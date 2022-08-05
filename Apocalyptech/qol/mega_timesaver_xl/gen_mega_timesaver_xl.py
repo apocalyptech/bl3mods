@@ -992,13 +992,7 @@ for category, obj_names in [
             '/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch',
             ]),
         ('Mission-Specific Machines', [
-            # There's two animations involved here: one to read in the posters, and another to generate
-            # the statues.  This speeds up those animations individually (or at least it speeds up the
-            # first bit, honestly not totally sure about the second) but doesn't get rid of the delay
-            # between them.  I have not yet figured out how to get the delay shorter, and I *suspect*
-            # it might require blueprint bytecode tweaking, so that might be a bit of a journey.  So
-            # as-is, it's not really worth speeding this up yet, until I can figure it out.
-            #('Golden Calves Statue Scanner/Printer', 'Sacrifice_P', '/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine'),
+            ('Golden Calves Statue Scanner/Printer', 'Sacrifice_P', '/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine'),
             ]),
         ('Other Machines', [
             # This *does* speed up nearly all the slot machine animations, but the machine doesn't actually
@@ -1104,6 +1098,49 @@ for category, obj_names in [
             print('NOTICE - No curve timings found for {}'.format(base_obj_name))
 
         mod.newline()
+
+mod.header('Custom Golden Calves Statue Scanner Tweaks')
+
+mod.comment('Shorten scanner-light animation')
+mod.reg_hotfix(Mod.LEVEL, 'Sacrifice_P',
+        '/Game/InteractiveObjects/MissionScripted/Effects/System/PS_Scanning_Machine',
+        'Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration',
+        12/global_scale)
+mod.reg_hotfix(Mod.LEVEL, 'Sacrifice_P',
+        '/Game/InteractiveObjects/MissionScripted/Effects/System/PS_Scanning_Machine',
+        'Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..Modules.Modules[1].Object..Lifetime.Distribution.Object..Constant',
+        12/global_scale)
+mod.newline()
+
+mod.comment('Shorten delay between scanning + printing')
+mod.reg_hotfix(Mod.LEVEL, 'Sacrifice_P',
+        '/Game/Maps/Zone_0/Sacrifice/Sacrifice_M_GoldenCalves.Sacrifice_M_GoldenCalves:PersistentLevel.IO_MissionScripted_StatueManufacturingMachine_2.Scanning',
+        'TheTimeline.Length',
+        12/global_scale)
+mod.reg_hotfix(Mod.LEVEL, 'Sacrifice_P',
+        '/Game/Maps/Zone_0/Sacrifice/Sacrifice_M_GoldenCalves.Sacrifice_M_GoldenCalves:PersistentLevel.IO_MissionScripted_StatueManufacturingMachine_2.Scanning',
+        'TheTimeline.Events.Events[0].Time',
+        round(4.014948/global_scale, 6))
+mod.newline()
+
+# Not sure what most of this does, though at least one of them is an initial delay when
+# you stick the posters in, before they start getting sucked into the machine.
+mod.comment('Tweak a few shorter delays')
+for index, cur_val in [
+        (575, 0.2),
+        (899, 2.0),
+        # Honestly not sure if these two should be combined; not sure what they control and it's
+        # not super obvious.
+        (976, 1.0),
+        (2539, 1.0),
+        ]:
+    mod.bytecode_hotfix(Mod.LEVEL, 'Sacrifice_P',
+            '/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine',
+            'ExecuteUbergraph_IO_MissionScripted_StatueManufacturingMachine',
+            index,
+            cur_val,
+            round(cur_val/global_scale, 6))
+mod.newline()
 
 # Honestly not sure yet if I want to put this in here, but I'm doing it for now...
 # Can split it out later if I want.

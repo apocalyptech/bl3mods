@@ -8206,9 +8206,63 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/BloodyHarvest/InteractiveOb
 ### Mission-Specific Machines
 ###
 
+# Golden Calves Statue Scanner/Printer
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..TimelineLength,0,,2.4
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..EventTracks.EventTracks[0].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,0.80299
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.4
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.8
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.2
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,1.6
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,2.0
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.4
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.5
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.6
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,0.7
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[4].Time,0,,0.8
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[5].Time,0,,1.2
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[6].Time,0,,1.3
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[7].Time,0,,1.4
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[8].Time,0,,1.5
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[9].Time,0,,1.6
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[10].Time,0,,2.0
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[11].Time,0,,2.1
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[12].Time,0,,2.2
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[13].Time,0,,2.3
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[14].Time,0,,2.4
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[1].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[1].Time,0,,0.1
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[1].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[2].Time,0,,0.12
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[1].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[3].Time,0,,0.14
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[1].Object..VectorTracks.VectorTracks[2].CurveVector.Object..FloatCurves.Keys.Keys[0].Time,0,,0.12
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[1].Object..VectorTracks.VectorTracks[2].CurveVector.Object..FloatCurves.Keys.Keys[1].Time,0,,0.22
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[1].Object..VectorTracks.VectorTracks[2].CurveVector.Object..FloatCurves.Keys.Keys[2].Time,0,,0.24
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[1].Object..VectorTracks.VectorTracks[3].CurveVector.Object..FloatCurves.Keys.Keys[0].Time,0,,0.124545
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[1].Object..VectorTracks.VectorTracks[4].CurveVector.Object..FloatCurves.Keys.Keys[0].Time,0,,0.28
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[1].Object..VectorTracks.VectorTracks[4].CurveVector.Object..FloatCurves.Keys.Keys[1].Time,0,,0.38
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[1].Object..VectorTracks.VectorTracks[4].CurveVector.Object..FloatCurves.Keys.Keys[2].Time,0,,0.399253
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[1].Object..VectorTracks.VectorTracks[4].CurveVector.Object..FloatCurves.Keys.Keys[3].Time,0,,0.415946
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[1].Object..VectorTracks.VectorTracks[5].CurveVector.Object..FloatCurves.Keys.Keys[0].Time,0,,0.28
+
 ###
 ### Other Machines
 ###
+
+###
+### Custom Golden Calves Statue Scanner Tweaks
+###
+
+# Shorten scanner-light animation
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/Effects/System/PS_Scanning_Machine.PS_Scanning_Machine,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration,0,,2.4
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/Effects/System/PS_Scanning_Machine.PS_Scanning_Machine,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..Modules.Modules[1].Object..Lifetime.Distribution.Object..Constant,0,,2.4
+
+# Shorten delay between scanning + printing
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/Maps/Zone_0/Sacrifice/Sacrifice_M_GoldenCalves.Sacrifice_M_GoldenCalves:PersistentLevel.IO_MissionScripted_StatueManufacturingMachine_2.Scanning,TheTimeline.Length,0,,2.4
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/Maps/Zone_0/Sacrifice/Sacrifice_M_GoldenCalves.Sacrifice_M_GoldenCalves:PersistentLevel.IO_MissionScripted_StatueManufacturingMachine_2.Scanning,TheTimeline.Events.Events[0].Time,0,,0.80299
+
+# Tweak a few shorter delays
+SparkLevelPatchEntry,(1,7,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,0,1,ExecuteUbergraph_IO_MissionScripted_StatueManufacturingMachine,1,575,3:0.2,4:0.04
+SparkLevelPatchEntry,(1,7,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,0,1,ExecuteUbergraph_IO_MissionScripted_StatueManufacturingMachine,1,899,3:2.0,3:0.4
+SparkLevelPatchEntry,(1,7,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,0,1,ExecuteUbergraph_IO_MissionScripted_StatueManufacturingMachine,1,976,3:1.0,3:0.2
+SparkLevelPatchEntry,(1,7,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,0,1,ExecuteUbergraph_IO_MissionScripted_StatueManufacturingMachine,1,2539,3:1.0,3:0.2
 
 ###
 ### NPC Walking Speeds
