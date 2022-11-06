@@ -8247,6 +8247,14 @@ SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripte
 ###
 
 ###
+### Elevators
+###
+
+# Taking Flight (Sanctuary Drydock)
+SparkEarlyLevelPatchEntry,(1,1,0,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue_M_Ep04_EarnSpaceship.Prologue_M_Ep04_EarnSpaceship:PersistentLevel.Elevator_Ep04_Prologue,ElevatorSpeed,0,,875
+SparkEarlyLevelPatchEntry,(1,1,0,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue_M_Ep04_EarnSpaceship.Prologue_M_Ep04_EarnSpaceship:PersistentLevel.Elevator_Ep04_Prologue,ElevatorTravelTime,0,,2.0
+
+###
 ### Custom Golden Calves Statue Scanner Tweaks
 ###
 
@@ -8270,9 +8278,19 @@ SparkLevelPatchEntry,(1,7,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripte
 
 # Claptrap
 SparkCharacterLoadedEntry,(1,1,0,BpChar_Claptrap),/Game/NonPlayerCharacters/Claptrap/_Design/Character/BpChar_Claptrap.Default__BpChar_Claptrap_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
+SparkCharacterLoadedEntry,(1,1,0,BpChar_Claptrap),/Game/NonPlayerCharacters/Claptrap/_Design/Character/BpChar_Claptrap.Default__BpChar_Claptrap_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+
+# Ellie
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Ellie),/Game/NonPlayerCharacters/Ellie/_Design/Character/BPChar_Ellie.Default__BPChar_Ellie_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=560.0,BaseValue=560.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Ellie),/Game/NonPlayerCharacters/Ellie/_Design/Character/BPChar_Ellie.Default__BPChar_Ellie_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 
 # Lilith
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Lilith),/Game/NonPlayerCharacters/Lilith/_Design/Character/BPChar_Lilith.Default__BPChar_Lilith_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Lilith),/Game/NonPlayerCharacters/Lilith/_Design/Character/BPChar_Lilith.Default__BPChar_Lilith_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Lilith),/Game/NonPlayerCharacters/Lilith/_Design/Character/BPChar_Lilith.Default__BPChar_Lilith_C,OakCharacterMovement.Object..NavSlowdownOptions.bSlowdownNearGoal,0,,False
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Lilith),/Game/NonPlayerCharacters/Lilith/_Design/Character/BPChar_Lilith.Default__BPChar_Lilith_C,OakCharacterMovement.Object..NavSlowdownOptions.SlowdownSpeed.Value,0,,1
+
+# Vic
+SparkCharacterLoadedEntry,(1,1,0,BPChar_HeadCaseGirl),/Game/NonPlayerCharacters/_Pandora/HeadCaseGirl/_Design/Character/BPChar_HeadCaseGirl.Default__BPChar_HeadCaseGirl_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=1800,BaseValue=1800)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_HeadCaseGirl),/Game/NonPlayerCharacters/_Pandora/HeadCaseGirl/_Design/Character/BPChar_HeadCaseGirl.Default__BPChar_HeadCaseGirl_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=2700,BaseValue=2700)
 

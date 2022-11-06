@@ -1099,6 +1099,23 @@ for category, obj_names in [
 
         mod.newline()
 
+mod.header('Elevators')
+
+mod.comment('Taking Flight (Sanctuary Drydock)')
+# Honestly not sure if we need both of these, but we *do* need EarlyLevel.
+mod.reg_hotfix(Mod.EARLYLEVEL, 'Prologue_P',
+        '/Game/Maps/Zone_0/Prologue/Prologue_M_Ep04_EarnSpaceship.Prologue_M_Ep04_EarnSpaceship:PersistentLevel.Elevator_Ep04_Prologue',
+        'ElevatorSpeed',
+        175*global_scale,
+        )
+mod.reg_hotfix(Mod.EARLYLEVEL, 'Prologue_P',
+        '/Game/Maps/Zone_0/Prologue/Prologue_M_Ep04_EarnSpaceship.Prologue_M_Ep04_EarnSpaceship:PersistentLevel.Elevator_Ep04_Prologue',
+        'ElevatorTravelTime',
+        10/global_scale,
+        )
+
+mod.newline()
+
 mod.header('Custom Golden Calves Statue Scanner Tweaks')
 
 mod.comment('Shorten scanner-light animation')
@@ -1146,10 +1163,13 @@ mod.newline()
 # Can split it out later if I want.
 mod.header('NPC Walking Speeds')
 
-for charname, obj_name, scale in [
+for charname, obj_name, scale in sorted([
         ('Claptrap', '/Game/NonPlayerCharacters/Claptrap/_Design/Character/BpChar_Claptrap', global_char_scale),
+        ('Ellie', '/Game/NonPlayerCharacters/Ellie/_Design/Character/BPChar_Ellie', global_char_scale),
         ('Lilith', '/Game/NonPlayerCharacters/Lilith/_Design/Character/BPChar_Lilith', global_char_scale),
-        ]:
+        # Vic's got a long way to run -- really bump this one up
+        ('Vic', '/Game/NonPlayerCharacters/_Pandora/HeadCaseGirl/_Design/Character/BPChar_HeadCaseGirl', 3),
+        ]):
 
     last_bit = obj_name.split('/')[-1]
     default_name = 'Default__{}_C'.format(last_bit)
@@ -1157,7 +1177,8 @@ for charname, obj_name, scale in [
 
     found_main = False
     char_data = data.get_data(obj_name)
-    speed = None
+    speed_walk = None
+    speed_sprint = None
     have_slowdown = False
     for export in char_data:
         if export['_jwp_object_name'].lower() == default_name.lower():
@@ -1166,10 +1187,15 @@ for charname, obj_name, scale in [
                 if export['OakCharacterMovement']['export'] != 0:
                     move_export = char_data[export['OakCharacterMovement']['export']-1]
                     if 'MaxWalkSpeed' in move_export:
-                        raise RuntimeError('{} actually has a MaxWalkSpeed; check this out!'.format(obj_name))
+                        speed_walk = move_export['MaxWalkSpeed']['BaseValue']
                     else:
                         # The default
-                        speed = 600
+                        speed_walk = 600
+                    if 'MaxSprintSpeed' in move_export:
+                        speed_sprint = move_export['MaxSprintSpeed']['BaseValue']
+                    else:
+                        # The default
+                        speed_sprint = 900
                     if 'NavSlowdownOptions' in move_export and 'SlowdownSpeed' in move_export['NavSlowdownOptions']:
                         have_slowdown = True
                 else:
@@ -1185,8 +1211,16 @@ for charname, obj_name, scale in [
             full_obj_name,
             'OakCharacterMovement.Object..MaxWalkSpeed',
             '(Value={},BaseValue={})'.format(
-                speed*scale,
-                speed*scale,
+                speed_walk*scale,
+                speed_walk*scale,
+                ),
+            )
+    mod.reg_hotfix(Mod.CHAR, last_bit,
+            full_obj_name,
+            'OakCharacterMovement.Object..MaxSprintSpeed',
+            '(Value={},BaseValue={})'.format(
+                speed_sprint*scale,
+                speed_sprint*scale,
                 ),
             )
     if have_slowdown:

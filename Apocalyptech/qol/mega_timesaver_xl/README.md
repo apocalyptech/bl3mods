@@ -24,7 +24,9 @@ Currently, the mod affects the following:
 * Catch-A-Ride Digistruct Speed
 * Character Movement Speeds:
   * Claptrap
+  * Ellie
   * Lilith
+  * Vic (from Head Case)
 * Eridian tools (Resonator, Analyzer)
 
 Note that the vehicle animations in particular are a bit weird right now --
@@ -68,9 +70,21 @@ TODO
 * Maybe have a real slight speedup on melee attacks?
 * Level-loading (digistruct) animation/movie playback?
 * Speed of camera that moves in/out of Photo Mode?
+* Ammo containers seem to not attach ammo properly; ends up below the platform
+  (at least, the sort 'round Tannis's dig site in The Droughts)
+* Diamond Armory console?
+* Check CZ47's Faster NPCs mod (and make a note about compatibility, if need be)
 
 Changelog
 =========
+
+**v1.0.0** - *(unreleased)*
+ * Statue scanner/printer from Golden Calves
+ * Character Movement Speed:
+   * Ellie
+   * Vic (from Head Case)
+ * Elevators:
+   * Taking Flight (Sanctuary III Drydock)
 
 Aug 1, 2022 *(no version number change)*
  * Updated to use [new metadata tags](https://github.com/apple1417/blcmm-parsing/tree/master/blimp)
