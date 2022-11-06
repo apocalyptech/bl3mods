@@ -31,6 +31,9 @@ of the mods you'll find in here, though:
 - **Enemy Equips** - A set of mods to alter what kind of gear enemies use.
 - **Infinite Slide** - Makes the duration of your character's slide effectively
   infinite.
+- **Jetbeasts (Almost) Everywhere** - Adds Jetbeast-spawning Catch-A-Ride
+  consoles wherever regular ones are found, with the exception of Skittermaw
+  Basin.
 - **Movement Speed Cheats** - Move faster!
 - **No Hidden Eridium** - Alters the Eridium spawns which require Mysterious
   Amulet to just be normal Eridium clusters/jars instead.
@@ -128,6 +131,8 @@ of the mods you'll find in here, though:
   as soon as you can get to the levels which provide them.
 - **Sisterly Love: More Money** - Buffs the amount of cash you get from the
   malfunctioning slot machines during "Sisterly Love."
+- **Transaction-Packed: Abridged** - Skips basically all of the mission, and
+  removes all remaining mission dialogue.
 
 ## Mod-Testing Mods
 
@@ -148,6 +153,8 @@ of the mods you'll find in here, though:
 - **Testing Enemy Spawns** - Used to spawn in specific enemies wihthout having
   to travel to their usual spawn points, used for testing enemy-specific mods.
 - **Testing Loot Drops** - Used to test drops and verify balance names.
+- **Visible BPChar Names** - Displays the BPChar names for NPCs and Enemies
+  in-game, instead of their usual names.
 
 ## Quality of Life Mods
 
@@ -166,6 +173,8 @@ of the mods you'll find in here, though:
   for killing enemies with specific manufacturers.
 - **Droughts Stocked Porta-Potties** - Ensures that all porta-potties in The
   Droughts have the usual porta-potty weapon attachments when looting.
+- **Easy Entry to Fort Sunshine** - Adds a door-opening lever to the outside of
+  Fort Sunshine, in Floodmoor Basin.
 - **Free Hemovorous Door** - Makes the door to get to Hemovorous the Invincible
   free, instead of costing 500 Eridium.
 - **Mega TimeSaver XL** - Speeds up slow animations throughout the game.
@@ -176,6 +185,8 @@ of the mods you'll find in here, though:
   near the end of a magazine.
 - **Photo Mode Unlock** - Lets the camera in Photo Mode go extremely far, and
   speeds up its movement.
+- **Quick Changes Everywhere** - Introduces a Quick Change station to every
+  level in the game which didn't already have one.
 
 ## Timed Event Mods
 
