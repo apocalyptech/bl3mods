@@ -23,6 +23,7 @@ Currently, the mod affects the following:
 * Vehicle interaction animations (hijacking, entering, leaving, changing seats)
 * Catch-A-Ride Digistruct Speed
 * Character Movement Speeds:
+  * Ace Baron (from Healers and Dealers)
   * Claptrap
   * Ellie
   * Lilith
@@ -34,6 +35,12 @@ the animation gets "frozen" near the end for a bit.  I think that's something
 that we can't do much about at the moment, though I'll be looking into it
 more for the eventual 1.0 release.  Check the full README for known bugs and
 my current TODO!
+
+A few known quirks of running with this mod:
+* To get on top of the "main" elevator in Meridian Outskirts (to reach the
+  Typhon Dead Drop), you'll likely either have to use Photo Mode to hit
+  the elevator button, or go the long way around after moving the elevator
+  to the bottom.
 
 Known Bugs
 ==========
@@ -79,12 +86,16 @@ Changelog
 =========
 
 **v1.0.0** - *(unreleased)*
- * Statue scanner/printer from Golden Calves
+ * Fixed Typhon Dead Drop Chests
+ * Mission-Specific Animations:
+   * Statue scanner/printer from Golden Calves
  * Character Movement Speed:
+   * Ace Baron (from Healers and Dealers)
    * Ellie
    * Vic (from Head Case)
  * Elevators:
    * Taking Flight (Sanctuary III Drydock)
+   * Both Meridian Outskirts elevators
 
 Aug 1, 2022 *(no version number change)*
  * Updated to use [new metadata tags](https://github.com/apple1417/blcmm-parsing/tree/master/blimp)

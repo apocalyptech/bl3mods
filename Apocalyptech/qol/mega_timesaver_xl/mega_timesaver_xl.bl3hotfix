@@ -78,6 +78,7 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Global/Chest_Gold/Animati
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Global/Chest_Trials/Animation/AS_Open.AS_Open,RateScale,0,,5
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Global/Chest_Trials/Animation/AS_Open_v2.AS_Open_v2,RateScale,0,,5
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Global/Chest_Typhon/Animation/AS_Open.AS_Open,RateScale,0,,5
+SparkCharacterLoadedEntry,(1,1,0,MatchAll),/Game/Lootables/_Global/Chest_Typhon/Animation/AS_Open.AS_Open,RateScale,0,,5
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Global/Crate_Ammo/Animations/AS_Open.AS_Open,RateScale,0,,5
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Global/Dumpster_Small/Animation/AS_Open.AS_Open,RateScale,0,,5
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Global/Locker_Generic/Animation/AS_Open_Misnamed.AS_Open_Misnamed,RateScale,0,,5
@@ -8250,7 +8251,15 @@ SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripte
 ### Elevators
 ###
 
-# Taking Flight (Sanctuary Drydock)
+# Meridian Outskirts - Main upper/lower Elevator
+SparkEarlyLevelPatchEntry,(1,1,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outskirts_Mission.Outskirts_Mission:PersistentLevel.Elevator_Outskirts_Refugee,ElevatorSpeed,0,,2000
+SparkEarlyLevelPatchEntry,(1,1,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outskirts_Mission.Outskirts_Mission:PersistentLevel.Elevator_Outskirts_Refugee,ElevatorTravelTime,0,,2.0
+
+# Meridian Outskirts - Under Rax/Max Platform
+SparkEarlyLevelPatchEntry,(1,1,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outskirts_LowerSector.Outskirts_LowerSector:PersistentLevel.Elevator_UnderBridge_2,ElevatorSpeed,0,,600
+SparkEarlyLevelPatchEntry,(1,1,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outskirts_LowerSector.Outskirts_LowerSector:PersistentLevel.Elevator_UnderBridge_2,ElevatorTravelTime,0,,2.0
+
+# The Droughts - Taking Flight (Sanctuary III Drydock)
 SparkEarlyLevelPatchEntry,(1,1,0,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue_M_Ep04_EarnSpaceship.Prologue_M_Ep04_EarnSpaceship:PersistentLevel.Elevator_Ep04_Prologue,ElevatorSpeed,0,,875
 SparkEarlyLevelPatchEntry,(1,1,0,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue_M_Ep04_EarnSpaceship.Prologue_M_Ep04_EarnSpaceship:PersistentLevel.Elevator_Ep04_Prologue,ElevatorTravelTime,0,,2.0
 
@@ -8276,6 +8285,10 @@ SparkLevelPatchEntry,(1,7,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripte
 ### NPC Walking Speeds
 ###
 
+# Ace Baron (Healers and Dealers)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_MedicalAssistant),/Game/NonPlayerCharacters/_Promethea/MedicalAssistant/_Design/Character/BPChar_MedicalAssistant.Default__BPChar_MedicalAssistant_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_MedicalAssistant),/Game/NonPlayerCharacters/_Promethea/MedicalAssistant/_Design/Character/BPChar_MedicalAssistant.Default__BPChar_MedicalAssistant_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+
 # Claptrap
 SparkCharacterLoadedEntry,(1,1,0,BpChar_Claptrap),/Game/NonPlayerCharacters/Claptrap/_Design/Character/BpChar_Claptrap.Default__BpChar_Claptrap_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
 SparkCharacterLoadedEntry,(1,1,0,BpChar_Claptrap),/Game/NonPlayerCharacters/Claptrap/_Design/Character/BpChar_Claptrap.Default__BpChar_Claptrap_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
@@ -8290,7 +8303,7 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_Lilith),/Game/NonPlayerCharacters/Lilith
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Lilith),/Game/NonPlayerCharacters/Lilith/_Design/Character/BPChar_Lilith.Default__BPChar_Lilith_C,OakCharacterMovement.Object..NavSlowdownOptions.bSlowdownNearGoal,0,,False
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Lilith),/Game/NonPlayerCharacters/Lilith/_Design/Character/BPChar_Lilith.Default__BPChar_Lilith_C,OakCharacterMovement.Object..NavSlowdownOptions.SlowdownSpeed.Value,0,,1
 
-# Vic
+# Vic (Head Case)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_HeadCaseGirl),/Game/NonPlayerCharacters/_Pandora/HeadCaseGirl/_Design/Character/BPChar_HeadCaseGirl.Default__BPChar_HeadCaseGirl_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=1800,BaseValue=1800)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_HeadCaseGirl),/Game/NonPlayerCharacters/_Pandora/HeadCaseGirl/_Design/Character/BPChar_HeadCaseGirl.Default__BPChar_HeadCaseGirl_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=2700,BaseValue=2700)
 

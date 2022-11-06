@@ -239,6 +239,16 @@ for obj_name in [
             'RateScale',
             global_scale)
 
+    # Typhon Dead Drop doesn't seem to actually apply with just a Level hotfix.  I
+    # suspect it gets loaded in too late, or something?  Anyway, applying a Char
+    # hotfix instead seems to do the trick, so whatever.  (Keeping the original
+    # Level hotfix too, though.)
+    if obj_name == '/Game/Lootables/_Global/Chest_Typhon/Animation/AS_Open':
+        mod.reg_hotfix(Mod.CHAR, 'MatchAll',
+                obj_name,
+                'RateScale',
+                global_scale)
+
 mod.newline()
 
 mod.header('Eridian Tools')
@@ -1099,22 +1109,32 @@ for category, obj_names in [
 
         mod.newline()
 
+# `getall Elevator`
 mod.header('Elevators')
-
-mod.comment('Taking Flight (Sanctuary Drydock)')
-# Honestly not sure if we need both of these, but we *do* need EarlyLevel.
-mod.reg_hotfix(Mod.EARLYLEVEL, 'Prologue_P',
-        '/Game/Maps/Zone_0/Prologue/Prologue_M_Ep04_EarnSpaceship.Prologue_M_Ep04_EarnSpaceship:PersistentLevel.Elevator_Ep04_Prologue',
-        'ElevatorSpeed',
-        175*global_scale,
-        )
-mod.reg_hotfix(Mod.EARLYLEVEL, 'Prologue_P',
-        '/Game/Maps/Zone_0/Prologue/Prologue_M_Ep04_EarnSpaceship.Prologue_M_Ep04_EarnSpaceship:PersistentLevel.Elevator_Ep04_Prologue',
-        'ElevatorTravelTime',
-        10/global_scale,
-        )
-
-mod.newline()
+for label, level, obj_name, speed, travel_time in sorted([
+        ('The Droughts - Taking Flight (Sanctuary III Drydock)', 'Prologue_P',
+            '/Game/Maps/Zone_0/Prologue/Prologue_M_Ep04_EarnSpaceship.Prologue_M_Ep04_EarnSpaceship:PersistentLevel.Elevator_Ep04_Prologue',
+            175, 10),
+        ('Meridian Outskirts - Under Rax/Max Platform', 'Outskirts_P',
+            '/Game/Maps/Zone_1/Outskirts/Outskirts_LowerSector.Outskirts_LowerSector:PersistentLevel.Elevator_UnderBridge_2',
+            120, 10),
+        ('Meridian Outskirts - Main upper/lower Elevator', 'Outskirts_P',
+            '/Game/Maps/Zone_1/Outskirts/Outskirts_Mission.Outskirts_Mission:PersistentLevel.Elevator_Outskirts_Refugee',
+            400, 10),
+        ]):
+    mod.comment(label)
+    # Honestly not sure if we need both of these, but we *do* need EarlyLevel.
+    mod.reg_hotfix(Mod.EARLYLEVEL, level,
+            obj_name,
+            'ElevatorSpeed',
+            speed*global_scale,
+            )
+    mod.reg_hotfix(Mod.EARLYLEVEL, level,
+            obj_name,
+            'ElevatorTravelTime',
+            travel_time/global_scale,
+            )
+    mod.newline()
 
 mod.header('Custom Golden Calves Statue Scanner Tweaks')
 
@@ -1164,11 +1184,22 @@ mod.newline()
 mod.header('NPC Walking Speeds')
 
 for charname, obj_name, scale in sorted([
-        ('Claptrap', '/Game/NonPlayerCharacters/Claptrap/_Design/Character/BpChar_Claptrap', global_char_scale),
-        ('Ellie', '/Game/NonPlayerCharacters/Ellie/_Design/Character/BPChar_Ellie', global_char_scale),
-        ('Lilith', '/Game/NonPlayerCharacters/Lilith/_Design/Character/BPChar_Lilith', global_char_scale),
+        ('Claptrap',
+            '/Game/NonPlayerCharacters/Claptrap/_Design/Character/BpChar_Claptrap',
+            global_char_scale),
+        ('Ellie',
+            '/Game/NonPlayerCharacters/Ellie/_Design/Character/BPChar_Ellie',
+            global_char_scale),
+        ('Lilith',
+            '/Game/NonPlayerCharacters/Lilith/_Design/Character/BPChar_Lilith',
+            global_char_scale),
+        ('Ace Baron (Healers and Dealers)',
+            '/Game/NonPlayerCharacters/_Promethea/MedicalAssistant/_Design/Character/BPChar_MedicalAssistant',
+            global_char_scale),
         # Vic's got a long way to run -- really bump this one up
-        ('Vic', '/Game/NonPlayerCharacters/_Pandora/HeadCaseGirl/_Design/Character/BPChar_HeadCaseGirl', 3),
+        ('Vic (Head Case)',
+            '/Game/NonPlayerCharacters/_Pandora/HeadCaseGirl/_Design/Character/BPChar_HeadCaseGirl',
+            3),
         ]):
 
     last_bit = obj_name.split('/')[-1]
