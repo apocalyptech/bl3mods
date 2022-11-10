@@ -41,9 +41,10 @@ SparkPatchEntry,(1,1,0,),/Game/Pickups/_Shared/_Design/DroppedPickupFlyToSetting
 SparkPatchEntry,(1,1,0,),/Game/Pickups/_Shared/_Design/DroppedPickupFlyToSettings.DroppedPickupFlyToSettings,LinearAcceleration,0,,1000.0
 
 ###
-### Containers: Simple Animation Speedups
+### Simple Animation Speedups
 ###
 
+# Containers
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Alisma/Lootables/Hyperion/AmmoCase/Animation/AS_Open_In.AS_Open_In,RateScale,0,,5
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Alisma/Lootables/Hyperion/LootCase/Animation/AS_Hyp_Misc2_Opening.AS_Hyp_Misc2_Opening,RateScale,0,,5
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Alisma/Lootables/Hyperion/PortaPotty/Animation/AS_Open_IN_Poor.AS_Open_IN_Poor,RateScale,0,,5
@@ -136,6 +137,9 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Hibiscus/InteractiveObjects/Lootables/Sin
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Hibiscus/InteractiveObjects/Lootables/SingingFish/Animation/AS_Sing_Spit.AS_Sing_Spit,RateScale,0,,5
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Hibiscus/InteractiveObjects/Lootables/SingleMushroom/AS_Mush_Open.AS_Mush_Open,RateScale,0,,5
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Hibiscus/InteractiveObjects/Lootables/TentacleToilet/Animation/AS_TentacleToilet_OpenAndDropWeapon.AS_TentacleToilet_OpenAndDropWeapon,RateScale,0,,5
+
+# Doors
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/Doors/Eden_6/Door_Eden6_VehicleSpawner/Animation/AS_VehicleDoor_Open.AS_VehicleDoor_Open,RateScale,0,,5
 
 ###
 ### Eridian Tools
@@ -8280,6 +8284,15 @@ SparkLevelPatchEntry,(1,7,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripte
 SparkLevelPatchEntry,(1,7,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,0,1,ExecuteUbergraph_IO_MissionScripted_StatueManufacturingMachine,1,899,3:2.0,3:0.4
 SparkLevelPatchEntry,(1,7,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,0,1,ExecuteUbergraph_IO_MissionScripted_StatueManufacturingMachine,1,976,3:1.0,3:0.2
 SparkLevelPatchEntry,(1,7,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,0,1,ExecuteUbergraph_IO_MissionScripted_StatueManufacturingMachine,1,2539,3:1.0,3:0.2
+
+###
+### Coffee-pouring Animations during Rise and Grind
+###
+
+SparkLevelPatchEntry,(1,1,0,City_P),/Game/Maps/Zone_1/City/City_M_RiseAndGrind.City_M_RiseAndGrind:PersistentLevel.RiseAndGrind_Thermos,FillDuration,0,,14
+SparkLevelPatchEntry,(1,1,0,City_P),/Game/Missions/Side/Zone_1/City/RiseAndGrind/Effects/Systems/PS_CoffeePour_Stream.PS_CoffeePour_Stream:ParticleModuleSpawn_1.RequiredDistributionSpawnRate,Constant,0,,14
+SparkLevelPatchEntry,(1,1,0,City_P),/Game/Missions/Side/Zone_1/City/RiseAndGrind/Effects/Systems/PS_CoffeePour_Stream.PS_CoffeePour_Stream:ParticleModuleRequired_1,EmitterDuration,0,,14
+SparkLevelPatchEntry,(1,7,0,City_P),/Game/Maps/Zone_1/City/City_M_RiseAndGrind.City_M_RiseAndGrind_C,0,1,ExecuteUbergraph_City_M_RiseAndGrind,1,6616,2:20,2:14
 
 ###
 ### NPC Walking Speeds

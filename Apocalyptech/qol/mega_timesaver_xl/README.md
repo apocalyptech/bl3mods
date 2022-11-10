@@ -89,6 +89,7 @@ Changelog
  * Fixed Typhon Dead Drop Chests
  * Mission-Specific Animations:
    * Statue scanner/printer from Golden Calves
+   * Coffee-pouring animation during Rise and Grind (pretty slight improvement there)
  * Character Movement Speed:
    * Ace Baron (from Healers and Dealers)
    * Ellie
@@ -96,6 +97,8 @@ Changelog
  * Elevators:
    * Taking Flight (Sanctuary III Drydock)
    * Both Meridian Outskirts elevators
+ * Doors:
+   * Meridian Metroplex hub door opening
 
 Aug 1, 2022 *(no version number change)*
  * Updated to use [new metadata tags](https://github.com/apple1417/blcmm-parsing/tree/master/blimp)
