@@ -22,11 +22,15 @@ Currently, the mod affects the following:
 * Doors
 * Vehicle interaction animations (hijacking, entering, leaving, changing seats)
 * Catch-A-Ride Digistruct Speed
-* Character Movement Speeds:
+* Character Movement Speeds (a little less of a speedup than CZ47's Faster NPCs
+  mod, in general, so execute that one after this one if you want some NPCs to
+  be even faster):
   * Ace Baron (from Healers and Dealers)
+  * Ava
   * Claptrap
   * Ellie
   * Lilith
+  * Maya
   * Vic (from Head Case)
 * Eridian tools (Resonator, Analyzer)
 
@@ -41,6 +45,11 @@ A few known quirks of running with this mod:
   Typhon Dead Drop), you'll likely either have to use Photo Mode to hit
   the elevator button, or go the long way around after moving the elevator
   to the bottom.
+
+Some things intentionally *not* handled by the mod:
+* The Desolation's Edge mission "Transaction-Packed" has been left alone.
+  I recommend using my "Transaction-Packed: Abridged" to basically skip
+  the entire mission, instead.
 
 Known Bugs
 ==========
@@ -78,9 +87,11 @@ TODO
 * Level-loading (digistruct) animation/movie playback?
 * Speed of camera that moves in/out of Photo Mode?
 * Ammo containers seem to not attach ammo properly; ends up below the platform
-  (at least, the sort 'round Tannis's dig site in The Droughts)
+  (at least, the sort 'round Tannis's dig site in The Droughts, and in Athenas)
 * Diamond Armory console?
 * Check CZ47's Faster NPCs mod (and make a note about compatibility, if need be)
+* Vault Card chest-opening
+* Maliwan small ammo chests could digistruct in the ammo a bit earlier
 
 Changelog
 =========
@@ -89,10 +100,13 @@ Changelog
  * Fixed Typhon Dead Drop Chests
  * Mission-Specific Animations:
    * Statue scanner/printer from Golden Calves
-   * Coffee-pouring animation during Rise and Grind (pretty slight improvement there)
+   * Coffee-pouring animation during Rise and Grind (pretty slight improvement,
+     and if localization dialogue other than English happens to be longer, it's
+     possible that some dialogue might get cut off)
  * Character Movement Speed:
    * Ace Baron (from Healers and Dealers)
    * Ellie
+   * Maya
    * Vic (from Head Case)
  * Elevators:
    * Taking Flight (Sanctuary III Drydock)

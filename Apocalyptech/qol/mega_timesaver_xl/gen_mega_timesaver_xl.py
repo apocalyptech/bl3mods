@@ -1010,10 +1010,10 @@ for category, obj_names in [
             '/Game/InteractiveObjects/Switches/WheelValve/Design/IO_Switch_Industrial_WheelValve_V1',
             '/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch',
             ]),
-        ('Mission-Specific Machines', [
+        ('Mission-Specific', [
             ('Golden Calves Statue Scanner/Printer', 'Sacrifice_P', '/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine'),
             ]),
-        ('Other Machines', [
+        ('Other', [
             # This *does* speed up nearly all the slot machine animations, but the machine doesn't actually
             # spit out loot (or reset, in the event of no loot) until its sound effects are done, so there's
             # some other timing thing going on here, too.  No point speeding up the first bits if the last
@@ -1219,6 +1219,63 @@ mod.bytecode_hotfix(Mod.LEVEL, 'City_P',
         pour_duration)
 mod.newline()
 
+mod.header('Speed up second Athenas Bell door opening (*very* slightly)')
+mod.bytecode_hotfix(Mod.LEVEL, 'Monastery_P',
+        '/Game/Maps/Zone_1/Monastery/Monastery_Mission_Ep06_MeetMaya',
+        'ExecuteUbergraph_Monastery_Mission_Ep06_MeetMaya',
+        49863,
+        1,
+        0)
+mod.newline()
+
+# Peace Bells (or whatever) in Athenas.  They're really more trouble than they're worth
+# to speed up, especially since their speed isn't that bad.  The *second* bell is the
+# one with the most annoying pause, but that pause turns out to be nearly entirely due
+# to a `BPChar_GenericMonk` named "Brother Catus" spawning in to run over and open the
+# door -- we could speed up *all* BPChar_GenericMonk speed, but the majority of his
+# time is spent in the actual spwaning-animation anyway.  So I *could* look to see if
+# I could cut that whole sequence out of the loop, but he's got dialogue and everything,
+# and it'd be a bit weird.  So: whatever, just deal with it.
+#
+# I *did* find an easy-to-zero-out one-second delay on processing the RingBell2Completed
+# event, which I bytecode-hotifxes above, so I'll go ahead and leave that in.
+if False:
+
+    # Up in the main IO/BPIO section, this speeds up the striker itself...
+    #('Large Bells in Athenas', 'Monastery_P', '/Game/InteractiveObjects/BonshuBell/Global/IO_MissionUsable_BonshuBell'),
+
+    # ... and this next bit makes the bell ringing trigger at the right time
+    mod.header('Large Bells on Athenas')
+    bell_scale=5
+    for obj_name in [
+            '/Game/Maps/Zone_1/Monastery/Monastery_Mission_MonkMission.Monastery_Mission_MonkMission:PersistentLevel.IO_MissionUsable_BonshuBell_1',
+            '/Game/Maps/Zone_1/Monastery/Monastery_Mission_Ep06_MeetMaya.Monastery_Mission_Ep06_MeetMaya:PersistentLevel.IO_MissionUsable_BonshuBell_0',
+            '/Game/Maps/Zone_1/Monastery/Monastery_Mission_Ep06_MeetMaya.Monastery_Mission_Ep06_MeetMaya:PersistentLevel.IO_MissionUsable_BonshuBell_1',
+            '/Game/Maps/Zone_1/Monastery/Monastery_Mission_Ep06_MeetMaya.Monastery_Mission_Ep06_MeetMaya:PersistentLevel.IO_MissionUsable_BonshuBell_4227',
+            ]:
+        for subobj in [
+                'BellRinging',
+                'StrikeBell',
+                ]:
+            full_obj = f'{obj_name}.{subobj}'
+            mod.reg_hotfix(Mod.LEVEL, 'Monastery_P',
+                    full_obj,
+                    'TheTimeline.Length',
+                    4/bell_scale,
+                    )
+            if subobj == 'StrikeBell':
+                mod.reg_hotfix(Mod.LEVEL, 'Monastery_P',
+                        full_obj,
+                        'TheTimeline.Events.Events[0].Time',
+                        1/bell_scale,
+                        )
+        #mod.reg_hotfix(Mod.LEVEL, 'Monastery_P',
+        #        obj_name,
+        #        'TheTimeline.PlayRate',
+        #        bell_scale,
+        #        )
+    mod.newline()
+
 # Honestly not sure yet if I want to put this in here, but I'm doing it for now...
 # Can split it out later if I want.
 mod.header('NPC Walking Speeds')
@@ -1240,6 +1297,14 @@ for charname, obj_name, scale in sorted([
         ('Vic (Head Case)',
             '/Game/NonPlayerCharacters/_Pandora/HeadCaseGirl/_Design/Character/BPChar_HeadCaseGirl',
             3),
+        # Maya's mostly fine, but there's a couple of cases where it'd be nice if she were a bit faster
+        ('Maya',
+            '/Game/NonPlayerCharacters/Maya/_Design/Character/BPChar_Maya',
+            global_char_scale),
+        # Ava's honestly not too bad, but she's got a long run back from the graveyard
+        ('Ava',
+            '/Game/NonPlayerCharacters/Ava/_Design/Character/BPChar_Ava',
+            global_char_scale),
         ]):
 
     last_bit = obj_name.split('/')[-1]

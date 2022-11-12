@@ -8208,7 +8208,7 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/BloodyHarvest/InteractiveOb
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.05
 
 ###
-### Mission-Specific Machines
+### Mission-Specific
 ###
 
 # Golden Calves Statue Scanner/Printer
@@ -8248,7 +8248,7 @@ SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripte
 SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[1].Object..VectorTracks.VectorTracks[5].CurveVector.Object..FloatCurves.Keys.Keys[0].Time,0,,0.28
 
 ###
-### Other Machines
+### Other
 ###
 
 ###
@@ -8295,12 +8295,22 @@ SparkLevelPatchEntry,(1,1,0,City_P),/Game/Missions/Side/Zone_1/City/RiseAndGrind
 SparkLevelPatchEntry,(1,7,0,City_P),/Game/Maps/Zone_1/City/City_M_RiseAndGrind.City_M_RiseAndGrind_C,0,1,ExecuteUbergraph_City_M_RiseAndGrind,1,6616,2:20,2:14
 
 ###
+### Speed up second Athenas Bell door opening (*very* slightly)
+###
+
+SparkLevelPatchEntry,(1,7,0,Monastery_P),/Game/Maps/Zone_1/Monastery/Monastery_Mission_Ep06_MeetMaya.Monastery_Mission_Ep06_MeetMaya_C,0,1,ExecuteUbergraph_Monastery_Mission_Ep06_MeetMaya,1,49863,1:1,1:0
+
+###
 ### NPC Walking Speeds
 ###
 
 # Ace Baron (Healers and Dealers)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_MedicalAssistant),/Game/NonPlayerCharacters/_Promethea/MedicalAssistant/_Design/Character/BPChar_MedicalAssistant.Default__BPChar_MedicalAssistant_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_MedicalAssistant),/Game/NonPlayerCharacters/_Promethea/MedicalAssistant/_Design/Character/BPChar_MedicalAssistant.Default__BPChar_MedicalAssistant_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+
+# Ava
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Ava),/Game/NonPlayerCharacters/Ava/_Design/Character/BPChar_Ava.Default__BPChar_Ava_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Ava),/Game/NonPlayerCharacters/Ava/_Design/Character/BPChar_Ava.Default__BPChar_Ava_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 
 # Claptrap
 SparkCharacterLoadedEntry,(1,1,0,BpChar_Claptrap),/Game/NonPlayerCharacters/Claptrap/_Design/Character/BpChar_Claptrap.Default__BpChar_Claptrap_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
@@ -8315,6 +8325,10 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_Lilith),/Game/NonPlayerCharacters/Lilith
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Lilith),/Game/NonPlayerCharacters/Lilith/_Design/Character/BPChar_Lilith.Default__BPChar_Lilith_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Lilith),/Game/NonPlayerCharacters/Lilith/_Design/Character/BPChar_Lilith.Default__BPChar_Lilith_C,OakCharacterMovement.Object..NavSlowdownOptions.bSlowdownNearGoal,0,,False
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Lilith),/Game/NonPlayerCharacters/Lilith/_Design/Character/BPChar_Lilith.Default__BPChar_Lilith_C,OakCharacterMovement.Object..NavSlowdownOptions.SlowdownSpeed.Value,0,,1
+
+# Maya
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Maya),/Game/NonPlayerCharacters/Maya/_Design/Character/BPChar_Maya.Default__BPChar_Maya_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Maya),/Game/NonPlayerCharacters/Maya/_Design/Character/BPChar_Maya.Default__BPChar_Maya_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 
 # Vic (Head Case)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_HeadCaseGirl),/Game/NonPlayerCharacters/_Pandora/HeadCaseGirl/_Design/Character/BPChar_HeadCaseGirl.Default__BPChar_HeadCaseGirl_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=1800,BaseValue=1800)
