@@ -1219,7 +1219,23 @@ mod.bytecode_hotfix(Mod.LEVEL, 'City_P',
         pour_duration)
 mod.newline()
 
-mod.header('Speed up second Athenas Bell door opening (*very* slightly)')
+# The remaining speed improvements here would have to be done in relation to a
+# `BPChar_GenericMonk` named "Brother Catus" spawning in to run over and open the
+# door.  We could make him faster, but the bulk of the time is actually spent in
+# the spawning animation, so walking/sprinting speed tweaks really don't help
+# him much.  And also, since he's not actually an individual BPChar of his own,
+# tweaking him would also tweak all other monks in the area, which I'd rather not
+# do.  Anyway, these two tweaks improve the opening time pretty well anyway, so
+# I'm content with that.  (Another thing to do would be to try and cut Catus out
+# of the loop entirely, but I just don't care enough to try and do that without
+# breaking the mission entirely.)
+mod.header('Speed up second Athenas Bell of Peace door opening')
+mod.bytecode_hotfix(Mod.LEVEL, 'Monastery_P',
+        '/Game/Missions/Plot/Mission_Ep06_MeetMaya',
+        'ExecuteUbergraph_Mission_Ep06_MeetMaya',
+        39968,
+        3,
+        0)
 mod.bytecode_hotfix(Mod.LEVEL, 'Monastery_P',
         '/Game/Maps/Zone_1/Monastery/Monastery_Mission_Ep06_MeetMaya',
         'ExecuteUbergraph_Monastery_Mission_Ep06_MeetMaya',
@@ -1228,17 +1244,11 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Monastery_P',
         0)
 mod.newline()
 
-# Peace Bells (or whatever) in Athenas.  They're really more trouble than they're worth
-# to speed up, especially since their speed isn't that bad.  The *second* bell is the
-# one with the most annoying pause, but that pause turns out to be nearly entirely due
-# to a `BPChar_GenericMonk` named "Brother Catus" spawning in to run over and open the
-# door -- we could speed up *all* BPChar_GenericMonk speed, but the majority of his
-# time is spent in the actual spwaning-animation anyway.  So I *could* look to see if
-# I could cut that whole sequence out of the loop, but he's got dialogue and everything,
-# and it'd be a bit weird.  So: whatever, just deal with it.
-#
-# I *did* find an easy-to-zero-out one-second delay on processing the RingBell2Completed
-# event, which I bytecode-hotifxes above, so I'll go ahead and leave that in.
+# Peace Bells (or whatever) in Athenas.  Not actually doing this because the speed
+# isn't too bad already, and the events they trigger actually happen immediately
+# when you "use" them, anyway.  The Ubergraphs sometimes put in some artificial
+# delays to make it seem like stuff's happening after, like with the door opening
+# I tweaked, above, but it's not actually tied in with this.
 if False:
 
     # Up in the main IO/BPIO section, this speeds up the striker itself...

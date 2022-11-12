@@ -103,6 +103,7 @@ Changelog
    * Coffee-pouring animation during Rise and Grind (pretty slight improvement,
      and if localization dialogue other than English happens to be longer, it's
      possible that some dialogue might get cut off)
+   * Second Bell-of-Peace door opening on Athenas
  * Character Movement Speed:
    * Ace Baron (from Healers and Dealers)
    * Ellie
