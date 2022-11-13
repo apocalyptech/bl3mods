@@ -95,11 +95,19 @@ TODO
   (at least, the sort 'round Tannis's dig site in The Droughts, and in Athenas)
 * Diamond Armory console?
 * Check CZ47's Faster NPCs mod (and make a note about compatibility, if need be)
+* I ended up reducing `global_scale` from 5 to 4 at the end of Athenas, because
+  the other container tightening I did there ended up making them sort of seem
+  *too* fast.  Even at 4x, things still seem quite good, IMO.  May want to
+  doublecheck some stuff from before then, though, to just to be sure:
+  * Statue printer/scanner
+  * Taking Flight elevator
+  * Meridian Outskirts elevators
 
 Changelog
 =========
 
 **v1.0.0** - *(unreleased)*
+ * Reduced our "standard" speed improvement from 5x to 4x
  * Fixed Typhon Dead Drop Chests
  * Tightened up various chest-opening animations (including digistruct contents)
  * Added Vault Card chest-opening animation

@@ -62,7 +62,7 @@ mod = Mod('mega_timesaver_xl.bl3hotfix',
 #     scale things up easily, to.  So that's what we're going to be using, mostly!
 
 # How much to improve speed
-global_scale = 5
+global_scale = 4
 
 # Character movement speed
 global_char_scale = 1.4
