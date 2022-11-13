@@ -80,6 +80,57 @@ min_apoc_jwp_version = 19
 # Data obj
 data = BL3Data()
 
+# Method to shorten animation sequences (does *not* do the main RateScale at the moment)
+def scale_animsequence(mod, obj_name, hf_trigger, hf_target, anim_scale, sequencelength_scale):
+
+    # Serialize the data
+    as_data = data.get_exports(obj_name, 'AnimSequence')[0]
+
+    # First the RateScale; happens regardless of AnimSequence contents
+    mod.reg_hotfix(hf_trigger, hf_target,
+            obj_name,
+            'RateScale',
+            anim_scale)
+
+    # Now Notifies
+    if 'Notifies' in as_data:
+        for idx, notify in enumerate(as_data['Notifies']):
+            for var in ['SegmentBeginTime', 'SegmentLength', 'LinkValue']:
+                if var in notify and notify[var] != 0:
+                    mod.reg_hotfix(hf_trigger, hf_target,
+                            obj_name,
+                            'Notifies.Notifies[{}].{}'.format(idx, var),
+                            round(notify[var]/anim_scale, 6))
+
+            # If we have targets inside EndLink, process that, too.  (So far, it doesn't
+            # look like any animations we touch actually have anything here.)
+            endlink = notify['EndLink']
+            if 'export' not in endlink['LinkedMontage'] \
+                    or endlink['LinkedMontage']['export'] != 0 \
+                    or 'export' not in endlink['LinkedSequence'] \
+                    or endlink['LinkedSequence']['export'] != 0:
+                for var in ['SegmentBeginTime', 'SegmentLength', 'LinkValue']:
+                    if var in endlink and endlink[var] != 0:
+                        mod.reg_hotfix(hf_trigger, hf_target,
+                                obj_name,
+                                'Notifies.Notifies[{}].EndLink.{}'.format(idx, var),
+                                round(endlink[var]/anim_scale, 6))
+
+    # Finally: SequenceLength.  This one's a bit weird, which is why we're letting categories
+    # decide if they want to use alt scalings.  For player animations for entering/leaving vehicles
+    # (or for changing seats), if SequenceLength is scaled at the same scale as the rest of the
+    # animations, the animation "freezes" before it's fully complete, and the player just jerks
+    # to their final spot once the appropriate time has elapsed.  Contrariwise, if we *don't*
+    # scale SequenceLength down, you end up with a period of time where you can't interact with
+    # the vehicle at all, like driving, leaving, or changing seats again.  In the end, I settled
+    # on just using the global vehicle scale for all categories here, but if I want to tweak
+    # something in the future, at least it's easy enough to do so.
+    if 'SequenceLength' in as_data:
+        mod.reg_hotfix(hf_trigger, hf_target,
+                obj_name,
+                'SequenceLength',
+                round(as_data['SequenceLength']/sequencelength_scale, 6))
+
 mod.header('Item Pickups')
 
 # Defaults:
@@ -243,20 +294,25 @@ for cat_name, obj_names in [
 
     for obj_name in obj_names:
 
-        mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
-                obj_name,
-                'RateScale',
-                global_scale)
-
-        # Typhon Dead Drop doesn't seem to actually apply with just a Level hotfix.  I
-        # suspect it gets loaded in too late, or something?  Anyway, applying a Char
-        # hotfix instead seems to do the trick, so whatever.  (Keeping the original
-        # Level hotfix too, though.)
+        scale_animsequence(mod, obj_name, Mod.LEVEL, 'MatchAll', global_scale, global_scale)
         if obj_name == '/Game/Lootables/_Global/Chest_Typhon/Animation/AS_Open':
-            mod.reg_hotfix(Mod.CHAR, 'MatchAll',
+            scale_animsequence(mod, obj_name, Mod.CHAR, 'MatchAll', global_scale, global_scale)
+
+        if False:
+            mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
                     obj_name,
                     'RateScale',
                     global_scale)
+
+            # Typhon Dead Drop doesn't seem to actually apply with just a Level hotfix.  I
+            # suspect it gets loaded in too late, or something?  Anyway, applying a Char
+            # hotfix instead seems to do the trick, so whatever.  (Keeping the original
+            # Level hotfix too, though.)
+            if obj_name == '/Game/Lootables/_Global/Chest_Typhon/Animation/AS_Open':
+                mod.reg_hotfix(Mod.CHAR, 'MatchAll',
+                        obj_name,
+                        'RateScale',
+                        global_scale)
 
     mod.newline()
 
@@ -794,55 +850,9 @@ for vehicle_cat, hf_trigger, vehicle_scale, sequencelength_scale, obj_names in [
         if verbose:
             print('Processing {}'.format(obj_name))
 
-        # First the RateScale; happens regardless of AnimSequence contents
+        # Here we go!
         mod.comment(obj_name)
-        mod.reg_hotfix(hf_trigger, hf_target,
-                obj_name,
-                'RateScale',
-                vehicle_scale)
-
-        # Now we get into AnimSequence specifics.  This'll happen so long as there's
-        # data which makes sense to alter (ie: non-`0` values)
-        as_data = data.get_exports(obj_name, 'AnimSequence')[0]
-        if 'Notifies' in as_data:
-            for idx, notify in enumerate(as_data['Notifies']):
-                for var in ['SegmentBeginTime', 'SegmentLength', 'LinkValue']:
-                    if var in notify and notify[var] != 0:
-                        mod.reg_hotfix(hf_trigger, hf_target,
-                                obj_name,
-                                'Notifies.Notifies[{}].{}'.format(idx, var),
-                                round(notify[var]/vehicle_scale, 6))
-
-                # If we have targets inside EndLink, process that, too.  (So far, it doesn't
-                # look like any animations we touch actually have anything here.)
-                endlink = notify['EndLink']
-                if 'export' not in endlink['LinkedMontage'] \
-                        or endlink['LinkedMontage']['export'] != 0 \
-                        or 'export' not in endlink['LinkedSequence'] \
-                        or endlink['LinkedSequence']['export'] != 0:
-                    for var in ['SegmentBeginTime', 'SegmentLength', 'LinkValue']:
-                        if var in endlink and endlink[var] != 0:
-                            mod.reg_hotfix(hf_trigger, hf_target,
-                                    obj_name,
-                                    'Notifies.Notifies[{}].EndLink.{}'.format(idx, var),
-                                    round(endlink[var]/vehicle_scale, 6))
-
-        # Finally: SequenceLength.  This one's a bit weird, which is why we're letting categories
-        # decide if they want to use alt scalings.  For player animations for entering/leaving vehicles
-        # (or for changing seats), if SequenceLength is scaled at the same scale as the rest of the
-        # animations, the animation "freezes" before it's fully complete, and the player just jerks
-        # to their final spot once the appropriate time has elapsed.  Contrariwise, if we *don't*
-        # scale SequenceLength down, you end up with a period of time where you can't interact with
-        # the vehicle at all, like driving, leaving, or changing seats again.  In the end, I settled
-        # on just using the global vehicle scale for all categories here, but if I want to tweak
-        # something in the future, at least it's easy enough to do so.
-        if 'SequenceLength' in as_data:
-            mod.reg_hotfix(hf_trigger, hf_target,
-                    obj_name,
-                    'SequenceLength',
-                    round(as_data['SequenceLength']/sequencelength_scale, 6))
-
-        # ... aaaand we're done.
+        scale_animsequence(mod, obj_name, hf_trigger, hf_target, vehicle_scale, sequencelength_scale)
         mod.newline()
 
 # Default here is 2.36; not gonna bother dynamically reading it for a single object.
