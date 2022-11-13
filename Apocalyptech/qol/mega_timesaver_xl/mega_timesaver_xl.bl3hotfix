@@ -41,6 +41,528 @@ SparkPatchEntry,(1,1,0,),/Game/Pickups/_Shared/_Design/DroppedPickupFlyToSetting
 SparkPatchEntry,(1,1,0,),/Game/Pickups/_Shared/_Design/DroppedPickupFlyToSettings.DroppedPickupFlyToSettings,LinearAcceleration,0,,1000.0
 
 ###
+### Vault Card Chest Injection (needed in order to speed up the opening animation)
+###
+
+# Castle Crimson
+SparkEarlyLevelPatchEntry,(1,11,0,Anger_P),/Alisma/Maps/Anger,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Anger_P),/Alisma/Maps/Anger/Anger_P.Anger_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Anger_P),/Alisma/Maps/Anger/Anger_P.Anger_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Anger_P),/Alisma/Maps/Anger/Anger_P.Anger_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Anger_P),/Alisma/Maps/Anger/Anger_P.Anger_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Sapphire's Run
+SparkEarlyLevelPatchEntry,(1,11,0,Chase_P),/Alisma/Maps/Chase,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Chase_P),/Alisma/Maps/Chase/Chase_P.Chase_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Chase_P),/Alisma/Maps/Chase/Chase_P.Chase_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Chase_P),/Alisma/Maps/Chase/Chase_P.Chase_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Chase_P),/Alisma/Maps/Chase/Chase_P.Chase_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Vaulthalla
+SparkEarlyLevelPatchEntry,(1,11,0,Eldorado_P),/Alisma/Maps/Eldorado,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Eldorado_P),/Alisma/Maps/Eldorado/Eldorado_P.Eldorado_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Eldorado_P),/Alisma/Maps/Eldorado/Eldorado_P.Eldorado_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Eldorado_P),/Alisma/Maps/Eldorado/Eldorado_P.Eldorado_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Eldorado_P),/Alisma/Maps/Eldorado/Eldorado_P.Eldorado_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Benediction of Pain
+SparkEarlyLevelPatchEntry,(1,11,0,Experiment_P),/Alisma/Maps/Experiment,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Experiment_P),/Alisma/Maps/Experiment/Experiment_P.Experiment_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Experiment_P),/Alisma/Maps/Experiment/Experiment_P.Experiment_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Experiment_P),/Alisma/Maps/Experiment/Experiment_P.Experiment_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Experiment_P),/Alisma/Maps/Experiment/Experiment_P.Experiment_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# The Psychoscape
+SparkEarlyLevelPatchEntry,(1,11,0,Sanctum_P),/Alisma/Maps/Sanctum,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Sanctum_P),/Alisma/Maps/Sanctum/Sanctum_P.Sanctum_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Sanctum_P),/Alisma/Maps/Sanctum/Sanctum_P.Sanctum_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Sanctum_P),/Alisma/Maps/Sanctum/Sanctum_P.Sanctum_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Sanctum_P),/Alisma/Maps/Sanctum/Sanctum_P.Sanctum_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Grand Opening
+SparkEarlyLevelPatchEntry,(1,11,0,CasinoIntro_P),/Dandelion/Maps/CasinoIntro,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,CasinoIntro_P),/Dandelion/Maps/CasinoIntro/CasinoIntro_P.CasinoIntro_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,CasinoIntro_P),/Dandelion/Maps/CasinoIntro/CasinoIntro_P.CasinoIntro_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,CasinoIntro_P),/Dandelion/Maps/CasinoIntro/CasinoIntro_P.CasinoIntro_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,CasinoIntro_P),/Dandelion/Maps/CasinoIntro/CasinoIntro_P.CasinoIntro_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Jack's Secret
+SparkEarlyLevelPatchEntry,(1,11,0,Core_P),/Dandelion/Maps/Core,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Core_P),/Dandelion/Maps/Core/Core_P.Core_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Core_P),/Dandelion/Maps/Core/Core_P.Core_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Core_P),/Dandelion/Maps/Core/Core_P.Core_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Core_P),/Dandelion/Maps/Core/Core_P.Core_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Impound Deluxe
+SparkEarlyLevelPatchEntry,(1,11,0,Impound_P),/Dandelion/Maps/Impound,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Impound_P),/Dandelion/Maps/Impound/Impound_P.Impound_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Impound_P),/Dandelion/Maps/Impound/Impound_P.Impound_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Impound_P),/Dandelion/Maps/Impound/Impound_P.Impound_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Impound_P),/Dandelion/Maps/Impound/Impound_P.Impound_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Spendopticon
+SparkEarlyLevelPatchEntry,(1,11,0,Strip_P),/Dandelion/Maps/Strip,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Strip_P),/Dandelion/Maps/Strip/Strip_P.Strip_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Strip_P),/Dandelion/Maps/Strip/Strip_P.Strip_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Strip_P),/Dandelion/Maps/Strip/Strip_P.Strip_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/Maps/Strip/Strip_P.Strip_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# VIP Tower
+SparkEarlyLevelPatchEntry,(1,11,0,TowerLair_P),/Dandelion/Maps/TowerLair,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,TowerLair_P),/Dandelion/Maps/TowerLair/TowerLair_P.TowerLair_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,TowerLair_P),/Dandelion/Maps/TowerLair/TowerLair_P.TowerLair_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,TowerLair_P),/Dandelion/Maps/TowerLair/TowerLair_P.TowerLair_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,TowerLair_P),/Dandelion/Maps/TowerLair/TowerLair_P.TowerLair_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Compactor
+SparkEarlyLevelPatchEntry,(1,11,0,Trashtown_P),/Dandelion/Maps/Trashtown,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Trashtown_P),/Dandelion/Maps/Trashtown/Trashtown_P.Trashtown_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Trashtown_P),/Dandelion/Maps/Trashtown/Trashtown_P.Trashtown_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Trashtown_P),/Dandelion/Maps/Trashtown/Trashtown_P.Trashtown_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Trashtown_P),/Dandelion/Maps/Trashtown/Trashtown_P.Trashtown_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Gradient of Dawn (Survival)
+SparkEarlyLevelPatchEntry,(1,11,0,ProvingGrounds_Trial1_P),/Game/Maps/ProvingGrounds/Trial1,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,ProvingGrounds_Trial1_P),/Game/Maps/ProvingGrounds/Trial1/ProvingGrounds_Trial1_P.ProvingGrounds_Trial1_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,ProvingGrounds_Trial1_P),/Game/Maps/ProvingGrounds/Trial1/ProvingGrounds_Trial1_P.ProvingGrounds_Trial1_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,ProvingGrounds_Trial1_P),/Game/Maps/ProvingGrounds/Trial1/ProvingGrounds_Trial1_P.ProvingGrounds_Trial1_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,ProvingGrounds_Trial1_P),/Game/Maps/ProvingGrounds/Trial1/ProvingGrounds_Trial1_P.ProvingGrounds_Trial1_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Skydrowned Pulpit (Fervor)
+SparkEarlyLevelPatchEntry,(1,11,0,ProvingGrounds_Trial4_P),/Game/Maps/ProvingGrounds/Trial4,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,ProvingGrounds_Trial4_P),/Game/Maps/ProvingGrounds/Trial4/ProvingGrounds_Trial4_P.ProvingGrounds_Trial4_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,ProvingGrounds_Trial4_P),/Game/Maps/ProvingGrounds/Trial4/ProvingGrounds_Trial4_P.ProvingGrounds_Trial4_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,ProvingGrounds_Trial4_P),/Game/Maps/ProvingGrounds/Trial4/ProvingGrounds_Trial4_P.ProvingGrounds_Trial4_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,ProvingGrounds_Trial4_P),/Game/Maps/ProvingGrounds/Trial4/ProvingGrounds_Trial4_P.ProvingGrounds_Trial4_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Ghostlight Beacon (Cunning)
+SparkEarlyLevelPatchEntry,(1,11,0,ProvingGrounds_Trial5_P),/Game/Maps/ProvingGrounds/Trial5,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,ProvingGrounds_Trial5_P),/Game/Maps/ProvingGrounds/Trial5/ProvingGrounds_Trial5_P.ProvingGrounds_Trial5_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,ProvingGrounds_Trial5_P),/Game/Maps/ProvingGrounds/Trial5/ProvingGrounds_Trial5_P.ProvingGrounds_Trial5_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,ProvingGrounds_Trial5_P),/Game/Maps/ProvingGrounds/Trial5/ProvingGrounds_Trial5_P.ProvingGrounds_Trial5_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,ProvingGrounds_Trial5_P),/Game/Maps/ProvingGrounds/Trial5/ProvingGrounds_Trial5_P.ProvingGrounds_Trial5_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Hall Obsidian (Supremacy)
+SparkEarlyLevelPatchEntry,(1,11,0,ProvingGrounds_Trial6_P),/Game/Maps/ProvingGrounds/Trial6,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,ProvingGrounds_Trial6_P),/Game/Maps/ProvingGrounds/Trial6/ProvingGrounds_Trial6_P.ProvingGrounds_Trial6_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,ProvingGrounds_Trial6_P),/Game/Maps/ProvingGrounds/Trial6/ProvingGrounds_Trial6_P.ProvingGrounds_Trial6_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,ProvingGrounds_Trial6_P),/Game/Maps/ProvingGrounds/Trial6/ProvingGrounds_Trial6_P.ProvingGrounds_Trial6_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,ProvingGrounds_Trial6_P),/Game/Maps/ProvingGrounds/Trial6/ProvingGrounds_Trial6_P.ProvingGrounds_Trial6_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Precipice Anchor (Discipline)
+SparkEarlyLevelPatchEntry,(1,11,0,ProvingGrounds_Trial7_P),/Game/Maps/ProvingGrounds/Trial7,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,ProvingGrounds_Trial7_P),/Game/Maps/ProvingGrounds/Trial7/ProvingGrounds_Trial7_P.ProvingGrounds_Trial7_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,ProvingGrounds_Trial7_P),/Game/Maps/ProvingGrounds/Trial7/ProvingGrounds_Trial7_P.ProvingGrounds_Trial7_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,ProvingGrounds_Trial7_P),/Game/Maps/ProvingGrounds/Trial7/ProvingGrounds_Trial7_P.ProvingGrounds_Trial7_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,ProvingGrounds_Trial7_P),/Game/Maps/ProvingGrounds/Trial7/ProvingGrounds_Trial7_P.ProvingGrounds_Trial7_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Wayward Tether (Instinct)
+SparkEarlyLevelPatchEntry,(1,11,0,ProvingGrounds_Trial8_P),/Game/Maps/ProvingGrounds/Trial8,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,ProvingGrounds_Trial8_P),/Game/Maps/ProvingGrounds/Trial8/ProvingGrounds_Trial8_P.ProvingGrounds_Trial8_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,ProvingGrounds_Trial8_P),/Game/Maps/ProvingGrounds/Trial8/ProvingGrounds_Trial8_P.ProvingGrounds_Trial8_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,ProvingGrounds_Trial8_P),/Game/Maps/ProvingGrounds/Trial8/ProvingGrounds_Trial8_P.ProvingGrounds_Trial8_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,ProvingGrounds_Trial8_P),/Game/Maps/ProvingGrounds/Trial8/ProvingGrounds_Trial8_P.ProvingGrounds_Trial8_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Sanctuary
+SparkEarlyLevelPatchEntry,(1,11,0,Sanctuary3_P),/Game/Maps/Sanctuary3,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Sanctuary3_P),/Game/Maps/Sanctuary3/Sanctuary3_P.Sanctuary3_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Sanctuary3_P),/Game/Maps/Sanctuary3/Sanctuary3_P.Sanctuary3_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Sanctuary3_P),/Game/Maps/Sanctuary3/Sanctuary3_P.Sanctuary3_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Sanctuary3_P),/Game/Maps/Sanctuary3/Sanctuary3_P.Sanctuary3_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Slaughter Shaft
+SparkEarlyLevelPatchEntry,(1,11,0,COVSlaughter_P),/Game/Maps/Slaughters/COVSlaughter,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,COVSlaughter_P),/Game/Maps/Slaughters/COVSlaughter/COVSlaughter_P.COVSlaughter_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,COVSlaughter_P),/Game/Maps/Slaughters/COVSlaughter/COVSlaughter_P.COVSlaughter_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,COVSlaughter_P),/Game/Maps/Slaughters/COVSlaughter/COVSlaughter_P.COVSlaughter_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,COVSlaughter_P),/Game/Maps/Slaughters/COVSlaughter/COVSlaughter_P.COVSlaughter_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Cistern of Slaughter
+SparkEarlyLevelPatchEntry,(1,11,0,CreatureSlaughter_P),/Game/Maps/Slaughters/CreatureSlaughter,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,CreatureSlaughter_P),/Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P.CreatureSlaughter_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,CreatureSlaughter_P),/Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P.CreatureSlaughter_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,CreatureSlaughter_P),/Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P.CreatureSlaughter_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,CreatureSlaughter_P),/Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P.CreatureSlaughter_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Slaughterstar 3000
+SparkEarlyLevelPatchEntry,(1,11,0,TechSlaughter_P),/Game/Maps/Slaughters/TechSlaughter,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,TechSlaughter_P),/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_P.TechSlaughter_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,TechSlaughter_P),/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_P.TechSlaughter_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,TechSlaughter_P),/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_P.TechSlaughter_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,TechSlaughter_P),/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_P.TechSlaughter_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Destroyer's Rift
+SparkEarlyLevelPatchEntry,(1,11,0,FinalBoss_P),/Game/Maps/Zone_0/FinalBoss,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,FinalBoss_P),/Game/Maps/Zone_0/FinalBoss/FinalBoss_P.FinalBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,FinalBoss_P),/Game/Maps/Zone_0/FinalBoss/FinalBoss_P.FinalBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,FinalBoss_P),/Game/Maps/Zone_0/FinalBoss/FinalBoss_P.FinalBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,FinalBoss_P),/Game/Maps/Zone_0/FinalBoss/FinalBoss_P.FinalBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Droughts
+SparkEarlyLevelPatchEntry,(1,11,0,Prologue_P),/Game/Maps/Zone_0/Prologue,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue_P.Prologue_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue_P.Prologue_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue_P.Prologue_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue_P.Prologue_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Covenant Pass
+SparkEarlyLevelPatchEntry,(1,11,0,Recruitment_P),/Game/Maps/Zone_0/Recruitment,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Recruitment_P),/Game/Maps/Zone_0/Recruitment/Recruitment_P.Recruitment_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Recruitment_P),/Game/Maps/Zone_0/Recruitment/Recruitment_P.Recruitment_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Recruitment_P),/Game/Maps/Zone_0/Recruitment/Recruitment_P.Recruitment_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Recruitment_P),/Game/Maps/Zone_0/Recruitment/Recruitment_P.Recruitment_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Ascension Bluff
+SparkEarlyLevelPatchEntry,(1,11,0,Sacrifice_P),/Game/Maps/Zone_0/Sacrifice,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Sacrifice_P),/Game/Maps/Zone_0/Sacrifice/Sacrifice_P.Sacrifice_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Sacrifice_P),/Game/Maps/Zone_0/Sacrifice/Sacrifice_P.Sacrifice_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Sacrifice_P),/Game/Maps/Zone_0/Sacrifice/Sacrifice_P.Sacrifice_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/Maps/Zone_0/Sacrifice/Sacrifice_P.Sacrifice_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Atlas HQ
+SparkEarlyLevelPatchEntry,(1,11,0,AtlasHQ_P),/Game/Maps/Zone_1/AtlasHQ,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,AtlasHQ_P),/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_P.AtlasHQ_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,AtlasHQ_P),/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_P.AtlasHQ_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,AtlasHQ_P),/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_P.AtlasHQ_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,AtlasHQ_P),/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_P.AtlasHQ_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Meridian Metroplex
+SparkEarlyLevelPatchEntry,(1,11,0,City_P),/Game/Maps/Zone_1/City,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,City_P),/Game/Maps/Zone_1/City/City_P.City_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,City_P),/Game/Maps/Zone_1/City/City_P.City_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,City_P),/Game/Maps/Zone_1/City/City_P.City_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,City_P),/Game/Maps/Zone_1/City/City_P.City_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Forgotten Basilica
+SparkEarlyLevelPatchEntry,(1,11,0,CityBoss_P),/Game/Maps/Zone_1/CityBoss,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,CityBoss_P),/Game/Maps/Zone_1/CityBoss/CityBoss_P.CityBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,CityBoss_P),/Game/Maps/Zone_1/CityBoss/CityBoss_P.CityBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,CityBoss_P),/Game/Maps/Zone_1/CityBoss/CityBoss_P.CityBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,CityBoss_P),/Game/Maps/Zone_1/CityBoss/CityBoss_P.CityBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Neon Arterial
+SparkEarlyLevelPatchEntry,(1,11,0,CityVault_P),/Game/Maps/Zone_1/CityVault,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,CityVault_P),/Game/Maps/Zone_1/CityVault/CityVault_P.CityVault_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,CityVault_P),/Game/Maps/Zone_1/CityVault/CityVault_P.CityVault_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,CityVault_P),/Game/Maps/Zone_1/CityVault/CityVault_P.CityVault_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,CityVault_P),/Game/Maps/Zone_1/CityVault/CityVault_P.CityVault_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Athenas
+SparkEarlyLevelPatchEntry,(1,11,0,Monastery_P),/Game/Maps/Zone_1/Monastery,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Monastery_P),/Game/Maps/Zone_1/Monastery/Monastery_P.Monastery_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Monastery_P),/Game/Maps/Zone_1/Monastery/Monastery_P.Monastery_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Monastery_P),/Game/Maps/Zone_1/Monastery/Monastery_P.Monastery_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Monastery_P),/Game/Maps/Zone_1/Monastery/Monastery_P.Monastery_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Skywell-27
+SparkEarlyLevelPatchEntry,(1,11,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPlatform,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_P.OrbitalPlatform_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_P.OrbitalPlatform_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_P.OrbitalPlatform_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_P.OrbitalPlatform_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Meridian Outskirts
+SparkEarlyLevelPatchEntry,(1,11,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outskirts_P.Outskirts_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outskirts_P.Outskirts_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outskirts_P.Outskirts_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outskirts_P.Outskirts_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Lectra City
+SparkEarlyLevelPatchEntry,(1,11,0,Towers_P),/Game/Maps/Zone_1/Towers,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Towers_P),/Game/Maps/Zone_1/Towers/Towers_P.Towers_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Towers_P),/Game/Maps/Zone_1/Towers/Towers_P.Towers_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Towers_P),/Game/Maps/Zone_1/Towers/Towers_P.Towers_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Towers_P),/Game/Maps/Zone_1/Towers/Towers_P.Towers_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Jakobs Estate
+SparkEarlyLevelPatchEntry,(1,11,0,Mansion_P),/Game/Maps/Zone_2/Mansion,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_P.Mansion_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_P.Mansion_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_P.Mansion_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_P.Mansion_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Ambermire
+SparkEarlyLevelPatchEntry,(1,11,0,MarshFields_P),/Game/Maps/Zone_2/MarshFields,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,MarshFields_P),/Game/Maps/Zone_2/MarshFields/MarshFields_P.MarshFields_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,MarshFields_P),/Game/Maps/Zone_2/MarshFields/MarshFields_P.MarshFields_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,MarshFields_P),/Game/Maps/Zone_2/MarshFields/MarshFields_P.MarshFields_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,MarshFields_P),/Game/Maps/Zone_2/MarshFields/MarshFields_P.MarshFields_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Anvil
+SparkEarlyLevelPatchEntry,(1,11,0,Prison_P),/Game/Maps/Zone_2/Prison,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Prison_P),/Game/Maps/Zone_2/Prison/Prison_P.Prison_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Prison_P),/Game/Maps/Zone_2/Prison/Prison_P.Prison_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Prison_P),/Game/Maps/Zone_2/Prison/Prison_P.Prison_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Prison_P),/Game/Maps/Zone_2/Prison/Prison_P.Prison_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Voracious Canopy
+SparkEarlyLevelPatchEntry,(1,11,0,Watership_P),/Game/Maps/Zone_2/Watership,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Watership_P),/Game/Maps/Zone_2/Watership/Watership_P.Watership_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Watership_P),/Game/Maps/Zone_2/Watership/Watership_P.Watership_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Watership_P),/Game/Maps/Zone_2/Watership/Watership_P.Watership_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Watership_P),/Game/Maps/Zone_2/Watership/Watership_P.Watership_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Floodmoor Basin
+SparkEarlyLevelPatchEntry,(1,11,0,Wetlands_P),/Game/Maps/Zone_2/Wetlands,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Wetlands_P),/Game/Maps/Zone_2/Wetlands/Wetlands_P.Wetlands_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Wetlands_P),/Game/Maps/Zone_2/Wetlands/Wetlands_P.Wetlands_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Wetlands_P),/Game/Maps/Zone_2/Wetlands/Wetlands_P.Wetlands_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Wetlands_P),/Game/Maps/Zone_2/Wetlands/Wetlands_P.Wetlands_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Floating Tomb
+SparkEarlyLevelPatchEntry,(1,11,0,WetlandsBoss_P),/Game/Maps/Zone_2/WetlandsBoss,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,WetlandsBoss_P),/Game/Maps/Zone_2/WetlandsBoss/WetlandsBoss_P.WetlandsBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,WetlandsBoss_P),/Game/Maps/Zone_2/WetlandsBoss/WetlandsBoss_P.WetlandsBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,WetlandsBoss_P),/Game/Maps/Zone_2/WetlandsBoss/WetlandsBoss_P.WetlandsBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,WetlandsBoss_P),/Game/Maps/Zone_2/WetlandsBoss/WetlandsBoss_P.WetlandsBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Blackbarrel Cellars
+SparkEarlyLevelPatchEntry,(1,11,0,WetlandsVault_P),/Game/Maps/Zone_2/WetlandsVault,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,WetlandsVault_P),/Game/Maps/Zone_2/WetlandsVault/WetlandsVault_P.WetlandsVault_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,WetlandsVault_P),/Game/Maps/Zone_2/WetlandsVault/WetlandsVault_P.WetlandsVault_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,WetlandsVault_P),/Game/Maps/Zone_2/WetlandsVault/WetlandsVault_P.WetlandsVault_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,WetlandsVault_P),/Game/Maps/Zone_2/WetlandsVault/WetlandsVault_P.WetlandsVault_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Sandblast Scar
+SparkEarlyLevelPatchEntry,(1,11,0,Convoy_P),/Game/Maps/Zone_3/Convoy,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Convoy_P),/Game/Maps/Zone_3/Convoy/Convoy_P.Convoy_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Convoy_P),/Game/Maps/Zone_3/Convoy/Convoy_P.Convoy_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Convoy_P),/Game/Maps/Zone_3/Convoy/Convoy_P.Convoy_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Convoy_P),/Game/Maps/Zone_3/Convoy/Convoy_P.Convoy_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Devil's Razor
+SparkEarlyLevelPatchEntry,(1,11,0,Desert_P),/Game/Maps/Zone_3/Desert,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Desert_P),/Game/Maps/Zone_3/Desert/Desert_P.Desert_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Desert_P),/Game/Maps/Zone_3/Desert/Desert_P.Desert_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Desert_P),/Game/Maps/Zone_3/Desert/Desert_P.Desert_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Desert_P),/Game/Maps/Zone_3/Desert/Desert_P.Desert_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Great Vault
+SparkEarlyLevelPatchEntry,(1,11,0,DesertBoss_P),/Game/Maps/Zone_3/DesertBoss,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,DesertBoss_P),/Game/Maps/Zone_3/DesertBoss/DesertBoss_P.DesertBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,DesertBoss_P),/Game/Maps/Zone_3/DesertBoss/DesertBoss_P.DesertBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,DesertBoss_P),/Game/Maps/Zone_3/DesertBoss/DesertBoss_P.DesertBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,DesertBoss_P),/Game/Maps/Zone_3/DesertBoss/DesertBoss_P.DesertBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Cathedral of the Twin Gods
+SparkEarlyLevelPatchEntry,(1,11,0,Desertvault_P),/Game/Maps/Zone_3/DesertVault,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Desertvault_P),/Game/Maps/Zone_3/DesertVault/Desertvault_P.Desertvault_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Desertvault_P),/Game/Maps/Zone_3/DesertVault/Desertvault_P.Desertvault_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Desertvault_P),/Game/Maps/Zone_3/DesertVault/Desertvault_P.Desertvault_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Desertvault_P),/Game/Maps/Zone_3/DesertVault/Desertvault_P.Desertvault_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Konrad's Hold
+SparkEarlyLevelPatchEntry,(1,11,0,Mine_P),/Game/Maps/Zone_3/Mine,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Mine_P),/Game/Maps/Zone_3/Mine/Mine_P.Mine_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Mine_P),/Game/Maps/Zone_3/Mine/Mine_P.Mine_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Mine_P),/Game/Maps/Zone_3/Mine/Mine_P.Mine_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/Maps/Zone_3/Mine/Mine_P.Mine_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Splinterlands
+SparkEarlyLevelPatchEntry,(1,11,0,Motorcade_P),/Game/Maps/Zone_3/Motorcade,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Motorcade_P),/Game/Maps/Zone_3/Motorcade/Motorcade_P.Motorcade_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Motorcade_P),/Game/Maps/Zone_3/Motorcade/Motorcade_P.Motorcade_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Motorcade_P),/Game/Maps/Zone_3/Motorcade/Motorcade_P.Motorcade_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Maps/Zone_3/Motorcade/Motorcade_P.Motorcade_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Carnivora
+SparkEarlyLevelPatchEntry,(1,11,0,MotorcadeFestival_P),/Game/Maps/Zone_3/MotorcadeFestival,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,MotorcadeFestival_P),/Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_P.MotorcadeFestival_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,MotorcadeFestival_P),/Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_P.MotorcadeFestival_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,MotorcadeFestival_P),/Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_P.MotorcadeFestival_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,MotorcadeFestival_P),/Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_P.MotorcadeFestival_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Guts of Carnivora
+SparkEarlyLevelPatchEntry,(1,11,0,MotorcadeInterior_P),/Game/Maps/Zone_3/MotorcadeInterior,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,MotorcadeInterior_P),/Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_P.MotorcadeInterior_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,MotorcadeInterior_P),/Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_P.MotorcadeInterior_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,MotorcadeInterior_P),/Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_P.MotorcadeInterior_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,MotorcadeInterior_P),/Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_P.MotorcadeInterior_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Tazendeer Ruins
+SparkEarlyLevelPatchEntry,(1,11,0,Beach_P),/Game/Maps/Zone_4/Beach,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Beach_P),/Game/Maps/Zone_4/Beach/Beach_P.Beach_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Beach_P),/Game/Maps/Zone_4/Beach/Beach_P.Beach_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Beach_P),/Game/Maps/Zone_4/Beach/Beach_P.Beach_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_P.Beach_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Pyre of Stars
+SparkEarlyLevelPatchEntry,(1,11,0,Crypt_P),/Game/Maps/Zone_4/Crypt,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_P.Crypt_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_P.Crypt_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_P.Crypt_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_P.Crypt_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Desolation's Edge
+SparkEarlyLevelPatchEntry,(1,11,0,Desolate_P),/Game/Maps/Zone_4/Desolate,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Desolate_P),/Game/Maps/Zone_4/Desolate/Desolate_P.Desolate_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Desolate_P),/Game/Maps/Zone_4/Desolate/Desolate_P.Desolate_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Desolate_P),/Game/Maps/Zone_4/Desolate/Desolate_P.Desolate_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Desolate_P),/Game/Maps/Zone_4/Desolate/Desolate_P.Desolate_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Heck Hole
+SparkEarlyLevelPatchEntry,(1,11,0,BloodyHarvest_P),/Game/PatchDLC/BloodyHarvest/Maps/Seasons/BloodyHarvest,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,BloodyHarvest_P),/Game/PatchDLC/BloodyHarvest/Maps/Seasons/BloodyHarvest/BloodyHarvest_P.BloodyHarvest_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,BloodyHarvest_P),/Game/PatchDLC/BloodyHarvest/Maps/Seasons/BloodyHarvest/BloodyHarvest_P.BloodyHarvest_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,BloodyHarvest_P),/Game/PatchDLC/BloodyHarvest/Maps/Seasons/BloodyHarvest/BloodyHarvest_P.BloodyHarvest_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,BloodyHarvest_P),/Game/PatchDLC/BloodyHarvest/Maps/Seasons/BloodyHarvest/BloodyHarvest_P.BloodyHarvest_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Villa Ultraviolet
+SparkEarlyLevelPatchEntry,(1,11,0,Cartels_P),/Game/PatchDLC/Event2/Maps,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_P.Cartels_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_P.Cartels_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_P.Cartels_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_P.Cartels_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Midnight's Cairn (Maliwan Takedown)
+SparkEarlyLevelPatchEntry,(1,11,0,Raid_P),/Game/PatchDLC/Raid1/Maps/Raid,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Raid_P),/Game/PatchDLC/Raid1/Maps/Raid/Raid_P.Raid_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Raid_P),/Game/PatchDLC/Raid1/Maps/Raid/Raid_P.Raid_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Raid_P),/Game/PatchDLC/Raid1/Maps/Raid/Raid_P.Raid_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Raid_P),/Game/PatchDLC/Raid1/Maps/Raid/Raid_P.Raid_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Minos Prime / The Shattered Tribunal
+SparkEarlyLevelPatchEntry,(1,11,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_P.GuardianTakedown_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_P.GuardianTakedown_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_P.GuardianTakedown_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_P.GuardianTakedown_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Crater's Edge
+SparkEarlyLevelPatchEntry,(1,11,0,CraterBoss_P),/Geranium/Maps/CraterBoss,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,CraterBoss_P),/Geranium/Maps/CraterBoss/CraterBoss_P.CraterBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,CraterBoss_P),/Geranium/Maps/CraterBoss/CraterBoss_P.CraterBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,CraterBoss_P),/Geranium/Maps/CraterBoss/CraterBoss_P.CraterBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/CraterBoss_P.CraterBoss_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Bloodsun Canyon
+SparkEarlyLevelPatchEntry,(1,11,0,Facility_P),/Geranium/Maps/Facility,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Facility_P),/Geranium/Maps/Facility/Facility_P.Facility_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Facility_P),/Geranium/Maps/Facility/Facility_P.Facility_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Facility_P),/Geranium/Maps/Facility/Facility_P.Facility_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Facility_P),/Geranium/Maps/Facility/Facility_P.Facility_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Obsidian Forest
+SparkEarlyLevelPatchEntry,(1,11,0,Forest_P),/Geranium/Maps/Forest,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Forest_P),/Geranium/Maps/Forest/Forest_P.Forest_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Forest_P),/Geranium/Maps/Forest/Forest_P.Forest_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Forest_P),/Geranium/Maps/Forest/Forest_P.Forest_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Forest_P),/Geranium/Maps/Forest/Forest_P.Forest_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# The Blastplains
+SparkEarlyLevelPatchEntry,(1,11,0,Frontier_P),/Geranium/Maps/Frontier,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Frontier_P),/Geranium/Maps/Frontier/Frontier_P.Frontier_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Frontier_P),/Geranium/Maps/Frontier/Frontier_P.Frontier_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Frontier_P),/Geranium/Maps/Frontier/Frontier_P.Frontier_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Frontier_P),/Geranium/Maps/Frontier/Frontier_P.Frontier_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Ashfall Peaks
+SparkEarlyLevelPatchEntry,(1,11,0,Lodge_P),/Geranium/Maps/Lodge,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Lodge_P),/Geranium/Maps/Lodge/Lodge_P.Lodge_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Lodge_P),/Geranium/Maps/Lodge/Lodge_P.Lodge_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Lodge_P),/Geranium/Maps/Lodge/Lodge_P.Lodge_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Lodge_P),/Geranium/Maps/Lodge/Lodge_P.Lodge_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Vestige
+SparkEarlyLevelPatchEntry,(1,11,0,Town_P),/Geranium/Maps/Town,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Town_P),/Geranium/Maps/Town/Town_P.Town_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Town_P),/Geranium/Maps/Town/Town_P.Town_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Town_P),/Geranium/Maps/Town/Town_P.Town_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Town_P),/Geranium/Maps/Town/Town_P.Town_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Dustbound Archives
+SparkEarlyLevelPatchEntry,(1,11,0,Archive_P),/Hibiscus/Maps/Archive,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Archive_P),/Hibiscus/Maps/Archive/Archive_P.Archive_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Archive_P),/Hibiscus/Maps/Archive/Archive_P.Archive_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Archive_P),/Hibiscus/Maps/Archive/Archive_P.Archive_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Archive_P),/Hibiscus/Maps/Archive/Archive_P.Archive_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Lodge
+SparkEarlyLevelPatchEntry,(1,11,0,Bar_P),/Hibiscus/Maps/Bar,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Bar_P),/Hibiscus/Maps/Bar/Bar_P.Bar_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Bar_P),/Hibiscus/Maps/Bar/Bar_P.Bar_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Bar_P),/Hibiscus/Maps/Bar/Bar_P.Bar_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Bar_P),/Hibiscus/Maps/Bar/Bar_P.Bar_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Negul Neshai
+SparkEarlyLevelPatchEntry,(1,11,0,Camp_P),/Hibiscus/Maps/Camp,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Camp_P),/Hibiscus/Maps/Camp/Camp_P.Camp_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Camp_P),/Hibiscus/Maps/Camp/Camp_P.Camp_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Camp_P),/Hibiscus/Maps/Camp/Camp_P.Camp_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Camp_P),/Hibiscus/Maps/Camp/Camp_P.Camp_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Skittermaw Basin
+SparkEarlyLevelPatchEntry,(1,11,0,Lake_P),/Hibiscus/Maps/Lake,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Lake_P),/Hibiscus/Maps/Lake/Lake_P.Lake_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Lake_P),/Hibiscus/Maps/Lake/Lake_P.Lake_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Lake_P),/Hibiscus/Maps/Lake/Lake_P.Lake_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Lake_P),/Hibiscus/Maps/Lake/Lake_P.Lake_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Heart's Desire
+SparkEarlyLevelPatchEntry,(1,11,0,Venue_P),/Hibiscus/Maps/Venue,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Venue_P),/Hibiscus/Maps/Venue/Venue_P.Venue_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Venue_P),/Hibiscus/Maps/Venue/Venue_P.Venue_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Venue_P),/Hibiscus/Maps/Venue/Venue_P.Venue_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Venue_P),/Hibiscus/Maps/Venue/Venue_P.Venue_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Cursehaven
+SparkEarlyLevelPatchEntry,(1,11,0,Village_P),/Hibiscus/Maps/Village,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Village_P),/Hibiscus/Maps/Village/Village_P.Village_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Village_P),/Hibiscus/Maps/Village/Village_P.Village_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Village_P),/Hibiscus/Maps/Village/Village_P.Village_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Village_P),/Hibiscus/Maps/Village/Village_P.Village_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Cankerwood
+SparkEarlyLevelPatchEntry,(1,11,0,Woods_P),/Hibiscus/Maps/Woods,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Woods_P),/Hibiscus/Maps/Woods/Woods_P.Woods_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Woods_P),/Hibiscus/Maps/Woods/Woods_P.Woods_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Woods_P),/Hibiscus/Maps/Woods/Woods_P.Woods_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/Maps/Woods/Woods_P.Woods_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Stormblind Complex
+SparkEarlyLevelPatchEntry,(1,11,0,FrostSite_P),/Ixora/Maps/FrostSite,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,FrostSite_P),/Ixora/Maps/FrostSite/FrostSite_P.FrostSite_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,FrostSite_P),/Ixora/Maps/FrostSite/FrostSite_P.FrostSite_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,FrostSite_P),/Ixora/Maps/FrostSite/FrostSite_P.FrostSite_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,FrostSite_P),/Ixora/Maps/FrostSite/FrostSite_P.FrostSite_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Darkthirst Dominion
+SparkEarlyLevelPatchEntry,(1,11,0,SacrificeBoss_p),/Ixora2/Maps/Boss,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,SacrificeBoss_p),/Ixora2/Maps/Boss/SacrificeBoss_p.SacrificeBoss_p:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,SacrificeBoss_p),/Ixora2/Maps/Boss/SacrificeBoss_p.SacrificeBoss_p:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,SacrificeBoss_p),/Ixora2/Maps/Boss/SacrificeBoss_p.SacrificeBoss_p:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,SacrificeBoss_p),/Ixora2/Maps/Boss/SacrificeBoss_p.SacrificeBoss_p:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Enoch's Grove
+SparkEarlyLevelPatchEntry,(1,11,0,Cabin_P),/Ixora2/Maps/Cabin,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Cabin_P),/Ixora2/Maps/Cabin/Cabin_P.Cabin_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Cabin_P),/Ixora2/Maps/Cabin/Cabin_P.Cabin_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Cabin_P),/Ixora2/Maps/Cabin/Cabin_P.Cabin_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Cabin_P),/Ixora2/Maps/Cabin/Cabin_P.Cabin_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Scryer's Crypt
+SparkEarlyLevelPatchEntry,(1,11,0,NekroMystery_p),/Ixora2/Maps/Mystery/Nekro,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,NekroMystery_p),/Ixora2/Maps/Mystery/Nekro/NekroMystery_p.NekroMystery_p:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,NekroMystery_p),/Ixora2/Maps/Mystery/Nekro/NekroMystery_p.NekroMystery_p:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,NekroMystery_p),/Ixora2/Maps/Mystery/Nekro/NekroMystery_p.NekroMystery_p:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,NekroMystery_p),/Ixora2/Maps/Mystery/Nekro/NekroMystery_p.NekroMystery_p:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Karass Canyon
+SparkEarlyLevelPatchEntry,(1,11,0,PandoraMystery_p),/Ixora2/Maps/Mystery/Pandora,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,PandoraMystery_p),/Ixora2/Maps/Mystery/Pandora/PandoraMystery_p.PandoraMystery_p:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,PandoraMystery_p),/Ixora2/Maps/Mystery/Pandora/PandoraMystery_p.PandoraMystery_p:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,PandoraMystery_p),/Ixora2/Maps/Mystery/Pandora/PandoraMystery_p.PandoraMystery_p:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,PandoraMystery_p),/Ixora2/Maps/Mystery/Pandora/PandoraMystery_p.PandoraMystery_p:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+# Eschaton Row
+SparkEarlyLevelPatchEntry,(1,11,0,Noir_P),/Ixora2/Maps/Noir,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
+SparkEarlyLevelPatchEntry,(1,1,1,Noir_P),/Ixora2/Maps/Noir/Noir_P.Noir_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Noir_P),/Ixora2/Maps/Noir/Noir_P.Noir_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeRotation,0,,(Pitch=0.000000,Yaw=0.000000,Roll=0.000000)
+SparkEarlyLevelPatchEntry,(1,1,1,Noir_P),/Ixora2/Maps/Noir/Noir_P.Noir_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeScale3D,0,,(X=1.000000,Y=1.000000,Z=1.000000)
+SparkLevelPatchEntry,(1,1,0,Noir_P),/Ixora2/Maps/Noir/Noir_P.Noir_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
+
+###
 ### Simple Animation Speedups
 ###
 
@@ -776,6 +1298,31 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Promethea/Toilet/Animation
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Promethea/Toilet/Animation/AS_Open_v1.AS_Open_v1,Notifies.Notifies[4].SegmentLength,0,,0.18
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Promethea/Toilet/Animation/AS_Open_v1.AS_Open_v1,Notifies.Notifies[4].LinkValue,0,,0.140547
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Promethea/Toilet/Animation/AS_Open_v1.AS_Open_v1,SequenceLength,0,,0.18
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,RateScale,0,,2
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[0].SegmentLength,0,,1.183333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[1].SegmentLength,0,,1.183333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[1].LinkValue,0,,0.092561
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[2].SegmentLength,0,,1.183333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[2].LinkValue,0,,0.295453
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[3].SegmentLength,0,,1.183333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[3].LinkValue,0,,0.388219
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[4].SegmentLength,0,,1.183333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[4].LinkValue,0,,0.397118
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[5].SegmentLength,0,,1.183333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[5].LinkValue,0,,0.441945
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[6].SegmentLength,0,,1.183333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[6].LinkValue,0,,0.552383
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[7].SegmentLength,0,,1.183333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[7].LinkValue,0,,0.583672
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[8].SegmentLength,0,,1.183333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[8].LinkValue,0,,0.607621
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[9].SegmentLength,0,,1.183333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[9].LinkValue,0,,0.790903
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[10].SegmentLength,0,,1.183333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[10].LinkValue,0,,1.065038
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[11].SegmentLength,0,,1.183333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,Notifies.Notifies[11].LinkValue,0,,1.183333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2,SequenceLength,0,,1.183333
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Geranium/Lootables/CashRegister/Animation/AS_Open.AS_Open,RateScale,0,,5
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Geranium/Lootables/CashRegister/Animation/AS_Open.AS_Open,Notifies.Notifies[0].SegmentLength,0,,0.198333
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Geranium/Lootables/CashRegister/Animation/AS_Open.AS_Open,Notifies.Notifies[1].SegmentLength,0,,0.198333

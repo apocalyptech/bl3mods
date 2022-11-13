@@ -40,6 +40,11 @@ that we can't do much about at the moment, though I'll be looking into it
 more for the eventual 1.0 release.  Check the full README for known bugs and
 my current TODO!
 
+**NOTE:** The Vault Card Chest-opening speed tweak currently *requires*
+using OpenHotfixLoader (OHL) instead of B3HM.  If B3HM v1.0.2 ever gets
+released, that version should be supported too, but v1.0.1 will *not*
+work with that Vault Card chest.
+
 A few known quirks of running with this mod:
 * To get on top of the "main" elevator in Meridian Outskirts (to reach the
   Typhon Dead Drop), you'll likely either have to use Photo Mode to hit
@@ -90,7 +95,6 @@ TODO
   (at least, the sort 'round Tannis's dig site in The Droughts, and in Athenas)
 * Diamond Armory console?
 * Check CZ47's Faster NPCs mod (and make a note about compatibility, if need be)
-* Vault Card chest-opening
 
 Changelog
 =========
@@ -98,6 +102,7 @@ Changelog
 **v1.0.0** - *(unreleased)*
  * Fixed Typhon Dead Drop Chests
  * Tightened up various chest-opening animations (including digistruct contents)
+ * Added Vault Card chest-opening animation
  * Mission-Specific Animations:
    * Statue scanner/printer from Golden Calves
    * Coffee-pouring animation during Rise and Grind (pretty slight improvement,
