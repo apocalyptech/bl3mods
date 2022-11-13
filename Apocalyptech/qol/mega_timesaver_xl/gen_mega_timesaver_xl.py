@@ -316,6 +316,26 @@ for cat_name, obj_names in [
 
     mod.newline()
 
+mod.header('Extra Container Tweaks')
+
+mod.comment('Maliwan Ammo Crate Digistructs')
+# Honestly not sure what exactly this controls, though it's *not* anything to do with the animation trigger
+mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
+        '/Game/Lootables/_Design/Classes/Maliwan/BPIO_Lootable_Maliwan_AmmoCrate.BPIO_Lootable_Maliwan_AmmoCrate_C:Loot_GEN_VARIABLE',
+        'AutoLootDelayOverride',
+        0.8/global_scale)
+# This is the delay for the "light burst" effect, and maybe when the digistruct animation
+mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
+        '/Game/GameData/Loot/CoordinatedEffects/BP_CE_Maliwan_Loot_Digistruct_In.Default__BP_CE_Maliwan_Loot_Digistruct_In_C',
+        'ParticleEffects.ParticleEffects[0].StartTime',
+        0.25/global_scale)
+# *this* is what speeds up the actual digistruct animation on the individual items
+mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
+        '/Game/GameData/Loot/CoordinatedEffects/BP_CE_Maliwan_Loot_Digistruct_In.Default__BP_CE_Maliwan_Loot_Digistruct_In_C',
+        'Duration',
+        round(2.1/global_scale, 6))
+mod.newline()
+
 mod.header('Eridian Tools')
 
 for anim_obj in [

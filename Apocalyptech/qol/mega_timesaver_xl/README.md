@@ -91,14 +91,13 @@ TODO
 * Diamond Armory console?
 * Check CZ47's Faster NPCs mod (and make a note about compatibility, if need be)
 * Vault Card chest-opening
-* Maliwan small ammo chests could digistruct in the ammo a bit earlier
 
 Changelog
 =========
 
 **v1.0.0** - *(unreleased)*
  * Fixed Typhon Dead Drop Chests
- * Tightened up other chest-opening animations a bit
+ * Tightened up various chest-opening animations (including digistruct contents)
  * Mission-Specific Animations:
    * Statue scanner/printer from Golden Calves
    * Coffee-pouring animation during Rise and Grind (pretty slight improvement,

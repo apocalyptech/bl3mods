@@ -987,6 +987,15 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/Doors/Eden_6/Door
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/Doors/Eden_6/Door_Eden6_VehicleSpawner/Animation/AS_VehicleDoor_Open.AS_VehicleDoor_Open,SequenceLength,0,,0.64
 
 ###
+### Extra Container Tweaks
+###
+
+# Maliwan Ammo Crate Digistructs
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Design/Classes/Maliwan/BPIO_Lootable_Maliwan_AmmoCrate.BPIO_Lootable_Maliwan_AmmoCrate_C:Loot_GEN_VARIABLE,AutoLootDelayOverride,0,,0.16
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/GameData/Loot/CoordinatedEffects/BP_CE_Maliwan_Loot_Digistruct_In.Default__BP_CE_Maliwan_Loot_Digistruct_In_C,ParticleEffects.ParticleEffects[0].StartTime,0,,0.05
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/GameData/Loot/CoordinatedEffects/BP_CE_Maliwan_Loot_Digistruct_In.Default__BP_CE_Maliwan_Loot_Digistruct_In_C,Duration,0,,0.42
+
+###
 ### Eridian Tools
 ###
 
