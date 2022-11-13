@@ -100,6 +100,8 @@ TODO
   * Statue printer/scanner
   * Taking Flight elevator
   * Meridian Outskirts elevators
+* Unrelatedly to re-test:
+  * Moxxi slot-machine eridium bump
 
 Changelog
 =========

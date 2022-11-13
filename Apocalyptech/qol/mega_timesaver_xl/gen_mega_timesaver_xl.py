@@ -1562,12 +1562,70 @@ if False:
                     0.1,
                     notify=notify)
 
-    # Bit of a test to see how these things behave if we set them to attach their loot rather than spew
-    # it out, but this doesn't actually change the `getall` results either, so no idea.
-    mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
-            '/Game/Lootables/_Design/Classes/Global/BPIO_Lootable_BonePile.Default__BPIO_Lootable_BonePile_C',
-            'ShouldAttachLoot',
-            'True')
+    # So after some more experimentation, I think that the basic issue is that loot
+    # doesn't get auto-picked-up until it's no longer being affected by physics.  The
+    # engine just waits for them to get "settled" and *then* adds them into whatever
+    # structure controls "these are the things you can auto-pick-up."  So in the end,
+    # it's sot of the `ShouldAttachLoot` boolean which determines how quickly things
+    # like ammo/health/money will get auto-picked up.  The `bSimulatePhysicsAfterOpening`
+    # boolean is actually for the container itself, not the loot -- think of the way
+    # cardboard boxes get physicsy after they've been opened.  I figured I'd try
+    # turning that off too, anyway, just so any loot-attachment didn't get screwed
+    # up.
+    #
+    # Anyway, first attempt: altering the Default__ object.  This just doesn't work;
+    # the attrs never get updated on the map objects.  I think it's 'cause the map
+    # objects are sort of hardcoded with the defaults already.
+    for hf_type in [Mod.EARLYLEVEL, Mod.LEVEL]:
+        for notify in [True, False]:
+            mod.reg_hotfix(hf_type, 'Towers_P',
+                    '/Game/Lootables/_Design/Classes/CoV/BPIO_Lootable_COV_CardboardBox.Default__BPIO_Lootable_COV_CardboardBox_C',
+                    'bSimulatePhysicsAfterOpening',
+                    'False',
+                    notify=notify)
+            mod.reg_hotfix(hf_type, 'Towers_P',
+                    '/Game/Lootables/_Design/Classes/CoV/BPIO_Lootable_COV_CardboardBox.Default__BPIO_Lootable_COV_CardboardBox_C',
+                    'ShouldAttachLoot',
+                    'True',
+                    notify=notify)
+
+    # ... aaand testing this out by hitting each individual map object.  This *does*
+    # work!  The cardboard boxes don't get physics after opening, the loot gets
+    # "attached" inside, and money/health/ammo will get immediately auto-picked-up.
+    # In the end I wouldn't be willing to do this, though, 'cause I kind of like
+    # the default dispersal method (and it might end up weird for stuff like guns),
+    # and also because I'd have to touch literally every single relevant object in
+    # the game to do it this way.  Eesh.
+    #
+    # Anyway, the only other alternative here would be to see if there's *some* way
+    # to tell the engine to auto-pick-up items even if they're being acted on by
+    # physics.  It's possible that there's a boolean somewhere which'd do that (or
+    # maybe some ubergraph stuff?) but I haven't found it yet, and don't really care
+    # to work hard enough to find it.  I assume that that behavior isn't default
+    # For A Reason -- like maybe it's very "expensive" in the engine to keep updating
+    # those locations in realtime, in whatever structure controls auto-pick-up.
+    # Anyway, for now I'm definitely giving up on it.
+    for map_name in [
+            '/Game/Maps/Zone_1/Towers/Towers_P',
+            '/Game/Maps/Zone_1/Towers/Towers_Combat',
+            '/Game/Maps/Zone_1/Towers/Towers_Light',
+            ]:
+        map_data = data.get_data(map_name)
+        map_last = map_name.rsplit('/', 1)[-1]
+        for export in map_data:
+            if export['export_type'] == 'BPIO_Lootable_COV_CardboardBox_C':
+                export_name = export['_jwp_object_name']
+                obj_full = f'{map_name}.{map_last}:PersistentLevel.{export_name}'
+                mod.reg_hotfix(Mod.EARLYLEVEL, 'Towers_P',
+                        obj_full,
+                        'bSimulatePhysicsAfterOpening',
+                        'False',
+                        notify=True)
+                mod.reg_hotfix(Mod.EARLYLEVEL, 'Towers_P',
+                        obj_full,
+                        'ShouldAttachLoot',
+                        'True',
+                        notify=True)
 
 if False:
 
