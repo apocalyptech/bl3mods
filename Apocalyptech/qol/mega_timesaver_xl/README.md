@@ -74,9 +74,7 @@ TODO
 * Pretty much every mission-specific animation
 * Elevators
 * Lost Loot machine?
-* I can speed up the slot machine animations easily, but they don't actually
-  drop loot until after a set timer (synced with the sound effects).  Haven't
-  been able to figure that out yet.
+* DLC1 Slot Machines
 * Delay after breaking bone piles, trash cans, etc (basically pickups which
   aren't actually "connected" to a container)
   * Bone Piles
@@ -111,12 +109,6 @@ Changelog
  * Fixed Typhon Dead Drop Chests
  * Tightened up various chest-opening animations (including digistruct contents)
  * Added Vault Card chest-opening animation
- * Mission-Specific Animations:
-   * Statue scanner/printer from Golden Calves
-   * Coffee-pouring animation during Rise and Grind (pretty slight improvement,
-     and if localization dialogue other than English happens to be longer, it's
-     possible that some dialogue might get cut off)
-   * Second Bell-of-Peace door opening on Athenas
  * Character Movement Speed:
    * Ace Baron (from Healers and Dealers)
    * Ellie
@@ -127,6 +119,14 @@ Changelog
    * Both Meridian Outskirts elevators
  * Doors:
    * Meridian Metroplex hub door opening
+ * Other Additions:
+   * Slot Machines
+ * Mission-Specific Animations:
+   * Statue scanner/printer from Golden Calves
+   * Coffee-pouring animation during Rise and Grind (pretty slight improvement,
+     and if localization dialogue other than English happens to be longer, it's
+     possible that some dialogue might get cut off)
+   * Second Bell-of-Peace door opening on Athenas
 
 Aug 1, 2022 *(no version number change)*
  * Updated to use [new metadata tags](https://github.com/apple1417/blcmm-parsing/tree/master/blimp)

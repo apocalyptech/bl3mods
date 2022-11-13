@@ -9652,6 +9652,45 @@ SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripte
 ### Other
 ###
 
+# BPIO_SlotMachine
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.121759
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..EventTracks.EventTracks[0].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,0.75
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..EventTracks.EventTracks[1].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,1.0
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..EventTracks.EventTracks[2].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,1.2475
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.75
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.05
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.0
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.1
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.25
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[2].Object..TimelineLength,0,,0.5
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.025
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,0.2125
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[4].Time,0,,0.25
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..TimelineLength,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[1].Time,0,,0.0275
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[2].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[3].Time,0,,0.1
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[4].Time,0,,0.14721
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[5].Time,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[1].Time,0,,0.0275
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[2].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[3].Time,0,,0.077647
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[4].Time,0,,0.0867
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[5].Time,0,,0.136252
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[6].Time,0,,0.177227
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[7].Time,0,,0.1875
+
+###
+### Slot Machine Tweaks
+###
+
+SparkLevelPatchEntry,(1,7,0,Sanctuary3_P),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,0,1,ExecuteUbergraph_BPIO_SlotMachine,1,1513,1:5,4:1.25
+SparkLevelPatchEntry,(1,7,0,Sanctuary3_P),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,0,1,ExecuteUbergraph_BPIO_SlotMachine,1,2889,1:1,4:0.25
+
 ###
 ### Elevators
 ###

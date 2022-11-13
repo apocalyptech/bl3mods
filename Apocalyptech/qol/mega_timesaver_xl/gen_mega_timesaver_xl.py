@@ -393,6 +393,15 @@ for cat_name, obj_names in [
             # Called by IO_Door_1000x600_SlideUp_Promethea_Vehicle2, the door to the hub area in City_P
             '/Game/InteractiveObjects/Doors/Eden_6/Door_Eden6_VehicleSpawner/Animation/AS_VehicleDoor_Open',
             ]),
+        # Doing this ends up screwing up the slots pretty thoroughly, actually -- the animation gets killed
+        # pretty much immediately, so the rewards get stuck "inside" the machine until the 10-sec auto-drop
+        # timer elapses.  Weird.  Anyway, the drawer animations aren't awful anyway, so just leave 'em.
+        #('Slot Machine Components', [
+        #    '/Game/InteractiveObjects/GameSystemMachines/SlotMachine/Animation/AS_SlotMachine_Drawer_Close',
+        #    '/Game/InteractiveObjects/GameSystemMachines/SlotMachine/Animation/AS_SlotMachine_Drawer_Open',
+        #    '/Game/InteractiveObjects/GameSystemMachines/SlotMachine/Animation/AS_Slotmachine_Locker_Closing',
+        #    '/Game/InteractiveObjects/GameSystemMachines/SlotMachine/Animation/AS_Slotmachine_Locker_Opening',
+        #    ]),
         ]:
 
     mod.comment(cat_name)
@@ -1154,11 +1163,8 @@ for category, obj_names in [
             ('Golden Calves Statue Scanner/Printer', 'Sacrifice_P', '/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine'),
             ]),
         ('Other', [
-            # This *does* speed up nearly all the slot machine animations, but the machine doesn't actually
-            # spit out loot (or reset, in the event of no loot) until its sound effects are done, so there's
-            # some other timing thing going on here, too.  No point speeding up the first bits if the last
-            # ones still have to wait.
-            #'/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine',
+            # Needs some other tweaks as well, done below.
+            '/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine',
             ]),
         ]:
 
@@ -1257,6 +1263,22 @@ for category, obj_names in [
             print('NOTICE - No curve timings found for {}'.format(base_obj_name))
 
         mod.newline()
+
+# TODO: DLC1
+mod.header('Slot Machine Tweaks')
+mod.bytecode_hotfix(Mod.LEVEL, 'Sanctuary3_P',
+        '/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine',
+        'ExecuteUbergraph_BPIO_SlotMachine',
+        1513,
+        5,
+        5/global_scale)
+mod.bytecode_hotfix(Mod.LEVEL, 'Sanctuary3_P',
+        '/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine',
+        'ExecuteUbergraph_BPIO_SlotMachine',
+        2889,
+        1,
+        1/global_scale)
+mod.newline()
 
 # `getall Elevator`
 mod.header('Elevators')
