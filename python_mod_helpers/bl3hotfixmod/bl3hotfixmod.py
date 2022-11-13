@@ -51,21 +51,24 @@ class _StreamingBlueprintPosition:
                 self.obj_name.split('.')[-2],
                 map_name,
                 ))
-        mod.reg_hotfix(Mod.EARLYLEVEL, map_name,
-                self.obj_name,
-                'RelativeLocation',
-                '(X={:.6f},Y={:.6f},Z={:.6f})'.format(*self.location),
-                notify=True)
-        mod.reg_hotfix(Mod.EARLYLEVEL, map_name,
-                self.obj_name,
-                'RelativeRotation',
-                '(Pitch={:.6f},Yaw={:.6f},Roll={:.6f})'.format(*self.rotation),
-                notify=True)
-        mod.reg_hotfix(Mod.EARLYLEVEL, map_name,
-                self.obj_name,
-                'RelativeScale3D',
-                '(X={:.6f},Y={:.6f},Z={:.6f})'.format(*self.scale),
-                notify=True)
+        if self.location != (0,0,0):
+            mod.reg_hotfix(Mod.EARLYLEVEL, map_name,
+                    self.obj_name,
+                    'RelativeLocation',
+                    '(X={:.6f},Y={:.6f},Z={:.6f})'.format(*self.location),
+                    notify=True)
+        if self.rotation != (0,0,0):
+            mod.reg_hotfix(Mod.EARLYLEVEL, map_name,
+                    self.obj_name,
+                    'RelativeRotation',
+                    '(Pitch={:.6f},Yaw={:.6f},Roll={:.6f})'.format(*self.rotation),
+                    notify=True)
+        if self.scale != (1,1,1):
+            mod.reg_hotfix(Mod.EARLYLEVEL, map_name,
+                    self.obj_name,
+                    'RelativeScale3D',
+                    '(X={:.6f},Y={:.6f},Z={:.6f})'.format(*self.scale),
+                    notify=True)
 
 class _StreamingBlueprintHelper:
     """
