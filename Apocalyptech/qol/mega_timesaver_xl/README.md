@@ -52,6 +52,8 @@ A few known quirks of running with this mod:
   to the bottom.
 
 Some things intentionally *not* handled by the mod:
+* The Viper Drive uses in Space-Laser Tag are all pretty dialogue-dependent,
+  so I left those alone.
 * The Desolation's Edge mission "Transaction-Packed" has been left alone.
   I recommend using my "Transaction-Packed: Abridged" to basically skip
   the entire mission, instead.
@@ -121,6 +123,7 @@ Changelog
    * Both Meridian Outskirts elevators
  * Doors:
    * Meridian Metroplex hub door opening
+   * A couple doors from DLC6
  * Other Additions:
    * Slot Machines
  * Mission-Specific Animations:

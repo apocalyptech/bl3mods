@@ -27,11 +27,11 @@ getall BPIO_Lootable_VaultCard_RedCrate_C OpeningInteractions
   /Game/Maps/Zone_0/Recruitment/Recruitment_P
   /Game/Maps/Zone_0/Sacrifice/Sacrifice_P
   /Game/Maps/Zone_1/AtlasHQ/AtlasHQ_P
-  /Game/Maps/Zone_1/City/City_P
+* /Game/Maps/Zone_1/City/City_P
   /Game/Maps/Zone_1/CityBoss/CityBoss_P
   /Game/Maps/Zone_1/CityVault/CityVault_P
 * /Game/Maps/Zone_1/Monastery/Monastery_P
-  /Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_P
+* /Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_P
 * /Game/Maps/Zone_1/Outskirts/Outskirts_P
 * /Game/Maps/Zone_1/Towers/Towers_P
   /Game/Maps/Zone_2/Mansion/Mansion_P
@@ -74,4 +74,4 @@ getall BPIO_Lootable_VaultCard_RedCrate_C OpeningInteractions
   /Ixora2/Maps/Cabin/Cabin_P
   /Ixora2/Maps/Mystery/Nekro/NekroMystery_p
   /Ixora2/Maps/Mystery/Pandora/PandoraMystery_p
-  /Ixora2/Maps/Noir/Noir_P
+* /Ixora2/Maps/Noir/Noir_P

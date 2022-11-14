@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # vim: set expandtab tabstop=4 shiftwidth=4:
 
-# Copyright 2021 Christopher J. Kucera
+# Copyright 2021-2022 Christopher J. Kucera
 # <cj@apocalyptech.com>
-# <http://apocalyptech.com/contact.php>
+# <https://apocalyptech.com/contact.php>
 #
 # This Borderlands 3 Hotfix Mod is free software: you can redistribute it
 # and/or modify it under the terms of the GNU General Public License
@@ -1134,6 +1134,10 @@ for category, obj_names in [
             '/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Village/IO_Hib_Door_IronGate',
             '/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Woods/IO_Hib_Door_400x400_SlideDoor',
             '/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Woods/IO_Hib_Door_800x600_SlideDoor',
+            '/Ixora2/InteractiveObjects/Doors/IO_Door_400x400_SlideUp_Eridian_Generic',
+            # No timing parameters
+            #'/Ixora2/InteractiveObjects/Doors/IO_Door_Custom_Eridian',
+            '/Ixora2/InteractiveObjects/Doors/IO_Door_SlideLeftAndRight_AlleyGate',
             ]),
         ('Switches', [
             # find $(find . -name Switches) -name "IO_*.uasset" | sort -i | cut -d. -f2
@@ -1161,6 +1165,10 @@ for category, obj_names in [
             ]),
         ('Mission-Specific', [
             ('Golden Calves Statue Scanner/Printer', 'Sacrifice_P', '/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine'),
+            ]),
+        ('More Containers', [
+            # This basically just speeds up the turn-to-green which allows it to be opened
+            '/Game/Lootables/_Design/Classes/Eridian/BPIO_Lootable_Eridian_WhiteChestCrystal',
             ]),
         ('Other', [
             # Needs some other tweaks as well, done below.

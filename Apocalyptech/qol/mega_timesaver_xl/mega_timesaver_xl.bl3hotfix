@@ -9308,6 +9308,32 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Hibiscus/InteractiveObjects/Systems/Doors
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Woods/IO_Hib_Door_800x600_SlideDoor.IO_Hib_Door_800x600_SlideDoor_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.0625
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Woods/IO_Hib_Door_800x600_SlideDoor.IO_Hib_Door_800x600_SlideDoor_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.125
 
+# IO_Door_400x400_SlideUp_Eridian_Generic
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_400x400_SlideUp_Eridian_Generic.IO_Door_400x400_SlideUp_Eridian_Generic_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.625
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_400x400_SlideUp_Eridian_Generic.IO_Door_400x400_SlideUp_Eridian_Generic_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.625
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_400x400_SlideUp_Eridian_Generic.IO_Door_400x400_SlideUp_Eridian_Generic_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.025
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_400x400_SlideUp_Eridian_Generic.IO_Door_400x400_SlideUp_Eridian_Generic_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.225
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_400x400_SlideUp_Eridian_Generic.IO_Door_400x400_SlideUp_Eridian_Generic_C,Timelines.Timelines[1].Object..TimelineLength,0,,0.125
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_400x400_SlideUp_Eridian_Generic.IO_Door_400x400_SlideUp_Eridian_Generic_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_400x400_SlideUp_Eridian_Generic.IO_Door_400x400_SlideUp_Eridian_Generic_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.125
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_400x400_SlideUp_Eridian_Generic.IO_Door_400x400_SlideUp_Eridian_Generic_C,Timelines.Timelines[2].Object..TimelineLength,0,,0.125
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_400x400_SlideUp_Eridian_Generic.IO_Door_400x400_SlideUp_Eridian_Generic_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_400x400_SlideUp_Eridian_Generic.IO_Door_400x400_SlideUp_Eridian_Generic_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.125
+
+# IO_Door_SlideLeftAndRight_AlleyGate
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_SlideLeftAndRight_AlleyGate.IO_Door_SlideLeftAndRight_AlleyGate_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.9375
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_SlideLeftAndRight_AlleyGate.IO_Door_SlideLeftAndRight_AlleyGate_C,Timelines.Timelines[0].Object..EventTracks.EventTracks[0].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,0.375
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_SlideLeftAndRight_AlleyGate.IO_Door_SlideLeftAndRight_AlleyGate_C,Timelines.Timelines[0].Object..EventTracks.EventTracks[1].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,0.625
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_SlideLeftAndRight_AlleyGate.IO_Door_SlideLeftAndRight_AlleyGate_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.9375
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_SlideLeftAndRight_AlleyGate.IO_Door_SlideLeftAndRight_AlleyGate_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.9375
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_SlideLeftAndRight_AlleyGate.IO_Door_SlideLeftAndRight_AlleyGate_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.9375
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_SlideLeftAndRight_AlleyGate.IO_Door_SlideLeftAndRight_AlleyGate_C,Timelines.Timelines[1].Object..TimelineLength,0,,0.125
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_SlideLeftAndRight_AlleyGate.IO_Door_SlideLeftAndRight_AlleyGate_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_SlideLeftAndRight_AlleyGate.IO_Door_SlideLeftAndRight_AlleyGate_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.125
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_SlideLeftAndRight_AlleyGate.IO_Door_SlideLeftAndRight_AlleyGate_C,Timelines.Timelines[2].Object..TimelineLength,0,,0.125
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_SlideLeftAndRight_AlleyGate.IO_Door_SlideLeftAndRight_AlleyGate_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/Doors/IO_Door_SlideLeftAndRight_AlleyGate.IO_Door_SlideLeftAndRight_AlleyGate_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.125
+
 ###
 ### Switches
 ###
@@ -9499,6 +9525,16 @@ SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripte
 SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[1].Object..VectorTracks.VectorTracks[4].CurveVector.Object..FloatCurves.Keys.Keys[2].Time,0,,0.499067
 SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[1].Object..VectorTracks.VectorTracks[4].CurveVector.Object..FloatCurves.Keys.Keys[3].Time,0,,0.519932
 SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[1].Object..VectorTracks.VectorTracks[5].CurveVector.Object..FloatCurves.Keys.Keys[0].Time,0,,0.35
+
+###
+### More Containers
+###
+
+# BPIO_Lootable_Eridian_WhiteChestCrystal
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Design/Classes/Eridian/BPIO_Lootable_Eridian_WhiteChestCrystal.BPIO_Lootable_Eridian_WhiteChestCrystal_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.75
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Design/Classes/Eridian/BPIO_Lootable_Eridian_WhiteChestCrystal.BPIO_Lootable_Eridian_WhiteChestCrystal_C,Timelines.Timelines[0].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[1].Time,0,,0.308933
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Design/Classes/Eridian/BPIO_Lootable_Eridian_WhiteChestCrystal.BPIO_Lootable_Eridian_WhiteChestCrystal_C,Timelines.Timelines[0].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[2].Time,0,,0.48434
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Design/Classes/Eridian/BPIO_Lootable_Eridian_WhiteChestCrystal.BPIO_Lootable_Eridian_WhiteChestCrystal_C,Timelines.Timelines[0].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[3].Time,0,,0.75
 
 ###
 ### Other
