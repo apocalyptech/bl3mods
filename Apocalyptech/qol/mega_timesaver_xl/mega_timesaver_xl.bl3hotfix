@@ -1383,7 +1383,7 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Hibiscus/InteractiveObjects/Lootables/Ten
 
 # Doors
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/Doors/Eden_6/Door_Eden6_VehicleSpawner/Animation/AS_VehicleDoor_Open.AS_VehicleDoor_Open,RateScale,0,,4
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/Doors/Eden_6/Door_Eden6_VehicleSpawner/Animation/AS_VehicleDoor_Open.AS_VehicleDoor_Open,SequenceLength,0,,0.8
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/Doors/Eden_6/Door_Eden6_VehicleSpawner/Animation/AS_VehicleDoor_Open.AS_VehicleDoor_Open,SequenceLength,0,,3.2
 
 ###
 ### Extra Container Tweaks
@@ -9576,8 +9576,8 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shar
 ### Slot Machine Tweaks
 ###
 
-SparkLevelPatchEntry,(1,7,0,Sanctuary3_P),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,0,1,ExecuteUbergraph_BPIO_SlotMachine,1,1513,1:5,4:1.25
-SparkLevelPatchEntry,(1,7,0,Sanctuary3_P),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,0,1,ExecuteUbergraph_BPIO_SlotMachine,1,2889,1:1,4:0.25
+SparkLevelPatchEntry,(1,7,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,0,1,ExecuteUbergraph_BPIO_SlotMachine,1,1513,1:5,4:1.25
+SparkLevelPatchEntry,(1,7,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,0,1,ExecuteUbergraph_BPIO_SlotMachine,1,2889,1:1,4:0.25
 
 ###
 ### Elevators
@@ -9590,6 +9590,14 @@ SparkEarlyLevelPatchEntry,(1,1,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outski
 # Meridian Outskirts - Under Rax/Max Platform
 SparkEarlyLevelPatchEntry,(1,1,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outskirts_LowerSector.Outskirts_LowerSector:PersistentLevel.Elevator_UnderBridge_2,ElevatorSpeed,0,,480
 SparkEarlyLevelPatchEntry,(1,1,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outskirts_LowerSector.Outskirts_LowerSector:PersistentLevel.Elevator_UnderBridge_2,ElevatorTravelTime,0,,2.5
+
+# Skywell-27 - Boss Elevator
+SparkEarlyLevelPatchEntry,(1,1,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_Boss.OrbitalPlatform_Boss:PersistentLevel.Elevator_Cargo_OrbitalPlatform_2,ElevatorSpeed,0,,800
+SparkEarlyLevelPatchEntry,(1,1,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_Boss.OrbitalPlatform_Boss:PersistentLevel.Elevator_Cargo_OrbitalPlatform_2,ElevatorTravelTime,0,,2.5
+
+# Skywell-27 - Main Elevator
+SparkEarlyLevelPatchEntry,(1,1,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_Combat.OrbitalPlatform_Combat:PersistentLevel.Elevator_Cargo_OrbitalPlatform_2,ElevatorSpeed,0,,8000
+SparkEarlyLevelPatchEntry,(1,1,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_Combat.OrbitalPlatform_Combat:PersistentLevel.Elevator_Cargo_OrbitalPlatform_2,ElevatorTravelTime,0,,2.5
 
 # The Droughts - Taking Flight (Sanctuary III Drydock)
 SparkEarlyLevelPatchEntry,(1,1,0,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue_M_Ep04_EarnSpaceship.Prologue_M_Ep04_EarnSpaceship:PersistentLevel.Elevator_Ep04_Prologue,ElevatorSpeed,0,,700

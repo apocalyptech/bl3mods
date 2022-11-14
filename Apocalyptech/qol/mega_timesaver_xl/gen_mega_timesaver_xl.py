@@ -368,7 +368,7 @@ for cat_name, obj_names in [
             '/Game/Lootables/Promethea/Toilet/Animation/AS_Open_v1',
             # Make this one not *quite* as fast as the rest.  Also requires the injection
             # above this, otherwise this object won't exist yet.
-            ('/Game/PatchDLC/VaultCard/AS_Open_v2', 2),
+            ('/Game/PatchDLC/VaultCard/AS_Open_v2', 2, 2),
             '/Geranium/Lootables/CashRegister/Animation/AS_Open',
             '/Geranium/Lootables/Chest_DeadDrop/Model/Anims/AS_Open_Ger',
             '/Geranium/Lootables/_Design/Classes/AS_Open_MoneyBack',
@@ -390,8 +390,14 @@ for cat_name, obj_names in [
             '/Hibiscus/InteractiveObjects/Lootables/TentacleToilet/Animation/AS_TentacleToilet_OpenAndDropWeapon',
             ]),
         ('Doors', [
-            # Called by IO_Door_1000x600_SlideUp_Promethea_Vehicle2, the door to the hub area in City_P
-            '/Game/InteractiveObjects/Doors/Eden_6/Door_Eden6_VehicleSpawner/Animation/AS_VehicleDoor_Open',
+            # Called by IO_Door_1000x600_SlideUp_Promethea_Vehicle2, the door to the hub area in City_P,
+            # and also before the big pit in OrbitalPlatform_P (after the thruster).  We're doing some
+            # custom sequence scaling here 'cause in OrbitalPlatform_P, if we leave the animsequence
+            # scaling at the default, the door animation freezes *right* at the beginning and doesn't
+            # open hardly at all.  Leaving the sequence scale at 1 lets that work fine though, and the
+            # animation is still sped up, so that should do for now.  It does make me wonder if we maybe
+            # shouldn't be touching that value *at all*, but I guess I'll leave it for now.
+            ('/Game/InteractiveObjects/Doors/Eden_6/Door_Eden6_VehicleSpawner/Animation/AS_VehicleDoor_Open', global_scale, 1),
             ]),
         # Doing this ends up screwing up the slots pretty thoroughly, actually -- the animation gets killed
         # pretty much immediately, so the rewards get stuck "inside" the machine until the 10-sec auto-drop
@@ -409,13 +415,14 @@ for cat_name, obj_names in [
     for obj_name in obj_names:
 
         if type(obj_name) == tuple:
-            obj_name, obj_scale = obj_name
+            obj_name, obj_scale, obj_scale_seq = obj_name
         else:
             obj_scale = global_scale
+            obj_scale_seq = global_scale
 
-        scale_animsequence(mod, obj_name, Mod.LEVEL, 'MatchAll', obj_scale, obj_scale)
+        scale_animsequence(mod, obj_name, Mod.LEVEL, 'MatchAll', obj_scale, obj_scale_seq)
         if obj_name == '/Game/Lootables/_Global/Chest_Typhon/Animation/AS_Open':
-            scale_animsequence(mod, obj_name, Mod.CHAR, 'MatchAll', obj_scale, obj_scale)
+            scale_animsequence(mod, obj_name, Mod.CHAR, 'MatchAll', obj_scale, obj_scale_seq)
 
         if False:
             mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
@@ -1274,13 +1281,13 @@ for category, obj_names in [
 
 # TODO: DLC1
 mod.header('Slot Machine Tweaks')
-mod.bytecode_hotfix(Mod.LEVEL, 'Sanctuary3_P',
+mod.bytecode_hotfix(Mod.LEVEL, 'MatchAll',
         '/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine',
         'ExecuteUbergraph_BPIO_SlotMachine',
         1513,
         5,
         5/global_scale)
-mod.bytecode_hotfix(Mod.LEVEL, 'Sanctuary3_P',
+mod.bytecode_hotfix(Mod.LEVEL, 'MatchAll',
         '/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine',
         'ExecuteUbergraph_BPIO_SlotMachine',
         2889,
@@ -1300,6 +1307,14 @@ for label, level, obj_name, speed, travel_time in sorted([
         ('Meridian Outskirts - Main upper/lower Elevator', 'Outskirts_P',
             '/Game/Maps/Zone_1/Outskirts/Outskirts_Mission.Outskirts_Mission:PersistentLevel.Elevator_Outskirts_Refugee',
             400, 10),
+        ('Skywell-27 - Main Elevator', 'OrbitalPlatform_P',
+            '/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_Combat.OrbitalPlatform_Combat:PersistentLevel.Elevator_Cargo_OrbitalPlatform_2',
+            2000, 10),
+        # This one still feels a bit slow to me; I think it might not fully use these values?
+        # But whatever, it's not slow enough for me to care enough to look into more.
+        ('Skywell-27 - Boss Elevator', 'OrbitalPlatform_P',
+            '/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_Boss.OrbitalPlatform_Boss:PersistentLevel.Elevator_Cargo_OrbitalPlatform_2',
+            200, 10),
         ]):
     mod.comment(label)
     # Honestly not sure if we need both of these, but we *do* need EarlyLevel.

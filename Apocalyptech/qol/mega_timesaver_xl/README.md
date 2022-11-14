@@ -104,6 +104,7 @@ TODO
   * Meridian Outskirts elevators
 * Unrelatedly to re-test:
   * Moxxi slot-machine eridium bump
+  * Re-test `City_P` hub door-opening (tweaked that during `OrbitalPlatform_P`)
 
 Changelog
 =========
