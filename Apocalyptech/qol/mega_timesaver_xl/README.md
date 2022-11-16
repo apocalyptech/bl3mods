@@ -29,8 +29,10 @@ Currently, the mod affects the following:
   * Ava
   * Claptrap
   * Ellie
+  * Glenn the Ratch
   * Lilith
   * Maya
+  * Terry the Ratch
   * Vic (from Head Case)
 * Eridian tools (Resonator, Analyzer)
 
@@ -105,25 +107,27 @@ TODO
 * Unrelatedly to re-test:
   * Moxxi slot-machine eridium bump
   * Re-test `City_P` hub door-opening (tweaked that during `OrbitalPlatform_P`)
+  * Also the Skywell-27 door after the thruster disabling
 
 Changelog
 =========
 
 **v1.0.0** - *(unreleased)*
- * Reduced our "standard" speed improvement from 5x to 4x
+ * Reduced our "standard" speed improvement from 5x to 4x (except for doors)
  * Fixed Typhon Dead Drop Chests
  * Tightened up various chest-opening animations (including digistruct contents)
  * Added Vault Card chest-opening animation
  * Character Movement Speed:
    * Ace Baron (from Healers and Dealers)
    * Ellie
+   * Glenn the Ratch
    * Maya
+   * Terry the Ratch
    * Vic (from Head Case)
- * Elevators:
-   * Taking Flight (Sanctuary III Drydock)
-   * Both Meridian Outskirts elevators
+ * Elevators!
  * Doors:
-   * Meridian Metroplex hub door opening
+   * Meridian Metroplex hub door
+   * Skywell-27 post-thruster-disabling door
    * A couple doors from DLC6
  * Other Additions:
    * Slot Machines
@@ -133,6 +137,7 @@ Changelog
      and if localization dialogue other than English happens to be longer, it's
      possible that some dialogue might get cut off)
    * Second Bell-of-Peace door opening on Athenas
+   * Rhys's sliding desk in Atlas HQ
 
 Aug 1, 2022 *(no version number change)*
  * Updated to use [new metadata tags](https://github.com/apple1417/blcmm-parsing/tree/master/blimp)
