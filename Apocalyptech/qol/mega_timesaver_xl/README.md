@@ -4,17 +4,10 @@ Mega TimeSaver XL
 This mod aims to speed up nearly all the noticeably-slow interactive
 objects that you use throughout BL3.  It will eventually hope to encompass
 basically the entire game, but **it is currently a work in progress!**
-I've run up against some modding difficulties with the first complex-ish
-mission-related animation in the game (scanning Vaugn's Wanted posters to
-print statues during the "Golden Calves" mission in Ascension Bluff), and
-it looks like it might take me some time to figure that out (and I don't
-want to skip it just yet).
 
 As such, this mod has not seen an awful lot of testing, so please let me
 know if there's anything game-breaking or Obviously Wrong with this (like
 if a too-fast animation ends up breaking mission progression somewhere).
-Ordinarily I wouldn't release this until I'd had a chance to thoroughly
-test it, but I think I'll be on that Golden Calves mission for awhile.
 
 Currently, the mod affects the following:
 
@@ -22,14 +15,17 @@ Currently, the mod affects the following:
 * Doors
 * Vehicle interaction animations (hijacking, entering, leaving, changing seats)
 * Catch-A-Ride Digistruct Speed
-* Character Movement Speeds (a little less of a speedup than CZ47's Faster NPCs
-  mod, in general, so execute that one after this one if you want some NPCs to
-  be even faster):
+* Various characters' walking/sprinting speeds have been improved.  The speedup
+  is, in general, a little less than CZ47's Faster NPCs mod, so execute that
+  one after this one if you want some NPCs to be even faster.  The list of
+  affected NPCs is a bit different between the two, as well.  Characters
+  affected by this mod:
   * Ace Baron (from Healers and Dealers)
   * Ava
   * Claptrap
   * Ellie
   * Glenn the Ratch
+  * Liam (Atlas HQ Guard)
   * Lilith
   * Maya
   * Terry the Ratch
@@ -99,7 +95,9 @@ TODO
 * Ammo containers seem to not always attach ammo properly; ends up below the
   platform (at least, the sort 'round Tannis's dig site in The Droughts, and
   in Athenas).  Seems to be maybe not consistent, though?  Sometimes it seems
-  to work.
+  to work.  Possibly relatedly, sometimes Eridian ammo chests seem to not open
+  all the way.  I think all the ammo inside remains pick-uppable, though, and
+  I can't reliably reproduce the behavior.
 * Diamond Armory console?
 * Check CZ47's Faster NPCs mod (and make a note about compatibility, if need be)
 * I ended up reducing `global_scale` from 5 to 4 at the end of Athenas, because
@@ -121,21 +119,24 @@ Changelog
  * Reduced our "standard" speed improvement from 5x to 4x (except for doors)
  * Fixed Typhon Dead Drop Chests
  * Tightened up various chest-opening animations (including digistruct contents)
- * Added Vault Card chest-opening animation
  * Character Movement Speed:
    * Ace Baron (from Healers and Dealers)
+   * Ava
    * Ellie
    * Glenn the Ratch
+   * Liam (Atlas HQ guard)
    * Maya
    * Terry the Ratch
    * Vic (from Head Case)
  * Elevators!
- * Doors:
+ * Extra Doors:
    * Meridian Metroplex hub door
    * Skywell-27 post-thruster-disabling door
    * A couple doors from DLC6
  * Other Additions:
    * Slot Machines
+   * Vault Card chest-opening animation
+   * Fast-travel/teleport/resurrect skips
  * Mission-Specific Animations:
    * Statue scanner/printer from Golden Calves
    * Coffee-pouring animation during Rise and Grind (pretty slight improvement,

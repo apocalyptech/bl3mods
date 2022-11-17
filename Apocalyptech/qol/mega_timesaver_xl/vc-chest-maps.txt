@@ -28,8 +28,8 @@ getall BPIO_Lootable_VaultCard_RedCrate_C OpeningInteractions
   /Game/Maps/Zone_0/Sacrifice/Sacrifice_P
 * /Game/Maps/Zone_1/AtlasHQ/AtlasHQ_P
 * /Game/Maps/Zone_1/City/City_P
-  /Game/Maps/Zone_1/CityBoss/CityBoss_P
-  /Game/Maps/Zone_1/CityVault/CityVault_P
+* /Game/Maps/Zone_1/CityBoss/CityBoss_P
+* /Game/Maps/Zone_1/CityVault/CityVault_P
 * /Game/Maps/Zone_1/Monastery/Monastery_P
 * /Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_P
 * /Game/Maps/Zone_1/Outskirts/Outskirts_P

@@ -446,6 +446,7 @@ for cat_name, cat_scale, obj_names in [
 
 mod.header('Extra Container Tweaks')
 
+# Maliwan Ammo Crate Digistructs
 mod.comment('Maliwan Ammo Crate Digistructs')
 # Honestly not sure what exactly this controls, though it's *not* anything to do with the animation trigger
 mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
@@ -462,6 +463,30 @@ mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
         '/Game/GameData/Loot/CoordinatedEffects/BP_CE_Maliwan_Loot_Digistruct_In.Default__BP_CE_Maliwan_Loot_Digistruct_In_C',
         'Duration',
         round(2.1/global_scale, 6))
+mod.newline()
+
+# Eridian ammo crate light-burst speedup
+# This doesn't actually affect anything important, but the animation as-is makes the crate-opening
+# *look* slower, so I'm tweaking it anyway.  Note that this doesn't really speed it up as much
+# as it should; this ends up resulting in maybe a 2x speedup instead of our 4x intended.  So there's
+# still something going on, but whatever, it's better.
+mod.comment('Eridian Ammo Crate Light-Burst Speedup')
+mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
+        '/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn',
+        'Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..TypeDataModule..Object..EmitterInfo.MaxLifetime',
+        2/global_scale)
+mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
+        '/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn',
+        'Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MinValue',
+        2/global_scale)
+mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
+        '/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn',
+        'Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MaxValue',
+        2/global_scale)
+mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
+        '/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn',
+        'Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Table.Values.Values[0]',
+        2/global_scale)
 mod.newline()
 
 mod.header('Eridian Tools')

@@ -1494,6 +1494,12 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Design/Classes/Maliwan/BP
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/GameData/Loot/CoordinatedEffects/BP_CE_Maliwan_Loot_Digistruct_In.Default__BP_CE_Maliwan_Loot_Digistruct_In_C,ParticleEffects.ParticleEffects[0].StartTime,0,,0.0625
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/GameData/Loot/CoordinatedEffects/BP_CE_Maliwan_Loot_Digistruct_In.Default__BP_CE_Maliwan_Loot_Digistruct_In_C,Duration,0,,0.525
 
+# Eridian Ammo Crate Light-Burst Speedup
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn.PS_Eridian_Ammo_Chest_SinkNBurn,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..TypeDataModule..Object..EmitterInfo.MaxLifetime,0,,0.5
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn.PS_Eridian_Ammo_Chest_SinkNBurn,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MinValue,0,,0.5
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn.PS_Eridian_Ammo_Chest_SinkNBurn,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MaxValue,0,,0.5
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn.PS_Eridian_Ammo_Chest_SinkNBurn,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Table.Values.Values[0],0,,0.5
+
 ###
 ### Eridian Tools
 ###
