@@ -411,6 +411,16 @@ for cat_name, cat_scale, obj_names in [
         #    '/Game/InteractiveObjects/GameSystemMachines/SlotMachine/Animation/AS_Slotmachine_Locker_Closing',
         #    '/Game/InteractiveObjects/GameSystemMachines/SlotMachine/Animation/AS_Slotmachine_Locker_Opening',
         #    ]),
+        ('Character Death Respawns', global_scale, [
+            # Turns out this affects the *entire* respawn sequence, including digistruct tunnel.
+            # At our current rates, it ends up basically omitting the char-standing-up animation
+            # entirely.  (And also the char doesn't end up facing the right way 'cause the camera
+            # doesn't go through its motions.  Whatever.)
+            '/Game/PlayerCharacters/Beastmaster/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel',
+            '/Game/PlayerCharacters/Gunner/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel',
+            '/Game/PlayerCharacters/Operative/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel',
+            '/Game/PlayerCharacters/SirenBrawler/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel',
+            ]),
         ]:
 
     mod.comment(cat_name)
@@ -1358,6 +1368,55 @@ mod.bytecode_hotfix(Mod.LEVEL, 'AtlasHQ_P',
         25/global_scale)
 mod.newline()
 
+# Make Fast Travel + Teleport digistruct animations disappear
+# (note that the death respawn is totally separate from this, and handled via
+# some AnimSequence tweaks above)
+mod.header('Fast Travel / Teleport Animation Disable')
+
+# A bunch of silliness in here, when I was looking at bundling this separately
+# as its own mod and was considering multiple versions.  In the end, this just
+# hardcodes an effective disabling of the whole sequence, and I could omit
+# various bits of math.  But whatever, the work is done -- leaving it as-is.
+default_duration = 6.5
+default_unlock = 5.5
+default_teleport = 1.5
+unlock_scale = default_unlock/default_duration
+teleport_scale = default_teleport/default_duration
+
+# 0.5 - Effectively disables it
+# 2 - Quite short, but still gets a tiny bit of the tunnel
+new_duration = 0.5
+
+min_timers = min(default_teleport, new_duration)
+
+mod.reg_hotfix(Mod.PATCH, '',
+        '/Game/PlayerCharacters/_Shared/_Design/Travel/Action_TeleportEffects.Default__Action_TeleportEffects_C',
+        'Duration',
+        new_duration,
+        )
+
+# Adjust delay on unlocking resources (whatever that means; haven't figured out
+# what's not available when "locked")
+mod.bytecode_hotfix(Mod.PATCH, '',
+        '/Game/PlayerCharacters/_Shared/_Design/Travel/Action_TeleportEffects',
+        'ExecuteUbergraph_Action_TeleportEffects',
+        1119,
+        default_unlock,
+        max(min_timers, round(new_duration*unlock_scale, 6)),
+        )
+
+# Adjust delay on actually teleporting
+mod.bytecode_hotfix(Mod.PATCH, '',
+        '/Game/PlayerCharacters/_Shared/_Design/Travel/Action_TeleportEffects',
+        'ExecuteUbergraph_Action_TeleportEffects',
+        391,
+        default_teleport,
+        max(min_timers, round(new_duration*teleport_scale, 6)),
+        )
+
+mod.newline()
+
+# Golden Calves Statue Scanner
 mod.header('Custom Golden Calves Statue Scanner Tweaks')
 
 mod.comment('Shorten scanner-light animation')

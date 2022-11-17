@@ -35,6 +35,7 @@ Currently, the mod affects the following:
   * Terry the Ratch
   * Vic (from Head Case)
 * Eridian tools (Resonator, Analyzer)
+* Fast-Travel/Teleport and Respawn animations
 
 Note that the vehicle animations in particular are a bit weird right now --
 the animation gets "frozen" near the end for a bit.  I think that's something
@@ -70,10 +71,13 @@ Known Bugs
 * The door you have to slide under to retrieve the umbrella for
   Claptrap in Bad Reception acts a bit weirdly, and is probably
   pretty easy to just run through now.
+* Respawning after death leaves your char facing the wrong way.
 
 TODO
 ====
 
+* It'd be nice to figure out getting the respawn animation to leave the
+  camera in the right spot.
 * Other character-speed improvements (Oletta comes to mind)
 * Pretty much every mission-specific animation
 * Elevators
@@ -91,10 +95,11 @@ TODO
 * I feel like the Slam animation could use some work
 * Entering/Exiting Iron Bear?
 * Maybe have a real slight speedup on melee attacks?
-* Level-loading (digistruct) animation/movie playback?
 * Speed of camera that moves in/out of Photo Mode?
-* Ammo containers seem to not attach ammo properly; ends up below the platform
-  (at least, the sort 'round Tannis's dig site in The Droughts, and in Athenas)
+* Ammo containers seem to not always attach ammo properly; ends up below the
+  platform (at least, the sort 'round Tannis's dig site in The Droughts, and
+  in Athenas).  Seems to be maybe not consistent, though?  Sometimes it seems
+  to work.
 * Diamond Armory console?
 * Check CZ47's Faster NPCs mod (and make a note about compatibility, if need be)
 * I ended up reducing `global_scale` from 5 to 4 at the end of Athenas, because
