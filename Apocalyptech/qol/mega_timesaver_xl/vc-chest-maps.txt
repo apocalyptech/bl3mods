@@ -20,7 +20,7 @@ getall BPIO_Lootable_VaultCard_RedCrate_C OpeningInteractions
   /Game/Maps/ProvingGrounds/Trial8/ProvingGrounds_Trial8_P
 * /Game/Maps/Sanctuary3/Sanctuary3_P
   /Game/Maps/Slaughters/COVSlaughter/COVSlaughter_P
-  /Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P
+* /Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P
   /Game/Maps/Slaughters/TechSlaughter/TechSlaughter_P
   /Game/Maps/Zone_0/FinalBoss/FinalBoss_P
   /Game/Maps/Zone_0/Prologue/Prologue_P

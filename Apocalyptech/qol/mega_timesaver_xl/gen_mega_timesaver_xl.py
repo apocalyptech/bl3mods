@@ -1355,6 +1355,9 @@ for label, level, obj_name, speed, travel_time in sorted([
             '/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_M_EP06OfficeSpaceInvaders.AtlasHQ_M_EP06OfficeSpaceInvaders:PersistentLevel.Elevator_Ep06_AtlasHQ_V_0',
             #250/2, 5*2),
             250, 5),
+        ('Cistern of Slaughter', 'CreatureSlaughter_P',
+            '/Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P.CreatureSlaughter_P:PersistentLevel.Elevator_CreatureSlaughter',
+            400, 10),
         ]):
     mod.comment(label)
     # Honestly not sure if we need both of these, but we *do* need EarlyLevel.  I'm pretty

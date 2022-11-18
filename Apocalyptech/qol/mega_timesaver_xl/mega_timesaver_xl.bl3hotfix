@@ -9731,6 +9731,10 @@ SparkEarlyLevelPatchEntry,(1,1,0,AtlasHQ_P),/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_M_
 SparkEarlyLevelPatchEntry,(1,1,0,AtlasHQ_P),/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_M_EP06OfficeSpaceInvaders.AtlasHQ_M_EP06OfficeSpaceInvaders:PersistentLevel.Elevator_Ep06_AtlasHQ_V_0,ElevatorTravelTime,0,,1.25
 SparkEarlyLevelPatchEntry,(1,1,0,AtlasHQ_P),/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_M_EP06OfficeSpaceInvaders.AtlasHQ_M_EP06OfficeSpaceInvaders:PersistentLevel.Elevator_Ep06_AtlasHQ_V_0,killDelay,0,,0
 
+# Cistern of Slaughter
+SparkEarlyLevelPatchEntry,(1,1,0,CreatureSlaughter_P),/Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P.CreatureSlaughter_P:PersistentLevel.Elevator_CreatureSlaughter,ElevatorSpeed,0,,1600
+SparkEarlyLevelPatchEntry,(1,1,0,CreatureSlaughter_P),/Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P.CreatureSlaughter_P:PersistentLevel.Elevator_CreatureSlaughter,ElevatorTravelTime,0,,2.5
+
 # Meridian Outskirts - Main upper/lower Elevator
 SparkEarlyLevelPatchEntry,(1,1,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outskirts_Mission.Outskirts_Mission:PersistentLevel.Elevator_Outskirts_Refugee,ElevatorSpeed,0,,1600
 SparkEarlyLevelPatchEntry,(1,1,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outskirts_Mission.Outskirts_Mission:PersistentLevel.Elevator_Outskirts_Refugee,ElevatorTravelTime,0,,2.5
