@@ -144,6 +144,7 @@ Changelog
      possible that some dialogue might get cut off)
    * Second Bell-of-Peace door opening on Athenas
    * Rhys's sliding desk in Atlas HQ
+   * Ava's shock reaction after Maya's death
 
 Aug 1, 2022 *(no version number change)*
  * Updated to use [new metadata tags](https://github.com/apple1417/blcmm-parsing/tree/master/blimp)

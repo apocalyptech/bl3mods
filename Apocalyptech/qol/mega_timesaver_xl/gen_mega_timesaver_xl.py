@@ -421,6 +421,10 @@ for cat_name, cat_scale, obj_names in [
             '/Game/PlayerCharacters/Operative/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel',
             '/Game/PlayerCharacters/SirenBrawler/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel',
             ]),
+        ('NPC Animations', 2, [
+            '/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Enter',
+            '/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit',
+            ]),
         ]:
 
     mod.comment(cat_name)
@@ -1539,6 +1543,20 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Monastery_P',
         49863,
         1,
         0)
+mod.newline()
+
+# Don't let Ava spend so long shocked at Maya's death
+mod.header("Speed up Ava's shock-at-Maya's-death time")
+mod.reg_hotfix(Mod.LEVEL, 'CityBoss_P',
+        '/Game/NonPlayerCharacters/Ava/_Design/Actions/Action_Ava_Loop_Grieve.Default__Action_Ava_Loop_Grieve_C',
+        'LoopTime.Range.Value',
+        15/global_scale)
+mod.bytecode_hotfix(Mod.LEVEL, 'CityBoss_P',
+        '/Game/Maps/Zone_1/CityBoss/CityBoss_Mission',
+        'ExecuteUbergraph_CityBoss_Mission',
+        31722,
+        15,
+        15/global_scale)
 mod.newline()
 
 # Peace Bells (or whatever) in Athenas.  Not actually doing this because the speed

@@ -1485,6 +1485,28 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/SirenBrawler/_Share
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/SirenBrawler/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel.AS_Respawn_Kneel,Notifies.Notifies[14].LinkValue,0,,2.37658
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/SirenBrawler/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel.AS_Respawn_Kneel,SequenceLength,0,,2.475
 
+# NPC Animations
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Enter.AS_MayaDeathReaction_Enter,RateScale,0,,2
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Enter.AS_MayaDeathReaction_Enter,Notifies.Notifies[0].SegmentLength,0,,1.9
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Enter.AS_MayaDeathReaction_Enter,Notifies.Notifies[0].LinkValue,0,,0.63075
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Enter.AS_MayaDeathReaction_Enter,SequenceLength,0,,1.9
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,RateScale,0,,2
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,Notifies.Notifies[0].SegmentLength,0,,2.883333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,Notifies.Notifies[0].LinkValue,0,,0.601513
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,Notifies.Notifies[1].SegmentLength,0,,2.883333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,Notifies.Notifies[1].LinkValue,0,,0.789813
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,Notifies.Notifies[2].SegmentLength,0,,2.883333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,Notifies.Notifies[2].LinkValue,0,,0.967652
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,Notifies.Notifies[3].SegmentLength,0,,2.883333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,Notifies.Notifies[3].LinkValue,0,,1.344252
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,Notifies.Notifies[4].SegmentLength,0,,2.883333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,Notifies.Notifies[4].LinkValue,0,,1.574396
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,Notifies.Notifies[5].SegmentLength,0,,2.883333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,Notifies.Notifies[5].LinkValue,0,,1.961457
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,Notifies.Notifies[6].SegmentLength,0,,2.883333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,Notifies.Notifies[6].LinkValue,0,,2.207293
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,SequenceLength,0,,2.883333
+
 ###
 ### Extra Container Tweaks
 ###
@@ -9777,6 +9799,13 @@ SparkLevelPatchEntry,(1,7,0,City_P),/Game/Maps/Zone_1/City/City_M_RiseAndGrind.C
 
 SparkLevelPatchEntry,(1,7,0,Monastery_P),/Game/Missions/Plot/Mission_Ep06_MeetMaya.Mission_Ep06_MeetMaya_C,0,1,ExecuteUbergraph_Mission_Ep06_MeetMaya,1,39968,1:3,1:0
 SparkLevelPatchEntry,(1,7,0,Monastery_P),/Game/Maps/Zone_1/Monastery/Monastery_Mission_Ep06_MeetMaya.Monastery_Mission_Ep06_MeetMaya_C,0,1,ExecuteUbergraph_Monastery_Mission_Ep06_MeetMaya,1,49863,1:1,1:0
+
+###
+### Speed up Ava's shock-at-Maya's-death time
+###
+
+SparkLevelPatchEntry,(1,1,0,CityBoss_P),/Game/NonPlayerCharacters/Ava/_Design/Actions/Action_Ava_Loop_Grieve.Default__Action_Ava_Loop_Grieve_C,LoopTime.Range.Value,0,,3.75
+SparkLevelPatchEntry,(1,7,0,CityBoss_P),/Game/Maps/Zone_1/CityBoss/CityBoss_Mission.CityBoss_Mission_C,0,1,ExecuteUbergraph_CityBoss_Mission,1,31722,2:15,4:3.75
 
 ###
 ### NPC Walking Speeds
