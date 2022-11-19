@@ -9735,6 +9735,10 @@ SparkEarlyLevelPatchEntry,(1,1,0,AtlasHQ_P),/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_M_
 SparkEarlyLevelPatchEntry,(1,1,0,CreatureSlaughter_P),/Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P.CreatureSlaughter_P:PersistentLevel.Elevator_CreatureSlaughter,ElevatorSpeed,0,,1600
 SparkEarlyLevelPatchEntry,(1,1,0,CreatureSlaughter_P),/Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P.CreatureSlaughter_P:PersistentLevel.Elevator_CreatureSlaughter,ElevatorTravelTime,0,,2.5
 
+# Floodmoor Basin - Knotty Peak
+SparkEarlyLevelPatchEntry,(1,1,0,Wetlands_P),/Game/Maps/Zone_2/Wetlands/Wetlands_Dynamic.Wetlands_Dynamic:PersistentLevel.Elevator_WetlandsLodge_3326,ElevatorSpeed,0,,1600
+SparkEarlyLevelPatchEntry,(1,1,0,Wetlands_P),/Game/Maps/Zone_2/Wetlands/Wetlands_Dynamic.Wetlands_Dynamic:PersistentLevel.Elevator_WetlandsLodge_3326,ElevatorTravelTime,0,,2.5
+
 # Meridian Outskirts - Main upper/lower Elevator
 SparkEarlyLevelPatchEntry,(1,1,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outskirts_Mission.Outskirts_Mission:PersistentLevel.Elevator_Outskirts_Refugee,ElevatorSpeed,0,,1600
 SparkEarlyLevelPatchEntry,(1,1,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outskirts_Mission.Outskirts_Mission:PersistentLevel.Elevator_Outskirts_Refugee,ElevatorTravelTime,0,,2.5
@@ -9750,6 +9754,10 @@ SparkEarlyLevelPatchEntry,(1,1,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPla
 # Skywell-27 - Main Elevator
 SparkEarlyLevelPatchEntry,(1,1,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_Combat.OrbitalPlatform_Combat:PersistentLevel.Elevator_Cargo_OrbitalPlatform_2,ElevatorSpeed,0,,8000
 SparkEarlyLevelPatchEntry,(1,1,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_Combat.OrbitalPlatform_Combat:PersistentLevel.Elevator_Cargo_OrbitalPlatform_2,ElevatorTravelTime,0,,2.5
+
+# The Anvil - Sauce Room
+SparkEarlyLevelPatchEntry,(1,1,0,Prison_P),/Game/Maps/Zone_2/Prison/Prison_M_EP08PrisonBreak.Prison_M_EP08PrisonBreak:PersistentLevel.Elevator_PrisonArmory_1624,ElevatorSpeed,0,,1400
+SparkEarlyLevelPatchEntry,(1,1,0,Prison_P),/Game/Maps/Zone_2/Prison/Prison_M_EP08PrisonBreak.Prison_M_EP08PrisonBreak:PersistentLevel.Elevator_PrisonArmory_1624,ElevatorTravelTime,0,,2.5
 
 # The Droughts - Taking Flight (Sanctuary III Drydock)
 SparkEarlyLevelPatchEntry,(1,1,0,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue_M_Ep04_EarnSpaceship.Prologue_M_Ep04_EarnSpaceship:PersistentLevel.Elevator_Ep04_Prologue,ElevatorSpeed,0,,700
@@ -9823,6 +9831,10 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_MedicalAssistant),/Game/NonPlayerCharact
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Ava),/Game/NonPlayerCharacters/Ava/_Design/Character/BPChar_Ava.Default__BPChar_Ava_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Ava),/Game/NonPlayerCharacters/Ava/_Design/Character/BPChar_Ava.Default__BPChar_Ava_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 
+# Brick
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Brick),/Game/NonPlayerCharacters/Brick/_Design/Character/BPChar_Brick.Default__BPChar_Brick_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Brick),/Game/NonPlayerCharacters/Brick/_Design/Character/BPChar_Brick.Default__BPChar_Brick_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+
 # Claptrap
 SparkCharacterLoadedEntry,(1,1,0,BpChar_Claptrap),/Game/NonPlayerCharacters/Claptrap/_Design/Character/BpChar_Claptrap.Default__BpChar_Claptrap_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
 SparkCharacterLoadedEntry,(1,1,0,BpChar_Claptrap),/Game/NonPlayerCharacters/Claptrap/_Design/Character/BpChar_Claptrap.Default__BpChar_Claptrap_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
@@ -9852,6 +9864,10 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_Maya),/Game/NonPlayerCharacters/Maya/_De
 # Terry the Ratch
 SparkCharacterLoadedEntry,(1,1,0,BPChar_GoodRatch),/Game/NonPlayerCharacters/_Promethea/TalkingRatch/_Design/Character/BPChar_GoodRatch.Default__BPChar_GoodRatch_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_GoodRatch),/Game/NonPlayerCharacters/_Promethea/TalkingRatch/_Design/Character/BPChar_GoodRatch.Default__BPChar_GoodRatch_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+
+# Tina
+SparkCharacterLoadedEntry,(1,1,0,BPChar_TinyTina),/Game/NonPlayerCharacters/TinyTina/_Design/Character/BPChar_TinyTina.Default__BPChar_TinyTina_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_TinyTina),/Game/NonPlayerCharacters/TinyTina/_Design/Character/BPChar_TinyTina.Default__BPChar_TinyTina_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 
 # Vic (Head Case)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_HeadCaseGirl),/Game/NonPlayerCharacters/_Pandora/HeadCaseGirl/_Design/Character/BPChar_HeadCaseGirl.Default__BPChar_HeadCaseGirl_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=1800,BaseValue=1800)

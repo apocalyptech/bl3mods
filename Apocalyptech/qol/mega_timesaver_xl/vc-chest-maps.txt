@@ -16,8 +16,8 @@ getall BPIO_Lootable_VaultCard_RedCrate_C OpeningInteractions
   /Game/Maps/ProvingGrounds/Trial4/ProvingGrounds_Trial4_P
   /Game/Maps/ProvingGrounds/Trial5/ProvingGrounds_Trial5_P
   /Game/Maps/ProvingGrounds/Trial6/ProvingGrounds_Trial6_P
-  /Game/Maps/ProvingGrounds/Trial7/ProvingGrounds_Trial7_P
-  /Game/Maps/ProvingGrounds/Trial8/ProvingGrounds_Trial8_P
+* /Game/Maps/ProvingGrounds/Trial7/ProvingGrounds_Trial7_P
+* /Game/Maps/ProvingGrounds/Trial8/ProvingGrounds_Trial8_P
 * /Game/Maps/Sanctuary3/Sanctuary3_P
   /Game/Maps/Slaughters/COVSlaughter/COVSlaughter_P
 * /Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P
@@ -36,9 +36,9 @@ getall BPIO_Lootable_VaultCard_RedCrate_C OpeningInteractions
 * /Game/Maps/Zone_1/Towers/Towers_P
   /Game/Maps/Zone_2/Mansion/Mansion_P
   /Game/Maps/Zone_2/MarshFields/MarshFields_P
-  /Game/Maps/Zone_2/Prison/Prison_P
+* /Game/Maps/Zone_2/Prison/Prison_P
   /Game/Maps/Zone_2/Watership/Watership_P
-  /Game/Maps/Zone_2/Wetlands/Wetlands_P
+* /Game/Maps/Zone_2/Wetlands/Wetlands_P
   /Game/Maps/Zone_2/WetlandsBoss/WetlandsBoss_P
   /Game/Maps/Zone_2/WetlandsVault/WetlandsVault_P
   /Game/Maps/Zone_3/Convoy/Convoy_P

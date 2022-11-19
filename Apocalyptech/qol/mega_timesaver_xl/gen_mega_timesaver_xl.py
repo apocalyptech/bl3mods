@@ -1358,6 +1358,16 @@ for label, level, obj_name, speed, travel_time in sorted([
         ('Cistern of Slaughter', 'CreatureSlaughter_P',
             '/Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P.CreatureSlaughter_P:PersistentLevel.Elevator_CreatureSlaughter',
             400, 10),
+        ('Floodmoor Basin - Knotty Peak', 'Wetlands_P',
+            '/Game/Maps/Zone_2/Wetlands/Wetlands_Dynamic.Wetlands_Dynamic:PersistentLevel.Elevator_WetlandsLodge_3326',
+            400, 10),
+        # May do alt scaling for this, and there's probably ubergraph stuff involved.  Check that out once we get there.
+        #('Floodmoor Basin - Rocket Elevator', 'Wetlands_P',
+        #    '/Game/Maps/Zone_2/Wetlands/Wetlands_M_DudeBro.Wetlands_M_DudeBro:PersistentLevel.Elevator_Rocket',
+        #    900, 7),
+        ('The Anvil - Sauce Room', 'Prison_P',
+            '/Game/Maps/Zone_2/Prison/Prison_M_EP08PrisonBreak.Prison_M_EP08PrisonBreak:PersistentLevel.Elevator_PrisonArmory_1624',
+            350, 10),
         ]):
     mod.comment(label)
     # Honestly not sure if we need both of these, but we *do* need EarlyLevel.  I'm pretty
@@ -1642,6 +1652,15 @@ for charname, obj_name, scale in sorted([
             global_char_scale),
         ('Terry the Ratch',
             '/Game/NonPlayerCharacters/_Promethea/TalkingRatch/_Design/Character/BPChar_GoodRatch',
+            global_char_scale),
+        # Not sure if this is really necessary, but he *can* lag behind in The Anvil.
+        ('Brick',
+            '/Game/NonPlayerCharacters/Brick/_Design/Character/BPChar_Brick',
+            global_char_scale),
+        # Also not sure how necessary this is; at the moment this hardly improves anything; just her
+        # saunter over to construct the bomb, in Anvil.
+        ('Tina',
+            '/Game/NonPlayerCharacters/TinyTina/_Design/Character/BPChar_TinyTina',
             global_char_scale),
         ]):
 

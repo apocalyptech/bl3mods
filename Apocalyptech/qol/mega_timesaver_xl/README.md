@@ -22,6 +22,7 @@ Currently, the mod affects the following:
   affected by this mod:
   * Ace Baron (from Healers and Dealers)
   * Ava
+  * Brick
   * Claptrap
   * Ellie
   * Glenn the Ratch
@@ -29,6 +30,7 @@ Currently, the mod affects the following:
   * Lilith
   * Maya
   * Terry the Ratch
+  * Tina
   * Vic (from Head Case)
 * Eridian tools (Resonator, Analyzer)
 * Fast-Travel/Teleport and Respawn animations
@@ -51,6 +53,8 @@ A few known quirks of running with this mod:
   to the bottom.
 
 Some things intentionally *not* handled by the mod:
+* Various minor mission-related animations have been left alone when they
+  were already quite short.
 * The Viper Drive uses in Space-Laser Tag are all pretty dialogue-dependent,
   so I left those alone.
 * The Desolation's Edge mission "Transaction-Packed" has been left alone.
@@ -122,11 +126,13 @@ Changelog
  * Character Movement Speed:
    * Ace Baron (from Healers and Dealers)
    * Ava
+   * Brick
    * Ellie
    * Glenn the Ratch
    * Liam (Atlas HQ guard)
    * Maya
    * Terry the Ratch
+   * Tina
    * Vic (from Head Case)
  * Elevators!
  * Extra Doors:
