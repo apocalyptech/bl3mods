@@ -1775,7 +1775,7 @@ mod.header('NPC Walking Speeds')
 
 class Char():
 
-    def __init__(self, name, path, scale, level='MatchAll'):
+    def __init__(self, name, path, scale):
         self.name = name
         self.path = path
         self.last_bit = path.split('/')[-1]
@@ -1783,7 +1783,6 @@ class Char():
         self.default_name_lower = self.default_name.lower()
         self.full_path = f'{self.path}.{self.default_name}'
         self.scale = scale
-        self.level = level
 
     def __lt__(self, other):
         return self.name.casefold() < other.name.casefold()
