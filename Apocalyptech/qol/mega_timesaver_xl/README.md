@@ -116,6 +116,7 @@ TODO
   * Moxxi slot-machine eridium bump
   * Re-test `City_P` hub door-opening (tweaked that during `OrbitalPlatform_P`)
   * Also the Skywell-27 door after the thruster disabling
+* Did we want to do the "initial" ECHO playing animation, with the blowing-on-cart?
 
 Changelog
 =========
@@ -144,6 +145,7 @@ Changelog
    * Slot Machines
    * Vault Card chest-opening animation
    * Fast-travel/teleport/resurrect skips
+   * ECHO cartridge playing animation
  * Mission-Specific Animations:
    * Statue scanner/printer from Golden Calves
    * Coffee-pouring animation during Rise and Grind (pretty slight improvement,

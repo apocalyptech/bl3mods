@@ -1485,6 +1485,33 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/SirenBrawler/_Share
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/SirenBrawler/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel.AS_Respawn_Kneel,Notifies.Notifies[14].LinkValue,0,,2.37658
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/SirenBrawler/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel.AS_Respawn_Kneel,SequenceLength,0,,2.475
 
+# PC Animations
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,RateScale,0,,1.5
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[0].SegmentLength,0,,1.8
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[0].EndLink.SegmentLength,0,,1.8
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[0].EndLink.LinkValue,0,,0.166353
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[1].SegmentLength,0,,1.8
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[1].LinkValue,0,,0.061018
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[2].SegmentLength,0,,1.8
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[2].LinkValue,0,,0.184441
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[3].SegmentLength,0,,1.8
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[3].LinkValue,0,,0.204274
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[4].SegmentLength,0,,1.8
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[4].LinkValue,0,,0.379975
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[5].SegmentLength,0,,1.8
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[5].LinkValue,0,,0.502011
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[6].SegmentLength,0,,1.8
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[6].LinkValue,0,,0.57551
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[7].SegmentLength,0,,1.8
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[7].LinkValue,0,,0.579654
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[8].SegmentLength,0,,1.8
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[8].LinkValue,0,,0.638472
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[9].SegmentLength,0,,1.8
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[9].LinkValue,0,,0.988768
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[10].SegmentLength,0,,1.8
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,Notifies.Notifies[10].LinkValue,0,,1.574551
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup.AS_Echo_Cart_Pickup,SequenceLength,0,,1.8
+
 # NPC Animations
 SparkLevelPatchEntry,(1,1,0,CityBoss_P),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Enter.AS_MayaDeathReaction_Enter,RateScale,0,,2
 SparkLevelPatchEntry,(1,1,0,CityBoss_P),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Enter.AS_MayaDeathReaction_Enter,Notifies.Notifies[0].SegmentLength,0,,1.9

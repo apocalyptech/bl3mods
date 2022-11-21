@@ -52,15 +52,6 @@ mod = Mod('mega_timesaver_xl.bl3hotfix',
         quiet_streaming=True,
         )
 
-# AnimSequence objects have two attributes of note:
-#  1) SequenceLength - total amount of time the sequence is supposed to take.  It
-#     looks like just shortening this value works great, but JWP can't currently
-#     serialize AnimSequence objects, so we can't automatically pull current values
-#     from data.  (FModel *can* serialize them, but we can't automate that like we
-#     can with JWP.)
-#  2) RateScale - almost certainly this is always just `1`, and this can be set to
-#     scale things up easily, to.  So that's what we're going to be using, mostly!
-
 # How much to improve speed
 global_scale = 4
 
@@ -239,6 +230,10 @@ for level_full in [
     mod.newline()
 
 class AS():
+    """
+    Little wrapper class so that I can more easily loop over a bunch of AnimSequence
+    objects which largely use the defaults but occasionally need to tweak some stuff.
+    """
 
     def __init__(self, path, scale=None, seqlen_scale=None, extra_char=None, method=Mod.LEVEL, target=None):
         self.path = path
@@ -265,6 +260,7 @@ class AS():
         # Now Notifies
         if 'Notifies' in as_data:
             for idx, notify in enumerate(as_data['Notifies']):
+                # TODO: Should we also do `Duration`?  Few objects have that one...
                 for var in ['SegmentBeginTime', 'SegmentLength', 'LinkValue']:
                     if var in notify and notify[var] != 0:
                         mod.reg_hotfix(hf_trigger, hf_target,
@@ -456,6 +452,13 @@ for cat_name, cat_scale, animseqs in [
             AS('/Game/PlayerCharacters/Gunner/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel'),
             AS('/Game/PlayerCharacters/Operative/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel'),
             AS('/Game/PlayerCharacters/SirenBrawler/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel'),
+            ]),
+        ('PC Animations', 2, [
+            AS('/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup',
+                # If we scale this up any more than this, the animation gets that freezing issue that
+                # we see on the vehicle animations.  Would prefer avoiding that, in this case.
+                scale=1.5,
+                ),
             ]),
         ('NPC Animations', 2, [
             AS('/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Enter', target='CityBoss_P'),
@@ -1071,6 +1074,10 @@ mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
 mod.newline()
 
 class IO():
+    """
+    Convenience class to allow me to loop over a bunch of IO/BPIO objects which largely
+    use the defaults but which occasionally need to override 'em.
+    """
 
     def __init__(self, path, label=None, level='MatchAll', scale=None):
         self.path = path
@@ -1781,6 +1788,12 @@ if False:
 mod.header('NPC Walking Speeds')
 
 class Char():
+    """
+    Convenience class for looping over a bunch of BPChar objects for speed improvements.
+    At the moment there's not really much of a reason to do this instead of just looping
+    over a list of tuples, but we're doing other classes like this anyway (IO and AS),
+    so I may as well do this too.
+    """
 
     def __init__(self, name, path, scale):
         self.name = name
