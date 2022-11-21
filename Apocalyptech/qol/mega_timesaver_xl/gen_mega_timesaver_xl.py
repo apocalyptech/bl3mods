@@ -240,12 +240,13 @@ for level_full in [
 
 class AS():
 
-    def __init__(self, path, scale=None, seqlen_scale=None, extra_char=None, method=Mod.LEVEL):
+    def __init__(self, path, scale=None, seqlen_scale=None, extra_char=None, method=Mod.LEVEL, target=None):
         self.path = path
         self.scale = scale
         self.seqlen_scale = seqlen_scale
         self.extra_char = extra_char
         self.method = method
+        self.target = target
 
     def _do_scale(self, mod, data, hf_trigger, hf_target):
         """
@@ -301,12 +302,15 @@ class AS():
                     round(as_data['SequenceLength']/self.seqlen_scale, 6))
 
     def do_scale(self, mod, data):
-        if self.method == Mod.PATCH:
-            target = ''
-        elif self.method == Mod.LEVEL or self.method == Mod.CHAR:
-            target = 'MatchAll'
+        if self.target is None:
+            if self.method == Mod.PATCH:
+                target = ''
+            elif self.method == Mod.LEVEL or self.method == Mod.CHAR:
+                target = 'MatchAll'
+            else:
+                raise RuntimeError(f'Unknown method for AnimSequence patching: {self.method}')
         else:
-            raise RuntimeError(f'Unknown method for AnimSequence patching: {self.method}')
+            target = self.target
         self._do_scale(mod, data, self.method, target)
         if self.extra_char:
             self._do_scale(mod, data, Mod.CHAR, self.extra_char)
@@ -454,9 +458,9 @@ for cat_name, cat_scale, animseqs in [
             AS('/Game/PlayerCharacters/SirenBrawler/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel'),
             ]),
         ('NPC Animations', 2, [
-            AS('/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Enter'),
-            AS('/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit'),
-            AS('/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging'),
+            AS('/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Enter', target='CityBoss_P'),
+            AS('/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit', target='CityBoss_P'),
+            AS('/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging', target='Mansion_P'),
             ]),
         ]:
 
@@ -1080,6 +1084,9 @@ class IO():
         self.level = level
         self.scale = scale
 
+# It's tempting to try and limit some of these doors to the "obvious" particular level, but a lot
+# of them end up getting used elsewhere anyway, like in Trials maps, or DLC6 levels.  We could
+# probably programmatically guess at it, using the refs database, but that seems like too much work.
 checked_ver = False
 for category, cat_scale, io_objs in [
         ('Doors', door_scale, [
@@ -1787,7 +1794,6 @@ class Char():
     def __lt__(self, other):
         return self.name.casefold() < other.name.casefold()
 
-#for charname, obj_name, scale in sorted([
 for char in sorted([
         Char('Claptrap',
             '/Game/NonPlayerCharacters/Claptrap/_Design/Character/BpChar_Claptrap',
