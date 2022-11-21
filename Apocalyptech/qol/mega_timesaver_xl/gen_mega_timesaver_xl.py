@@ -1773,63 +1773,87 @@ if False:
 # Can split it out later if I want.
 mod.header('NPC Walking Speeds')
 
-for charname, obj_name, scale in sorted([
-        ('Claptrap',
+class Char():
+
+    def __init__(self, name, path, scale, level='MatchAll'):
+        self.name = name
+        self.path = path
+        self.last_bit = path.split('/')[-1]
+        self.default_name = f'Default__{self.last_bit}_C'
+        self.default_name_lower = self.default_name.lower()
+        self.full_path = f'{self.path}.{self.default_name}'
+        self.scale = scale
+        self.level = level
+
+    def __lt__(self, other):
+        return self.name.casefold() < other.name.casefold()
+
+#for charname, obj_name, scale in sorted([
+for char in sorted([
+        Char('Claptrap',
             '/Game/NonPlayerCharacters/Claptrap/_Design/Character/BpChar_Claptrap',
-            global_char_scale),
-        ('Ellie',
+            global_char_scale,
+            ),
+        Char('Ellie',
             '/Game/NonPlayerCharacters/Ellie/_Design/Character/BPChar_Ellie',
-            global_char_scale),
-        ('Lilith',
+            global_char_scale,
+            ),
+        Char('Lilith',
             '/Game/NonPlayerCharacters/Lilith/_Design/Character/BPChar_Lilith',
-            global_char_scale),
-        ('Ace Baron (Healers and Dealers)',
+            global_char_scale,
+            ),
+        Char('Ace Baron (Healers and Dealers)',
             '/Game/NonPlayerCharacters/_Promethea/MedicalAssistant/_Design/Character/BPChar_MedicalAssistant',
-            global_char_scale),
+            global_char_scale,
+            ),
         # Vic's got a long way to run -- really bump this one up
-        ('Vic (Head Case)',
+        Char('Vic (Head Case)',
             '/Game/NonPlayerCharacters/_Pandora/HeadCaseGirl/_Design/Character/BPChar_HeadCaseGirl',
-            3),
+            3,
+            ),
         # Maya's mostly fine, but there's a couple of cases where it'd be nice if she were a bit faster
-        ('Maya',
+        Char('Maya',
             '/Game/NonPlayerCharacters/Maya/_Design/Character/BPChar_Maya',
-            global_char_scale),
+            global_char_scale,
+            ),
         # Ava's honestly not too bad, but she's got a long run back from the graveyard
-        ('Ava',
+        Char('Ava',
             '/Game/NonPlayerCharacters/Ava/_Design/Character/BPChar_Ava',
-            global_char_scale),
+            global_char_scale,
+            ),
         # This one's a bit silly 'cause he walks all of like three feet, but whatever.
-        ('Liam (Atlas HQ Security Guard)',
+        Char('Liam (Atlas HQ Security Guard)',
             '/Game/NonPlayerCharacters/_Promethea/AtlasSoldier/_Design/Character/BPChar_AtlasSecurityGuard',
-            global_char_scale),
-        ('Glenn the Ratch',
+            global_char_scale,
+            ),
+        Char('Glenn the Ratch',
             '/Game/NonPlayerCharacters/_Promethea/TalkingRatch/_Design/Character/BPChar_TalkingRatch',
-            global_char_scale),
-        ('Terry the Ratch',
+            global_char_scale,
+            ),
+        Char('Terry the Ratch',
             '/Game/NonPlayerCharacters/_Promethea/TalkingRatch/_Design/Character/BPChar_GoodRatch',
-            global_char_scale),
+            global_char_scale,
+            ),
         # Not sure if this is really necessary, but he *can* lag behind in The Anvil.
-        ('Brick',
+        Char('Brick',
             '/Game/NonPlayerCharacters/Brick/_Design/Character/BPChar_Brick',
-            global_char_scale),
+            global_char_scale,
+            ),
         # Also not sure how necessary this is; at the moment this hardly improves anything; just her
         # saunter over to construct the bomb, in Anvil.
-        ('Tina',
+        Char('Tina',
             '/Game/NonPlayerCharacters/TinyTina/_Design/Character/BPChar_TinyTina',
-            global_char_scale),
+            global_char_scale,
+            ),
         ]):
 
-    last_bit = obj_name.split('/')[-1]
-    default_name = 'Default__{}_C'.format(last_bit)
-    full_obj_name = '{}.{}'.format(obj_name, default_name)
-
     found_main = False
-    char_data = data.get_data(obj_name)
+    char_data = data.get_data(char.path)
     speed_walk = None
     speed_sprint = None
     have_slowdown = False
     for export in char_data:
-        if export['_jwp_object_name'].lower() == default_name.lower():
+        if export['_jwp_object_name'].lower() == char.default_name_lower:
             found_main = True
             if 'OakCharacterMovement' in export:
                 if export['OakCharacterMovement']['export'] != 0:
@@ -1847,38 +1871,38 @@ for charname, obj_name, scale in sorted([
                     if 'NavSlowdownOptions' in move_export and 'SlowdownSpeed' in move_export['NavSlowdownOptions']:
                         have_slowdown = True
                 else:
-                    raise RuntimeError('Could not find OakCharacterMovement export in {}'.format(obj_name))
+                    raise RuntimeError('Could not find OakCharacterMovement export in {}'.format(char.path))
             else:
-                raise RuntimeError('Could not find OakCharacterMovement in {}'.format(obj_name))
+                raise RuntimeError('Could not find OakCharacterMovement in {}'.format(char.path))
             break
     if not found_main:
-        raise RuntimeError('Could not find {} in {}'.format(default_name, obj_name))
+        raise RuntimeError('Could not find {} in {}'.format(char.default_name, char.path))
 
-    mod.comment(charname)
-    mod.reg_hotfix(Mod.CHAR, last_bit,
-            full_obj_name,
+    mod.comment(char.name)
+    mod.reg_hotfix(Mod.CHAR, char.last_bit,
+            char.full_path,
             'OakCharacterMovement.Object..MaxWalkSpeed',
             '(Value={},BaseValue={})'.format(
-                speed_walk*scale,
-                speed_walk*scale,
+                speed_walk*char.scale,
+                speed_walk*char.scale,
                 ),
             )
-    mod.reg_hotfix(Mod.CHAR, last_bit,
-            full_obj_name,
+    mod.reg_hotfix(Mod.CHAR, char.last_bit,
+            char.full_path,
             'OakCharacterMovement.Object..MaxSprintSpeed',
             '(Value={},BaseValue={})'.format(
-                speed_sprint*scale,
-                speed_sprint*scale,
+                speed_sprint*char.scale,
+                speed_sprint*char.scale,
                 ),
             )
     if have_slowdown:
-        mod.reg_hotfix(Mod.CHAR, last_bit,
-                full_obj_name,
+        mod.reg_hotfix(Mod.CHAR, char.last_bit,
+                char.full_path,
                 'OakCharacterMovement.Object..NavSlowdownOptions.bSlowdownNearGoal',
                 'False',
                 )
-        mod.reg_hotfix(Mod.CHAR, last_bit,
-                full_obj_name,
+        mod.reg_hotfix(Mod.CHAR, char.last_bit,
+                char.full_path,
                 'OakCharacterMovement.Object..NavSlowdownOptions.SlowdownSpeed.Value',
                 1,
                 )
