@@ -34,7 +34,7 @@ getall BPIO_Lootable_VaultCard_RedCrate_C OpeningInteractions
 * /Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_P
 * /Game/Maps/Zone_1/Outskirts/Outskirts_P
 * /Game/Maps/Zone_1/Towers/Towers_P
-  /Game/Maps/Zone_2/Mansion/Mansion_P
+* /Game/Maps/Zone_2/Mansion/Mansion_P
   /Game/Maps/Zone_2/MarshFields/MarshFields_P
 * /Game/Maps/Zone_2/Prison/Prison_P
   /Game/Maps/Zone_2/Watership/Watership_P

@@ -1506,6 +1506,27 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Mi
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,Notifies.Notifies[6].SegmentLength,0,,2.883333
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,Notifies.Notifies[6].LinkValue,0,,2.207293
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit.AS_MayaDeathReaction_Exit,SequenceLength,0,,2.883333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,RateScale,0,,2
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[0].SegmentLength,0,,2.066667
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[1].SegmentLength,0,,2.066667
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[1].LinkValue,0,,0.05739
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[2].SegmentLength,0,,2.066667
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[2].LinkValue,0,,0.213356
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[3].SegmentLength,0,,2.066667
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[3].LinkValue,0,,0.451316
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[4].SegmentLength,0,,2.066667
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[4].LinkValue,0,,0.704293
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[5].SegmentLength,0,,2.066667
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[5].LinkValue,0,,0.965355
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[6].SegmentLength,0,,2.066667
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[6].LinkValue,0,,1.090415
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[7].SegmentLength,0,,2.066667
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[7].LinkValue,0,,1.201853
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[8].SegmentLength,0,,2.066667
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[8].LinkValue,0,,1.464071
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[9].SegmentLength,0,,2.066667
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[9].LinkValue,0,,1.695808
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,SequenceLength,0,,2.066667
 
 ###
 ### Extra Container Tweaks
@@ -9603,20 +9624,72 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/Switches/WheelVal
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/Switches/WheelValve/Design/IO_Switch_Industrial_WheelValve_V1.IO_Switch_Industrial_WheelValve_V1_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.125
 
 # IO_Switch_SkullSwitch
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.1875
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.000771
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.154616
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.1875
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[1].Object..TimelineLength,0,,0.0625
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.031233
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.0625
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[2].Object..TimelineLength,0,,0.0625
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.03125
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,BloodyHarvest_P),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,BloodyHarvest_P),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.000771
+SparkLevelPatchEntry,(1,1,0,BloodyHarvest_P),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.154616
+SparkLevelPatchEntry,(1,1,0,BloodyHarvest_P),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,BloodyHarvest_P),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[1].Object..TimelineLength,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,BloodyHarvest_P),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.031233
+SparkLevelPatchEntry,(1,1,0,BloodyHarvest_P),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,BloodyHarvest_P),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[2].Object..TimelineLength,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,BloodyHarvest_P),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.03125
+SparkLevelPatchEntry,(1,1,0,BloodyHarvest_P),/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch.IO_Switch_SkullSwitch_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.0625
+
+# Hidden Statue Button in Jakobs Estate
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_Switch_StatueButton.IO_Switch_StatueButton_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_Switch_StatueButton.IO_Switch_StatueButton_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_Switch_StatueButton.IO_Switch_StatueButton_C,Timelines.Timelines[1].Object..TimelineLength,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_Switch_StatueButton.IO_Switch_StatueButton_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.031145
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_Switch_StatueButton.IO_Switch_StatueButton_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_Switch_StatueButton.IO_Switch_StatueButton_C,Timelines.Timelines[2].Object..TimelineLength,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_Switch_StatueButton.IO_Switch_StatueButton_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.03125
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_Switch_StatueButton.IO_Switch_StatueButton_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.0625
 
 ###
-### Mission-Specific
+### More Containers
 ###
+
+# BPIO_Lootable_Eridian_WhiteChestCrystal
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Design/Classes/Eridian/BPIO_Lootable_Eridian_WhiteChestCrystal.BPIO_Lootable_Eridian_WhiteChestCrystal_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.75
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Design/Classes/Eridian/BPIO_Lootable_Eridian_WhiteChestCrystal.BPIO_Lootable_Eridian_WhiteChestCrystal_C,Timelines.Timelines[0].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[1].Time,0,,0.308933
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Design/Classes/Eridian/BPIO_Lootable_Eridian_WhiteChestCrystal.BPIO_Lootable_Eridian_WhiteChestCrystal_C,Timelines.Timelines[0].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[2].Time,0,,0.48434
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Design/Classes/Eridian/BPIO_Lootable_Eridian_WhiteChestCrystal.BPIO_Lootable_Eridian_WhiteChestCrystal_C,Timelines.Timelines[0].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[3].Time,0,,0.75
+
+###
+### Other Objects
+###
+
+# BPIO_SlotMachine
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.121759
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..EventTracks.EventTracks[0].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,0.75
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..EventTracks.EventTracks[1].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,1.0
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..EventTracks.EventTracks[2].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,1.2475
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.75
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.05
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.0
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.1
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.25
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[2].Object..TimelineLength,0,,0.5
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.025
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,0.2125
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[4].Time,0,,0.25
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..TimelineLength,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[1].Time,0,,0.0275
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[2].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[3].Time,0,,0.1
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[4].Time,0,,0.14721
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[5].Time,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[1].Time,0,,0.0275
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[2].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[3].Time,0,,0.077647
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[4].Time,0,,0.0867
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[5].Time,0,,0.136252
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[6].Time,0,,0.177227
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[7].Time,0,,0.1875
 
 # Golden Calves Statue Scanner/Printer
 SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..TimelineLength,0,,3.0
@@ -9665,51 +9738,37 @@ SparkLevelPatchEntry,(1,1,0,AtlasHQ_P),/Game/InteractiveObjects/MissionScripted/
 SparkLevelPatchEntry,(1,1,0,AtlasHQ_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_SlidingDesk.IO_MissionScripted_SlidingDesk_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.5
 SparkLevelPatchEntry,(1,1,0,AtlasHQ_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_SlidingDesk.IO_MissionScripted_SlidingDesk_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,1.5
 
-###
-### More Containers
-###
+# Exploding Busts in Jakobs Estate
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_MissionUsable_ExplodingStatue.IO_MissionUsable_ExplodingStatue_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_MissionUsable_ExplodingStatue.IO_MissionUsable_ExplodingStatue_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.017124
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_MissionUsable_ExplodingStatue.IO_MissionUsable_ExplodingStatue_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_MissionUsable_ExplodingStatue.IO_MissionUsable_ExplodingStatue_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,0.2
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_MissionUsable_ExplodingStatue.IO_MissionUsable_ExplodingStatue_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[4].Time,0,,0.2375
 
-# BPIO_Lootable_Eridian_WhiteChestCrystal
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Design/Classes/Eridian/BPIO_Lootable_Eridian_WhiteChestCrystal.BPIO_Lootable_Eridian_WhiteChestCrystal_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.75
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Design/Classes/Eridian/BPIO_Lootable_Eridian_WhiteChestCrystal.BPIO_Lootable_Eridian_WhiteChestCrystal_C,Timelines.Timelines[0].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[1].Time,0,,0.308933
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Design/Classes/Eridian/BPIO_Lootable_Eridian_WhiteChestCrystal.BPIO_Lootable_Eridian_WhiteChestCrystal_C,Timelines.Timelines[0].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[2].Time,0,,0.48434
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Design/Classes/Eridian/BPIO_Lootable_Eridian_WhiteChestCrystal.BPIO_Lootable_Eridian_WhiteChestCrystal_C,Timelines.Timelines[0].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[3].Time,0,,0.75
+# Sliding Pictures in Jakobs Estate
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_MissionUsable_SlidingPictureFrame.IO_MissionUsable_SlidingPictureFrame_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.375
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_MissionUsable_SlidingPictureFrame.IO_MissionUsable_SlidingPictureFrame_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.375
 
-###
-### Other
-###
+# Rotating Bookshelves in Jakobs Estate
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_MissionUsable_SpinningBookShelf.IO_MissionUsable_SpinningBookShelf_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_MissionUsable_SpinningBookShelf.IO_MissionUsable_SpinningBookShelf_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.05
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_MissionUsable_SpinningBookShelf.IO_MissionUsable_SpinningBookShelf_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.2
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_MissionUsable_SpinningBookShelf.IO_MissionUsable_SpinningBookShelf_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.05
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_MissionUsable_SpinningBookShelf.IO_MissionUsable_SpinningBookShelf_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.2
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_MissionUsable_SpinningBookShelf.IO_MissionUsable_SpinningBookShelf_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_MissionUsable_SpinningBookShelf.IO_MissionUsable_SpinningBookShelf_C,Timelines.Timelines[1].Object..TimelineLength,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_MissionUsable_SpinningBookShelf.IO_MissionUsable_SpinningBookShelf_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.125
 
-# BPIO_SlotMachine
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.1875
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.0625
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.121759
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,0.1875
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..EventTracks.EventTracks[0].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,0.75
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..EventTracks.EventTracks[1].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,1.0
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..EventTracks.EventTracks[2].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,1.2475
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.75
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.05
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.0
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.1
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.25
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[2].Object..TimelineLength,0,,0.5
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.025
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.1875
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,0.2125
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[4].Time,0,,0.25
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..TimelineLength,0,,0.1875
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[1].Time,0,,0.0275
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[2].Time,0,,0.0625
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[3].Time,0,,0.1
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[4].Time,0,,0.14721
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[5].Time,0,,0.1875
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[1].Time,0,,0.0275
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[2].Time,0,,0.0625
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[3].Time,0,,0.077647
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[4].Time,0,,0.0867
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[5].Time,0,,0.136252
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[6].Time,0,,0.177227
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[7].Time,0,,0.1875
+# Stage Props in Jakobs Estate
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionSpecificObjects/GrandTour/_Design/BP_IO_StageProp_UpDown.BP_IO_StageProp_UpDown_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionSpecificObjects/GrandTour/_Design/BP_IO_StageProp_UpDown.BP_IO_StageProp_UpDown_C,Timelines.Timelines[0].Object..EventTracks.EventTracks[0].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,0.125
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionSpecificObjects/GrandTour/_Design/BP_IO_StageProp_UpDown.BP_IO_StageProp_UpDown_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.125
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionSpecificObjects/GrandTour/_Design/BP_IO_StageProp_UpDown.BP_IO_StageProp_UpDown_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.25
+
+# Sliding Bed in 'Sacked' mission
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/IO_MissionUsable_AureliasSkeletons_MovableBed.IO_MissionUsable_AureliasSkeletons_MovableBed_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.5
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/IO_MissionUsable_AureliasSkeletons_MovableBed.IO_MissionUsable_AureliasSkeletons_MovableBed_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.025
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/IO_MissionUsable_AureliasSkeletons_MovableBed.IO_MissionUsable_AureliasSkeletons_MovableBed_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.5
 
 ###
 ### Slot Machine Tweaks
@@ -9717,6 +9776,64 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shar
 
 SparkLevelPatchEntry,(1,7,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,0,1,ExecuteUbergraph_BPIO_SlotMachine,1,1513,1:5,4:1.25
 SparkLevelPatchEntry,(1,7,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,0,1,ExecuteUbergraph_BPIO_SlotMachine,1,2889,1:1,4:0.25
+
+###
+### Exploding Statue Tweaks
+###
+
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_ButtonStatue_2.RotateStatue,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_ButtonStatue_2.BP_IO_LootSpawnComponent,DelayBeforeSpawningLoot,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_3.RotateStatue,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_3.BP_IO_LootSpawnComponent,DelayBeforeSpawningLoot,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_1758.RotateStatue,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_1758.BP_IO_LootSpawnComponent,DelayBeforeSpawningLoot,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_1388.RotateStatue,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_1388.BP_IO_LootSpawnComponent,DelayBeforeSpawningLoot,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_P:PersistentLevel.IO_MissionUsable_ExplodingStatue_3.RotateStatue,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_P:PersistentLevel.IO_MissionUsable_ExplodingStatue_3.BP_IO_LootSpawnComponent,DelayBeforeSpawningLoot,0,,0.25
+
+###
+### Sliding Painting Tweaks
+###
+
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_10.MoveFrame,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_11.MoveFrame,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_5.MoveFrame,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_6.MoveFrame,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_7.MoveFrame,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_8.MoveFrame,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_9.MoveFrame,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Theater.Mansion_Theater:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_5.MoveFrame,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Theater.Mansion_Theater:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_8.MoveFrame,TheTimeline.Length,0,,0.25
+
+###
+### Jakobs Estate Stage Prop Tweaks
+###
+
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_Switch_IndustrialSwitch_V_1142,EndSwitchMovementDelay,0,,0.3
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_Switch_IndustrialSwitch_V_2148,EndSwitchMovementDelay,0,,0.3
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_Switch_IndustrialSwitch_V_991,EndSwitchMovementDelay,0,,0.55
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_BackgroundProp,DurationOfPropMovement,0,,0.625
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_BackgroundProp.Timeline_0,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_BackgroundProp.Timeline_0,TheTimeline.Events.Events[0].Time,0,,0.125
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_LeftProp,DurationOfPropMovement,0,,0.375
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_LeftProp.Timeline_0,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_LeftProp.Timeline_0,TheTimeline.Events.Events[0].Time,0,,0.125
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_RightProp,DurationOfPropMovement,0,,0.375
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_RightProp.Timeline_0,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_RightProp.Timeline_0,TheTimeline.Events.Events[0].Time,0,,0.125
+
+###
+### Jakobs Estate Spinning Bookshelf Tweaks
+###
+
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_P.Mansion_P:PersistentLevel.EasterEgg_SpiningBookshelf,LootSpawnDelay,0,,1.25
+
+###
+### Sliding Bed in Sacked
+###
+
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_AureliasSkeletons_MovableBed_2.Move Bed,TheTimeline.Length,0,,0.5
 
 ###
 ### Elevators
@@ -9738,6 +9855,10 @@ SparkEarlyLevelPatchEntry,(1,1,0,CreatureSlaughter_P),/Game/Maps/Slaughters/Crea
 # Floodmoor Basin - Knotty Peak
 SparkEarlyLevelPatchEntry,(1,1,0,Wetlands_P),/Game/Maps/Zone_2/Wetlands/Wetlands_Dynamic.Wetlands_Dynamic:PersistentLevel.Elevator_WetlandsLodge_3326,ElevatorSpeed,0,,1600
 SparkEarlyLevelPatchEntry,(1,1,0,Wetlands_P),/Game/Maps/Zone_2/Wetlands/Wetlands_Dynamic.Wetlands_Dynamic:PersistentLevel.Elevator_WetlandsLodge_3326,ElevatorTravelTime,0,,2.5
+
+# Jakobs Estate
+SparkEarlyLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.Elevator_Ep09_Mansion_592,ElevatorSpeed,0,,700
+SparkEarlyLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.Elevator_Ep09_Mansion_592,ElevatorTravelTime,0,,5.0
 
 # Meridian Outskirts - Main upper/lower Elevator
 SparkEarlyLevelPatchEntry,(1,1,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outskirts_Mission.Outskirts_Mission:PersistentLevel.Elevator_Outskirts_Refugee,ElevatorSpeed,0,,1600

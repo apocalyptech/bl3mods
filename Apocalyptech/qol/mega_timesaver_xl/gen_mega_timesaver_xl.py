@@ -424,6 +424,7 @@ for cat_name, cat_scale, obj_names in [
         ('NPC Animations', 2, [
             '/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Enter',
             '/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit',
+            '/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging',
             ]),
         ]:
 
@@ -1043,203 +1044,240 @@ mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
         0.5)
 mod.newline()
 
+class IO():
+
+    def __init__(self, path, label=None, level='MatchAll', scale=None):
+        self.path = path
+        self.last_bit = path.split('/')[-1]
+        self.last_bit_c = f'{self.last_bit}_C'
+        self.full_path = f'{self.path}.{self.last_bit_c}'
+        if label is None:
+            self.label = self.last_bit
+        else:
+            self.label = label
+        self.level = level
+        self.scale = scale
+
 checked_ver = False
-for category, cat_scale, obj_names in [
+for category, cat_scale, io_objs in [
         ('Doors', door_scale, [
             # find $(find . -name Doors) -name "IO_*.uasset" | sort -i | cut -d. -f2 | grep -v Parent
-            '/Alisma/InteractiveObjects/General/Doors/IO_Door_130x250_SlideLeft_Hyperion',
-            '/Alisma/InteractiveObjects/General/Doors/IO_Door_130x250_SlideUp_Prison',
-            '/Alisma/InteractiveObjects/General/Doors/IO_Door_400x400_SlideDown_Hyp',
-            '/Alisma/InteractiveObjects/General/Doors/IO_DoubleDoor_SlideUp_Hyp',
+            IO('/Alisma/InteractiveObjects/General/Doors/IO_Door_130x250_SlideLeft_Hyperion'),
+            IO('/Alisma/InteractiveObjects/General/Doors/IO_Door_130x250_SlideUp_Prison'),
+            IO('/Alisma/InteractiveObjects/General/Doors/IO_Door_400x400_SlideDown_Hyp'),
+            IO('/Alisma/InteractiveObjects/General/Doors/IO_DoubleDoor_SlideUp_Hyp'),
             # This one's just part of a cutscene; stays open otherwise
-            #'/Dandelion/InteractiveObjects/Doors/IO_Door_800x600_SlideUp_TrashTownMainEntry',
-            '/Dandelion/InteractiveObjects/Doors/IO_Door_Hyperion_DoubleGlass',
-            '/Dandelion/InteractiveObjects/Doors/IO_Door_Hyperion_Double',
-            '/Dandelion/InteractiveObjects/Doors/IO_Door_Hyperion_Single_TricksyNickLoot',
-            '/Dandelion/InteractiveObjects/Doors/IO_Door_Hyperion_Single',
+            #IO('/Dandelion/InteractiveObjects/Doors/IO_Door_800x600_SlideUp_TrashTownMainEntry'),
+            IO('/Dandelion/InteractiveObjects/Doors/IO_Door_Hyperion_DoubleGlass'),
+            IO('/Dandelion/InteractiveObjects/Doors/IO_Door_Hyperion_Double'),
+            IO('/Dandelion/InteractiveObjects/Doors/IO_Door_Hyperion_Single_TricksyNickLoot'),
+            IO('/Dandelion/InteractiveObjects/Doors/IO_Door_Hyperion_Single'),
             # No timing parameters on these two
-            #'/Dandelion/InteractiveObjects/Doors/PrizeDoors/IO_Door_Hyperion_Single_Prize',
-            #'/Dandelion/InteractiveObjects/Doors/PrizeDoors/IO_Switch_Hyp_Button_V1_Prize',
-            '/Game/InteractiveObjects/Doors/Atlas/_Design/IO_Door_130x250_Atlas_ShelfDoor',
-            '/Game/InteractiveObjects/Doors/Atlas/_Design/IO_Door_400x400_SlideLeftAndRight_AtlasHQ_Generic',
-            '/Game/InteractiveObjects/Doors/Atlas/_Design/IO_Door_AtlasHQ_Elevator_Exterior',
-            '/Game/InteractiveObjects/Doors/Atlas/_Design/IO_Door_AtlasHQ_Elevator_Interior_Short',
-            '/Game/InteractiveObjects/Doors/Atlas/_Design/IO_Door_AtlasHQ_Elevator_Interior_Tall',
+            #IO('/Dandelion/InteractiveObjects/Doors/PrizeDoors/IO_Door_Hyperion_Single_Prize'),
+            #IO('/Dandelion/InteractiveObjects/Doors/PrizeDoors/IO_Switch_Hyp_Button_V1_Prize'),
+            IO('/Game/InteractiveObjects/Doors/Atlas/_Design/IO_Door_130x250_Atlas_ShelfDoor'),
+            IO('/Game/InteractiveObjects/Doors/Atlas/_Design/IO_Door_400x400_SlideLeftAndRight_AtlasHQ_Generic'),
+            IO('/Game/InteractiveObjects/Doors/Atlas/_Design/IO_Door_AtlasHQ_Elevator_Exterior'),
+            IO('/Game/InteractiveObjects/Doors/Atlas/_Design/IO_Door_AtlasHQ_Elevator_Interior_Short'),
+            IO('/Game/InteractiveObjects/Doors/Atlas/_Design/IO_Door_AtlasHQ_Elevator_Interior_Tall'),
             # No timing parameters
-            #'/Game/InteractiveObjects/Doors/City/_Design/IO_Door_1630x600_MeltHole_GiantDoor',
-            '/Game/InteractiveObjects/Doors/City/_Design/IO_Door_1630x600_SlideUp_GiantDoor',
-            '/Game/InteractiveObjects/Doors/CoV/_Design/IO_Door_CoV_SwingingGate_V1',
-            '/Game/InteractiveObjects/Doors/Default/1000x600/IO_Door_1000x600_SlideLeftAndRight',
-            '/Game/InteractiveObjects/Doors/Default/800x600/IO_Door_800x600_SlideUp',
-            '/Game/InteractiveObjects/Doors/Eden_6/_Design/IO_Door_130x250_Rotate_Watership',
-            '/Game/InteractiveObjects/Doors/Eden_6/_Design/IO_Door_400x400_SlideLeftAndRight_Eden6_Generic_IronBear',
-            '/Game/InteractiveObjects/Doors/Eden_6/_Design/IO_Door_Custom_Watership_RotateUp',
-            '/Game/InteractiveObjects/Doors/Eden_6/_Design/IO_Door_Marshfields_Custom_HiddenSpyDoor',
-            '/Game/InteractiveObjects/Doors/Eden_6/_Design/IO_Door_Watership_Custom_LabDoor',
-            '/Game/InteractiveObjects/Doors/Eridian/_Design/IO_Door_1000x600_SlideLeftAndRight_Eridian_Generic',
-            '/Game/InteractiveObjects/Doors/Eridian/_Design/IO_Door_400x400_SlideUp_Eridian_Generic',
-            '/Game/InteractiveObjects/Doors/Eridian/_Design/IO_Door_Large_SlideUp_Eridian_Generic1',
-            '/Game/InteractiveObjects/Doors/Global/_Design/IO_Door_ScalableForcefield',
-            '/Game/InteractiveObjects/Doors/Industrial/_Design/IO_Door_1000x600_SlideUp_Industrial_Generic',
-            '/Game/InteractiveObjects/Doors/Industrial/_Design/IO_Door_400x400_SlideUp_Industrial_Generic',
-            '/Game/InteractiveObjects/Doors/Maliwan/_Design/IO_Door_Custom_Rotate_2Piece_Maliwan',
+            #IO('/Game/InteractiveObjects/Doors/City/_Design/IO_Door_1630x600_MeltHole_GiantDoor'),
+            IO('/Game/InteractiveObjects/Doors/City/_Design/IO_Door_1630x600_SlideUp_GiantDoor'),
+            IO('/Game/InteractiveObjects/Doors/CoV/_Design/IO_Door_CoV_SwingingGate_V1'),
+            IO('/Game/InteractiveObjects/Doors/Default/1000x600/IO_Door_1000x600_SlideLeftAndRight'),
+            IO('/Game/InteractiveObjects/Doors/Default/800x600/IO_Door_800x600_SlideUp'),
+            IO('/Game/InteractiveObjects/Doors/Eden_6/_Design/IO_Door_130x250_Rotate_Watership'),
+            IO('/Game/InteractiveObjects/Doors/Eden_6/_Design/IO_Door_400x400_SlideLeftAndRight_Eden6_Generic_IronBear'),
+            IO('/Game/InteractiveObjects/Doors/Eden_6/_Design/IO_Door_Custom_Watership_RotateUp'),
+            IO('/Game/InteractiveObjects/Doors/Eden_6/_Design/IO_Door_Marshfields_Custom_HiddenSpyDoor'),
+            IO('/Game/InteractiveObjects/Doors/Eden_6/_Design/IO_Door_Watership_Custom_LabDoor'),
+            IO('/Game/InteractiveObjects/Doors/Eridian/_Design/IO_Door_1000x600_SlideLeftAndRight_Eridian_Generic'),
+            IO('/Game/InteractiveObjects/Doors/Eridian/_Design/IO_Door_400x400_SlideUp_Eridian_Generic'),
+            IO('/Game/InteractiveObjects/Doors/Eridian/_Design/IO_Door_Large_SlideUp_Eridian_Generic1'),
+            IO('/Game/InteractiveObjects/Doors/Global/_Design/IO_Door_ScalableForcefield'),
+            IO('/Game/InteractiveObjects/Doors/Industrial/_Design/IO_Door_1000x600_SlideUp_Industrial_Generic'),
+            IO('/Game/InteractiveObjects/Doors/Industrial/_Design/IO_Door_400x400_SlideUp_Industrial_Generic'),
+            IO('/Game/InteractiveObjects/Doors/Maliwan/_Design/IO_Door_Custom_Rotate_2Piece_Maliwan'),
             # No timing parameters for these two
-            #'/Game/InteractiveObjects/Doors/Maliwan/_Design/IO_Door_Maliwan_Shield_Large',
-            #'/Game/InteractiveObjects/Doors/Maliwan/_Design/IO_Door_Maliwan_Shield',
-            '/Game/InteractiveObjects/Doors/Mansion/_Design/IO_Door_130x250_Rotate_Mansion_NoFrame',
-            '/Game/InteractiveObjects/Doors/Mansion/_Design/IO_Door_130x250_Rotate_Mansion',
-            '/Game/InteractiveObjects/Doors/Mansion/_Design/IO_Door_400x400_2Piece_Atrium_IronBearDoor',
-            '/Game/InteractiveObjects/Doors/Mansion/_Design/IO_Door_400x400_Rotate_2Piece_BustOpenMansionDoor',
-            '/Game/InteractiveObjects/Doors/Mansion/_Design/IO_Door_400x400_Rotate_2Piece_Generic_IronBearDoor',
-            '/Game/InteractiveObjects/Doors/Mansion/_Design/IO_Door_CustomSize_Rotate_2Piece_IronGate',
-            '/Game/InteractiveObjects/Doors/Mansion/_Design/IO_Door_Mansion_Bookcase_500x500_SlideRight',
+            #IO('/Game/InteractiveObjects/Doors/Maliwan/_Design/IO_Door_Maliwan_Shield_Large'),
+            #IO('/Game/InteractiveObjects/Doors/Maliwan/_Design/IO_Door_Maliwan_Shield'),
+            IO('/Game/InteractiveObjects/Doors/Mansion/_Design/IO_Door_130x250_Rotate_Mansion_NoFrame'),
+            IO('/Game/InteractiveObjects/Doors/Mansion/_Design/IO_Door_130x250_Rotate_Mansion'),
+            IO('/Game/InteractiveObjects/Doors/Mansion/_Design/IO_Door_400x400_2Piece_Atrium_IronBearDoor'),
+            IO('/Game/InteractiveObjects/Doors/Mansion/_Design/IO_Door_400x400_Rotate_2Piece_BustOpenMansionDoor'),
+            IO('/Game/InteractiveObjects/Doors/Mansion/_Design/IO_Door_400x400_Rotate_2Piece_Generic_IronBearDoor'),
+            IO('/Game/InteractiveObjects/Doors/Mansion/_Design/IO_Door_CustomSize_Rotate_2Piece_IronGate'),
+            IO('/Game/InteractiveObjects/Doors/Mansion/_Design/IO_Door_Mansion_Bookcase_500x500_SlideRight'),
             # No timing parameters
-            #'/Game/InteractiveObjects/Doors/Mine/_Design/IO_Door_400x400_SlideUp_MinerDetails_DestroyableDoor',
-            '/Game/InteractiveObjects/Doors/Monastery/_Design/IO_Door_130x250_SlideDown_Monastery',
-            '/Game/InteractiveObjects/Doors/Monastery/_Design/IO_Door_400x400_LeftAndRight_Monastery_1',
-            '/Game/InteractiveObjects/Doors/Monastery/_Design/IO_Door_400x400_LeftAndRight_Monastery_SpecialTitleCard',
+            #IO('/Game/InteractiveObjects/Doors/Mine/_Design/IO_Door_400x400_SlideUp_MinerDetails_DestroyableDoor'),
+            IO('/Game/InteractiveObjects/Doors/Monastery/_Design/IO_Door_130x250_SlideDown_Monastery'),
+            IO('/Game/InteractiveObjects/Doors/Monastery/_Design/IO_Door_400x400_LeftAndRight_Monastery_1'),
+            IO('/Game/InteractiveObjects/Doors/Monastery/_Design/IO_Door_400x400_LeftAndRight_Monastery_SpecialTitleCard'),
             # No timing parameters
-            #'/Game/InteractiveObjects/Doors/Monastery/_Design/IO_Door_400x400_SlideUp_Monastery_TombDoor',
-            '/Game/InteractiveObjects/Doors/Monastery/_Design/IO_Door_800x600_SlideUp_Monastery_Courtyard',
-            '/Game/InteractiveObjects/Doors/Motorcade/_Design/IO_Door_130x250_Rotate_Motorcade_OrphanageDoor',
-            '/Game/InteractiveObjects/Doors/Motorcade/_Design/IO_Door_130x250_SlideUp_Motorcade_BanditHideoutDoor',
-            '/Game/InteractiveObjects/Doors/Motorcade/_Design/IO_Door_400x400_Motorcade_RotateUp',
-            '/Game/InteractiveObjects/Doors/Motorcade/_Design/IO_Door_800x600_Motorcade_Rotate',
-            '/Game/InteractiveObjects/Doors/Motorcade/_Design/IO_Door_800x600_SlideLeftAndRight_Motorcade_BarnDoor',
-            '/Game/InteractiveObjects/Doors/Motorcade/_Design/IO_Door_SkagFarm_400x400_RotateUp',
+            #IO('/Game/InteractiveObjects/Doors/Monastery/_Design/IO_Door_400x400_SlideUp_Monastery_TombDoor'),
+            IO('/Game/InteractiveObjects/Doors/Monastery/_Design/IO_Door_800x600_SlideUp_Monastery_Courtyard'),
+            IO('/Game/InteractiveObjects/Doors/Motorcade/_Design/IO_Door_130x250_Rotate_Motorcade_OrphanageDoor'),
+            IO('/Game/InteractiveObjects/Doors/Motorcade/_Design/IO_Door_130x250_SlideUp_Motorcade_BanditHideoutDoor'),
+            IO('/Game/InteractiveObjects/Doors/Motorcade/_Design/IO_Door_400x400_Motorcade_RotateUp'),
+            IO('/Game/InteractiveObjects/Doors/Motorcade/_Design/IO_Door_800x600_Motorcade_Rotate'),
+            IO('/Game/InteractiveObjects/Doors/Motorcade/_Design/IO_Door_800x600_SlideLeftAndRight_Motorcade_BarnDoor'),
+            IO('/Game/InteractiveObjects/Doors/Motorcade/_Design/IO_Door_SkagFarm_400x400_RotateUp'),
             # Leave this one alone, doesn't ever impede movement.
-            #'/Game/InteractiveObjects/Doors/Nekro/_Design/IO_Door_Custom_CloakedRock',
+            #IO('/Game/InteractiveObjects/Doors/Nekro/_Design/IO_Door_Custom_CloakedRock'),
             # No timing parameters for these two
-            #'/Game/InteractiveObjects/Doors/Nekro/_Design/IO_Door_Custom_Nekro_Crypt_Small',
-            #'/Game/InteractiveObjects/Doors/Nekro/_Design/IO_Door_Custom_Nekro_Crypt',
-            '/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_1000x600_SlideLeftAndRight_Pandora',
-            '/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_1000x600_SlideUp_Pandora_Generic',
-            '/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_130x250_Lynchwood_SlideLeft1',
-            '/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_1630x1200_SlideUp_SecretGarageDoor',
-            '/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_400x400_SlideUp_Pandora_Generic',
+            #IO('/Game/InteractiveObjects/Doors/Nekro/_Design/IO_Door_Custom_Nekro_Crypt_Small'),
+            #IO('/Game/InteractiveObjects/Doors/Nekro/_Design/IO_Door_Custom_Nekro_Crypt'),
+            IO('/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_1000x600_SlideLeftAndRight_Pandora'),
+            IO('/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_1000x600_SlideUp_Pandora_Generic'),
+            IO('/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_130x250_Lynchwood_SlideLeft1'),
+            IO('/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_1630x1200_SlideUp_SecretGarageDoor'),
+            IO('/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_400x400_SlideUp_Pandora_Generic'),
             # No timing parameters
-            #'/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_CustomSize_Rotate_2Piece_CovRecruitmentDoor_Small',
-            '/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_CustomSize_Rotate_2Piece_CovRecruitmentDoor',
+            #IO('/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_CustomSize_Rotate_2Piece_CovRecruitmentDoor_Small'),
+            IO('/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_CustomSize_Rotate_2Piece_CovRecruitmentDoor'),
             # Only main TimelineLength found; skip it for now...
-            #'/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_CustomSize_Rotate_2Piece_MagnetDoor',
-            '/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_CustomSize_RotateUp_Pandora_TunnelCap',
-            '/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_CustomSize_SlideUp_Pandora_CarHook',
-            '/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_Pandora_130x250_Rotate',
-            '/Game/InteractiveObjects/Doors/Prison/_Design/IO_Door_130x250_SlideUp_PrisonBars',
-            '/Game/InteractiveObjects/Doors/Prison/_Design/IO_Door_130x250_SlideUp_PrisonMetal',
-            '/Game/InteractiveObjects/Doors/Prison/_Design/IO_Door_400x400_SlideUpAndDown_Prison',
-            '/Game/InteractiveObjects/Doors/Prison/_Design/IO_Door_400x400_SlideUp_Prison',
-            '/Game/InteractiveObjects/Doors/Promethea/_Design/IO_Door_1000x600_SlideUp_Promethea_Generic',
+            #IO('/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_CustomSize_Rotate_2Piece_MagnetDoor'),
+            IO('/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_CustomSize_RotateUp_Pandora_TunnelCap'),
+            IO('/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_CustomSize_SlideUp_Pandora_CarHook'),
+            IO('/Game/InteractiveObjects/Doors/Pandora/_Design/IO_Door_Pandora_130x250_Rotate'),
+            IO('/Game/InteractiveObjects/Doors/Prison/_Design/IO_Door_130x250_SlideUp_PrisonBars'),
+            IO('/Game/InteractiveObjects/Doors/Prison/_Design/IO_Door_130x250_SlideUp_PrisonMetal'),
+            IO('/Game/InteractiveObjects/Doors/Prison/_Design/IO_Door_400x400_SlideUpAndDown_Prison'),
+            IO('/Game/InteractiveObjects/Doors/Prison/_Design/IO_Door_400x400_SlideUp_Prison'),
+            IO('/Game/InteractiveObjects/Doors/Promethea/_Design/IO_Door_1000x600_SlideUp_Promethea_Generic'),
             # No timing parameters -- calls out to Door_Eden6_VehicleSpawner's AS_VehicleDoor_Open and handled above, though.
-            #'/Game/InteractiveObjects/Doors/Promethea/_Design/IO_Door_1000x600_SlideUp_Promethea_Vehicle2',
-            '/Game/InteractiveObjects/Doors/Promethea/_Design/IO_Door_400x400_SlideUp_Promethea_Generic',
-            '/Game/InteractiveObjects/Doors/SpaceShips/_Design/IO_Door_130x250__SlideUp_Spaceships_Generic',
-            '/Game/InteractiveObjects/Doors/SpaceShips/_Design/IO_Door_400x400_SlideDown_Spaceships_Generic',
-            '/Game/InteractiveObjects/Doors/SpaceShips/_Design/IO_Door_400x400_SlideRight_Spaceships_Generi',
-            '/Game/InteractiveObjects/Doors/SpaceShips/_Design/IO_Door_400x400_SlideUp_Spaceships_Generic',
-            '/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Doors/_Design/IO_Door_BloodyHarvest_Rotate_2Piece_IronGate',
+            #IO('/Game/InteractiveObjects/Doors/Promethea/_Design/IO_Door_1000x600_SlideUp_Promethea_Vehicle2'),
+            IO('/Game/InteractiveObjects/Doors/Promethea/_Design/IO_Door_400x400_SlideUp_Promethea_Generic'),
+            IO('/Game/InteractiveObjects/Doors/SpaceShips/_Design/IO_Door_130x250__SlideUp_Spaceships_Generic'),
+            IO('/Game/InteractiveObjects/Doors/SpaceShips/_Design/IO_Door_400x400_SlideDown_Spaceships_Generic'),
+            IO('/Game/InteractiveObjects/Doors/SpaceShips/_Design/IO_Door_400x400_SlideRight_Spaceships_Generi'),
+            IO('/Game/InteractiveObjects/Doors/SpaceShips/_Design/IO_Door_400x400_SlideUp_Spaceships_Generic'),
+            IO('/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Doors/_Design/IO_Door_BloodyHarvest_Rotate_2Piece_IronGate'),
             # No timing parameters for these two
-            #'/Game/PatchDLC/Event2/InteractiveObjects/Doors/_Design/IO_Door_400x400_Rotate_2Piece_Generic_IronBearDoor_Cartels',
-            #'/Game/PatchDLC/Event2/InteractiveObjects/Doors/_Design/IO_Door_CustomSize_Rotate_2Piece_IronGate_CartelsVar',
-            '/Game/PatchDLC/Ixora/InteractiveObjects/Doors/IO_Door_130x250_SlideUp_Motorcade_BanditHideoutDoor_GearUp',
+            #IO('/Game/PatchDLC/Event2/InteractiveObjects/Doors/_Design/IO_Door_400x400_Rotate_2Piece_Generic_IronBearDoor_Cartels'),
+            #IO('/Game/PatchDLC/Event2/InteractiveObjects/Doors/_Design/IO_Door_CustomSize_Rotate_2Piece_IronGate_CartelsVar'),
+            IO('/Game/PatchDLC/Ixora/InteractiveObjects/Doors/IO_Door_130x250_SlideUp_Motorcade_BanditHideoutDoor_GearUp'),
             # No timing parameters
-            #'/Game/PatchDLC/Ixora/InteractiveObjects/Doors/IO_Door_400x400_SlideUp_Industrial_Generic_GearUp',
-            '/Geranium/InteractiveObjects/Doors/Facility/_Design/IO_Door_130x250_SlideUp_FacilityPlayerDoor1',
-            '/Geranium/InteractiveObjects/Doors/Facility/_Design/IO_Door_400x400_SlideLeftAndRight_FacilityIBDoor2',
-            '/Geranium/InteractiveObjects/Doors/Facility/_Design/IO_Door_400x400_SlideUp_FacilityIBDoor1',
-            '/Geranium/InteractiveObjects/Doors/Facility/_Design/IO_Door_800x600_SlideUpAndDown_FacilitySmallVehicleDoor2',
-            '/Geranium/InteractiveObjects/Doors/Facility/_Design/IO_Door_800x600_SlideUp_FacilitySmallVehicleDoor',
-            '/Geranium/InteractiveObjects/Doors/Facility/_Design/IO_Door_800x800_Rotate_IBArenaDoor',
+            #IO('/Game/PatchDLC/Ixora/InteractiveObjects/Doors/IO_Door_400x400_SlideUp_Industrial_Generic_GearUp'),
+            IO('/Geranium/InteractiveObjects/Doors/Facility/_Design/IO_Door_130x250_SlideUp_FacilityPlayerDoor1'),
+            IO('/Geranium/InteractiveObjects/Doors/Facility/_Design/IO_Door_400x400_SlideLeftAndRight_FacilityIBDoor2'),
+            IO('/Geranium/InteractiveObjects/Doors/Facility/_Design/IO_Door_400x400_SlideUp_FacilityIBDoor1'),
+            IO('/Geranium/InteractiveObjects/Doors/Facility/_Design/IO_Door_800x600_SlideUpAndDown_FacilitySmallVehicleDoor2'),
+            IO('/Geranium/InteractiveObjects/Doors/Facility/_Design/IO_Door_800x600_SlideUp_FacilitySmallVehicleDoor'),
+            IO('/Geranium/InteractiveObjects/Doors/Facility/_Design/IO_Door_800x800_Rotate_IBArenaDoor'),
             # No timing parameters
-            #'/Geranium/InteractiveObjects/Doors/Forest/_Design/IO_Door_Forest_TrainCrash',
-            '/Geranium/InteractiveObjects/Doors/Frontier/_Design/IO_Door_130x250_SlideUp_FrontierPlayerDoor',
-            '/Geranium/InteractiveObjects/Doors/Frontier/_Design/IO_Door_400x400_SlideLeftAndRight_FrontierIBDoor',
-            '/Geranium/InteractiveObjects/Doors/Frontier/_Design/IO_Door_400x400_VaultDoor',
-            '/Geranium/InteractiveObjects/Doors/IO_Door_130x250_SaloonDoor',
-            '/Geranium/InteractiveObjects/Doors/Lodge/_Design/IO_Door_400x400_Rotate_2Piece_Lodge_IronBear',
-            '/Geranium/InteractiveObjects/Doors/Lodge/_Design/IO_Door_Lodge_TreasureRoom',
-            '/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Factory/IO_Hib_Door_800x600_Factory',
+            #IO('/Geranium/InteractiveObjects/Doors/Forest/_Design/IO_Door_Forest_TrainCrash'),
+            IO('/Geranium/InteractiveObjects/Doors/Frontier/_Design/IO_Door_130x250_SlideUp_FrontierPlayerDoor'),
+            IO('/Geranium/InteractiveObjects/Doors/Frontier/_Design/IO_Door_400x400_SlideLeftAndRight_FrontierIBDoor'),
+            IO('/Geranium/InteractiveObjects/Doors/Frontier/_Design/IO_Door_400x400_VaultDoor'),
+            IO('/Geranium/InteractiveObjects/Doors/IO_Door_130x250_SaloonDoor'),
+            IO('/Geranium/InteractiveObjects/Doors/Lodge/_Design/IO_Door_400x400_Rotate_2Piece_Lodge_IronBear'),
+            IO('/Geranium/InteractiveObjects/Doors/Lodge/_Design/IO_Door_Lodge_TreasureRoom'),
+            IO('/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Factory/IO_Hib_Door_800x600_Factory'),
             # No timing parameters for these two
-            #'/Hibiscus/InteractiveObjects/Systems/Doors/_Design/MansionReskin/IO_Hib_Door2_400x400',
-            #'/Hibiscus/InteractiveObjects/Systems/Doors/_Design/MansionReskin/IO_Hib_Door_400x400',
+            #IO('/Hibiscus/InteractiveObjects/Systems/Doors/_Design/MansionReskin/IO_Hib_Door2_400x400'),
+            #IO('/Hibiscus/InteractiveObjects/Systems/Doors/_Design/MansionReskin/IO_Hib_Door_400x400'),
             # This one can't be serialized currently, for some reason.
-            #'/Hibiscus/InteractiveObjects/Systems/Doors/_Design/MansionReskin/IO_Hib_Door_Bookcase',
+            #IO('/Hibiscus/InteractiveObjects/Systems/Doors/_Design/MansionReskin/IO_Hib_Door_Bookcase'),
             # No timing parameters
-            #'/Hibiscus/InteractiveObjects/Systems/Doors/_Design/MansionReskin/IO_Hib_DoorFrame_130x250',
-            '/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Venue/IO_Hib_Door_Venue_BossGate',
+            #IO('/Hibiscus/InteractiveObjects/Systems/Doors/_Design/MansionReskin/IO_Hib_DoorFrame_130x250'),
+            IO('/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Venue/IO_Hib_Door_Venue_BossGate'),
             # No timing parameters
-            #'/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Village/IO_Hib_Door_130x250_Village',
-            '/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Village/IO_Hib_Door_IronGate',
-            '/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Woods/IO_Hib_Door_400x400_SlideDoor',
-            '/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Woods/IO_Hib_Door_800x600_SlideDoor',
-            '/Ixora2/InteractiveObjects/Doors/IO_Door_400x400_SlideUp_Eridian_Generic',
+            #IO('/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Village/IO_Hib_Door_130x250_Village'),
+            IO('/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Village/IO_Hib_Door_IronGate'),
+            IO('/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Woods/IO_Hib_Door_400x400_SlideDoor'),
+            IO('/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Woods/IO_Hib_Door_800x600_SlideDoor'),
+            IO('/Ixora2/InteractiveObjects/Doors/IO_Door_400x400_SlideUp_Eridian_Generic'),
             # No timing parameters
-            #'/Ixora2/InteractiveObjects/Doors/IO_Door_Custom_Eridian',
-            '/Ixora2/InteractiveObjects/Doors/IO_Door_SlideLeftAndRight_AlleyGate',
+            #IO('/Ixora2/InteractiveObjects/Doors/IO_Door_Custom_Eridian'),
+            IO('/Ixora2/InteractiveObjects/Doors/IO_Door_SlideLeftAndRight_AlleyGate'),
             ]),
         ('Switches', global_scale, [
             # find $(find . -name Switches) -name "IO_*.uasset" | sort -i | cut -d. -f2
-            '/Game/InteractiveObjects/Switches/Circuit_Breaker/_Design/IO_Switch_Circuit_Breaker_V1',
+            IO('/Game/InteractiveObjects/Switches/Circuit_Breaker/_Design/IO_Switch_Circuit_Breaker_V1'),
             # No timing parameters
-            #'/Game/InteractiveObjects/Switches/ControlPanel_Crane/_Design/IO_Switch_ControlPanel_Crane',
-            '/Game/InteractiveObjects/Switches/CoV/IO_Switch_CoV_SkullSwitch_V1',
-            '/Game/InteractiveObjects/Switches/CoV/Kitbash/_Design/IO_Switch_CoV_Kitbash_V1',
+            #IO('/Game/InteractiveObjects/Switches/ControlPanel_Crane/_Design/IO_Switch_ControlPanel_Crane'),
+            IO('/Game/InteractiveObjects/Switches/CoV/IO_Switch_CoV_SkullSwitch_V1'),
+            IO('/Game/InteractiveObjects/Switches/CoV/Kitbash/_Design/IO_Switch_CoV_Kitbash_V1'),
             # No timing parameters
-            #'/Game/InteractiveObjects/Switches/CoV/Target/IO_SwitchDamagable_CoV_TargetCeiling_V1',
-            '/Game/InteractiveObjects/Switches/CoV/Target/IO_SwitchDamagable_CoV_Target_V2',
-            '/Game/InteractiveObjects/Switches/Detonator/_Design/IO_Switch_Detonator_V1',
-            '/Game/InteractiveObjects/Switches/Eridian/_Design/IO_Switch_EridianSwitch_V1',
-            '/Game/InteractiveObjects/Switches/Industrial/Button/_Design/IO_Switch_GenericButton_V1',
+            #IO('/Game/InteractiveObjects/Switches/CoV/Target/IO_SwitchDamagable_CoV_TargetCeiling_V1'),
+            IO('/Game/InteractiveObjects/Switches/CoV/Target/IO_SwitchDamagable_CoV_Target_V2'),
+            IO('/Game/InteractiveObjects/Switches/Detonator/_Design/IO_Switch_Detonator_V1'),
+            IO('/Game/InteractiveObjects/Switches/Eridian/_Design/IO_Switch_EridianSwitch_V1'),
+            IO('/Game/InteractiveObjects/Switches/Industrial/Button/_Design/IO_Switch_GenericButton_V1'),
             # No timing parameters
-            #'/Game/InteractiveObjects/Switches/Industrial/Keyboard/_Design/IO_Switch_Industrial_Keyboard_V1',
-            '/Game/InteractiveObjects/Switches/Lever/Design/IO_Switch_Industrial_FloorLever_V1',
-            '/Game/InteractiveObjects/Switches/Lever/Design/IO_Switch_Industrial_Prison',
-            '/Game/InteractiveObjects/Switches/Promethea/_Design/IO_Switch_Promethea_Generic_V1',
+            #IO('/Game/InteractiveObjects/Switches/Industrial/Keyboard/_Design/IO_Switch_Industrial_Keyboard_V1'),
+            IO('/Game/InteractiveObjects/Switches/Lever/Design/IO_Switch_Industrial_FloorLever_V1'),
+            IO('/Game/InteractiveObjects/Switches/Lever/Design/IO_Switch_Industrial_Prison'),
+            IO('/Game/InteractiveObjects/Switches/Promethea/_Design/IO_Switch_Promethea_Generic_V1'),
             # No timing parameters
-            #'/Game/InteractiveObjects/Switches/_Shared/_Design/IO_ChangeOfHeart_DoorbellButton',
-            '/Game/InteractiveObjects/Switches/Switch/Design/IO_Switch_IndustrialSwitch_V1',
-            '/Game/InteractiveObjects/Switches/WheelValve/Design/IO_Switch_Industrial_WheelValve_V1',
-            '/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch',
-            ]),
-        ('Mission-Specific', global_scale, [
-            ('Golden Calves Statue Scanner/Printer', 'Sacrifice_P', '/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine'),
-            ("Rhys's Sliding Desk (Lamp)", 'AtlasHQ_P', '/Game/InteractiveObjects/MissionUsable/_Design/IO_MissionUsable_SlidingDesk_Lamp'),
-            ("Rhys's Sliding Desk (Desk)", 'AtlasHQ_P', '/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_SlidingDesk'),
+            #IO('/Game/InteractiveObjects/Switches/_Shared/_Design/IO_ChangeOfHeart_DoorbellButton'),
+            IO('/Game/InteractiveObjects/Switches/Switch/Design/IO_Switch_IndustrialSwitch_V1'),
+            IO('/Game/InteractiveObjects/Switches/WheelValve/Design/IO_Switch_Industrial_WheelValve_V1'),
+            IO('/Game/PatchDLC/BloodyHarvest/InteractiveObjects/Switches/_Design/IO_Switch_SkullSwitch',
+                level='BloodyHarvest_P',
+                ),
+            IO('/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_Switch_StatueButton',
+                label="Hidden Statue Button in Jakobs Estate",
+                level='Mansion_P',
+                ),
             ]),
         ('More Containers', global_scale, [
             # This basically just speeds up the turn-to-green which allows it to be opened
-            '/Game/Lootables/_Design/Classes/Eridian/BPIO_Lootable_Eridian_WhiteChestCrystal',
+            IO('/Game/Lootables/_Design/Classes/Eridian/BPIO_Lootable_Eridian_WhiteChestCrystal'),
             ]),
-        ('Other', global_scale, [
+        ('Other Objects', global_scale, [
             # Needs some other tweaks as well, done below.
-            '/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine',
+            IO('/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine'),
+            IO('/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine',
+                label='Golden Calves Statue Scanner/Printer',
+                level='Sacrifice_P',
+                ),
+            IO('/Game/InteractiveObjects/MissionUsable/_Design/IO_MissionUsable_SlidingDesk_Lamp',
+                label="Rhys's Sliding Desk (Lamp)",
+                level='AtlasHQ_P',
+                ),
+            IO('/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_SlidingDesk',
+                label="Rhys's Sliding Desk (Desk)",
+                level='AtlasHQ_P',
+                ),
+            IO('/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_MissionUsable_ExplodingStatue',
+                label="Exploding Busts in Jakobs Estate",
+                level='Mansion_P',
+                ),
+            IO('/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_MissionUsable_SlidingPictureFrame',
+                label="Sliding Pictures in Jakobs Estate",
+                level='Mansion_P',
+                ),
+            IO('/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_MissionUsable_SpinningBookShelf',
+                label="Rotating Bookshelves in Jakobs Estate",
+                level='Mansion_P',
+                ),
+            IO('/Game/InteractiveObjects/MissionSpecificObjects/GrandTour/_Design/BP_IO_StageProp_UpDown',
+                label="Stage Props in Jakobs Estate",
+                level='Mansion_P',
+                ),
+            IO('/Game/InteractiveObjects/MissionUsable/_Design/IO_MissionUsable_AureliasSkeletons_MovableBed',
+                label="Sliding Bed in 'Sacked' mission",
+                level='Mansion_P',
+                ),
             ]),
         ]:
 
     mod.header(category)
 
-    for base_obj_name in obj_names:
-
-        if type(base_obj_name) == tuple:
-            label, level_name, base_obj_name = base_obj_name
-        else:
-            label = None
-            level_name = 'MatchAll'
+    for io_obj in io_objs:
 
         if verbose:
-            print('Processing {}'.format(base_obj_name))
+            print('Processing {}'.format(io_obj.path))
 
-        last_bit = base_obj_name.split('/')[-1]
-        if label:
-            mod.comment(label)
-        else:
-            mod.comment(last_bit)
-        last_bit = '{}_C'.format(last_bit)
-        full_obj_name = '{}.{}'.format(base_obj_name, last_bit)
+        if io_obj.scale is None:
+            io_obj.scale = cat_scale
 
-        obj = data.get_data(base_obj_name)
+        mod.comment(io_obj.label)
+        obj = data.get_data(io_obj.path)
         if not obj:
-            print('WARNING - Could not be serialized: {}'.format(base_obj_name))
+            print('WARNING - Could not be serialized: {}'.format(io_obj.path))
             continue
 
         if not checked_ver:
@@ -1251,7 +1289,7 @@ for category, cat_scale, obj_names in [
         did_main = False
         did_curve = False
         for export in obj:
-            if export['_jwp_object_name'] == last_bit:
+            if export['_jwp_object_name'] == io_obj.last_bit_c:
                 found_primary = True
                 if 'Timelines' in export:
                     for timeline_idx, timeline_ref in enumerate(export['Timelines']):
@@ -1264,10 +1302,10 @@ for category, cat_scale, obj_names in [
                             # This one's not actually required (and doesn't seem to do anything), but I feel weird *not* specifying it.
                             if 'TimelineLength' in timeline and timeline['TimelineLength'] != 0:
                                 did_main = True
-                                mod.reg_hotfix(Mod.LEVEL, level_name,
-                                        full_obj_name,
+                                mod.reg_hotfix(Mod.LEVEL, io_obj.level,
+                                        io_obj.full_path,
                                         f'Timelines.Timelines[{timeline_idx}].Object..TimelineLength',
-                                        round(timeline['TimelineLength']/cat_scale, 6))
+                                        round(timeline['TimelineLength']/io_obj.scale, 6))
 
                             # Now process all our various curves
                             for trackname, curve_var in [
@@ -1291,24 +1329,24 @@ for category, cat_scale, obj_names in [
                                                     for key_idx, key in enumerate(curve[inner_curve_var]['Keys']):
                                                         if key['time'] != 0:
                                                             did_curve = True
-                                                            mod.reg_hotfix(Mod.LEVEL, level_name,
-                                                                    full_obj_name,
+                                                            mod.reg_hotfix(Mod.LEVEL, io_obj.level,
+                                                                    io_obj.full_path,
                                                                     f'Timelines.Timelines[{timeline_idx}].Object..{trackname}.{trackname}[{track_idx}].{curve_var}.Object..{inner_curve_var}.Keys.Keys[{key_idx}].Time',
-                                                                    round(key['time']/cat_scale, 6))
+                                                                    round(key['time']/io_obj.scale, 6))
 
 
         if not found_primary:
-            raise RuntimeError('Could not find main export for {}'.format(base_obj_name))
+            raise RuntimeError('Could not find main export for {}'.format(io_obj.path))
 
         if not did_main and not did_curve:
-            print('NOTICE - No timing parameters found for {}'.format(base_obj_name))
+            print('NOTICE - No timing parameters found for {}'.format(io_obj.path))
             mod.comment('(no timing parameters found to alter)')
         elif not did_main:
             # This honestly hardly matters; it doesn't look like this attr's really used
             # for much, anyway.
-            print('NOTICE - No main TimelineLength found for {}'.format(base_obj_name))
+            print('NOTICE - No main TimelineLength found for {}'.format(io_obj.path))
         elif not did_curve:
-            print('NOTICE - No curve timings found for {}'.format(base_obj_name))
+            print('NOTICE - No curve timings found for {}'.format(io_obj.path))
 
         mod.newline()
 
@@ -1326,6 +1364,98 @@ mod.bytecode_hotfix(Mod.LEVEL, 'MatchAll',
         2889,
         1,
         1/global_scale)
+mod.newline()
+
+# Exploding Statues (in Jakobs Estate)
+mod.header('Exploding Statue Tweaks')
+for obj_name in [
+        'Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_ButtonStatue_2',
+        'Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_3',
+        'Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_1758',
+        'Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_1388',
+        'Mansion_P:PersistentLevel.IO_MissionUsable_ExplodingStatue_3',
+        ]:
+    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
+            f'/Game/Maps/Zone_2/Mansion/{obj_name}.RotateStatue',
+            'TheTimeline.Length',
+            1/global_scale,
+            )
+    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
+            f'/Game/Maps/Zone_2/Mansion/{obj_name}.BP_IO_LootSpawnComponent',
+            'DelayBeforeSpawningLoot',
+            1/global_scale,
+            )
+mod.newline()
+
+# Sliding Paintings (in Jakobs Estate)
+mod.header('Sliding Painting Tweaks')
+for obj_name in [
+        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_10',
+        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_11',
+        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_5',
+        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_6',
+        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_7',
+        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_8',
+        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_9',
+        'Mansion_Theater.Mansion_Theater:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_5',
+        'Mansion_Theater.Mansion_Theater:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_8',
+        ]:
+    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
+            f'/Game/Maps/Zone_2/Mansion/{obj_name}.MoveFrame',
+            'TheTimeline.Length',
+            1/global_scale,
+            )
+mod.newline()
+
+# Jakobs Estate Stage Props
+mod.header('Jakobs Estate Stage Prop Tweaks')
+mansion_base = '/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel'
+for obj_name, delay in [
+        ('IO_Switch_IndustrialSwitch_V_1142', 1.2),
+        ('IO_Switch_IndustrialSwitch_V_2148', 1.2),
+        ('IO_Switch_IndustrialSwitch_V_991', 2.2),
+        ]:
+    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
+            f'{mansion_base}.{obj_name}',
+            'EndSwitchMovementDelay',
+            round(delay/global_scale, 6),
+            )
+for obj_name, duration in [
+        ('E11GrandTour_BackgroundProp', 2.5),
+        ('E11GrandTour_LeftProp', 1.5),
+        ('E11GrandTour_RightProp', 1.5),
+        ]:
+    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
+            f'{mansion_base}.{obj_name}',
+            'DurationOfPropMovement',
+            round(duration/global_scale, 6),
+            )
+    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
+            f'{mansion_base}.{obj_name}.Timeline_0',
+            'TheTimeline.Length',
+            round(1/global_scale, 6),
+            )
+    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
+            f'{mansion_base}.{obj_name}.Timeline_0',
+            'TheTimeline.Events.Events[0].Time',
+            round(0.5/global_scale, 6),
+            )
+mod.newline()
+
+# Spinning Bookshelves
+mod.header('Jakobs Estate Spinning Bookshelf Tweaks')
+mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
+        '/Game/Maps/Zone_2/Mansion/Mansion_P.Mansion_P:PersistentLevel.EasterEgg_SpiningBookshelf',
+        'LootSpawnDelay',
+        5/global_scale)
+mod.newline()
+
+# Sliding Bed in Sacked
+mod.header('Sliding Bed in Sacked')
+mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
+        '/Game/Maps/Zone_2/Mansion/Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_AureliasSkeletons_MovableBed_2.Move Bed',
+        'TheTimeline.Length',
+        2/global_scale)
 mod.newline()
 
 # `getall Elevator`
@@ -1368,6 +1498,9 @@ for label, level, obj_name, speed, travel_time in sorted([
         ('The Anvil - Sauce Room', 'Prison_P',
             '/Game/Maps/Zone_2/Prison/Prison_M_EP08PrisonBreak.Prison_M_EP08PrisonBreak:PersistentLevel.Elevator_PrisonArmory_1624',
             350, 10),
+        ('Jakobs Estate', 'Mansion_P',
+            '/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.Elevator_Ep09_Mansion_592',
+            175, 20),
         ]):
     mod.comment(label)
     # Honestly not sure if we need both of these, but we *do* need EarlyLevel.  I'm pretty

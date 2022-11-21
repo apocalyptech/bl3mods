@@ -34,6 +34,7 @@ Currently, the mod affects the following:
   * Vic (from Head Case)
 * Eridian tools (Resonator, Analyzer)
 * Fast-Travel/Teleport and Respawn animations
+* A *lot* of mission-and-map-specific animations throughout the game
 
 Note that the vehicle animations in particular are a bit weird right now --
 the animation gets "frozen" near the end for a bit.  I think that's something
@@ -151,6 +152,10 @@ Changelog
    * Second Bell-of-Peace door opening on Athenas
    * Rhys's sliding desk in Atlas HQ
    * Ava's shock reaction after Maya's death
+   * Pippie digging animation in Witch's Brew
+   * Lots of Jakobs Estate-specific animations: exploding statues, sliding
+     portraits, spinning bookshelves, stage props
+   * Sliding bed in "Sacked"
 
 Aug 1, 2022 *(no version number change)*
  * Updated to use [new metadata tags](https://github.com/apple1417/blcmm-parsing/tree/master/blimp)
