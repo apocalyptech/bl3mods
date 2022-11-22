@@ -1741,6 +1741,52 @@ mod.bytecode_hotfix(Mod.LEVEL, 'CityBoss_P',
         15/global_scale)
 mod.newline()
 
+# Rumble in the Jungle Chasm-Jump Timer
+mod.header('Rumble in the Jungle Chasm-Jump Timer')
+mod.bytecode_hotfix(Mod.LEVEL, 'Watership_P',
+        '/Game/Missions/Side/Zone_2/Watership/Mission_RumbleJungle',
+        'ExecuteUbergraph_Mission_RumbleJungle',
+        47567,
+        30,
+        5)
+mod.newline()
+
+# BALEX / EMS Bot door-opening scanning
+mod.header('BALEX / EMS Bot door-opening scanning')
+mod.reg_hotfix(Mod.LEVEL, 'Watership_P',
+        '/Game/Missions/Side/Zone_2/Watership/RumbleJungle/Action_ServiceBot_Rumble_OpenDoor.Default__Action_ServiceBot_Rumble_OpenDoor_C',
+        'PlayRate',
+        1*global_scale)
+mod.newline()
+
+# Bomb-conveyor during Capture The Frag
+if False:
+    # All of this actually works quite well, but the bomb can end up clipping through
+    # other conveyor items, which looks weird, and also has a tendency to skip
+    # dialogue.  So, whatever, let's just Not Do It.
+    bomb_scale = 2
+    mod.header('Capture the Frag bomb conveyor')
+    mod.reg_hotfix(Mod.LEVEL, 'Wetlands_P',
+            '/Game/Maps/Zone_2/Wetlands/Wetlands_M_SpecialDelivery.Wetlands_M_SpecialDelivery:PersistentLevel.BP_TransporterSystem_SpecialDelivery.TransporterTrack1',
+            'CarryingSpeed',
+            750*bomb_scale)
+    # Timing for the bomb breaking down
+    for index, from_val in [
+            (2598, 25),
+            ([4031, 14233], 18),
+            (5122, 16),
+            (10904, 24),
+            (15721, 22),
+            ]:
+        mod.bytecode_hotfix(Mod.LEVEL, 'Wetlands_P',
+                '/Game/Missions/Side/Zone_2/Wetlands/Mission_SpecialDelivery',
+                'ExecuteUbergraph_Mission_SpecialDelivery',
+                index,
+                from_val,
+                from_val/bomb_scale,
+                )
+    mod.newline()
+
 # Peace Bells (or whatever) in Athenas.  Not actually doing this because the speed
 # isn't too bad already, and the events they trigger actually happen immediately
 # when you "use" them, anyway.  The Ubergraphs sometimes put in some artificial
@@ -1861,6 +1907,10 @@ for char in sorted([
         # saunter over to construct the bomb, in Anvil.
         Char('Tina',
             '/Game/NonPlayerCharacters/TinyTina/_Design/Character/BPChar_TinyTina',
+            global_char_scale,
+            ),
+        Char('Failurebot',
+            '/Game/NonPlayerCharacters/_Eden6/MrInterpolator/_Design/Character/BPChar_MrInterpolator',
             global_char_scale,
             ),
         ]):

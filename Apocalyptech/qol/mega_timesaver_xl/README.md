@@ -25,6 +25,7 @@ Currently, the mod affects the following:
   * Brick
   * Claptrap
   * Ellie
+  * Failurebot
   * Glenn the Ratch
   * Liam (Atlas HQ Guard)
   * Lilith
@@ -58,6 +59,15 @@ Some things intentionally *not* handled by the mod:
   were already quite short.
 * The Viper Drive uses in Space-Laser Tag are all pretty dialogue-dependent,
   so I left those alone.
+* Chadd's movement in Swamp Bro could probably be improved, but most of the
+  "blockers" are shared animations like climbing ledges and so on, so they've
+  been left entirely alone.
+* The Boosty-Jammer elevator in Floodmoor Basin has also been left alone,
+  since it was already pretty good speedwise, and I didn't feel like messing
+  with its more-complicated animation sequences.
+* The bomb conveyor in Capture the Frag has been left alone, since it can
+  end up clipping through other conveyors and causing dialogue skips if sped
+  up.
 * The Desolation's Edge mission "Transaction-Packed" has been left alone.
   I recommend using my "Transaction-Packed: Abridged" to basically skip
   the entire mission, instead.
@@ -130,6 +140,7 @@ Changelog
    * Ava
    * Brick
    * Ellie
+   * Failurebot
    * Glenn the Ratch
    * Liam (Atlas HQ guard)
    * Maya
@@ -158,6 +169,8 @@ Changelog
    * Lots of Jakobs Estate-specific animations: exploding statues, sliding
      portraits, spinning bookshelves, stage props
    * Sliding bed in "Sacked"
+   * Chasm-jump timer in Rumble in the Jungle
+   * BALEX / EMS Bot door-opening scanning
 
 Aug 1, 2022 *(no version number change)*
  * Updated to use [new metadata tags](https://github.com/apple1417/blcmm-parsing/tree/master/blimp)

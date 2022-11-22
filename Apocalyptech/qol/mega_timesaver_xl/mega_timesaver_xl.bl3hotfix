@@ -9968,6 +9968,18 @@ SparkLevelPatchEntry,(1,1,0,CityBoss_P),/Game/NonPlayerCharacters/Ava/_Design/Ac
 SparkLevelPatchEntry,(1,7,0,CityBoss_P),/Game/Maps/Zone_1/CityBoss/CityBoss_Mission.CityBoss_Mission_C,0,1,ExecuteUbergraph_CityBoss_Mission,1,31722,2:15,4:3.75
 
 ###
+### Rumble in the Jungle Chasm-Jump Timer
+###
+
+SparkLevelPatchEntry,(1,7,0,Watership_P),/Game/Missions/Side/Zone_2/Watership/Mission_RumbleJungle.Mission_RumbleJungle_C,0,1,ExecuteUbergraph_Mission_RumbleJungle,1,47567,2:30,1:5
+
+###
+### BALEX / EMS Bot door-opening scanning
+###
+
+SparkLevelPatchEntry,(1,1,0,Watership_P),/Game/Missions/Side/Zone_2/Watership/RumbleJungle/Action_ServiceBot_Rumble_OpenDoor.Default__Action_ServiceBot_Rumble_OpenDoor_C,PlayRate,0,,4
+
+###
 ### NPC Walking Speeds
 ###
 
@@ -9990,6 +10002,10 @@ SparkCharacterLoadedEntry,(1,1,0,BpChar_Claptrap),/Game/NonPlayerCharacters/Clap
 # Ellie
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Ellie),/Game/NonPlayerCharacters/Ellie/_Design/Character/BPChar_Ellie.Default__BPChar_Ellie_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=560.0,BaseValue=560.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Ellie),/Game/NonPlayerCharacters/Ellie/_Design/Character/BPChar_Ellie.Default__BPChar_Ellie_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+
+# Failurebot
+SparkCharacterLoadedEntry,(1,1,0,BPChar_MrInterpolator),/Game/NonPlayerCharacters/_Eden6/MrInterpolator/_Design/Character/BPChar_MrInterpolator.Default__BPChar_MrInterpolator_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_MrInterpolator),/Game/NonPlayerCharacters/_Eden6/MrInterpolator/_Design/Character/BPChar_MrInterpolator.Default__BPChar_MrInterpolator_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 
 # Glenn the Ratch
 SparkCharacterLoadedEntry,(1,1,0,BPChar_TalkingRatch),/Game/NonPlayerCharacters/_Promethea/TalkingRatch/_Design/Character/BPChar_TalkingRatch.Default__BPChar_TalkingRatch_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)

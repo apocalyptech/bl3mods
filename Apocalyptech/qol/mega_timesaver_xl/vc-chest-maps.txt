@@ -37,7 +37,7 @@ getall BPIO_Lootable_VaultCard_RedCrate_C OpeningInteractions
 * /Game/Maps/Zone_2/Mansion/Mansion_P
   /Game/Maps/Zone_2/MarshFields/MarshFields_P
 * /Game/Maps/Zone_2/Prison/Prison_P
-  /Game/Maps/Zone_2/Watership/Watership_P
+* /Game/Maps/Zone_2/Watership/Watership_P
 * /Game/Maps/Zone_2/Wetlands/Wetlands_P
   /Game/Maps/Zone_2/WetlandsBoss/WetlandsBoss_P
   /Game/Maps/Zone_2/WetlandsVault/WetlandsVault_P
@@ -71,7 +71,7 @@ getall BPIO_Lootable_VaultCard_RedCrate_C OpeningInteractions
   /Hibiscus/Maps/Woods/Woods_P
   /Ixora/Maps/FrostSite/FrostSite_P
   /Ixora2/Maps/Boss/SacrificeBoss_p
-  /Ixora2/Maps/Cabin/Cabin_P
+* /Ixora2/Maps/Cabin/Cabin_P
   /Ixora2/Maps/Mystery/Nekro/NekroMystery_p
   /Ixora2/Maps/Mystery/Pandora/PandoraMystery_p
 * /Ixora2/Maps/Noir/Noir_P
