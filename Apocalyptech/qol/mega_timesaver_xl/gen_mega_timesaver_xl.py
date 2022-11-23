@@ -1913,6 +1913,10 @@ for char in sorted([
             '/Game/NonPlayerCharacters/_Eden6/MrInterpolator/_Design/Character/BPChar_MrInterpolator',
             global_char_scale,
             ),
+        Char('Clay (DLC6)',
+            '/Ixora2/NonPlayerCharacters/Clay/_Design/Character/BPChar_Clay_IXO',
+            global_char_scale,
+            ),
         ]):
 
     found_main = False

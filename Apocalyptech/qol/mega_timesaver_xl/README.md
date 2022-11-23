@@ -23,6 +23,7 @@ Currently, the mod affects the following:
   * Ace Baron (from Healers and Dealers)
   * Ava
   * Brick
+  * Clay (DLC6 version)
   * Claptrap
   * Ellie
   * Failurebot
@@ -139,6 +140,7 @@ Changelog
    * Ace Baron (from Healers and Dealers)
    * Ava
    * Brick
+   * Clay (DLC6 version)
    * Ellie
    * Failurebot
    * Glenn the Ratch

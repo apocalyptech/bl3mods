@@ -9999,6 +9999,10 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_Brick),/Game/NonPlayerCharacters/Brick/_
 SparkCharacterLoadedEntry,(1,1,0,BpChar_Claptrap),/Game/NonPlayerCharacters/Claptrap/_Design/Character/BpChar_Claptrap.Default__BpChar_Claptrap_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
 SparkCharacterLoadedEntry,(1,1,0,BpChar_Claptrap),/Game/NonPlayerCharacters/Claptrap/_Design/Character/BpChar_Claptrap.Default__BpChar_Claptrap_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 
+# Clay (DLC6)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Clay_IXO),/Ixora2/NonPlayerCharacters/Clay/_Design/Character/BPChar_Clay_IXO.Default__BPChar_Clay_IXO_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Clay_IXO),/Ixora2/NonPlayerCharacters/Clay/_Design/Character/BPChar_Clay_IXO.Default__BPChar_Clay_IXO_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+
 # Ellie
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Ellie),/Game/NonPlayerCharacters/Ellie/_Design/Character/BPChar_Ellie.Default__BPChar_Ellie_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=560.0,BaseValue=560.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Ellie),/Game/NonPlayerCharacters/Ellie/_Design/Character/BPChar_Ellie.Default__BPChar_Ellie_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
