@@ -23,7 +23,7 @@ Currently, the mod affects the following:
   * Ace Baron (from Healers and Dealers)
   * Ava
   * Brick
-  * Clay (DLC6 version)
+  * Clay (base game and DLC6 version)
   * Claptrap
   * Ellie
   * Failurebot
@@ -69,6 +69,9 @@ Some things intentionally *not* handled by the mod:
 * The bomb conveyor in Capture the Frag has been left alone, since it can
   end up clipping through other conveyors and causing dialogue skips if sped
   up.
+* The crane in Ambermire could probably be sped up a bit, but not by a lot
+  without skipping dialogue or having it just sit there waiting for dialogue.
+  So, it's been left alone.
 * The Desolation's Edge mission "Transaction-Packed" has been left alone.
   I recommend using my "Transaction-Packed: Abridged" to basically skip
   the entire mission, instead.
@@ -140,7 +143,7 @@ Changelog
    * Ace Baron (from Healers and Dealers)
    * Ava
    * Brick
-   * Clay (DLC6 version)
+   * Clay (base game and DLC6 version)
    * Ellie
    * Failurebot
    * Glenn the Ratch

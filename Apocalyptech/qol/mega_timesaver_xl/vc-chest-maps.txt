@@ -24,8 +24,8 @@ getall BPIO_Lootable_VaultCard_RedCrate_C OpeningInteractions
   /Game/Maps/Slaughters/TechSlaughter/TechSlaughter_P
   /Game/Maps/Zone_0/FinalBoss/FinalBoss_P
   /Game/Maps/Zone_0/Prologue/Prologue_P
-  /Game/Maps/Zone_0/Recruitment/Recruitment_P
-  /Game/Maps/Zone_0/Sacrifice/Sacrifice_P
+* /Game/Maps/Zone_0/Recruitment/Recruitment_P
+* /Game/Maps/Zone_0/Sacrifice/Sacrifice_P
 * /Game/Maps/Zone_1/AtlasHQ/AtlasHQ_P
 * /Game/Maps/Zone_1/City/City_P
 * /Game/Maps/Zone_1/CityBoss/CityBoss_P
@@ -35,12 +35,12 @@ getall BPIO_Lootable_VaultCard_RedCrate_C OpeningInteractions
 * /Game/Maps/Zone_1/Outskirts/Outskirts_P
 * /Game/Maps/Zone_1/Towers/Towers_P
 * /Game/Maps/Zone_2/Mansion/Mansion_P
-  /Game/Maps/Zone_2/MarshFields/MarshFields_P
+* /Game/Maps/Zone_2/MarshFields/MarshFields_P
 * /Game/Maps/Zone_2/Prison/Prison_P
 * /Game/Maps/Zone_2/Watership/Watership_P
 * /Game/Maps/Zone_2/Wetlands/Wetlands_P
-  /Game/Maps/Zone_2/WetlandsBoss/WetlandsBoss_P
-  /Game/Maps/Zone_2/WetlandsVault/WetlandsVault_P
+* /Game/Maps/Zone_2/WetlandsBoss/WetlandsBoss_P
+* /Game/Maps/Zone_2/WetlandsVault/WetlandsVault_P
   /Game/Maps/Zone_3/Convoy/Convoy_P
   /Game/Maps/Zone_3/Desert/Desert_P
   /Game/Maps/Zone_3/DesertBoss/DesertBoss_P

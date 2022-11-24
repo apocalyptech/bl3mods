@@ -1297,6 +1297,19 @@ for category, cat_scale, io_objs in [
                 label="Sliding Bed in 'Sacked' mission",
                 level='Mansion_P',
                 ),
+            # To fully speed this up, we'd also need to adjust PS_Static_Scanned_Digistruct_Sweep timing,
+            # which is used somewhere in Dandelion as well.  Maybe we'll want to do that eventually
+            # anyway, in which case make sure to go back and test this.  Also might as well figure out
+            # what the City_P use is, as well -- I'm guessing bringing the Ratch meat back to the Burger
+            # joint?  At any rate, in MarshFields_P, the animation doesn't actually block you from
+            # doing the Next Thing anyway, so eh.  See down below for another tweak I'd started on
+            # before realizing it was silly.
+            #IO('/Game/InteractiveObjects/MissionPlaceables/_Design/IO_MissionPlaceable_Static_Scanned',
+            #    label="Rogues ID Scanner in Ambermire",
+            #    # Looks like this actually shows up in City_P, in the Dynasty Diner quest.  I didn't
+            #    # notice it then, so at least for now I'm only doing this in MarshField_P.
+            #    level='MarshFields_P',
+            #    ),
             ]),
         ]:
 
@@ -1494,6 +1507,14 @@ mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
         2/global_scale)
 mod.newline()
 
+# Going Rogue ID Scanner
+#mod.header('Going Rogue ID Scanner')
+#mod.reg_hotfix(Mod.LEVEL, 'MarshFields_P',
+#        '/Game/Maps/Zone_2/MarshFields/MarshFields_M_Ep12Marshfields.MarshFields_M_Ep12Marshfields:PersistentLevel.IO_MissionPlaceable_Static_Scanned_2.Timeline_0',
+#        'TheTimeline.Length',
+#        2/global_scale)
+#mod.newline()
+
 # `getall Elevator`
 mod.header('Elevators')
 for label, level, obj_name, speed, travel_time in sorted([
@@ -1537,6 +1558,147 @@ for label, level, obj_name, speed, travel_time in sorted([
         ('Jakobs Estate', 'Mansion_P',
             '/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.Elevator_Ep09_Mansion_592',
             175, 20),
+        ('Ambermire', 'MarshFields_P',
+            '/Game/Maps/Zone_2/MarshFields/MarshFields_M_Ep12Marshfields.MarshFields_M_Ep12Marshfields:PersistentLevel.Elevator_Marshfields_WaterWheelStandin_4',
+            500, 10),
+
+        # Wrote some code to attempt to autodetect some things, to make future filling-in easier.
+        # Keeping them commented for now; kind of want to doublecheck things as I go, still,  I
+        # suspect that `defaultspeed` is 200, but we'll see.  A default traveltime of 10 has been
+        # filled in on a lot of these.  Also I suspect that at least some of these aren't really
+        # things that we'd want to speed up -- like all the Guardian Takedown ones, for instance.
+
+        #("Floating Tomb", 'WetlandsBoss_P',
+        #    '/Game/Maps/Zone_2/WetlandsBoss/WetlandsBoss_M_EP13SiblingRivalry.WetlandsBoss_M_EP13SiblingRivalry:PersistentLevel.Elevator_WetlandsBossPlatform_4',
+        #    0.2, 10)
+
+        #("Carnivora", 'MotorcadeFestival_P',
+        #    '/Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_M_Plot.MotorcadeFestival_M_Plot:PersistentLevel.BP_Ep15_BigChase_FestivalElevator',
+        #    120, 10)
+        #("Carnivora", 'MotorcadeFestival_P',
+        #    '/Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_M_Plot.MotorcadeFestival_M_Plot:PersistentLevel.BP_Ep15_BigChase_FestivalElevator_0',
+        #    120, 10)
+
+        #("Guts of Carnivora", 'MotorcadeInterior_P',
+        #    '/Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_Plot.MotorcadeInterior_Plot:PersistentLevel.BP_CarnivorArena_Elevator_578',
+        #    defaultspeed, 10)
+
+        #("Konrad's Hold", 'Mine_P',
+        #    '/Game/Maps/Zone_3/Mine/Mine_Section2_Lobby.Mine_Section2_Lobby:PersistentLevel.Elevator_Ep14_Mine_NoName_3',
+        #    5, 10)
+
+        #("Cathedral of the Twin Gods", 'Desertvault_P',
+        #    '/Game/Maps/Zone_3/DesertVault/Desertvault_Dynamic.Desertvault_Dynamic:PersistentLevel.Elevator_DesertVaultUnderworks_2',
+        #    350, 10)
+
+        #("Great Vault", 'DesertBoss_P',
+        #    '/Game/Maps/Zone_3/DesertBoss/DesertBoss_Mission.DesertBoss_Mission:PersistentLevel.BP_TroyBoss_Antenna_8726',
+        #    600, 10)
+        #("Great Vault", 'DesertBoss_P',
+        #    '/Game/Maps/Zone_3/DesertBoss/DesertBoss_Mission.DesertBoss_Mission:PersistentLevel.Elevator_TroyBoss_OuterPlatform_2',
+        #    400, 10)
+
+        #("Tazendeer Ruins", 'Beach_P',
+        #    '/Game/Maps/Zone_4/Beach/Beach_TempleFirstFloor.Beach_TempleFirstFloor:PersistentLevel.BP_EP18_Eridian_Elevator_0',
+        #    2000, 10)
+
+        #("Destroyer's Rift", 'FinalBoss_P',
+        #    '/Game/Maps/Zone_0/FinalBoss/FinalBoss_M_EP23TyreenFinalBoss.FinalBoss_M_EP23TyreenFinalBoss:PersistentLevel.Elevator_FinalBoss_Rocks_86',
+        #    500, 10)
+
+        #("Slaughterstar 3000", 'TechSlaughter_P',
+        #    '/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_Geo.TechSlaughter_Geo:PersistentLevel.Elevator_TechSlaughter_2',
+        #    500, 10)
+        #("Slaughterstar 3000", 'TechSlaughter_P',
+        #    '/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_Mission.TechSlaughter_Mission:PersistentLevel.ElevatorA_TechSlaughter_2',
+        #    defaultspeed, 10)
+
+        #("Stormblind Complex", 'FrostSite_P',
+        #    '/Ixora/Maps/FrostSite/FrostSite_Combat.FrostSite_Combat:PersistentLevel.Elevator_FrostSite_2',
+        #    defaultspeed, 10)
+
+        #("Villa Ultraviolet", 'Cartels_P',
+        #    '/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.Elevator_Cartels_5',
+        #    95, 10)
+
+        #("Midnight's Cairn (Maliwan Takedown)", 'Raid_P',
+        #    '/Game/PatchDLC/Raid1/Maps/Raid/Raid_M_RaidOnMaliwan.Raid_M_RaidOnMaliwan:PersistentLevel.Elevator_Raid__3',
+        #    900, 10)
+
+        #("Minos Prime / The Shattered Tribunal", 'GuardianTakedown_P',
+        #    '/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Combat.GuardianTakedown_Combat:PersistentLevel.Elevator_GuardianTakedown_Lift_12',
+        #    defaultspeed, 10)
+        #("Minos Prime / The Shattered Tribunal", 'GuardianTakedown_P',
+        #    '/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Combat.GuardianTakedown_Combat:PersistentLevel.Elevator_GuardianTakedown_Lift_13',
+        #    defaultspeed, 10)
+        #("Minos Prime / The Shattered Tribunal", 'GuardianTakedown_P',
+        #    '/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Combat.GuardianTakedown_Combat:PersistentLevel.Elevator_GuardianTakedown_Lift_14',
+        #    defaultspeed, 10)
+        #("Minos Prime / The Shattered Tribunal", 'GuardianTakedown_P',
+        #    '/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Combat.GuardianTakedown_Combat:PersistentLevel.Elevator_GuardianTakedown_Lift_2',
+        #    defaultspeed, 10)
+        #("Minos Prime / The Shattered Tribunal", 'GuardianTakedown_P',
+        #    '/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Combat.GuardianTakedown_Combat:PersistentLevel.Elevator_GuardianTakedown_Lift_3',
+        #    defaultspeed, 10)
+        #("Minos Prime / The Shattered Tribunal", 'GuardianTakedown_P',
+        #    '/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Combat.GuardianTakedown_Combat:PersistentLevel.Elevator_GuardianTakedown_Lift_4',
+        #    defaultspeed, 10)
+        #("Minos Prime / The Shattered Tribunal", 'GuardianTakedown_P',
+        #    '/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Combat.GuardianTakedown_Combat:PersistentLevel.Elevator_GuardianTakedown_Lift_5',
+        #    defaultspeed, 10)
+        #("Minos Prime / The Shattered Tribunal", 'GuardianTakedown_P',
+        #    '/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Combat.GuardianTakedown_Combat:PersistentLevel.Elevator_GuardianTakedown_Lift_7',
+        #    defaultspeed, 10)
+
+        #("Grand Opening", 'CasinoIntro_P',
+        #    '/Dandelion/Maps/CasinoIntro/CasinoIntro_GoldenBullion.CasinoIntro_GoldenBullion:PersistentLevel.Elevator_CasinoIntro_2',
+        #    150, 10)
+
+        #("Spendopticon", 'Strip_P',
+        #    '/Dandelion/Maps/Strip/Strip_SM_RagingBot.Strip_SM_RagingBot:PersistentLevel.Elevator_RagingBot_Strip_2',
+        #    350, 10)
+
+        #("Jack's Secret", 'Core_P',
+        #    '/Dandelion/Maps/Core/Core_Mission.Core_Mission:PersistentLevel.Elevator_Core_JackpotToCore_2',
+        #    700, 20)
+
+        #("Negul Neshai", 'Camp_P',
+        #    '/Hibiscus/Maps/Camp/Camp_Plot_M.Camp_Plot_M:PersistentLevel.Elevator_Hib_DahlShip_2',
+        #    200, 10)
+
+        #("Heart's Desire", 'Venue_P',
+        #    '/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.Elevator_Hib_EleanorOffice_3',
+        #    150, 10)
+        #("Heart's Desire", 'Venue_P',
+        #    '/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.Elevator_PrisonArmory_4',
+        #    200, 10)
+
+        #("The Blastplains", 'Frontier_P',
+        #    '/Geranium/Maps/Frontier/Frontier_M_MoneyBackGuarantee.Frontier_M_MoneyBackGuarantee:PersistentLevel.Elevator_MoneyBack_frontier_2',
+        #    defaultspeed, 10)
+
+        #("Bloodsun Canyon", 'Facility_P',
+        #    '/Geranium/Maps/Facility/Facility_M_Plot.Facility_M_Plot:PersistentLevel.Elevator_Boss_2',
+        #    defaultspeed, 15)
+        #("Bloodsun Canyon", 'Facility_P',
+        #    '/Geranium/Maps/Facility/Facility_M_Plot.Facility_M_Plot:PersistentLevel.Elevator_ToLowerFacility_2',
+        #    400, 40)
+
+        #("Crater's Edge", 'CraterBoss_P',
+        #    '/Geranium/Maps/CraterBoss/CraterBoss_Boss.CraterBoss_Boss:PersistentLevel.Elevator_CraterBoss_Gondola_2',
+        #    defaultspeed, 50)
+        #("Crater's Edge", 'CraterBoss_P',
+        #    '/Geranium/Maps/CraterBoss/CraterBoss_Boss.CraterBoss_Boss:PersistentLevel.Elevator_BossTest_0',
+        #    defaultspeed, 20)
+        #("Crater's Edge", 'CraterBoss_P',
+        #    '/Geranium/Maps/CraterBoss/CraterBoss_Boss.CraterBoss_Boss:PersistentLevel.Elevator_BossTest_1',
+        #    defaultspeed, 20)
+        #("Crater's Edge", 'CraterBoss_P',
+        #    '/Geranium/Maps/CraterBoss/CraterBoss_Boss.CraterBoss_Boss:PersistentLevel.Elevator_BossTest_4',
+        #    defaultspeed, 20)
+        #("Crater's Edge", 'CraterBoss_P',
+        #    '/Geranium/Maps/CraterBoss/CraterBoss_Boss.CraterBoss_Boss:PersistentLevel.Elevator_BossTest_6',
+        #    defaultspeed, 20)
         ]):
     mod.comment(label)
     # Honestly not sure if we need both of these, but we *do* need EarlyLevel.  I'm pretty
@@ -1911,6 +2073,12 @@ for char in sorted([
             ),
         Char('Failurebot',
             '/Game/NonPlayerCharacters/_Eden6/MrInterpolator/_Design/Character/BPChar_MrInterpolator',
+            global_char_scale,
+            ),
+        # Clay is actually fine for most of his interactions in the main game, but he can lag behind
+        # on the way to Blackbarrel Cellars
+        Char('Clay',
+            '/Game/NonPlayerCharacters/Clay/_Design/Character/BPChar_Clay',
             global_char_scale,
             ),
         Char('Clay (DLC6)',

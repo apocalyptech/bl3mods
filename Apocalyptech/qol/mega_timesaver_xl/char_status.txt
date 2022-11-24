@@ -6,7 +6,7 @@ CZ47's Faster NPCs:
   * Ava
     Ava DLC6
     Clay
-    Clay DLC6
+  * Clay DLC6
   * Lilith
     Lorelei
     Lorelei DLC6
