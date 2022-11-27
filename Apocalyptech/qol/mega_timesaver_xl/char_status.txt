@@ -1,11 +1,11 @@
 CZ47's Faster NPCs:
     Typhon
   * Claptrap
-    Claptrap DLC6
+  * Claptrap DLC6
     Maya
   * Ava
     Ava DLC6
-    Clay
+  * Clay
   * Clay DLC6
   * Lilith
     Lorelei

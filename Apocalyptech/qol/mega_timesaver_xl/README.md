@@ -24,7 +24,7 @@ Currently, the mod affects the following:
   * Ava
   * Brick
   * Clay (base game and DLC6 version)
-  * Claptrap
+  * Claptrap (base game and DLC6 version)
   * Ellie
   * Failurebot
   * Glenn the Ratch
@@ -58,6 +58,7 @@ A few known quirks of running with this mod:
 Some things intentionally *not* handled by the mod:
 * Various minor mission-related animations have been left alone when they
   were already quite short.
+* Inter-system navigation via Sanctuary III has been left alone.
 * The Viper Drive uses in Space-Laser Tag are all pretty dialogue-dependent,
   so I left those alone.
 * Chadd's movement in Swamp Bro could probably be improved, but most of the
@@ -72,6 +73,8 @@ Some things intentionally *not* handled by the mod:
 * The crane in Ambermire could probably be sped up a bit, but not by a lot
   without skipping dialogue or having it just sit there waiting for dialogue.
   So, it's been left alone.
+* The Rakk shootout in Life of the Party has been left alone -- use my
+  "Life of the Party: Short Rakk Shootout" mod to shorten that, if you want.
 * The Desolation's Edge mission "Transaction-Packed" has been left alone.
   I recommend using my "Transaction-Packed: Abridged" to basically skip
   the entire mission, instead.
@@ -131,6 +134,9 @@ TODO
   * Re-test `City_P` hub door-opening (tweaked that during `OrbitalPlatform_P`)
   * Also the Skywell-27 door after the thruster disabling
 * Did we want to do the "initial" ECHO playing animation, with the blowing-on-cart?
+* To split up into separate mods, instead?
+  * Character speed movement?
+  * Digistruct tunnel removal (both teleport/FT and respawn)
 
 Changelog
 =========
@@ -143,6 +149,7 @@ Changelog
    * Ace Baron (from Healers and Dealers)
    * Ava
    * Brick
+   * Claptrap (DLC6 version)
    * Clay (base game and DLC6 version)
    * Ellie
    * Failurebot

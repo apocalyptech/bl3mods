@@ -1570,6 +1570,9 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Eridian/Chest_Red/Effects/
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn.PS_Eridian_Ammo_Chest_SinkNBurn,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MaxValue,0,,0.5
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn.PS_Eridian_Ammo_Chest_SinkNBurn,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Table.Values.Values[0],0,,0.5
 
+# Industrial Dumpster Loot Spawn
+SparkLevelPatchEntry,(1,7,0,MatchAll),/Game/Lootables/_Design/Classes/Industrial/BPIO_Lootable_Industrial_Dumpster.BPIO_Lootable_Industrial_Dumpster_C,0,1,ExecuteUbergraph_BPIO_Lootable_Industrial_Dumpster,1,243,3:0.8,3:0.2
+
 ###
 ### Eridian Tools
 ###
@@ -10002,6 +10005,10 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_Brick),/Game/NonPlayerCharacters/Brick/_
 # Claptrap
 SparkCharacterLoadedEntry,(1,1,0,BpChar_Claptrap),/Game/NonPlayerCharacters/Claptrap/_Design/Character/BpChar_Claptrap.Default__BpChar_Claptrap_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
 SparkCharacterLoadedEntry,(1,1,0,BpChar_Claptrap),/Game/NonPlayerCharacters/Claptrap/_Design/Character/BpChar_Claptrap.Default__BpChar_Claptrap_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+
+# Claptrap (DLC6)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Claptrap_IXO),/Ixora2/NonPlayerCharacters/Claptrap/_Design/Character/BPChar_Claptrap_IXO.Default__BPChar_Claptrap_IXO_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=720.0,BaseValue=720.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Claptrap_IXO),/Ixora2/NonPlayerCharacters/Claptrap/_Design/Character/BPChar_Claptrap_IXO.Default__BPChar_Claptrap_IXO_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1080.0,BaseValue=1080.0)
 
 # Clay
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Clay),/Game/NonPlayerCharacters/Clay/_Design/Character/BPChar_Clay.Default__BPChar_Clay_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)

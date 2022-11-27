@@ -525,6 +525,17 @@ mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
         2/global_scale)
 mod.newline()
 
+# Industrial Dumpsters
+mod.comment('Industrial Dumpster Loot Spawn')
+mod.bytecode_hotfix(Mod.LEVEL, 'MatchAll',
+        '/Game/Lootables/_Design/Classes/Industrial/BPIO_Lootable_Industrial_Dumpster',
+        'ExecuteUbergraph_BPIO_Lootable_Industrial_Dumpster',
+        243,
+        0.8,
+        0.8/global_scale,
+        )
+mod.newline()
+
 mod.header('Eridian Tools')
 
 for anim_obj in [
@@ -2019,6 +2030,13 @@ for char in sorted([
         Char('Claptrap',
             '/Game/NonPlayerCharacters/Claptrap/_Design/Character/BpChar_Claptrap',
             global_char_scale,
+            ),
+        # At our default scale, DLC6 Claptrap actually cuts off some dialogue.  (It's
+        # pretty slight, but still.)  Honestly his speed isn't awful anyway, but eh.
+        # (He actually has a line get cut off at one point even at the default speeds.)
+        Char('Claptrap (DLC6)',
+            '/Ixora2/NonPlayerCharacters/Claptrap/_Design/Character/BPChar_Claptrap_IXO',
+            1.2,
             ),
         Char('Ellie',
             '/Game/NonPlayerCharacters/Ellie/_Design/Character/BPChar_Ellie',
