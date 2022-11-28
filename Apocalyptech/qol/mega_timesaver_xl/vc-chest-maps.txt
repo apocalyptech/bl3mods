@@ -47,7 +47,7 @@ getall BPIO_Lootable_VaultCard_RedCrate_C OpeningInteractions
   /Game/Maps/Zone_3/DesertVault/Desertvault_P
   /Game/Maps/Zone_3/Mine/Mine_P
 * /Game/Maps/Zone_3/Motorcade/Motorcade_P
-  /Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_P
+* /Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_P
   /Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_P
   /Game/Maps/Zone_4/Beach/Beach_P
   /Game/Maps/Zone_4/Crypt/Crypt_P

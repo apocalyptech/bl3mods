@@ -1384,6 +1384,24 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Hibiscus/InteractiveObjects/Lootables/Ten
 # Doors
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/Doors/Eden_6/Door_Eden6_VehicleSpawner/Animation/AS_VehicleDoor_Open.AS_VehicleDoor_Open,RateScale,0,,5
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/Doors/Eden_6/Door_Eden6_VehicleSpawner/Animation/AS_VehicleDoor_Open.AS_VehicleDoor_Open,SequenceLength,0,,3.2
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/SmallDoor/Animation/AS_Opening.AS_Opening,RateScale,0,,5
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/SmallDoor/Animation/AS_Opening.AS_Opening,Notifies.Notifies[0].SegmentLength,0,,1.16
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/SmallDoor/Animation/AS_Opening.AS_Opening,Notifies.Notifies[0].LinkValue,0,,0.006185
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/SmallDoor/Animation/AS_Opening.AS_Opening,Notifies.Notifies[1].SegmentLength,0,,1.16
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/SmallDoor/Animation/AS_Opening.AS_Opening,Notifies.Notifies[1].LinkValue,0,,0.063084
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/SmallDoor/Animation/AS_Opening.AS_Opening,SequenceLength,0,,5.8
+
+# Other Mission Animations
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/Crane/Animation/AS_Going_Down.AS_Going_Down,RateScale,0,,2.0
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/Crane/Animation/AS_Going_Down.AS_Going_Down,Notifies.Notifies[0].SegmentLength,0,,3.166667
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/Crane/Animation/AS_Going_Down.AS_Going_Down,Notifies.Notifies[0].LinkValue,0,,0.058445
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/Crane/Animation/AS_Going_Down.AS_Going_Down,Notifies.Notifies[1].SegmentLength,0,,3.166667
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/Crane/Animation/AS_Going_Down.AS_Going_Down,Notifies.Notifies[1].LinkValue,0,,0.612668
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/Crane/Animation/AS_Going_Down.AS_Going_Down,Notifies.Notifies[2].SegmentLength,0,,3.166667
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/Crane/Animation/AS_Going_Down.AS_Going_Down,Notifies.Notifies[2].LinkValue,0,,0.743437
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/Crane/Animation/AS_Going_Down.AS_Going_Down,Notifies.Notifies[3].SegmentLength,0,,3.166667
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/Crane/Animation/AS_Going_Down.AS_Going_Down,Notifies.Notifies[3].LinkValue,0,,2.802687
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/Crane/Animation/AS_Going_Down.AS_Going_Down,SequenceLength,0,,6.333334
 
 # Character Death Respawns
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Beastmaster/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel.AS_Respawn_Kneel,RateScale,0,,4
@@ -9800,6 +9818,17 @@ SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_D
 SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/IO_MissionUsable_AureliasSkeletons_MovableBed.IO_MissionUsable_AureliasSkeletons_MovableBed_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.025
 SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/IO_MissionUsable_AureliasSkeletons_MovableBed.IO_MissionUsable_AureliasSkeletons_MovableBed_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.5
 
+# Splinterlands Car Grinder
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.5
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.5
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C,Timelines.Timelines[2].Object..TimelineLength,0,,1.0
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.0
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C,Timelines.Timelines[3].Object..TimelineLength,0,,1.15
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C,Timelines.Timelines[3].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.15
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C,Timelines.Timelines[3].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,1.0
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C,Timelines.Timelines[3].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,1.15
+
 ###
 ### Slot Machine Tweaks
 ###
@@ -9864,6 +9893,18 @@ SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_P.Mansi
 ###
 
 SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_AureliasSkeletons_MovableBed_2.Move Bed,TheTimeline.Length,0,,0.5
+
+###
+### Splinterlands Car Grinder Conveyor
+###
+
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Maps/Zone_3/Motorcade/Motorcade_M_Plot.Motorcade_M_Plot:PersistentLevel.ConveyorDisplacementZone_GEN_VARIABLE_DisplacementZone_CAT_2260,Speed,0,,800
+
+###
+### Splinterlands Car Grinder Magnet
+###
+
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C:NODE_AddInterpToMovementComponent-3,Duration,0,,2.25
 
 ###
 ### Elevators

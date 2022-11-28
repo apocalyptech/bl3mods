@@ -15,6 +15,7 @@ Currently, the mod affects the following:
 * Doors
 * Vehicle interaction animations (hijacking, entering, leaving, changing seats)
 * Catch-A-Ride Digistruct Speed
+* Digistruct tunnel has been removed for teleport / fast travel / respawning
 * Various characters' walking/sprinting speeds have been improved.  The speedup
   is, in general, a little less than CZ47's Faster NPCs mod, so execute that
   one after this one if you want some NPCs to be even faster.  The list of
@@ -66,7 +67,8 @@ Some things intentionally *not* handled by the mod:
   been left entirely alone.
 * The Boosty-Jammer elevator in Floodmoor Basin has also been left alone,
   since it was already pretty good speedwise, and I didn't feel like messing
-  with its more-complicated animation sequences.
+  with its more-complicated animation sequences.  Amusingly, this elevator
+  becomes one of the slower ones in the game, instead of one of the fastest.
 * The bomb conveyor in Capture the Frag has been left alone, since it can
   end up clipping through other conveyors and causing dialogue skips if sped
   up.
@@ -163,6 +165,7 @@ Changelog
  * Extra Doors:
    * Meridian Metroplex hub door
    * Skywell-27 post-thruster-disabling door
+   * Gate to the back half of the Homestead, in Splinterlands
    * A couple doors from DLC6
  * Other Additions:
    * Slot Machines
@@ -183,6 +186,8 @@ Changelog
    * Sliding bed in "Sacked"
    * Chasm-jump timer in Rumble in the Jungle
    * BALEX / EMS Bot door-opening scanning
+   * Splinterlands Car Grinder
+   * Golden Chariot crane-lowering
 
 Aug 1, 2022 *(no version number change)*
  * Updated to use [new metadata tags](https://github.com/apple1417/blcmm-parsing/tree/master/blimp)

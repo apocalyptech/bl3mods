@@ -433,6 +433,24 @@ for cat_name, cat_scale, animseqs in [
             AS('/Game/InteractiveObjects/Doors/Eden_6/Door_Eden6_VehicleSpawner/Animation/AS_VehicleDoor_Open',
                 seqlen_scale=1,
                 ),
+            # Gate to the "back" half of the Homestead, in Splinterlands, during Part 2 of that questline
+            AS('/Game/MapSpecific/Motorcade/SmallDoor/Animation/AS_Opening',
+                target='Motorcade_P',
+                # This one, too, needs a sequence scale of 1, otherwise the animation gets very janky.  Wonder
+                # if *all* custom door-related ASes will end up needing this...
+                seqlen_scale=1,
+                ),
+            ]),
+        ('Other Mission Animations', global_scale, [
+            AS('/Game/MapSpecific/Motorcade/Crane/Animation/AS_Going_Down',
+                target='Motorcade_P',
+                # At global_scale, the crane descends faster than in-game gravity, which makes
+                # the Golden Chariot a bit unpredictable.  So, cut down on the scale a bit.
+                # (Even at this scale, it bounces around a bit, but seems more stable to me.)
+                scale=global_scale/2,
+                # Need to do this, otherwise the animation glitches out
+                seqlen_scale=1,
+                ),
             ]),
         # Doing this ends up screwing up the slots pretty thoroughly, actually -- the animation gets killed
         # pretty much immediately, so the rewards get stuck "inside" the machine until the 10-sec auto-drop
@@ -1321,6 +1339,10 @@ for category, cat_scale, io_objs in [
             #    # notice it then, so at least for now I'm only doing this in MarshField_P.
             #    level='MarshFields_P',
             #    ),
+            IO('/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder',
+                label='Splinterlands Car Grinder',
+                level='Motorcade_P',
+                ),
             ]),
         ]:
 
@@ -1525,6 +1547,25 @@ mod.newline()
 #        'TheTimeline.Length',
 #        2/global_scale)
 #mod.newline()
+
+# Splinterlands Car Grinder
+mod.header('Splinterlands Car Grinder Conveyor')
+mod.reg_hotfix(Mod.LEVEL, 'Motorcade_P',
+        '/Game/Maps/Zone_3/Motorcade/Motorcade_M_Plot.Motorcade_M_Plot:PersistentLevel.ConveyorDisplacementZone_GEN_VARIABLE_DisplacementZone_CAT_2260',
+        'Speed',
+        200*global_scale)
+mod.newline()
+
+# Splinterlands grinder magnet (not especially important but whatever)
+mod.header('Splinterlands Car Grinder Magnet')
+mod.reg_hotfix(Mod.LEVEL, 'Motorcade_P',
+        f'/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C:NODE_AddInterpToMovementComponent-3',
+        'Duration',
+        # This needs to be scaled back a little bit for... reasons?  Anyway, 2/3 seems
+        # about right, so there we are.
+        6/(global_scale*2/3),
+        )
+mod.newline()
 
 # `getall Elevator`
 mod.header('Elevators')
