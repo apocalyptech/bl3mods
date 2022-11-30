@@ -14,7 +14,7 @@ getall BPIO_Lootable_VaultCard_RedCrate_C OpeningInteractions
   /Dandelion/Maps/Trashtown/Trashtown_P
 * /Game/Maps/ProvingGrounds/Trial1/ProvingGrounds_Trial1_P
 * /Game/Maps/ProvingGrounds/Trial4/ProvingGrounds_Trial4_P
-  /Game/Maps/ProvingGrounds/Trial5/ProvingGrounds_Trial5_P
+* /Game/Maps/ProvingGrounds/Trial5/ProvingGrounds_Trial5_P
   /Game/Maps/ProvingGrounds/Trial6/ProvingGrounds_Trial6_P
 * /Game/Maps/ProvingGrounds/Trial7/ProvingGrounds_Trial7_P
 * /Game/Maps/ProvingGrounds/Trial8/ProvingGrounds_Trial8_P
@@ -45,10 +45,10 @@ getall BPIO_Lootable_VaultCard_RedCrate_C OpeningInteractions
 * /Game/Maps/Zone_3/Desert/Desert_P
   /Game/Maps/Zone_3/DesertBoss/DesertBoss_P
   /Game/Maps/Zone_3/DesertVault/Desertvault_P
-  /Game/Maps/Zone_3/Mine/Mine_P
+* /Game/Maps/Zone_3/Mine/Mine_P
 * /Game/Maps/Zone_3/Motorcade/Motorcade_P
 * /Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_P
-  /Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_P
+* /Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_P
   /Game/Maps/Zone_4/Beach/Beach_P
   /Game/Maps/Zone_4/Crypt/Crypt_P
   /Game/Maps/Zone_4/Desolate/Desolate_P

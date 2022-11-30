@@ -9923,6 +9923,14 @@ SparkEarlyLevelPatchEntry,(1,1,0,AtlasHQ_P),/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_M_
 SparkEarlyLevelPatchEntry,(1,1,0,AtlasHQ_P),/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_M_EP06OfficeSpaceInvaders.AtlasHQ_M_EP06OfficeSpaceInvaders:PersistentLevel.Elevator_Ep06_AtlasHQ_V_0,ElevatorTravelTime,0,,1.25
 SparkEarlyLevelPatchEntry,(1,1,0,AtlasHQ_P),/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_M_EP06OfficeSpaceInvaders.AtlasHQ_M_EP06OfficeSpaceInvaders:PersistentLevel.Elevator_Ep06_AtlasHQ_V_0,killDelay,0,,0
 
+# Carnivora - La Cage O' Tinks Entrance
+SparkEarlyLevelPatchEntry,(1,1,0,MotorcadeFestival_P),/Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_M_Plot.MotorcadeFestival_M_Plot:PersistentLevel.BP_Ep15_BigChase_FestivalElevator,ElevatorSpeed,0,,480
+SparkEarlyLevelPatchEntry,(1,1,0,MotorcadeFestival_P),/Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_M_Plot.MotorcadeFestival_M_Plot:PersistentLevel.BP_Ep15_BigChase_FestivalElevator,ElevatorTravelTime,0,,2.5
+
+# Carnivora - La Cage O' Tinks Exit
+SparkEarlyLevelPatchEntry,(1,1,0,MotorcadeFestival_P),/Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_M_Plot.MotorcadeFestival_M_Plot:PersistentLevel.BP_Ep15_BigChase_FestivalElevator_0,ElevatorSpeed,0,,480
+SparkEarlyLevelPatchEntry,(1,1,0,MotorcadeFestival_P),/Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_M_Plot.MotorcadeFestival_M_Plot:PersistentLevel.BP_Ep15_BigChase_FestivalElevator_0,ElevatorTravelTime,0,,2.5
+
 # Cistern of Slaughter
 SparkEarlyLevelPatchEntry,(1,1,0,CreatureSlaughter_P),/Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P.CreatureSlaughter_P:PersistentLevel.Elevator_CreatureSlaughter,ElevatorSpeed,0,,1600
 SparkEarlyLevelPatchEntry,(1,1,0,CreatureSlaughter_P),/Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P.CreatureSlaughter_P:PersistentLevel.Elevator_CreatureSlaughter,ElevatorTravelTime,0,,2.5
@@ -9931,9 +9939,17 @@ SparkEarlyLevelPatchEntry,(1,1,0,CreatureSlaughter_P),/Game/Maps/Slaughters/Crea
 SparkEarlyLevelPatchEntry,(1,1,0,Wetlands_P),/Game/Maps/Zone_2/Wetlands/Wetlands_Dynamic.Wetlands_Dynamic:PersistentLevel.Elevator_WetlandsLodge_3326,ElevatorSpeed,0,,1600
 SparkEarlyLevelPatchEntry,(1,1,0,Wetlands_P),/Game/Maps/Zone_2/Wetlands/Wetlands_Dynamic.Wetlands_Dynamic:PersistentLevel.Elevator_WetlandsLodge_3326,ElevatorTravelTime,0,,2.5
 
+# Guts of Carnivora
+SparkEarlyLevelPatchEntry,(1,1,0,MotorcadeInterior_P),/Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_Plot.MotorcadeInterior_Plot:PersistentLevel.BP_CarnivorArena_Elevator_578,ElevatorSpeed,0,,800
+SparkEarlyLevelPatchEntry,(1,1,0,MotorcadeInterior_P),/Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_Plot.MotorcadeInterior_Plot:PersistentLevel.BP_CarnivorArena_Elevator_578,ElevatorTravelTime,0,,2.5
+
 # Jakobs Estate
 SparkEarlyLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.Elevator_Ep09_Mansion_592,ElevatorSpeed,0,,700
 SparkEarlyLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.Elevator_Ep09_Mansion_592,ElevatorTravelTime,0,,5.0
+
+# Konrad's Hold
+SparkEarlyLevelPatchEntry,(1,1,0,Mine_P),/Game/Maps/Zone_3/Mine/Mine_Section2_Lobby.Mine_Section2_Lobby:PersistentLevel.Elevator_Ep14_Mine_NoName_3,ElevatorSpeed,0,,20
+SparkEarlyLevelPatchEntry,(1,1,0,Mine_P),/Game/Maps/Zone_3/Mine/Mine_Section2_Lobby.Mine_Section2_Lobby:PersistentLevel.Elevator_Ep14_Mine_NoName_3,ElevatorTravelTime,0,,2.5
 
 # Meridian Outskirts - Main upper/lower Elevator
 SparkEarlyLevelPatchEntry,(1,1,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outskirts_Mission.Outskirts_Mission:PersistentLevel.Elevator_Outskirts_Refugee,ElevatorSpeed,0,,1600
