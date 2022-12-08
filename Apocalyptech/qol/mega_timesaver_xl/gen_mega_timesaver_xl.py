@@ -451,6 +451,14 @@ for cat_name, cat_scale, animseqs in [
                 # Need to do this, otherwise the animation glitches out
                 seqlen_scale=1,
                 ),
+            AS('/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed',
+                target='Mine_P',
+                # a 2x speedup already looks a *bit* off; this animation really doesn't need
+                # much in the way of speeding up.
+                scale=global_scale/2,
+                # Need to do this, otherwise the animation glitches out
+                seqlen_scale=1,
+                ),
             ]),
         # Doing this ends up screwing up the slots pretty thoroughly, actually -- the animation gets killed
         # pretty much immediately, so the rewards get stuck "inside" the machine until the 10-sec auto-drop
@@ -1343,6 +1351,10 @@ for category, cat_scale, io_objs in [
                 label='Splinterlands Car Grinder',
                 level='Motorcade_P',
                 ),
+            IO('/Game/Missions/Side/Zone_3/Mine/GrowingPains/IO_MissionUsable_GrowingPains_PictureFrame',
+                label="Handsome Jack Portrait in Konrad's Hold",
+                level='Mine_P',
+                ),
             ]),
         ]:
 
@@ -1631,10 +1643,6 @@ for label, level, obj_name, speed, travel_time in sorted([
         # suspect that `defaultspeed` is 200, but we'll see.  A default traveltime of 10 has been
         # filled in on a lot of these.  Also I suspect that at least some of these aren't really
         # things that we'd want to speed up -- like all the Guardian Takedown ones, for instance.
-
-        #("Cathedral of the Twin Gods", 'Desertvault_P',
-        #    '/Game/Maps/Zone_3/DesertVault/Desertvault_Dynamic.Desertvault_Dynamic:PersistentLevel.Elevator_DesertVaultUnderworks_2',
-        #    350, 10),
 
         #("Great Vault", 'DesertBoss_P',
         #    '/Game/Maps/Zone_3/DesertBoss/DesertBoss_Mission.DesertBoss_Mission:PersistentLevel.BP_TroyBoss_Antenna_8726',

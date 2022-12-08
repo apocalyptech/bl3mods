@@ -188,6 +188,8 @@ Changelog
    * BALEX / EMS Bot door-opening scanning
    * Splinterlands Car Grinder
    * Golden Chariot crane-lowering
+   * Fragile overhead pipe in Konrad's Hold
+   * Handsome Jack portrait in Konrad's Hold
 
 Aug 1, 2022 *(no version number change)*
  * Updated to use [new metadata tags](https://github.com/apple1417/blcmm-parsing/tree/master/blimp)

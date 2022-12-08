@@ -1402,6 +1402,21 @@ SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/Crane/Anima
 SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/Crane/Animation/AS_Going_Down.AS_Going_Down,Notifies.Notifies[3].SegmentLength,0,,3.166667
 SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/Crane/Animation/AS_Going_Down.AS_Going_Down,Notifies.Notifies[3].LinkValue,0,,2.802687
 SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/Crane/Animation/AS_Going_Down.AS_Going_Down,SequenceLength,0,,6.333334
+SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed.AS_Pipe_Destroyed,RateScale,0,,2.0
+SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed.AS_Pipe_Destroyed,Notifies.Notifies[0].SegmentLength,0,,1.520833
+SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed.AS_Pipe_Destroyed,Notifies.Notifies[1].SegmentLength,0,,1.520833
+SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed.AS_Pipe_Destroyed,Notifies.Notifies[2].SegmentLength,0,,1.520833
+SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed.AS_Pipe_Destroyed,Notifies.Notifies[3].SegmentLength,0,,1.520833
+SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed.AS_Pipe_Destroyed,Notifies.Notifies[4].SegmentLength,0,,1.520833
+SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed.AS_Pipe_Destroyed,Notifies.Notifies[5].SegmentLength,0,,1.520833
+SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed.AS_Pipe_Destroyed,Notifies.Notifies[5].LinkValue,0,,0.822592
+SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed.AS_Pipe_Destroyed,Notifies.Notifies[6].SegmentLength,0,,1.520833
+SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed.AS_Pipe_Destroyed,Notifies.Notifies[6].LinkValue,0,,0.822592
+SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed.AS_Pipe_Destroyed,Notifies.Notifies[7].SegmentLength,0,,1.520833
+SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed.AS_Pipe_Destroyed,Notifies.Notifies[7].LinkValue,0,,1.074085
+SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed.AS_Pipe_Destroyed,Notifies.Notifies[8].SegmentLength,0,,1.520833
+SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed.AS_Pipe_Destroyed,Notifies.Notifies[8].LinkValue,0,,1.08631
+SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed.AS_Pipe_Destroyed,SequenceLength,0,,3.041667
 
 # Character Death Respawns
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Beastmaster/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel.AS_Respawn_Kneel,RateScale,0,,4
@@ -9828,6 +9843,10 @@ SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Missions/Plot/EP17_BigChase/BP_Ep
 SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C,Timelines.Timelines[3].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.15
 SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C,Timelines.Timelines[3].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,1.0
 SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C,Timelines.Timelines[3].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,1.15
+
+# Handsome Jack Portrait in Konrad's Hold
+SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/Missions/Side/Zone_3/Mine/GrowingPains/IO_MissionUsable_GrowingPains_PictureFrame.IO_MissionUsable_GrowingPains_PictureFrame_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/Missions/Side/Zone_3/Mine/GrowingPains/IO_MissionUsable_GrowingPains_PictureFrame.IO_MissionUsable_GrowingPains_PictureFrame_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.25
 
 ###
 ### Slot Machine Tweaks
