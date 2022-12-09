@@ -77,6 +77,11 @@ Some things intentionally *not* handled by the mod:
   So, it's been left alone.
 * The Rakk shootout in Life of the Party has been left alone -- use my
   "Life of the Party: Short Rakk Shootout" mod to shorten that, if you want.
+* The Desolation's Edge mission "Homeopathological" is pretty slow, but
+  there's no good way to speed it up without causing dialogue skips, apart
+  from some real minor timing tweaks, so it was left alone.
+* The explosive device delay in Bad Vibrations could probably be shortened,
+  but I left it alone for now.
 * The Desolation's Edge mission "Transaction-Packed" has been left alone.
   I recommend using my "Transaction-Packed: Abridged" to basically skip
   the entire mission, instead.

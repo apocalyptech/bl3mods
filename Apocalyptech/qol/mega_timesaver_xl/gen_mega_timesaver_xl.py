@@ -1637,6 +1637,9 @@ for label, level, obj_name, speed, travel_time in sorted([
         ("Konrad's Hold", 'Mine_P',
             '/Game/Maps/Zone_3/Mine/Mine_Section2_Lobby.Mine_Section2_Lobby:PersistentLevel.Elevator_Ep14_Mine_NoName_3',
             5, 10),
+        ("Slaughterstar 3000", 'TechSlaughter_P',
+            '/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_Geo.TechSlaughter_Geo:PersistentLevel.Elevator_TechSlaughter_2',
+            500, 10),
 
         # Wrote some code to attempt to autodetect some things, to make future filling-in easier.
         # Keeping them commented for now; kind of want to doublecheck things as I go, still,  I
@@ -1658,13 +1661,6 @@ for label, level, obj_name, speed, travel_time in sorted([
         #("Destroyer's Rift", 'FinalBoss_P',
         #    '/Game/Maps/Zone_0/FinalBoss/FinalBoss_M_EP23TyreenFinalBoss.FinalBoss_M_EP23TyreenFinalBoss:PersistentLevel.Elevator_FinalBoss_Rocks_86',
         #    500, 10),
-
-        #("Slaughterstar 3000", 'TechSlaughter_P',
-        #    '/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_Geo.TechSlaughter_Geo:PersistentLevel.Elevator_TechSlaughter_2',
-        #    500, 10),
-        #("Slaughterstar 3000", 'TechSlaughter_P',
-        #    '/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_Mission.TechSlaughter_Mission:PersistentLevel.ElevatorA_TechSlaughter_2',
-        #    defaultspeed, 10),
 
         #("Stormblind Complex", 'FrostSite_P',
         #    '/Ixora/Maps/FrostSite/FrostSite_Combat.FrostSite_Combat:PersistentLevel.Elevator_FrostSite_2',

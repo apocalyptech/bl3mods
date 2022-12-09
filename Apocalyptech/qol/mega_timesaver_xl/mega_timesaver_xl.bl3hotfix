@@ -9986,6 +9986,10 @@ SparkEarlyLevelPatchEntry,(1,1,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPla
 SparkEarlyLevelPatchEntry,(1,1,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_Combat.OrbitalPlatform_Combat:PersistentLevel.Elevator_Cargo_OrbitalPlatform_2,ElevatorSpeed,0,,8000
 SparkEarlyLevelPatchEntry,(1,1,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_Combat.OrbitalPlatform_Combat:PersistentLevel.Elevator_Cargo_OrbitalPlatform_2,ElevatorTravelTime,0,,2.5
 
+# Slaughterstar 3000
+SparkEarlyLevelPatchEntry,(1,1,0,TechSlaughter_P),/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_Geo.TechSlaughter_Geo:PersistentLevel.Elevator_TechSlaughter_2,ElevatorSpeed,0,,2000
+SparkEarlyLevelPatchEntry,(1,1,0,TechSlaughter_P),/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_Geo.TechSlaughter_Geo:PersistentLevel.Elevator_TechSlaughter_2,ElevatorTravelTime,0,,2.5
+
 # The Anvil - Sauce Room
 SparkEarlyLevelPatchEntry,(1,1,0,Prison_P),/Game/Maps/Zone_2/Prison/Prison_M_EP08PrisonBreak.Prison_M_EP08PrisonBreak:PersistentLevel.Elevator_PrisonArmory_1624,ElevatorSpeed,0,,1400
 SparkEarlyLevelPatchEntry,(1,1,0,Prison_P),/Game/Maps/Zone_2/Prison/Prison_M_EP08PrisonBreak.Prison_M_EP08PrisonBreak:PersistentLevel.Elevator_PrisonArmory_1624,ElevatorTravelTime,0,,2.5
