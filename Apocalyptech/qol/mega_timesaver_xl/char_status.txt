@@ -1,5 +1,5 @@
 CZ47's Faster NPCs:
-    Typhon
+  * Typhon
   * Claptrap
   * Claptrap DLC6
     Maya

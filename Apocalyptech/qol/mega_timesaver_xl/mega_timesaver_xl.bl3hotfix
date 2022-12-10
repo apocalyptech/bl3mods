@@ -1417,6 +1417,8 @@ SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObje
 SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed.AS_Pipe_Destroyed,Notifies.Notifies[8].SegmentLength,0,,1.520833
 SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed.AS_Pipe_Destroyed,Notifies.Notifies[8].LinkValue,0,,1.08631
 SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed.AS_Pipe_Destroyed,SequenceLength,0,,3.041667
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/InteractiveObjects/MissionSpecificObjects/Beach/Eridian_Bridge/_Shared/Animation/AS_Bridge_Going_up.AS_Bridge_Going_up,RateScale,0,,2.0
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/InteractiveObjects/MissionSpecificObjects/Beach/Eridian_Bridge/_Shared/Animation/AS_Bridge_Going_up.AS_Bridge_Going_up,SequenceLength,0,,3.333333
 
 # Character Death Respawns
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PlayerCharacters/Beastmaster/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel.AS_Respawn_Kneel,RateScale,0,,4
@@ -1598,7 +1600,11 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/GameData/Loot/CoordinatedEffects/BP_
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/GameData/Loot/CoordinatedEffects/BP_CE_Maliwan_Loot_Digistruct_In.Default__BP_CE_Maliwan_Loot_Digistruct_In_C,Duration,0,,0.525
 
 # Eridian Ammo Crate Light-Burst Speedup
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn.PS_Eridian_Ammo_Chest_SinkNBurn,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..TypeDataModule..Object..EmitterInfo.MaxLifetime,0,,0.5
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn.PS_Eridian_Ammo_Chest_SinkNBurn,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MinValue,0,,0.0375
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn.PS_Eridian_Ammo_Chest_SinkNBurn,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MaxValue,0,,0.0375
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn.PS_Eridian_Ammo_Chest_SinkNBurn,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Table.Values.Values[0],0,,0.0375
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn.PS_Eridian_Ammo_Chest_SinkNBurn,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Distribution.Object..Constant,0,,0.25
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn.PS_Eridian_Ammo_Chest_SinkNBurn,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..TypeDataModule.Object..EmitterInfo.MaxLifetime,0,,0.5
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn.PS_Eridian_Ammo_Chest_SinkNBurn,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MinValue,0,,0.5
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn.PS_Eridian_Ammo_Chest_SinkNBurn,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MaxValue,0,,0.5
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn.PS_Eridian_Ammo_Chest_SinkNBurn,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Table.Values.Values[0],0,,0.5
@@ -9990,6 +9996,10 @@ SparkEarlyLevelPatchEntry,(1,1,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPla
 SparkEarlyLevelPatchEntry,(1,1,0,TechSlaughter_P),/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_Geo.TechSlaughter_Geo:PersistentLevel.Elevator_TechSlaughter_2,ElevatorSpeed,0,,2000
 SparkEarlyLevelPatchEntry,(1,1,0,TechSlaughter_P),/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_Geo.TechSlaughter_Geo:PersistentLevel.Elevator_TechSlaughter_2,ElevatorTravelTime,0,,2.5
 
+# Tazendeer Ruins
+SparkEarlyLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_TempleFirstFloor.Beach_TempleFirstFloor:PersistentLevel.BP_EP18_Eridian_Elevator_0,ElevatorSpeed,0,,8000
+SparkEarlyLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_TempleFirstFloor.Beach_TempleFirstFloor:PersistentLevel.BP_EP18_Eridian_Elevator_0,ElevatorTravelTime,0,,2.5
+
 # The Anvil - Sauce Room
 SparkEarlyLevelPatchEntry,(1,1,0,Prison_P),/Game/Maps/Zone_2/Prison/Prison_M_EP08PrisonBreak.Prison_M_EP08PrisonBreak:PersistentLevel.Elevator_PrisonArmory_1624,ElevatorSpeed,0,,1400
 SparkEarlyLevelPatchEntry,(1,1,0,Prison_P),/Game/Maps/Zone_2/Prison/Prison_M_EP08PrisonBreak.Prison_M_EP08PrisonBreak:PersistentLevel.Elevator_PrisonArmory_1624,ElevatorTravelTime,0,,2.5
@@ -10067,6 +10077,69 @@ SparkLevelPatchEntry,(1,7,0,Watership_P),/Game/Missions/Side/Zone_2/Watership/Mi
 SparkLevelPatchEntry,(1,1,0,Watership_P),/Game/Missions/Side/Zone_2/Watership/RumbleJungle/Action_ServiceBot_Rumble_OpenDoor.Default__Action_ServiceBot_Rumble_OpenDoor_C,PlayRate,0,,4
 
 ###
+### Eridian statue rotation in Tazendeer Ruins
+###
+
+SparkEarlyLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_Plot_M:PersistentLevel.IO_BeachHead_EridianStatueMaliwan_0.RotatingMovement,Duration,0,,1.75
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_Plot_M:PersistentLevel.IO_BeachHead_EridianStatueMaliwan_0,DelayBeforePlayingSequence,0,,1.75
+
+###
+### Tazendeer Ruins elevator ceiling door
+###
+
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_Plot_M:PersistentLevel.IO_Beachhead_ElevatorCeilingSceal_1,SlideSpeed,0,,1.25
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_Plot_M:PersistentLevel.IO_Beachhead_ElevatorCeilingSceal_1,DelayBeforeStartAnim,0,,0.75
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_Plot_M:PersistentLevel.IO_Beachhead_ElevatorCeilingSceal_4,SlideSpeed,0,,1.25
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_Plot_M:PersistentLevel.IO_Beachhead_ElevatorCeilingSceal_4,DelayBeforeStartAnim,0,,0.75
+
+###
+### Tazendeer Ruins post-elevator dialogue trigger and bridge-raising tweaks
+###
+
+SparkLevelPatchEntry,(1,1,1,Beach_P),/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_Plot_M:PersistentLevel.OakMissionWaypointBox_0.CollisionComp,RelativeLocation,0,,(X=45044,Y=22996,Z=10648)
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_TempleSecondFloor.Beach_TempleSecondFloor:PersistentLevel.IO_BeachHead_EridianBridge_2,AnimationDelay,0,,1.05
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_TempleSecondFloor.Beach_TempleSecondFloor:PersistentLevel.IO_BeachHead_EridianBridge_3,AnimationDelay,0,,0.95
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_TempleSecondFloor.Beach_TempleSecondFloor:PersistentLevel.IO_BeachHead_EridianBridge_4,AnimationDelay,0,,0.75
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_TempleSecondFloor.Beach_TempleSecondFloor:PersistentLevel.IO_BeachHead_EridianBridge_5,AnimationDelay,0,,0.85
+
+###
+### Typhon digistruct in Tazendeer Ruins
+###
+
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/CoordinatedEffect/BP_CE_Typhon_Teleport.Default__BP_CE_Typhon_Teleport_C,Duration,0,,1.5
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration,0,,0.025
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MinValue,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MaxValue,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Table.Values.Values[0],0,,0.25
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..TypeDataModule.Object..EmitterInfo.MaxLifetime,0,,1.0
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration,0,,0.5625
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDelay,0,,0.625
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Distribution.Object..Constant,0,,1.0
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[2].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration,0,,0.75
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[2].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDelay,0,,0.4375
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[3].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration,0,,0.75
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[3].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Distribution.Object..Constant,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[4].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration,0,,0.75
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[4].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDelay,0,,0.4375
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[4].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Distribution.Object..Constant,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[5].Object..LODLevels.LODLevels[0].Object..TypeDataModule.Object..EmitterInfo.MaxLifetime,0,,0.375
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[5].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration,0,,0.75
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[6].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration,0,,0.75
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[6].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDelay,0,,0.5
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[6].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Distribution.Object..Constant,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[7].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration,0,,0.75
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[8].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Distribution.Object..Constant,0,,0.75
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[9].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDelay,0,,0.4625
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[9].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Distribution.Object..Constant,0,,0.975
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[10].Object..LODLevels.LODLevels[0].Object..TypeDataModule.Object..EmitterInfo.MaxLifetime,0,,0.375
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[10].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration,0,,0.75
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[11].Object..LODLevels.LODLevels[0].Object..TypeDataModule.Object..EmitterInfo.MaxLifetime,0,,0.375
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[11].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration,0,,0.375
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[11].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDelay,0,,0.625
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[12].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration,0,,1.0
+SparkLevelPatchEntry,(1,7,0,Beach_P),/Game/Missions/Plot/Mission_Ep21_Beachhead.Mission_Ep21_Beachhead_C,0,1,ExecuteUbergraph_Mission_Ep21_Beachhead,1,4145,3:5.6,3:1.4
+
+###
 ### NPC Walking Speeds
 ###
 
@@ -10131,6 +10204,10 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_GoodRatch),/Game/NonPlayerCharacters/_Pr
 # Tina
 SparkCharacterLoadedEntry,(1,1,0,BPChar_TinyTina),/Game/NonPlayerCharacters/TinyTina/_Design/Character/BPChar_TinyTina.Default__BPChar_TinyTina_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_TinyTina),/Game/NonPlayerCharacters/TinyTina/_Design/Character/BPChar_TinyTina.Default__BPChar_TinyTina_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+
+# Typhon
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Typhon),/Game/NonPlayerCharacters/Typhon/_Design/Character/BPChar_Typhon.Default__BPChar_Typhon_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=560.0,BaseValue=560.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Typhon),/Game/NonPlayerCharacters/Typhon/_Design/Character/BPChar_Typhon.Default__BPChar_Typhon_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 
 # Vic (Head Case)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_HeadCaseGirl),/Game/NonPlayerCharacters/_Pandora/HeadCaseGirl/_Design/Character/BPChar_HeadCaseGirl.Default__BPChar_HeadCaseGirl_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=1800,BaseValue=1800)

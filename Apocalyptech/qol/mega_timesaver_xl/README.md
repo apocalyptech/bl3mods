@@ -34,6 +34,7 @@ Currently, the mod affects the following:
   * Maya
   * Terry the Ratch
   * Tina
+  * Typhon
   * Vic (from Head Case)
 * Eridian tools (Resonator, Analyzer)
 * Fast-Travel/Teleport and Respawn animations
@@ -97,6 +98,14 @@ Known Bugs
   Claptrap in Bad Reception acts a bit weirdly, and is probably
   pretty easy to just run through now.
 * Respawning after death leaves your char facing the wrong way.
+* This isn't really a bug per se, but it's very easy to end up
+  with skipped dialogue at the top of the Tazendeer Elevator --
+  there's some triggers up there which can be missed if there's
+  already dialogue playing.  This mod moves one of those around a
+  bit so it no longer triggers right at the top of the now-sped-up
+  elevator, so if you want to make sure to hear all the Typhon+Tyreen
+  dialogue up there, make sure to wait around for dialogue lines
+  to finish before pressing onward.
 
 TODO
 ====
@@ -165,6 +174,7 @@ Changelog
    * Maya
    * Terry the Ratch
    * Tina
+   * Typhon
    * Vic (from Head Case)
  * Elevators!
  * Extra Doors:
@@ -195,6 +205,10 @@ Changelog
    * Golden Chariot crane-lowering
    * Fragile overhead pipe in Konrad's Hold
    * Handsome Jack portrait in Konrad's Hold
+   * Eridian statue rotation in Tazendeer Ruins
+   * Some tweaks to a dialogue trigger at the top of the Tazendeer Ruins
+     elevator
+   * Bridge-raising animation at the top of Tazendeer Ruins elevator
 
 Aug 1, 2022 *(no version number change)*
  * Updated to use [new metadata tags](https://github.com/apple1417/blcmm-parsing/tree/master/blimp)

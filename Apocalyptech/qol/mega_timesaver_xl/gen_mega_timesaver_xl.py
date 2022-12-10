@@ -75,6 +75,106 @@ min_apoc_jwp_version = 19
 # Data obj
 data = BL3Data()
 
+def scale_ps(mod, data, hf_type, hf_target, ps_name, scale, notify=False):
+    """
+    Function to attempt to scale all components of a ParticleSystem object.
+    At time of writing, this is hardly being used by anything -- I'd written
+    it for Typhon's digistruct animation in Tazendeer Ruins, and it turns
+    out that maybe we didn't even have to (the critical timing tweak looks
+    like it was probably an ubergraph bytecode change to the call to his
+    dialogue line).  Anyway, we've got a few other instances of editing
+    ParticleSystems in here, which should maybe get ported over to using
+    this, once I've got an opportunity to re-test 'em.
+
+    `mod` and `data` should be the relevant Mod and BL3Data objects.
+
+    `hf_type` and `hf_target` should be the initial hotfix params -- so far,
+    we've only needed Mod.LEVEL for `hf_type`.
+
+    `ps_name` is the path to the ParticleSystem object
+
+    `scale` is the scale to use ("scale" is actually kind of a bad name here;
+    we're actualy dividing, not multiplying)
+
+    `notify` can be passed in to set the notify flag on the hotfixes, too,
+    but so far that's never been necessary
+    """
+    done_work = False
+    ps_obj = data.get_data(ps_name)
+    for export in ps_obj:
+        if export['export_type'] == 'ParticleSystem':
+            for emitter_idx, emitter_obj in enumerate(export['Emitters']):
+                emitter = ps_obj[emitter_obj['export']-1]
+                for lod_idx, lod_obj in enumerate(emitter['LODLevels']):
+                    lod = ps_obj[lod_obj['export']-1]
+                    lod_attr = f'Emitters.Emitters[{emitter_idx}].Object..LODLevels.LODLevels[{lod_idx}].Object..'
+                    if 'TypeDataModule' in lod:
+                        tdm_obj = lod['TypeDataModule']
+                        tdm = ps_obj[tdm_obj['export']-1]
+                        if 'EmitterInfo' in tdm and 'MaxLifetime' in tdm['EmitterInfo']:
+                            done_work = True
+                            mod.reg_hotfix(hf_type, hf_target,
+                                    ps_name,
+                                    f'{lod_attr}TypeDataModule.Object..EmitterInfo.MaxLifetime',
+                                    round(tdm['EmitterInfo']['MaxLifetime']/scale, 6),
+                                    notify=notify,
+                                    )
+                    if 'RequiredModule' in lod:
+                        reqmod_obj = lod['RequiredModule']
+                        reqmod = ps_obj[reqmod_obj['export']-1]
+                        reqmod_attr = f'{lod_attr}RequiredModule.Object..'
+                        for attr in [
+                                'EmitterDuration',
+                                'EmitterDelay',
+                                ]:
+                            if attr in reqmod:
+                                done_work = True
+                                mod.reg_hotfix(hf_type, hf_target,
+                                        ps_name,
+                                        f'{reqmod_attr}{attr}',
+                                        round(reqmod[attr]/scale, 6),
+                                        notify=notify,
+                                        )
+                    for module_idx, module_obj in enumerate(lod['Modules']):
+                        module = ps_obj[module_obj['export']-1]
+                        module_attr = f'{lod_attr}Modules.Modules[0].Object..'
+                        if 'Lifetime' in module:
+                            for attr in ['MinValue', 'MaxValue']:
+                                if attr in module['Lifetime']:
+                                    done_work = True
+                                    mod.reg_hotfix(hf_type, hf_target,
+                                            ps_name,
+                                            f'{module_attr}Lifetime.{attr}',
+                                            round(module['Lifetime'][attr]/scale, 6),
+                                            notify=notify,
+                                            )
+                            if 'Table' in module['Lifetime'] and 'Values' in module['Lifetime']['Table']:
+                                for value_idx, value in enumerate(module['Lifetime']['Table']['Values']):
+                                    done_work = True
+                                    mod.reg_hotfix(hf_type, hf_target,
+                                            ps_name,
+                                            f'{module_attr}Lifetime.Table.Values.Values[{value_idx}]',
+                                            round(value/scale, 6),
+                                            notify=notify,
+                                            )
+                            if 'Distribution' in module['Lifetime']:
+                                dist_obj = module['Lifetime']['Distribution']
+                                dist = ps_obj[dist_obj['export']-1]
+                                if 'Constant' in dist:
+                                    done_work = True
+                                    mod.reg_hotfix(hf_type, hf_target,
+                                            ps_name,
+                                            f'{module_attr}Lifetime.Distribution.Object..Constant',
+                                            round(dist['Constant']/scale, 6),
+                                            notify=notify,
+                                            )
+
+            break
+
+    # Report if we didn't actually get any work
+    if not done_work:
+        print(f'WARNING: ParticleSystem had no edits: {ps_name}')
+
 mod.header('Item Pickups')
 
 # Defaults:
@@ -459,6 +559,13 @@ for cat_name, cat_scale, animseqs in [
                 # Need to do this, otherwise the animation glitches out
                 seqlen_scale=1,
                 ),
+            AS('/Game/InteractiveObjects/MissionSpecificObjects/Beach/Eridian_Bridge/_Shared/Animation/AS_Bridge_Going_up',
+                target='Beach_P',
+                scale=global_scale/2,
+                # Honestly not sure if we *do* need seqlen_scale=1 here; I just stuck it in assuming it'd
+                # be needed, given the other animations in this section.
+                seqlen_scale=1,
+                ),
             ]),
         # Doing this ends up screwing up the slots pretty thoroughly, actually -- the animation gets killed
         # pretty much immediately, so the rewards get stuck "inside" the machine until the 10-sec auto-drop
@@ -533,22 +640,9 @@ mod.newline()
 # as it should; this ends up resulting in maybe a 2x speedup instead of our 4x intended.  So there's
 # still something going on, but whatever, it's better.
 mod.comment('Eridian Ammo Crate Light-Burst Speedup')
-mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
+scale_ps(mod, data, Mod.LEVEL, 'MatchAll',
         '/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn',
-        'Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..TypeDataModule..Object..EmitterInfo.MaxLifetime',
-        2/global_scale)
-mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
-        '/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn',
-        'Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MinValue',
-        2/global_scale)
-mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
-        '/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn',
-        'Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MaxValue',
-        2/global_scale)
-mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
-        '/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn',
-        'Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Table.Values.Values[0]',
-        2/global_scale)
+        global_scale)
 mod.newline()
 
 # Industrial Dumpsters
@@ -1640,6 +1734,9 @@ for label, level, obj_name, speed, travel_time in sorted([
         ("Slaughterstar 3000", 'TechSlaughter_P',
             '/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_Geo.TechSlaughter_Geo:PersistentLevel.Elevator_TechSlaughter_2',
             500, 10),
+        ("Tazendeer Ruins", 'Beach_P',
+            '/Game/Maps/Zone_4/Beach/Beach_TempleFirstFloor.Beach_TempleFirstFloor:PersistentLevel.BP_EP18_Eridian_Elevator_0',
+            2000, 10),
 
         # Wrote some code to attempt to autodetect some things, to make future filling-in easier.
         # Keeping them commented for now; kind of want to doublecheck things as I go, still,  I
@@ -1653,10 +1750,6 @@ for label, level, obj_name, speed, travel_time in sorted([
         #("Great Vault", 'DesertBoss_P',
         #    '/Game/Maps/Zone_3/DesertBoss/DesertBoss_Mission.DesertBoss_Mission:PersistentLevel.Elevator_TroyBoss_OuterPlatform_2',
         #    400, 10),
-
-        #("Tazendeer Ruins", 'Beach_P',
-        #    '/Game/Maps/Zone_4/Beach/Beach_TempleFirstFloor.Beach_TempleFirstFloor:PersistentLevel.BP_EP18_Eridian_Elevator_0',
-        #    2000, 10),
 
         #("Destroyer's Rift", 'FinalBoss_P',
         #    '/Game/Maps/Zone_0/FinalBoss/FinalBoss_M_EP23TyreenFinalBoss.FinalBoss_M_EP23TyreenFinalBoss:PersistentLevel.Elevator_FinalBoss_Rocks_86',
@@ -1842,6 +1935,7 @@ mod.newline()
 mod.header('Custom Golden Calves Statue Scanner Tweaks')
 
 mod.comment('Shorten scanner-light animation')
+# TODO: Maybe convert this to `scale_ps()`?
 mod.reg_hotfix(Mod.LEVEL, 'Sacrifice_P',
         '/Game/InteractiveObjects/MissionScripted/Effects/System/PS_Scanning_Machine',
         'Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration',
@@ -1895,6 +1989,7 @@ mod.reg_hotfix(Mod.LEVEL, 'City_P',
         pour_duration)
 # Next two handle the actual pouring animation
 # getall DistributionFloatConstant Constant name=RequiredDistributionSpawnRate outer=PS_CoffeePour_Stream
+# TODO: Maybe convert this to `scale_ps()`?  This one's pretty custom-purpose, though, so maybe leave as-is.
 mod.reg_hotfix(Mod.LEVEL, 'City_P',
         '/Game/Missions/Side/Zone_1/City/RiseAndGrind/Effects/Systems/PS_CoffeePour_Stream.PS_CoffeePour_Stream:ParticleModuleSpawn_1.RequiredDistributionSpawnRate',
         'Constant',
@@ -1968,6 +2063,89 @@ mod.reg_hotfix(Mod.LEVEL, 'Watership_P',
         '/Game/Missions/Side/Zone_2/Watership/RumbleJungle/Action_ServiceBot_Rumble_OpenDoor.Default__Action_ServiceBot_Rumble_OpenDoor_C',
         'PlayRate',
         1*global_scale)
+mod.newline()
+
+# Eridian statue rotation in Tazendeer Ruins
+mod.header('Eridian statue rotation in Tazendeer Ruins')
+mod.reg_hotfix(Mod.EARLYLEVEL, 'Beach_P',
+        '/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_Plot_M:PersistentLevel.IO_BeachHead_EridianStatueMaliwan_0.RotatingMovement',
+        'Duration',
+        7/global_scale)
+mod.reg_hotfix(Mod.LEVEL, 'Beach_P',
+        '/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_Plot_M:PersistentLevel.IO_BeachHead_EridianStatueMaliwan_0',
+        'DelayBeforePlayingSequence',
+        7/global_scale)
+mod.newline()
+
+# These two are so the ceiling portal opens up in time, instead of knocking
+# the player off the elevator and to their death (lol)
+mod.header('Tazendeer Ruins elevator ceiling door')
+for obj_name in [
+        'IO_Beachhead_ElevatorCeilingSceal_1',
+        'IO_Beachhead_ElevatorCeilingSceal_4',
+        ]:
+    obj_name_full = f'/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_Plot_M:PersistentLevel.{obj_name}'
+    mod.reg_hotfix(Mod.LEVEL, 'Beach_P',
+            obj_name_full,
+            # Despite the word "speed" in here, this is actually a duration!
+            'SlideSpeed',
+            5/global_scale)
+    mod.reg_hotfix(Mod.LEVEL, 'Beach_P',
+            obj_name_full,
+            'DelayBeforeStartAnim',
+            3/global_scale)
+mod.newline()
+
+# There's a dialogue trigger at the top of the elevator which, at default speeds, is just about
+# perfectly timed to kick off as soon as you get up there, but with any speedup at all, you arrive
+# while Typhon's still talking on the way up, so the dialogue is skipped.  This tweak moves that
+# trigger a little ways "forwards" towards where the bridge raises up out of the ground, so that
+# the player could wait to finish the voice line before moving (though realistically, I'm not sure
+# anyone who doesn't know about this would actually wait around).  We're also speeding up the
+# bridge-raising animation here to account for the delayed trigger, since both that and the dialogue
+# get triggered by the same event.  (See also the `AS_Bridge_Going_up` tweaks up in our main
+# AnimSequence section.)
+mod.header('Tazendeer Ruins post-elevator dialogue trigger and bridge-raising tweaks')
+mod.reg_hotfix(Mod.LEVEL, 'Beach_P',
+        '/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_Plot_M:PersistentLevel.OakMissionWaypointBox_0.CollisionComp',
+        'RelativeLocation',
+        '(X=45044,Y=22996,Z=10648)',
+        notify=True,
+        )
+for num, default in [
+        (2, 4.2),
+        (3, 3.8),
+        (4, 3.0),
+        (5, 3.4),
+        ]:
+    mod.reg_hotfix(Mod.LEVEL, 'Beach_P',
+            f'/Game/Maps/Zone_4/Beach/Beach_TempleSecondFloor.Beach_TempleSecondFloor:PersistentLevel.IO_BeachHead_EridianBridge_{num}',
+            'AnimationDelay',
+            default/global_scale,
+            )
+mod.newline()
+
+# Typhon digistruct in Tazendeer Ruins
+mod.header('Typhon digistruct in Tazendeer Ruins')
+mod.reg_hotfix(Mod.LEVEL, 'Beach_P',
+        '/Game/Missions/Plot/EPXX_Beachhead/Effects/CoordinatedEffect/BP_CE_Typhon_Teleport.Default__BP_CE_Typhon_Teleport_C',
+        'Duration',
+        6/global_scale,
+        )
+# There's a lingering red glow which persists for the original 6-seconds-or-so.
+# Not sure where that's coming from, but it doesn't seem important -- the final
+# piece I was missing was the bytecode patch here, which happens inside a call
+# to FinishSpeak.  Maybe we don't even *actually* need to speed up the
+# ParticleSystem?
+scale_ps(mod, data, Mod.LEVEL, 'Beach_P',
+        '/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport',
+        global_scale)
+mod.bytecode_hotfix(Mod.LEVEL, 'Beach_P',
+        '/Game/Missions/Plot/Mission_Ep21_Beachhead',
+        'ExecuteUbergraph_Mission_Ep21_Beachhead',
+        4145,
+        5.6,
+        round(5.6/global_scale, 6))
 mod.newline()
 
 # Bomb-conveyor during Capture The Frag
@@ -2139,6 +2317,12 @@ for char in sorted([
             ),
         Char('Clay (DLC6)',
             '/Ixora2/NonPlayerCharacters/Clay/_Design/Character/BPChar_Clay_IXO',
+            global_char_scale,
+            ),
+        # He's not bad in Desolation's Edge, but there's a bit of following in Tazendeer Ruins which
+        # could benefit from a speedup.
+        Char('Typhon',
+            '/Game/NonPlayerCharacters/Typhon/_Design/Character/BPChar_Typhon',
             global_char_scale,
             ),
         ]):
