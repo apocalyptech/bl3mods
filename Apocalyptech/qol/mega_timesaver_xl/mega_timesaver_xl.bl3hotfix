@@ -9854,6 +9854,14 @@ SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Missions/Plot/EP17_BigChase/BP_Ep
 SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/Missions/Side/Zone_3/Mine/GrowingPains/IO_MissionUsable_GrowingPains_PictureFrame.IO_MissionUsable_GrowingPains_PictureFrame_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.25
 SparkLevelPatchEntry,(1,1,0,Mine_P),/Game/Missions/Side/Zone_3/Mine/GrowingPains/IO_MissionUsable_GrowingPains_PictureFrame.IO_MissionUsable_GrowingPains_PictureFrame_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.25
 
+# Eridian statues in Pyre of Stars
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_EridianStatue.IO_MissionScripted_EridianStatue_C,Timelines.Timelines[0].Object..TimelineLength,0,,1.5
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_EridianStatue.IO_MissionScripted_EridianStatue_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.5
+
+# Rising platforms in Pyre of Stars
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_EridianRaisingPlatform.IO_MissionScripted_EridianRaisingPlatform_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_EridianRaisingPlatform.IO_MissionScripted_EridianRaisingPlatform_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.25
+
 ###
 ### Slot Machine Tweaks
 ###
@@ -10144,6 +10152,33 @@ SparkLevelPatchEntry,(1,7,0,Beach_P),/Game/Missions/Plot/Mission_Ep21_Beachhead.
 ###
 
 SparkLevelPatchEntry,(1,7,0,Crypt_P),/Game/InteractiveObjects/Doors/Nekro/_Design/IO_Door_Custom_Nekro_Crypt_Small.IO_Door_Custom_Nekro_Crypt_Small_C,0,1,ExecuteUbergraph_IO_Door_Custom_Nekro_Crypt_Small,1,334,1:7,4:1.75
+
+###
+### Eridian statue tweaks in Pyre of Stars
+###
+
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine:PersistentLevel.IO_MissionScripted_EridianStatue_0,TheTimeline.Length,0,,1.5
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine:PersistentLevel.IO_MissionScripted_EridianStatue_2,TheTimeline.Length,0,,1.5
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine:PersistentLevel.IO_MissionScripted_EridianStatue_5,TheTimeline.Length,0,,1.5
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine:PersistentLevel.IO_MissionScripted_EridianStatue_8,TheTimeline.Length,0,,1.5
+SparkLevelPatchEntry,(1,7,0,Crypt_P),/Game/Missions/Plot/Mission_Ep22_TheMachine.Mission_Ep22_TheMachine_C,0,1,ExecuteUbergraph_Mission_Ep22_TheMachine,2,38557,25548,1:8,3:2.0
+SparkLevelPatchEntry,(1,7,0,Crypt_P),/Game/Missions/Plot/Mission_Ep22_TheMachine.Mission_Ep22_TheMachine_C,0,1,ExecuteUbergraph_Mission_Ep22_TheMachine,1,3523,3:8.5,5:2.125
+
+###
+### Rising platforms in Pyre of Stars
+###
+
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine:PersistentLevel.IO_MissionScripted_EridianRaisingPlatform_0,DelayBeforeStartingMovement,0,,0.375
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine:PersistentLevel.IO_MissionScripted_EridianRaisingPlatform_0.MovePlatform,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine:PersistentLevel.IO_MissionScripted_EridianRaisingPlatform_1,DelayBeforeStartingMovement,0,,0.625
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine:PersistentLevel.IO_MissionScripted_EridianRaisingPlatform_1.MovePlatform,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine:PersistentLevel.IO_MissionScripted_EridianRaisingPlatform_2,DelayBeforeStartingMovement,0,,0.75
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine:PersistentLevel.IO_MissionScripted_EridianRaisingPlatform_2.MovePlatform,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine:PersistentLevel.IO_MissionScripted_EridianRaisingPlatform_3,DelayBeforeStartingMovement,0,,0.125
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine:PersistentLevel.IO_MissionScripted_EridianRaisingPlatform_3.MovePlatform,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine:PersistentLevel.IO_MissionScripted_EridianRaisingPlatform_4,DelayBeforeStartingMovement,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine:PersistentLevel.IO_MissionScripted_EridianRaisingPlatform_4.MovePlatform,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,7,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine_C,0,1,ExecuteUbergraph_Crypt_M_EP22TheMachine,1,11737,3:6.5,5:1.625
 
 ###
 ### NPC Walking Speeds

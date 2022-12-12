@@ -1459,6 +1459,14 @@ for category, cat_scale, io_objs in [
                 label="Handsome Jack Portrait in Konrad's Hold",
                 level='Mine_P',
                 ),
+            IO('/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_EridianStatue',
+                label="Eridian statues in Pyre of Stars",
+                level='Crypt_P',
+                ),
+            IO('/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_EridianRaisingPlatform',
+                label="Rising platforms in Pyre of Stars",
+                level='Crypt_P',
+                ),
             ]),
         ]:
 
@@ -2177,6 +2185,56 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Crypt_P',
         7/global_scale)
 mod.newline()
 
+# Eridian statue tweaks in Pyre of Stars
+mod.header('Eridian statue tweaks in Pyre of Stars')
+for num in [0, 2, 5, 8]:
+    mod.reg_hotfix(Mod.LEVEL, 'Crypt_P',
+            f'/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine:PersistentLevel.IO_MissionScripted_EridianStatue_{num}',
+            'TheTimeline.Length',
+            6/global_scale,
+            )
+# Dialogue triggers
+mod.bytecode_hotfix(Mod.LEVEL, 'Crypt_P',
+        '/Game/Missions/Plot/Mission_Ep22_TheMachine',
+        'ExecuteUbergraph_Mission_Ep22_TheMachine',
+        [38557, 25548],
+        8,
+        8/global_scale)
+mod.bytecode_hotfix(Mod.LEVEL, 'Crypt_P',
+        '/Game/Missions/Plot/Mission_Ep22_TheMachine',
+        'ExecuteUbergraph_Mission_Ep22_TheMachine',
+        3523,
+        8.5,
+        8.5/global_scale)
+mod.newline()
+
+# Rising platforms in Pyre of Stars
+mod.header('Rising platforms in Pyre of Stars')
+for num, delay in [
+        (0, 1.5),
+        (1, 2.5),
+        (2, 3),
+        (3, 0.5),
+        (4, 1),
+        ]:
+    base_obj_name = f'/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine:PersistentLevel.IO_MissionScripted_EridianRaisingPlatform_{num}'
+    mod.reg_hotfix(Mod.LEVEL, 'Crypt_P',
+            base_obj_name,
+            'DelayBeforeStartingMovement',
+            delay/global_scale)
+    mod.reg_hotfix(Mod.LEVEL, 'Crypt_P',
+            f'{base_obj_name}.MovePlatform',
+            'TheTimeline.Length',
+            1/global_scale)
+# Action trigger for Typhon
+mod.bytecode_hotfix(Mod.LEVEL, 'Crypt_P',
+        '/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine',
+        'ExecuteUbergraph_Crypt_M_EP22TheMachine',
+        11737,
+        6.5,
+        6.5/global_scale)
+mod.newline()
+
 # Bomb-conveyor during Capture The Frag
 if False:
     # All of this actually works quite well, but the bomb can end up clipping through
@@ -2349,7 +2407,7 @@ for char in sorted([
             global_char_scale,
             ),
         # He's not bad in Desolation's Edge, but there's a bit of following in Tazendeer Ruins which
-        # could benefit from a speedup.
+        # could benefit from a speedup, as well as quite a bit in Pyre of Stars.
         Char('Typhon',
             '/Game/NonPlayerCharacters/Typhon/_Design/Character/BPChar_Typhon',
             global_char_scale,
