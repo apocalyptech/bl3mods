@@ -2235,6 +2235,37 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Crypt_P',
         6.5/global_scale)
 mod.newline()
 
+# Fire In The Sky rocket launch
+mod.header('Fire In The Sky rocket launch')
+# Rocket Acceleration
+mod.reg_hotfix(Mod.LEVEL, 'Beach_P',
+        '/Game/Maps/Zone_4/Beach/Beach_M_BetterTimes.Beach_M_BetterTimes:PersistentLevel.IO_MissionScripted_BetterTimes_Rocket.SplineFollower',
+        'Acceleration',
+        # Doing some guesstimation here
+        round(0.025*global_scale*3, 6))
+# Trigger for some extra rocket effects, I think
+mod.bytecode_hotfix(Mod.LEVEL, 'Beach_P',
+        '/Game/Missions/Side/Zone_4/Desolate/BetterTimes/IO_MissionScripted_BetterTimes_Rocket',
+        'ExecuteUbergraph_IO_MissionScripted_BetterTimes_Rocket',
+        2047,
+        10,
+        10/global_scale*1.5)
+# Explosion trigger
+mod.bytecode_hotfix(Mod.LEVEL, 'Beach_P',
+        '/Game/Missions/Side/Zone_4/Desolate/BetterTimes/IO_MissionScripted_BetterTimes_Rocket',
+        'ExecuteUbergraph_IO_MissionScripted_BetterTimes_Rocket',
+        479,
+        30,
+        30/global_scale*1.5)
+# Sparrow dialogue trigger
+mod.bytecode_hotfix(Mod.LEVEL, 'Beach_P',
+        '/Game/Missions/Side/Zone_4/Desolate/Mission_BetterTimes',
+        'ExecuteUbergraph_Mission_BetterTimes',
+        22911,
+        5,
+        5/global_scale)
+mod.newline()
+
 # Bomb-conveyor during Capture The Frag
 if False:
     # All of this actually works quite well, but the bomb can end up clipping through

@@ -10181,6 +10181,15 @@ SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMach
 SparkLevelPatchEntry,(1,7,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine_C,0,1,ExecuteUbergraph_Crypt_M_EP22TheMachine,1,11737,3:6.5,5:1.625
 
 ###
+### Fire In The Sky rocket launch
+###
+
+SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_M_BetterTimes.Beach_M_BetterTimes:PersistentLevel.IO_MissionScripted_BetterTimes_Rocket.SplineFollower,Acceleration,0,,0.3
+SparkLevelPatchEntry,(1,7,0,Beach_P),/Game/Missions/Side/Zone_4/Desolate/BetterTimes/IO_MissionScripted_BetterTimes_Rocket.IO_MissionScripted_BetterTimes_Rocket_C,0,1,ExecuteUbergraph_IO_MissionScripted_BetterTimes_Rocket,1,2047,2:10,4:3.75
+SparkLevelPatchEntry,(1,7,0,Beach_P),/Game/Missions/Side/Zone_4/Desolate/BetterTimes/IO_MissionScripted_BetterTimes_Rocket.IO_MissionScripted_BetterTimes_Rocket_C,0,1,ExecuteUbergraph_IO_MissionScripted_BetterTimes_Rocket,1,479,2:30,5:11.25
+SparkLevelPatchEntry,(1,7,0,Beach_P),/Game/Missions/Side/Zone_4/Desolate/Mission_BetterTimes.Mission_BetterTimes_C,0,1,ExecuteUbergraph_Mission_BetterTimes,1,22911,1:5,4:1.25
+
+###
 ### NPC Walking Speeds
 ###
 

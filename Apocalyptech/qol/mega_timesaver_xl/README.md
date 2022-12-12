@@ -217,6 +217,9 @@ Changelog
    * Some tweaks to a dialogue trigger at the top of the Tazendeer Ruins
      elevator
    * Bridge-raising animation at the top of Tazendeer Ruins elevator
+   * Rising Eridian statues in Pyre of Stars
+   * Rising platforms in Pyre of Stars
+   * Rocket launch in Fire in the Sky
 
 Aug 1, 2022 *(no version number change)*
  * Updated to use [new metadata tags](https://github.com/apple1417/blcmm-parsing/tree/master/blimp)
