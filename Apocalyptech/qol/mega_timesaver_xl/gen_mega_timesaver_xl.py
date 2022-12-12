@@ -289,7 +289,11 @@ for level_full in [
         '/Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_P',
         '/Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_P',
         '/Game/Maps/Zone_4/Beach/Beach_P',
-        '/Game/Maps/Zone_4/Crypt/Crypt_P',
+        # For some reason, injecting this chest in Crypt_P causes Tannis+Typhon to get
+        # stuck right at the beginning of the map, after the first door opens.  No idea
+        # why, though clearly the chest is stealing an event, or just getting in the
+        # way of an event delivery.  Seriously bizarre.
+        #'/Game/Maps/Zone_4/Crypt/Crypt_P',
         '/Game/Maps/Zone_4/Desolate/Desolate_P',
         '/Game/PatchDLC/BloodyHarvest/Maps/Seasons/BloodyHarvest/BloodyHarvest_P',
         '/Game/PatchDLC/Event2/Maps/Cartels_P',
@@ -538,6 +542,12 @@ for cat_name, cat_scale, animseqs in [
                 target='Motorcade_P',
                 # This one, too, needs a sequence scale of 1, otherwise the animation gets very janky.  Wonder
                 # if *all* custom door-related ASes will end up needing this...
+                seqlen_scale=1,
+                ),
+            # Nekrotafeyo-style door, first seen in Pyre of Stars but it's also in the Guardian Takedown.
+            # See the IO_Door_Custom_Nekro_Crypt_Small bytecode fix below, too.
+            AS('/Game/InteractiveObjects/MissionSpecificObjects/Desolate/DoorCrypt/_Shared/Model/SK_Desolate_CryptDoor_Anim',
+                target='MatchAll',
                 seqlen_scale=1,
                 ),
             ]),
@@ -2148,6 +2158,25 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Beach_P',
         round(5.6/global_scale, 6))
 mod.newline()
 
+# Initial door-opening triggers in Pyre of Stars
+mod.header('Door-opening triggers in Pyre of Stars')
+# kk, so the last arg to PlaySingleAnimation *is* a playrate arg.  This basically does the same
+# thing as our AnimSequence tweaks to SK_Desolate_CryptDoor_Anim, above.  Sticking with the AS
+# tweaks instead.
+#mod.bytecode_hotfix(Mod.LEVEL, 'Crypt_P',
+#        '/Game/InteractiveObjects/Doors/Nekro/_Design/IO_Door_Custom_Nekro_Crypt_Small',
+#        'ExecuteUbergraph_IO_Door_Custom_Nekro_Crypt_Small',
+#        296,
+#        1,
+#        global_scale)
+mod.bytecode_hotfix(Mod.LEVEL, 'Crypt_P',
+        '/Game/InteractiveObjects/Doors/Nekro/_Design/IO_Door_Custom_Nekro_Crypt_Small',
+        'ExecuteUbergraph_IO_Door_Custom_Nekro_Crypt_Small',
+        334,
+        7,
+        7/global_scale)
+mod.newline()
+
 # Bomb-conveyor during Capture The Frag
 if False:
     # All of this actually works quite well, but the bomb can end up clipping through
@@ -2325,6 +2354,14 @@ for char in sorted([
             '/Game/NonPlayerCharacters/Typhon/_Design/Character/BPChar_Typhon',
             global_char_scale,
             ),
+        # Tannis is honestly fine; you can end up waiting on her a bit in Pyre of Stars, but mostly
+        # just if you're doing the kind of mod-testing that this mod encourages.  So, leaving her as-is.
+        # (also, in Pyre of Stars, her default speed is about as fast as Typhon's boosted speed, and
+        # they tend to run together)
+        #Char('Tannis',
+        #    '/Game/NonPlayerCharacters/Tannis/_Design/Character/BPChar_Tannis',
+        #    global_char_scale,
+        #    ),
         ]):
 
     found_main = False
@@ -2363,16 +2400,16 @@ for char in sorted([
             char.full_path,
             'OakCharacterMovement.Object..MaxWalkSpeed',
             '(Value={},BaseValue={})'.format(
-                speed_walk*char.scale,
-                speed_walk*char.scale,
+                round(speed_walk*char.scale, 6),
+                round(speed_walk*char.scale, 6),
                 ),
             )
     mod.reg_hotfix(Mod.CHAR, char.last_bit,
             char.full_path,
             'OakCharacterMovement.Object..MaxSprintSpeed',
             '(Value={},BaseValue={})'.format(
-                speed_sprint*char.scale,
-                speed_sprint*char.scale,
+                round(speed_sprint*char.scale, 6),
+                round(speed_sprint*char.scale, 6),
                 ),
             )
     if have_slowdown:

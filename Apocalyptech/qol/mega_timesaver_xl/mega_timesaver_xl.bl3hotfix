@@ -289,11 +289,6 @@ SparkEarlyLevelPatchEntry,(1,11,0,Beach_P),/Game/Maps/Zone_4/Beach,/Game/PatchDL
 SparkEarlyLevelPatchEntry,(1,1,1,Beach_P),/Game/Maps/Zone_4/Beach/Beach_P.Beach_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
 SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_P.Beach_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
 
-# Pyre of Stars
-SparkEarlyLevelPatchEntry,(1,11,0,Crypt_P),/Game/Maps/Zone_4/Crypt,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
-SparkEarlyLevelPatchEntry,(1,1,1,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_P.Crypt_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
-SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_P.Crypt_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0,OpeningInteractions.OpeningInteractions[0].TransitionAnimation,0,,AnimSequence'"/Game/PatchDLC/VaultCard/AS_Open_v2.AS_Open_v2"'
-
 # Desolation's Edge
 SparkEarlyLevelPatchEntry,(1,11,0,Desolate_P),/Game/Maps/Zone_4/Desolate,/Game/PatchDLC/VaultCard/InteractiveObjects,BPIO_Lootable_VaultCard_RedCrate,80,"0.000000,0.000000,0.000000|0.000000,0.000000,0.000000|1.000000,1.000000,1.000000"
 SparkEarlyLevelPatchEntry,(1,1,1,Desolate_P),/Game/Maps/Zone_4/Desolate/Desolate_P.Desolate_P:PersistentLevel.BPIO_Lootable_VaultCard_RedCrate_C_0.Mesh_Chest1,RelativeLocation,0,,(X=99999.000000,Y=99999.000000,Z=99999.000000)
@@ -1390,6 +1385,11 @@ SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/SmallDoor/A
 SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/SmallDoor/Animation/AS_Opening.AS_Opening,Notifies.Notifies[1].SegmentLength,0,,1.16
 SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/SmallDoor/Animation/AS_Opening.AS_Opening,Notifies.Notifies[1].LinkValue,0,,0.063084
 SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/SmallDoor/Animation/AS_Opening.AS_Opening,SequenceLength,0,,5.8
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/MissionSpecificObjects/Desolate/DoorCrypt/_Shared/Model/SK_Desolate_CryptDoor_Anim.SK_Desolate_CryptDoor_Anim,RateScale,0,,5
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/MissionSpecificObjects/Desolate/DoorCrypt/_Shared/Model/SK_Desolate_CryptDoor_Anim.SK_Desolate_CryptDoor_Anim,Notifies.Notifies[0].SegmentLength,0,,1.4
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/MissionSpecificObjects/Desolate/DoorCrypt/_Shared/Model/SK_Desolate_CryptDoor_Anim.SK_Desolate_CryptDoor_Anim,Notifies.Notifies[1].SegmentLength,0,,1.4
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/MissionSpecificObjects/Desolate/DoorCrypt/_Shared/Model/SK_Desolate_CryptDoor_Anim.SK_Desolate_CryptDoor_Anim,Notifies.Notifies[2].SegmentLength,0,,1.4
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/MissionSpecificObjects/Desolate/DoorCrypt/_Shared/Model/SK_Desolate_CryptDoor_Anim.SK_Desolate_CryptDoor_Anim,SequenceLength,0,,7.0
 
 # Other Mission Animations
 SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/MapSpecific/Motorcade/Crane/Animation/AS_Going_Down.AS_Going_Down,RateScale,0,,2.0
@@ -10138,6 +10138,12 @@ SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/
 SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[11].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDelay,0,,0.625
 SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/Particles/PS_EP21_Typhon_Teleport.PS_EP21_Typhon_Teleport,Emitters.Emitters[12].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration,0,,1.0
 SparkLevelPatchEntry,(1,7,0,Beach_P),/Game/Missions/Plot/Mission_Ep21_Beachhead.Mission_Ep21_Beachhead_C,0,1,ExecuteUbergraph_Mission_Ep21_Beachhead,1,4145,3:5.6,3:1.4
+
+###
+### Door-opening triggers in Pyre of Stars
+###
+
+SparkLevelPatchEntry,(1,7,0,Crypt_P),/Game/InteractiveObjects/Doors/Nekro/_Design/IO_Door_Custom_Nekro_Crypt_Small.IO_Door_Custom_Nekro_Crypt_Small_C,0,1,ExecuteUbergraph_IO_Door_Custom_Nekro_Crypt_Small,1,334,1:7,4:1.75
 
 ###
 ### NPC Walking Speeds

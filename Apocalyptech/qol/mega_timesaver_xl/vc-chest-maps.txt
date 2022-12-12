@@ -50,7 +50,7 @@ getall BPIO_Lootable_VaultCard_RedCrate_C OpeningInteractions
 * /Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_P
 * /Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_P
 * /Game/Maps/Zone_4/Beach/Beach_P
-  /Game/Maps/Zone_4/Crypt/Crypt_P
+X /Game/Maps/Zone_4/Crypt/Crypt_P
 * /Game/Maps/Zone_4/Desolate/Desolate_P
   /Game/PatchDLC/BloodyHarvest/Maps/Seasons/BloodyHarvest/BloodyHarvest_P
   /Game/PatchDLC/Event2/Maps/Cartels_P

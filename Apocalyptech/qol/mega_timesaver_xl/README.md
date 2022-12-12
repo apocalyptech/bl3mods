@@ -49,7 +49,9 @@ my current TODO!
 **NOTE:** The Vault Card Chest-opening speed tweak currently *requires*
 using OpenHotfixLoader (OHL) instead of B3HM.  If B3HM v1.0.2 ever gets
 released, that version should be supported too, but v1.0.1 will *not*
-work with that Vault Card chest.
+work with that Vault Card chest.  Also, the Vault Card Chest-opening
+tweak does *not* work in Pyre of Stars.  Open your chests elsewhere if
+you want their opening to be quicker!
 
 A few known quirks of running with this mod:
 * To get on top of the "main" elevator in Meridian Outskirts (to reach the
@@ -149,6 +151,11 @@ TODO
   * Moxxi slot-machine eridium bump
   * Re-test `City_P` hub door-opening (tweaked that during `OrbitalPlatform_P`)
   * Also the Skywell-27 door after the thruster disabling
+  * Maybe *everything* up through Athenas?  When I got to Pyre of Stars, I discovered
+    that our Vault Card Chest speedup causes some mission event to Not Work Anymore
+    (specifically at the very beginning when Tannis and Typhon run up to the door,
+    and it opens -- the door will open but Tannis and Typhon will remain stuck there).
+    The Vault Card Chest addition happened after I was through on Athenas.
 * Did we want to do the "initial" ECHO playing animation, with the blowing-on-cart?
 * To split up into separate mods, instead?
   * Character speed movement?
@@ -181,10 +188,11 @@ Changelog
    * Meridian Metroplex hub door
    * Skywell-27 post-thruster-disabling door
    * Gate to the back half of the Homestead, in Splinterlands
+   * Largeish Eridian doors in Pyre of Stars
    * A couple doors from DLC6
  * Other Additions:
    * Slot Machines
-   * Vault Card chest-opening animation
+   * Vault Card chest-opening animation (except in Pyre of Stars)
    * Fast-travel/teleport/resurrect skips
    * ECHO cartridge playing animation
  * Mission-Specific Animations:
