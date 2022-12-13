@@ -22,7 +22,7 @@ Currently, the mod affects the following:
   affected NPCs is a bit different between the two, as well.  Characters
   affected by this mod:
   * Ace Baron (from Healers and Dealers)
-  * Ava
+  * Ava (base game and DLC6 version)
   * Brick
   * Clay (base game and DLC6 version)
   * Claptrap (base game and DLC6 version)
@@ -88,6 +88,9 @@ Some things intentionally *not* handled by the mod:
 * The Desolation's Edge mission "Transaction-Packed" has been left alone.
   I recommend using my "Transaction-Packed: Abridged" to basically skip
   the entire mission, instead.
+* Various aspects of Mysteriouslier: Horror at Scryer's Crypt could probably
+  be sped up (like the cube animations and such) but it's been mostly left
+  alone apart from the initial door-opening animation.
 
 Known Bugs
 ==========
@@ -170,7 +173,7 @@ Changelog
  * Tightened up various chest-opening animations (including digistruct contents)
  * Character Movement Speed:
    * Ace Baron (from Healers and Dealers)
-   * Ava
+   * Ava (base game and DLC6 version)
    * Brick
    * Claptrap (DLC6 version)
    * Clay (base game and DLC6 version)

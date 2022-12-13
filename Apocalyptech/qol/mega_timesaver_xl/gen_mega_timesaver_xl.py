@@ -1368,6 +1368,7 @@ for category, cat_scale, io_objs in [
             # No timing parameters
             #IO('/Ixora2/InteractiveObjects/Doors/IO_Door_Custom_Eridian'),
             IO('/Ixora2/InteractiveObjects/Doors/IO_Door_SlideLeftAndRight_AlleyGate'),
+            IO('/Ixora2/InteractiveObjects/MissionSpecific/04_Nekro/IO_Door_IXO_TombEntrance_SlideUp'),
             ]),
         ('Switches', global_scale, [
             # find $(find . -name Switches) -name "IO_*.uasset" | sort -i | cut -d. -f2
@@ -1459,10 +1460,12 @@ for category, cat_scale, io_objs in [
                 label="Handsome Jack Portrait in Konrad's Hold",
                 level='Mine_P',
                 ),
+            # Also has some tweaks down below
             IO('/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_EridianStatue',
                 label="Eridian statues in Pyre of Stars",
                 level='Crypt_P',
                 ),
+            # Also has some tweaks down below
             IO('/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_EridianRaisingPlatform',
                 label="Rising platforms in Pyre of Stars",
                 level='Crypt_P',
@@ -2187,13 +2190,18 @@ mod.newline()
 
 # Eridian statue tweaks in Pyre of Stars
 mod.header('Eridian statue tweaks in Pyre of Stars')
+
+mod.comment('Timeline tweaks')
 for num in [0, 2, 5, 8]:
+    # See also: the IO_MissionScripted_EridianStatue tweaks above
     mod.reg_hotfix(Mod.LEVEL, 'Crypt_P',
             f'/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine:PersistentLevel.IO_MissionScripted_EridianStatue_{num}',
             'TheTimeline.Length',
             6/global_scale,
             )
-# Dialogue triggers
+mod.newline()
+
+mod.comment('Dialogue triggers')
 mod.bytecode_hotfix(Mod.LEVEL, 'Crypt_P',
         '/Game/Missions/Plot/Mission_Ep22_TheMachine',
         'ExecuteUbergraph_Mission_Ep22_TheMachine',
@@ -2210,6 +2218,8 @@ mod.newline()
 
 # Rising platforms in Pyre of Stars
 mod.header('Rising platforms in Pyre of Stars')
+
+mod.comment('Timeline tweaks')
 for num, delay in [
         (0, 1.5),
         (1, 2.5),
@@ -2217,6 +2227,7 @@ for num, delay in [
         (3, 0.5),
         (4, 1),
         ]:
+    # See also: the IO_MissionScripted_EridianRaisingPlatform tweak above
     base_obj_name = f'/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine:PersistentLevel.IO_MissionScripted_EridianRaisingPlatform_{num}'
     mod.reg_hotfix(Mod.LEVEL, 'Crypt_P',
             base_obj_name,
@@ -2226,7 +2237,9 @@ for num, delay in [
             f'{base_obj_name}.MovePlatform',
             'TheTimeline.Length',
             1/global_scale)
-# Action trigger for Typhon
+mod.newline()
+
+mod.comment('Action trigger for Typhon')
 mod.bytecode_hotfix(Mod.LEVEL, 'Crypt_P',
         '/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine',
         'ExecuteUbergraph_Crypt_M_EP22TheMachine',
@@ -2237,33 +2250,69 @@ mod.newline()
 
 # Fire In The Sky rocket launch
 mod.header('Fire In The Sky rocket launch')
-# Rocket Acceleration
-mod.reg_hotfix(Mod.LEVEL, 'Beach_P',
-        '/Game/Maps/Zone_4/Beach/Beach_M_BetterTimes.Beach_M_BetterTimes:PersistentLevel.IO_MissionScripted_BetterTimes_Rocket.SplineFollower',
-        'Acceleration',
-        # Doing some guesstimation here
-        round(0.025*global_scale*3, 6))
-# Trigger for some extra rocket effects, I think
-mod.bytecode_hotfix(Mod.LEVEL, 'Beach_P',
-        '/Game/Missions/Side/Zone_4/Desolate/BetterTimes/IO_MissionScripted_BetterTimes_Rocket',
-        'ExecuteUbergraph_IO_MissionScripted_BetterTimes_Rocket',
-        2047,
-        10,
-        10/global_scale*1.5)
-# Explosion trigger
-mod.bytecode_hotfix(Mod.LEVEL, 'Beach_P',
-        '/Game/Missions/Side/Zone_4/Desolate/BetterTimes/IO_MissionScripted_BetterTimes_Rocket',
-        'ExecuteUbergraph_IO_MissionScripted_BetterTimes_Rocket',
-        479,
-        30,
-        30/global_scale*1.5)
-# Sparrow dialogue trigger
+
+mod.comment('Sparrow dialogue trigger')
 mod.bytecode_hotfix(Mod.LEVEL, 'Beach_P',
         '/Game/Missions/Side/Zone_4/Desolate/Mission_BetterTimes',
         'ExecuteUbergraph_Mission_BetterTimes',
         22911,
         5,
         5/global_scale)
+mod.newline()
+
+mod.comment('Rocket Acceleration')
+mod.reg_hotfix(Mod.LEVEL, 'Beach_P',
+        '/Game/Maps/Zone_4/Beach/Beach_M_BetterTimes.Beach_M_BetterTimes:PersistentLevel.IO_MissionScripted_BetterTimes_Rocket.SplineFollower',
+        'Acceleration',
+        # Doing some guesstimation here
+        round(0.025*global_scale*3, 6))
+mod.newline()
+
+mod.comment('Extra rocket effect trigger')
+mod.bytecode_hotfix(Mod.LEVEL, 'Beach_P',
+        '/Game/Missions/Side/Zone_4/Desolate/BetterTimes/IO_MissionScripted_BetterTimes_Rocket',
+        'ExecuteUbergraph_IO_MissionScripted_BetterTimes_Rocket',
+        2047,
+        10,
+        10/global_scale*1.5)
+mod.newline()
+
+mod.comment('Explosion trigger')
+mod.bytecode_hotfix(Mod.LEVEL, 'Beach_P',
+        '/Game/Missions/Side/Zone_4/Desolate/BetterTimes/IO_MissionScripted_BetterTimes_Rocket',
+        'ExecuteUbergraph_IO_MissionScripted_BetterTimes_Rocket',
+        479,
+        30,
+        30/global_scale*1.5)
+mod.newline()
+
+# Scryer's Crypt Door Phaselock-opening
+mod.header("Scryer's Crypt Main Door")
+
+mod.comment('Ava Phaselock animation')
+mod.bytecode_hotfix(Mod.LEVEL, 'NekroMystery_p',
+        '/Ixora2/Maps/Mystery/Nekro/NekroMystery_Mission',
+        'ExecuteUbergraph_NekroMystery_Mission',
+        53486,
+        16,
+        16/door_scale)
+mod.newline()
+
+mod.comment('Post-open delay')
+mod.bytecode_hotfix(Mod.LEVEL, 'NekroMystery_p',
+        '/Ixora2/Maps/Mystery/Nekro/NekroMystery_Mission',
+        'ExecuteUbergraph_NekroMystery_Mission',
+        55436,
+        2.5,
+        2.5/door_scale)
+mod.newline()
+
+# See also: IO_Door_IXO_TombEntrance_SlideUp speedups above
+mod.comment('Actual door-opening timeline')
+mod.reg_hotfix(Mod.LEVEL, 'NekroMystery_p',
+        '/Ixora2/Maps/Mystery/Nekro/NekroMystery_Mission.NekroMystery_Mission:PersistentLevel.IO_Door_IXO_TombEntrance_SlideUp_2.Timeline_DoorOpening',
+        'TheTimeline.Length',
+        20/door_scale),
 mod.newline()
 
 # Bomb-conveyor during Capture The Frag
@@ -2397,6 +2446,11 @@ for char in sorted([
         # Ava's honestly not too bad, but she's got a long run back from the graveyard
         Char('Ava',
             '/Game/NonPlayerCharacters/Ava/_Design/Character/BPChar_Ava',
+            global_char_scale,
+            ),
+        # ... her DLC6 char does have a tendency to get stuck on stuff, may as well buff her there, too.
+        Char('Ava (DLC6)',
+            '/Ixora2/NonPlayerCharacters/Ava/_Design/Character/BPChar_Ava_IXO',
             global_char_scale,
             ),
         # This one's a bit silly 'cause he walks all of like three feet, but whatever.

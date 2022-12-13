@@ -4,7 +4,7 @@ CZ47's Faster NPCs:
   * Claptrap DLC6
     Maya
   * Ava
-    Ava DLC6
+  * Ava DLC6
   * Clay
   * Clay DLC6
   * Lilith

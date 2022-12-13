@@ -72,6 +72,6 @@ X /Game/Maps/Zone_4/Crypt/Crypt_P
   /Ixora/Maps/FrostSite/FrostSite_P
   /Ixora2/Maps/Boss/SacrificeBoss_p
 * /Ixora2/Maps/Cabin/Cabin_P
-  /Ixora2/Maps/Mystery/Nekro/NekroMystery_p
+* /Ixora2/Maps/Mystery/Nekro/NekroMystery_p
 * /Ixora2/Maps/Mystery/Pandora/PandoraMystery_p
 * /Ixora2/Maps/Noir/Noir_P
