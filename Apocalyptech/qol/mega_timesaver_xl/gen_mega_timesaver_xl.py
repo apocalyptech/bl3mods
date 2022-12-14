@@ -1559,141 +1559,6 @@ for category, cat_scale, io_objs in [
 
         mod.newline()
 
-# TODO: DLC1
-mod.header('Slot Machine Tweaks')
-mod.bytecode_hotfix(Mod.LEVEL, 'MatchAll',
-        '/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine',
-        'ExecuteUbergraph_BPIO_SlotMachine',
-        1513,
-        5,
-        5/global_scale)
-mod.bytecode_hotfix(Mod.LEVEL, 'MatchAll',
-        '/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine',
-        'ExecuteUbergraph_BPIO_SlotMachine',
-        2889,
-        1,
-        1/global_scale)
-mod.newline()
-
-# Exploding Statues (in Jakobs Estate)
-mod.header('Exploding Statue Tweaks')
-for obj_name in [
-        'Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_ButtonStatue_2',
-        'Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_3',
-        'Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_1758',
-        'Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_1388',
-        'Mansion_P:PersistentLevel.IO_MissionUsable_ExplodingStatue_3',
-        ]:
-    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
-            f'/Game/Maps/Zone_2/Mansion/{obj_name}.RotateStatue',
-            'TheTimeline.Length',
-            1/global_scale,
-            )
-    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
-            f'/Game/Maps/Zone_2/Mansion/{obj_name}.BP_IO_LootSpawnComponent',
-            'DelayBeforeSpawningLoot',
-            1/global_scale,
-            )
-mod.newline()
-
-# Sliding Paintings (in Jakobs Estate)
-mod.header('Sliding Painting Tweaks')
-for obj_name in [
-        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_10',
-        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_11',
-        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_5',
-        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_6',
-        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_7',
-        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_8',
-        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_9',
-        'Mansion_Theater.Mansion_Theater:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_5',
-        'Mansion_Theater.Mansion_Theater:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_8',
-        ]:
-    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
-            f'/Game/Maps/Zone_2/Mansion/{obj_name}.MoveFrame',
-            'TheTimeline.Length',
-            1/global_scale,
-            )
-mod.newline()
-
-# Jakobs Estate Stage Props
-mod.header('Jakobs Estate Stage Prop Tweaks')
-mansion_base = '/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel'
-for obj_name, delay in [
-        ('IO_Switch_IndustrialSwitch_V_1142', 1.2),
-        ('IO_Switch_IndustrialSwitch_V_2148', 1.2),
-        ('IO_Switch_IndustrialSwitch_V_991', 2.2),
-        ]:
-    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
-            f'{mansion_base}.{obj_name}',
-            'EndSwitchMovementDelay',
-            round(delay/global_scale, 6),
-            )
-for obj_name, duration in [
-        ('E11GrandTour_BackgroundProp', 2.5),
-        ('E11GrandTour_LeftProp', 1.5),
-        ('E11GrandTour_RightProp', 1.5),
-        ]:
-    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
-            f'{mansion_base}.{obj_name}',
-            'DurationOfPropMovement',
-            round(duration/global_scale, 6),
-            )
-    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
-            f'{mansion_base}.{obj_name}.Timeline_0',
-            'TheTimeline.Length',
-            round(1/global_scale, 6),
-            )
-    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
-            f'{mansion_base}.{obj_name}.Timeline_0',
-            'TheTimeline.Events.Events[0].Time',
-            round(0.5/global_scale, 6),
-            )
-mod.newline()
-
-# Spinning Bookshelves
-mod.header('Jakobs Estate Spinning Bookshelf Tweaks')
-mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
-        '/Game/Maps/Zone_2/Mansion/Mansion_P.Mansion_P:PersistentLevel.EasterEgg_SpiningBookshelf',
-        'LootSpawnDelay',
-        5/global_scale)
-mod.newline()
-
-# Sliding Bed in Sacked
-mod.header('Sliding Bed in Sacked')
-mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
-        '/Game/Maps/Zone_2/Mansion/Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_AureliasSkeletons_MovableBed_2.Move Bed',
-        'TheTimeline.Length',
-        2/global_scale)
-mod.newline()
-
-# Going Rogue ID Scanner
-#mod.header('Going Rogue ID Scanner')
-#mod.reg_hotfix(Mod.LEVEL, 'MarshFields_P',
-#        '/Game/Maps/Zone_2/MarshFields/MarshFields_M_Ep12Marshfields.MarshFields_M_Ep12Marshfields:PersistentLevel.IO_MissionPlaceable_Static_Scanned_2.Timeline_0',
-#        'TheTimeline.Length',
-#        2/global_scale)
-#mod.newline()
-
-# Splinterlands Car Grinder
-mod.header('Splinterlands Car Grinder Conveyor')
-mod.reg_hotfix(Mod.LEVEL, 'Motorcade_P',
-        '/Game/Maps/Zone_3/Motorcade/Motorcade_M_Plot.Motorcade_M_Plot:PersistentLevel.ConveyorDisplacementZone_GEN_VARIABLE_DisplacementZone_CAT_2260',
-        'Speed',
-        200*global_scale)
-mod.newline()
-
-# Splinterlands grinder magnet (not especially important but whatever)
-mod.header('Splinterlands Car Grinder Magnet')
-mod.reg_hotfix(Mod.LEVEL, 'Motorcade_P',
-        f'/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C:NODE_AddInterpToMovementComponent-3',
-        'Duration',
-        # This needs to be scaled back a little bit for... reasons?  Anyway, 2/3 seems
-        # about right, so there we are.
-        6/(global_scale*2/3),
-        )
-mod.newline()
-
 # `getall Elevator`
 mod.header('Elevators')
 for label, level, obj_name, speed, travel_time in sorted([
@@ -1952,6 +1817,22 @@ mod.bytecode_hotfix(Mod.PATCH, '',
 
 mod.newline()
 
+# TODO: DLC1
+mod.header('Slot Machine Tweaks')
+mod.bytecode_hotfix(Mod.LEVEL, 'MatchAll',
+        '/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine',
+        'ExecuteUbergraph_BPIO_SlotMachine',
+        1513,
+        5,
+        5/global_scale)
+mod.bytecode_hotfix(Mod.LEVEL, 'MatchAll',
+        '/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine',
+        'ExecuteUbergraph_BPIO_SlotMachine',
+        2889,
+        1,
+        1/global_scale)
+mod.newline()
+
 # Golden Calves Statue Scanner
 mod.header('Custom Golden Calves Statue Scanner Tweaks')
 
@@ -2068,6 +1949,109 @@ mod.bytecode_hotfix(Mod.LEVEL, 'CityBoss_P',
         15/global_scale)
 mod.newline()
 
+# Exploding Statues (in Jakobs Estate)
+mod.header('Exploding Statue Tweaks')
+for obj_name in [
+        'Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_ButtonStatue_2',
+        'Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_3',
+        'Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_1758',
+        'Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_1388',
+        'Mansion_P:PersistentLevel.IO_MissionUsable_ExplodingStatue_3',
+        ]:
+    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
+            f'/Game/Maps/Zone_2/Mansion/{obj_name}.RotateStatue',
+            'TheTimeline.Length',
+            1/global_scale,
+            )
+    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
+            f'/Game/Maps/Zone_2/Mansion/{obj_name}.BP_IO_LootSpawnComponent',
+            'DelayBeforeSpawningLoot',
+            1/global_scale,
+            )
+mod.newline()
+
+# Sliding Paintings (in Jakobs Estate)
+mod.header('Sliding Painting Tweaks')
+for obj_name in [
+        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_10',
+        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_11',
+        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_5',
+        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_6',
+        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_7',
+        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_8',
+        'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_9',
+        'Mansion_Theater.Mansion_Theater:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_5',
+        'Mansion_Theater.Mansion_Theater:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_8',
+        ]:
+    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
+            f'/Game/Maps/Zone_2/Mansion/{obj_name}.MoveFrame',
+            'TheTimeline.Length',
+            1/global_scale,
+            )
+mod.newline()
+
+# Jakobs Estate Stage Props
+mod.header('Jakobs Estate Stage Prop Tweaks')
+mansion_base = '/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel'
+for obj_name, delay in [
+        ('IO_Switch_IndustrialSwitch_V_1142', 1.2),
+        ('IO_Switch_IndustrialSwitch_V_2148', 1.2),
+        ('IO_Switch_IndustrialSwitch_V_991', 2.2),
+        ]:
+    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
+            f'{mansion_base}.{obj_name}',
+            'EndSwitchMovementDelay',
+            round(delay/global_scale, 6),
+            )
+for obj_name, duration in [
+        ('E11GrandTour_BackgroundProp', 2.5),
+        ('E11GrandTour_LeftProp', 1.5),
+        ('E11GrandTour_RightProp', 1.5),
+        ]:
+    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
+            f'{mansion_base}.{obj_name}',
+            'DurationOfPropMovement',
+            round(duration/global_scale, 6),
+            )
+    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
+            f'{mansion_base}.{obj_name}.Timeline_0',
+            'TheTimeline.Length',
+            round(1/global_scale, 6),
+            )
+    mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
+            f'{mansion_base}.{obj_name}.Timeline_0',
+            'TheTimeline.Events.Events[0].Time',
+            round(0.5/global_scale, 6),
+            )
+mod.newline()
+
+# Spinning Bookshelves
+mod.header('Jakobs Estate Spinning Bookshelf Tweaks')
+mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
+        '/Game/Maps/Zone_2/Mansion/Mansion_P.Mansion_P:PersistentLevel.EasterEgg_SpiningBookshelf',
+        'LootSpawnDelay',
+        5/global_scale)
+mod.newline()
+
+# Sliding Bed in Sacked
+mod.header('Sliding Bed in Sacked')
+mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
+        '/Game/Maps/Zone_2/Mansion/Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_AureliasSkeletons_MovableBed_2.Move Bed',
+        'TheTimeline.Length',
+        2/global_scale)
+mod.newline()
+
+# Going Rogue ID Scanner
+# (Honestly don't remember why this is commented out -- I think I remember that
+# maybe it turns out to not matter at all?  Maybe the next sequence kicks off
+# immediately even though the scanner is still going, or something.)
+#mod.header('Going Rogue ID Scanner')
+#mod.reg_hotfix(Mod.LEVEL, 'MarshFields_P',
+#        '/Game/Maps/Zone_2/MarshFields/MarshFields_M_Ep12Marshfields.MarshFields_M_Ep12Marshfields:PersistentLevel.IO_MissionPlaceable_Static_Scanned_2.Timeline_0',
+#        'TheTimeline.Length',
+#        2/global_scale)
+#mod.newline()
+
 # Rumble in the Jungle Chasm-Jump Timer
 mod.header('Rumble in the Jungle Chasm-Jump Timer')
 mod.bytecode_hotfix(Mod.LEVEL, 'Watership_P',
@@ -2084,6 +2068,25 @@ mod.reg_hotfix(Mod.LEVEL, 'Watership_P',
         '/Game/Missions/Side/Zone_2/Watership/RumbleJungle/Action_ServiceBot_Rumble_OpenDoor.Default__Action_ServiceBot_Rumble_OpenDoor_C',
         'PlayRate',
         1*global_scale)
+mod.newline()
+
+# Splinterlands Car Grinder
+mod.header('Splinterlands Car Grinder Conveyor')
+mod.reg_hotfix(Mod.LEVEL, 'Motorcade_P',
+        '/Game/Maps/Zone_3/Motorcade/Motorcade_M_Plot.Motorcade_M_Plot:PersistentLevel.ConveyorDisplacementZone_GEN_VARIABLE_DisplacementZone_CAT_2260',
+        'Speed',
+        200*global_scale)
+mod.newline()
+
+# Splinterlands grinder magnet (not especially important but whatever)
+mod.header('Splinterlands Car Grinder Magnet')
+mod.reg_hotfix(Mod.LEVEL, 'Motorcade_P',
+        f'/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C:NODE_AddInterpToMovementComponent-3',
+        'Duration',
+        # This needs to be scaled back a little bit for... reasons?  Anyway, 2/3 seems
+        # about right, so there we are.
+        6/(global_scale*2/3),
+        )
 mod.newline()
 
 # Eridian statue rotation in Tazendeer Ruins
@@ -2315,76 +2318,6 @@ mod.reg_hotfix(Mod.LEVEL, 'NekroMystery_p',
         20/door_scale),
 mod.newline()
 
-# Bomb-conveyor during Capture The Frag
-if False:
-    # All of this actually works quite well, but the bomb can end up clipping through
-    # other conveyor items, which looks weird, and also has a tendency to skip
-    # dialogue.  So, whatever, let's just Not Do It.
-    bomb_scale = 2
-    mod.header('Capture the Frag bomb conveyor')
-    mod.reg_hotfix(Mod.LEVEL, 'Wetlands_P',
-            '/Game/Maps/Zone_2/Wetlands/Wetlands_M_SpecialDelivery.Wetlands_M_SpecialDelivery:PersistentLevel.BP_TransporterSystem_SpecialDelivery.TransporterTrack1',
-            'CarryingSpeed',
-            750*bomb_scale)
-    # Timing for the bomb breaking down
-    for index, from_val in [
-            (2598, 25),
-            ([4031, 14233], 18),
-            (5122, 16),
-            (10904, 24),
-            (15721, 22),
-            ]:
-        mod.bytecode_hotfix(Mod.LEVEL, 'Wetlands_P',
-                '/Game/Missions/Side/Zone_2/Wetlands/Mission_SpecialDelivery',
-                'ExecuteUbergraph_Mission_SpecialDelivery',
-                index,
-                from_val,
-                from_val/bomb_scale,
-                )
-    mod.newline()
-
-# Peace Bells (or whatever) in Athenas.  Not actually doing this because the speed
-# isn't too bad already, and the events they trigger actually happen immediately
-# when you "use" them, anyway.  The Ubergraphs sometimes put in some artificial
-# delays to make it seem like stuff's happening after, like with the door opening
-# I tweaked, above, but it's not actually tied in with this.
-if False:
-
-    # Up in the main IO/BPIO section, this speeds up the striker itself...
-    #('Large Bells in Athenas', 'Monastery_P', '/Game/InteractiveObjects/BonshuBell/Global/IO_MissionUsable_BonshuBell'),
-
-    # ... and this next bit makes the bell ringing trigger at the right time
-    mod.header('Large Bells on Athenas')
-    bell_scale=5
-    for obj_name in [
-            '/Game/Maps/Zone_1/Monastery/Monastery_Mission_MonkMission.Monastery_Mission_MonkMission:PersistentLevel.IO_MissionUsable_BonshuBell_1',
-            '/Game/Maps/Zone_1/Monastery/Monastery_Mission_Ep06_MeetMaya.Monastery_Mission_Ep06_MeetMaya:PersistentLevel.IO_MissionUsable_BonshuBell_0',
-            '/Game/Maps/Zone_1/Monastery/Monastery_Mission_Ep06_MeetMaya.Monastery_Mission_Ep06_MeetMaya:PersistentLevel.IO_MissionUsable_BonshuBell_1',
-            '/Game/Maps/Zone_1/Monastery/Monastery_Mission_Ep06_MeetMaya.Monastery_Mission_Ep06_MeetMaya:PersistentLevel.IO_MissionUsable_BonshuBell_4227',
-            ]:
-        for subobj in [
-                'BellRinging',
-                'StrikeBell',
-                ]:
-            full_obj = f'{obj_name}.{subobj}'
-            mod.reg_hotfix(Mod.LEVEL, 'Monastery_P',
-                    full_obj,
-                    'TheTimeline.Length',
-                    4/bell_scale,
-                    )
-            if subobj == 'StrikeBell':
-                mod.reg_hotfix(Mod.LEVEL, 'Monastery_P',
-                        full_obj,
-                        'TheTimeline.Events.Events[0].Time',
-                        1/bell_scale,
-                        )
-        #mod.reg_hotfix(Mod.LEVEL, 'Monastery_P',
-        #        obj_name,
-        #        'TheTimeline.PlayRate',
-        #        bell_scale,
-        #        )
-    mod.newline()
-
 # Honestly not sure yet if I want to put this in here, but I'm doing it for now...
 # Can split it out later if I want.
 mod.header('NPC Walking Speeds')
@@ -2566,6 +2499,81 @@ for char in sorted([
                 'OakCharacterMovement.Object..NavSlowdownOptions.SlowdownSpeed.Value',
                 1,
                 )
+    mod.newline()
+
+###
+### Various disabled things follow!  These are either bits which *work* but which I
+### decided not to do for various reasons, or attempts which just outright failed.
+###
+
+# Bomb-conveyor during Capture The Frag
+if False:
+    # All of this actually works quite well, but the bomb can end up clipping through
+    # other conveyor items, which looks weird, and also has a tendency to skip
+    # dialogue.  So, whatever, let's just Not Do It.
+    bomb_scale = 2
+    mod.header('Capture the Frag bomb conveyor')
+    mod.reg_hotfix(Mod.LEVEL, 'Wetlands_P',
+            '/Game/Maps/Zone_2/Wetlands/Wetlands_M_SpecialDelivery.Wetlands_M_SpecialDelivery:PersistentLevel.BP_TransporterSystem_SpecialDelivery.TransporterTrack1',
+            'CarryingSpeed',
+            750*bomb_scale)
+    # Timing for the bomb breaking down
+    for index, from_val in [
+            (2598, 25),
+            ([4031, 14233], 18),
+            (5122, 16),
+            (10904, 24),
+            (15721, 22),
+            ]:
+        mod.bytecode_hotfix(Mod.LEVEL, 'Wetlands_P',
+                '/Game/Missions/Side/Zone_2/Wetlands/Mission_SpecialDelivery',
+                'ExecuteUbergraph_Mission_SpecialDelivery',
+                index,
+                from_val,
+                from_val/bomb_scale,
+                )
+    mod.newline()
+
+# Peace Bells (or whatever) in Athenas.  Not actually doing this because the speed
+# isn't too bad already, and the events they trigger actually happen immediately
+# when you "use" them, anyway.  The Ubergraphs sometimes put in some artificial
+# delays to make it seem like stuff's happening after, like with the door opening
+# I tweaked, above, but it's not actually tied in with this.
+if False:
+
+    # Up in the main IO/BPIO section, this speeds up the striker itself...
+    #('Large Bells in Athenas', 'Monastery_P', '/Game/InteractiveObjects/BonshuBell/Global/IO_MissionUsable_BonshuBell'),
+
+    # ... and this next bit makes the bell ringing trigger at the right time
+    mod.header('Large Bells on Athenas')
+    bell_scale=5
+    for obj_name in [
+            '/Game/Maps/Zone_1/Monastery/Monastery_Mission_MonkMission.Monastery_Mission_MonkMission:PersistentLevel.IO_MissionUsable_BonshuBell_1',
+            '/Game/Maps/Zone_1/Monastery/Monastery_Mission_Ep06_MeetMaya.Monastery_Mission_Ep06_MeetMaya:PersistentLevel.IO_MissionUsable_BonshuBell_0',
+            '/Game/Maps/Zone_1/Monastery/Monastery_Mission_Ep06_MeetMaya.Monastery_Mission_Ep06_MeetMaya:PersistentLevel.IO_MissionUsable_BonshuBell_1',
+            '/Game/Maps/Zone_1/Monastery/Monastery_Mission_Ep06_MeetMaya.Monastery_Mission_Ep06_MeetMaya:PersistentLevel.IO_MissionUsable_BonshuBell_4227',
+            ]:
+        for subobj in [
+                'BellRinging',
+                'StrikeBell',
+                ]:
+            full_obj = f'{obj_name}.{subobj}'
+            mod.reg_hotfix(Mod.LEVEL, 'Monastery_P',
+                    full_obj,
+                    'TheTimeline.Length',
+                    4/bell_scale,
+                    )
+            if subobj == 'StrikeBell':
+                mod.reg_hotfix(Mod.LEVEL, 'Monastery_P',
+                        full_obj,
+                        'TheTimeline.Events.Events[0].Time',
+                        1/bell_scale,
+                        )
+        #mod.reg_hotfix(Mod.LEVEL, 'Monastery_P',
+        #        obj_name,
+        #        'TheTimeline.PlayRate',
+        #        bell_scale,
+        #        )
     mod.newline()
 
 # Some attempts to make loot-spewing pickups (bone piles, trash cans, etc) pick up more quickly.

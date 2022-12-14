@@ -9869,83 +9869,6 @@ SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/InteractiveObjects/MissionScripted/_D
 SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_EridianRaisingPlatform.IO_MissionScripted_EridianRaisingPlatform_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.25
 
 ###
-### Slot Machine Tweaks
-###
-
-SparkLevelPatchEntry,(1,7,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,0,1,ExecuteUbergraph_BPIO_SlotMachine,1,1513,1:5,4:1.25
-SparkLevelPatchEntry,(1,7,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,0,1,ExecuteUbergraph_BPIO_SlotMachine,1,2889,1:1,4:0.25
-
-###
-### Exploding Statue Tweaks
-###
-
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_ButtonStatue_2.RotateStatue,TheTimeline.Length,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_ButtonStatue_2.BP_IO_LootSpawnComponent,DelayBeforeSpawningLoot,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_3.RotateStatue,TheTimeline.Length,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_3.BP_IO_LootSpawnComponent,DelayBeforeSpawningLoot,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_1758.RotateStatue,TheTimeline.Length,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_1758.BP_IO_LootSpawnComponent,DelayBeforeSpawningLoot,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_1388.RotateStatue,TheTimeline.Length,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_1388.BP_IO_LootSpawnComponent,DelayBeforeSpawningLoot,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_P:PersistentLevel.IO_MissionUsable_ExplodingStatue_3.RotateStatue,TheTimeline.Length,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_P:PersistentLevel.IO_MissionUsable_ExplodingStatue_3.BP_IO_LootSpawnComponent,DelayBeforeSpawningLoot,0,,0.25
-
-###
-### Sliding Painting Tweaks
-###
-
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_10.MoveFrame,TheTimeline.Length,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_11.MoveFrame,TheTimeline.Length,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_5.MoveFrame,TheTimeline.Length,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_6.MoveFrame,TheTimeline.Length,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_7.MoveFrame,TheTimeline.Length,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_8.MoveFrame,TheTimeline.Length,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_9.MoveFrame,TheTimeline.Length,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Theater.Mansion_Theater:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_5.MoveFrame,TheTimeline.Length,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Theater.Mansion_Theater:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_8.MoveFrame,TheTimeline.Length,0,,0.25
-
-###
-### Jakobs Estate Stage Prop Tweaks
-###
-
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_Switch_IndustrialSwitch_V_1142,EndSwitchMovementDelay,0,,0.3
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_Switch_IndustrialSwitch_V_2148,EndSwitchMovementDelay,0,,0.3
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_Switch_IndustrialSwitch_V_991,EndSwitchMovementDelay,0,,0.55
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_BackgroundProp,DurationOfPropMovement,0,,0.625
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_BackgroundProp.Timeline_0,TheTimeline.Length,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_BackgroundProp.Timeline_0,TheTimeline.Events.Events[0].Time,0,,0.125
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_LeftProp,DurationOfPropMovement,0,,0.375
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_LeftProp.Timeline_0,TheTimeline.Length,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_LeftProp.Timeline_0,TheTimeline.Events.Events[0].Time,0,,0.125
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_RightProp,DurationOfPropMovement,0,,0.375
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_RightProp.Timeline_0,TheTimeline.Length,0,,0.25
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_RightProp.Timeline_0,TheTimeline.Events.Events[0].Time,0,,0.125
-
-###
-### Jakobs Estate Spinning Bookshelf Tweaks
-###
-
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_P.Mansion_P:PersistentLevel.EasterEgg_SpiningBookshelf,LootSpawnDelay,0,,1.25
-
-###
-### Sliding Bed in Sacked
-###
-
-SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_AureliasSkeletons_MovableBed_2.Move Bed,TheTimeline.Length,0,,0.5
-
-###
-### Splinterlands Car Grinder Conveyor
-###
-
-SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Maps/Zone_3/Motorcade/Motorcade_M_Plot.Motorcade_M_Plot:PersistentLevel.ConveyorDisplacementZone_GEN_VARIABLE_DisplacementZone_CAT_2260,Speed,0,,800
-
-###
-### Splinterlands Car Grinder Magnet
-###
-
-SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C:NODE_AddInterpToMovementComponent-3,Duration,0,,2.25
-
-###
 ### Elevators
 ###
 
@@ -10038,6 +9961,13 @@ SparkPatchEntry,(1,7,0,),/Game/PlayerCharacters/_Shared/_Design/Travel/Action_Te
 SparkPatchEntry,(1,7,0,),/Game/PlayerCharacters/_Shared/_Design/Travel/Action_TeleportEffects.Action_TeleportEffects_C,0,1,ExecuteUbergraph_Action_TeleportEffects,1,391,3:1.5,3:0.5
 
 ###
+### Slot Machine Tweaks
+###
+
+SparkLevelPatchEntry,(1,7,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,0,1,ExecuteUbergraph_BPIO_SlotMachine,1,1513,1:5,4:1.25
+SparkLevelPatchEntry,(1,7,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,0,1,ExecuteUbergraph_BPIO_SlotMachine,1,2889,1:1,4:0.25
+
+###
 ### Custom Golden Calves Statue Scanner Tweaks
 ###
 
@@ -10079,6 +10009,64 @@ SparkLevelPatchEntry,(1,1,0,CityBoss_P),/Game/NonPlayerCharacters/Ava/_Design/Ac
 SparkLevelPatchEntry,(1,7,0,CityBoss_P),/Game/Maps/Zone_1/CityBoss/CityBoss_Mission.CityBoss_Mission_C,0,1,ExecuteUbergraph_CityBoss_Mission,1,31722,2:15,4:3.75
 
 ###
+### Exploding Statue Tweaks
+###
+
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_ButtonStatue_2.RotateStatue,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_ButtonStatue_2.BP_IO_LootSpawnComponent,DelayBeforeSpawningLoot,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_3.RotateStatue,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_3.BP_IO_LootSpawnComponent,DelayBeforeSpawningLoot,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_1758.RotateStatue,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_1758.BP_IO_LootSpawnComponent,DelayBeforeSpawningLoot,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_1388.RotateStatue,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_1388.BP_IO_LootSpawnComponent,DelayBeforeSpawningLoot,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_P:PersistentLevel.IO_MissionUsable_ExplodingStatue_3.RotateStatue,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_P:PersistentLevel.IO_MissionUsable_ExplodingStatue_3.BP_IO_LootSpawnComponent,DelayBeforeSpawningLoot,0,,0.25
+
+###
+### Sliding Painting Tweaks
+###
+
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_10.MoveFrame,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_11.MoveFrame,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_5.MoveFrame,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_6.MoveFrame,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_7.MoveFrame,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_8.MoveFrame,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_9.MoveFrame,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Theater.Mansion_Theater:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_5.MoveFrame,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Theater.Mansion_Theater:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_8.MoveFrame,TheTimeline.Length,0,,0.25
+
+###
+### Jakobs Estate Stage Prop Tweaks
+###
+
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_Switch_IndustrialSwitch_V_1142,EndSwitchMovementDelay,0,,0.3
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_Switch_IndustrialSwitch_V_2148,EndSwitchMovementDelay,0,,0.3
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_Switch_IndustrialSwitch_V_991,EndSwitchMovementDelay,0,,0.55
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_BackgroundProp,DurationOfPropMovement,0,,0.625
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_BackgroundProp.Timeline_0,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_BackgroundProp.Timeline_0,TheTimeline.Events.Events[0].Time,0,,0.125
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_LeftProp,DurationOfPropMovement,0,,0.375
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_LeftProp.Timeline_0,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_LeftProp.Timeline_0,TheTimeline.Events.Events[0].Time,0,,0.125
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_RightProp,DurationOfPropMovement,0,,0.375
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_RightProp.Timeline_0,TheTimeline.Length,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_RightProp.Timeline_0,TheTimeline.Events.Events[0].Time,0,,0.125
+
+###
+### Jakobs Estate Spinning Bookshelf Tweaks
+###
+
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_P.Mansion_P:PersistentLevel.EasterEgg_SpiningBookshelf,LootSpawnDelay,0,,1.25
+
+###
+### Sliding Bed in Sacked
+###
+
+SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_AureliasSkeletons_MovableBed_2.Move Bed,TheTimeline.Length,0,,0.5
+
+###
 ### Rumble in the Jungle Chasm-Jump Timer
 ###
 
@@ -10089,6 +10077,18 @@ SparkLevelPatchEntry,(1,7,0,Watership_P),/Game/Missions/Side/Zone_2/Watership/Mi
 ###
 
 SparkLevelPatchEntry,(1,1,0,Watership_P),/Game/Missions/Side/Zone_2/Watership/RumbleJungle/Action_ServiceBot_Rumble_OpenDoor.Default__Action_ServiceBot_Rumble_OpenDoor_C,PlayRate,0,,4
+
+###
+### Splinterlands Car Grinder Conveyor
+###
+
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Maps/Zone_3/Motorcade/Motorcade_M_Plot.Motorcade_M_Plot:PersistentLevel.ConveyorDisplacementZone_GEN_VARIABLE_DisplacementZone_CAT_2260,Speed,0,,800
+
+###
+### Splinterlands Car Grinder Magnet
+###
+
+SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C:NODE_AddInterpToMovementComponent-3,Duration,0,,2.25
 
 ###
 ### Eridian statue rotation in Tazendeer Ruins
