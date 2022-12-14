@@ -1220,7 +1220,7 @@ class IO():
     use the defaults but which occasionally need to override 'em.
     """
 
-    def __init__(self, path, label=None, level='MatchAll', scale=None):
+    def __init__(self, path, label=None, level='MatchAll', scale=None, timelinelength=True):
         self.path = path
         self.last_bit = path.split('/')[-1]
         self.last_bit_c = f'{self.last_bit}_C'
@@ -1231,6 +1231,9 @@ class IO():
             self.label = label
         self.level = level
         self.scale = scale
+        # This is just used to suppress warnings we'd otherwise print, for objects
+        # we know don't have this attr
+        self.timelinelength = timelinelength
 
 # It's tempting to try and limit some of these doors to the "obvious" particular level, but a lot
 # of them end up getting used elsewhere anyway, like in Trials maps, or DLC6 levels.  We could
@@ -1267,7 +1270,9 @@ for category, cat_scale, io_objs in [
             IO('/Game/InteractiveObjects/Doors/Eden_6/_Design/IO_Door_400x400_SlideLeftAndRight_Eden6_Generic_IronBear'),
             IO('/Game/InteractiveObjects/Doors/Eden_6/_Design/IO_Door_Custom_Watership_RotateUp'),
             IO('/Game/InteractiveObjects/Doors/Eden_6/_Design/IO_Door_Marshfields_Custom_HiddenSpyDoor'),
-            IO('/Game/InteractiveObjects/Doors/Eden_6/_Design/IO_Door_Watership_Custom_LabDoor'),
+            IO('/Game/InteractiveObjects/Doors/Eden_6/_Design/IO_Door_Watership_Custom_LabDoor',
+                timelinelength=False,
+                ),
             IO('/Game/InteractiveObjects/Doors/Eridian/_Design/IO_Door_1000x600_SlideLeftAndRight_Eridian_Generic'),
             IO('/Game/InteractiveObjects/Doors/Eridian/_Design/IO_Door_400x400_SlideUp_Eridian_Generic'),
             IO('/Game/InteractiveObjects/Doors/Eridian/_Design/IO_Door_Large_SlideUp_Eridian_Generic1'),
@@ -1358,7 +1363,9 @@ for category, cat_scale, io_objs in [
             #IO('/Hibiscus/InteractiveObjects/Systems/Doors/_Design/MansionReskin/IO_Hib_Door_Bookcase'),
             # No timing parameters
             #IO('/Hibiscus/InteractiveObjects/Systems/Doors/_Design/MansionReskin/IO_Hib_DoorFrame_130x250'),
-            IO('/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Venue/IO_Hib_Door_Venue_BossGate'),
+            IO('/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Venue/IO_Hib_Door_Venue_BossGate',
+                timelinelength=False,
+                ),
             # No timing parameters
             #IO('/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Village/IO_Hib_Door_130x250_Village'),
             IO('/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Village/IO_Hib_Door_IronGate'),
@@ -1553,7 +1560,8 @@ for category, cat_scale, io_objs in [
         elif not did_main:
             # This honestly hardly matters; it doesn't look like this attr's really used
             # for much, anyway.
-            print('NOTICE - No main TimelineLength found for {}'.format(io_obj.path))
+            if io_obj.timelinelength:
+                print('NOTICE - No main TimelineLength found for {}'.format(io_obj.path))
         elif not did_curve:
             print('NOTICE - No curve timings found for {}'.format(io_obj.path))
 
