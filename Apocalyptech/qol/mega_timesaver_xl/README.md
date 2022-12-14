@@ -38,7 +38,7 @@ Currently, the mod affects the following:
   * Vic (from Head Case)
 * Eridian tools (Resonator, Analyzer)
 * Fast-Travel/Teleport and Respawn animations
-* Removed startup countdown for Arm's Race
+* Removed startup countdown for: Raid on Maliwan Blacksite, Arm's Race
 * A *lot* of mission-and-map-specific animations throughout the game
 
 Note that the vehicle animations in particular are a bit weird right now --

@@ -9290,6 +9290,19 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/Ixora/InteractiveObjects/Do
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/Ixora/InteractiveObjects/Doors/IO_Door_130x250_SlideUp_Motorcade_BanditHideoutDoor_GearUp.IO_Door_130x250_SlideUp_Motorcade_BanditHideoutDoor_GearUp_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.05
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/Ixora/InteractiveObjects/Doors/IO_Door_130x250_SlideUp_Motorcade_BanditHideoutDoor_GearUp.IO_Door_130x250_SlideUp_Motorcade_BanditHideoutDoor_GearUp_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.1
 
+# IO_Door_Raid02_Custom_SlideUp
+SparkLevelPatchEntry,(1,1,0,Raid_P),/Game/PatchDLC/Raid1/InteractiveObjects/Raid_MaliwanDoor/IO_Door_Raid02_Custom_SlideUp.IO_Door_Raid02_Custom_SlideUp_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.5
+SparkLevelPatchEntry,(1,1,0,Raid_P),/Game/PatchDLC/Raid1/InteractiveObjects/Raid_MaliwanDoor/IO_Door_Raid02_Custom_SlideUp.IO_Door_Raid02_Custom_SlideUp_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.020788
+SparkLevelPatchEntry,(1,1,0,Raid_P),/Game/PatchDLC/Raid1/InteractiveObjects/Raid_MaliwanDoor/IO_Door_Raid02_Custom_SlideUp.IO_Door_Raid02_Custom_SlideUp_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.5
+SparkLevelPatchEntry,(1,1,0,Raid_P),/Game/PatchDLC/Raid1/InteractiveObjects/Raid_MaliwanDoor/IO_Door_Raid02_Custom_SlideUp.IO_Door_Raid02_Custom_SlideUp_C,Timelines.Timelines[1].Object..TimelineLength,0,,0.1
+SparkLevelPatchEntry,(1,1,0,Raid_P),/Game/PatchDLC/Raid1/InteractiveObjects/Raid_MaliwanDoor/IO_Door_Raid02_Custom_SlideUp.IO_Door_Raid02_Custom_SlideUp_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.020788
+SparkLevelPatchEntry,(1,1,0,Raid_P),/Game/PatchDLC/Raid1/InteractiveObjects/Raid_MaliwanDoor/IO_Door_Raid02_Custom_SlideUp.IO_Door_Raid02_Custom_SlideUp_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.058714
+SparkLevelPatchEntry,(1,1,0,Raid_P),/Game/PatchDLC/Raid1/InteractiveObjects/Raid_MaliwanDoor/IO_Door_Raid02_Custom_SlideUp.IO_Door_Raid02_Custom_SlideUp_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,0.1
+SparkLevelPatchEntry,(1,1,0,Raid_P),/Game/PatchDLC/Raid1/InteractiveObjects/Raid_MaliwanDoor/IO_Door_Raid02_Custom_SlideUp.IO_Door_Raid02_Custom_SlideUp_C,Timelines.Timelines[2].Object..TimelineLength,0,,0.1
+SparkLevelPatchEntry,(1,1,0,Raid_P),/Game/PatchDLC/Raid1/InteractiveObjects/Raid_MaliwanDoor/IO_Door_Raid02_Custom_SlideUp.IO_Door_Raid02_Custom_SlideUp_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.020788
+SparkLevelPatchEntry,(1,1,0,Raid_P),/Game/PatchDLC/Raid1/InteractiveObjects/Raid_MaliwanDoor/IO_Door_Raid02_Custom_SlideUp.IO_Door_Raid02_Custom_SlideUp_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.058714
+SparkLevelPatchEntry,(1,1,0,Raid_P),/Game/PatchDLC/Raid1/InteractiveObjects/Raid_MaliwanDoor/IO_Door_Raid02_Custom_SlideUp.IO_Door_Raid02_Custom_SlideUp_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,0.1
+
 # IO_Door_130x250_SlideUp_FacilityPlayerDoor1
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Geranium/InteractiveObjects/Doors/Facility/_Design/IO_Door_130x250_SlideUp_FacilityPlayerDoor1.IO_Door_130x250_SlideUp_FacilityPlayerDoor1_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.3
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Geranium/InteractiveObjects/Doors/Facility/_Design/IO_Door_130x250_SlideUp_FacilityPlayerDoor1.IO_Door_130x250_SlideUp_FacilityPlayerDoor1_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.3
@@ -9921,6 +9934,10 @@ SparkEarlyLevelPatchEntry,(1,1,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outski
 SparkEarlyLevelPatchEntry,(1,1,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outskirts_LowerSector.Outskirts_LowerSector:PersistentLevel.Elevator_UnderBridge_2,ElevatorSpeed,0,,480
 SparkEarlyLevelPatchEntry,(1,1,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outskirts_LowerSector.Outskirts_LowerSector:PersistentLevel.Elevator_UnderBridge_2,ElevatorTravelTime,0,,2.5
 
+# Midnight's Cairn (Maliwan Takedown)
+SparkEarlyLevelPatchEntry,(1,1,0,Raid_P),/Game/PatchDLC/Raid1/Maps/Raid/Raid_M_RaidOnMaliwan.Raid_M_RaidOnMaliwan:PersistentLevel.Elevator_Raid__3,ElevatorSpeed,0,,3600
+SparkEarlyLevelPatchEntry,(1,1,0,Raid_P),/Game/PatchDLC/Raid1/Maps/Raid/Raid_M_RaidOnMaliwan.Raid_M_RaidOnMaliwan:PersistentLevel.Elevator_Raid__3,ElevatorTravelTime,0,,2.5
+
 # Skywell-27 - Boss Elevator
 SparkEarlyLevelPatchEntry,(1,1,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_Boss.OrbitalPlatform_Boss:PersistentLevel.Elevator_Cargo_OrbitalPlatform_2,ElevatorSpeed,0,,800
 SparkEarlyLevelPatchEntry,(1,1,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_Boss.OrbitalPlatform_Boss:PersistentLevel.Elevator_Cargo_OrbitalPlatform_2,ElevatorTravelTime,0,,2.5
@@ -9956,7 +9973,7 @@ SparkEarlyLevelPatchEntry,(1,1,0,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue
 # Atlas HQ - Main Office Elevator (post-mission-activation)
 SparkLevelPatchEntry,(1,7,0,AtlasHQ_P),/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_M_EP06OfficeSpaceInvaders.AtlasHQ_M_EP06OfficeSpaceInvaders_C,0,1,ExecuteUbergraph_AtlasHQ_M_EP06OfficeSpaceInvaders,1,6427,2:25,4:6.25
 
-# Stormblind Complex (Arm's Race) activation delay
+# Stormblind Complex (Arm's Race) elevator activation delay
 SparkLevelPatchEntry,(1,1,0,FrostSite_P),/Ixora/Maps/FrostSite/FrostSite_Combat.FrostSite_Combat:PersistentLevel.Elevator_FrostSite_2,SwitchDelayTime,0,,0
 
 ###
@@ -10234,6 +10251,13 @@ SparkLevelPatchEntry,(1,1,0,NekroMystery_p),/Ixora2/Maps/Mystery/Nekro/NekroMyst
 
 SparkLevelPatchEntry,(1,7,0,FrostSite_P),/Game/PatchDLC/Ixora/Missions/Side/Mission_GearUp.Mission_GearUp_C,0,1,ExecuteUbergraph_Mission_GearUp,1,23316,2:10,1:0
 SparkLevelPatchEntry,(1,7,0,FrostSite_P),/Ixora/Maps/FrostSite/FrostSite_Mission.FrostSite_Mission_C,0,1,ExecuteUbergraph_FrostSite_Mission,1,6200,2:10,1:0
+
+###
+### Raid on Maliwan Blacksite start countdown
+###
+
+SparkLevelPatchEntry,(1,7,0,Raid_P),/Game/PatchDLC/Raid1/Missions/Mission_Raid1.Mission_Raid1_C,0,1,ExecuteUbergraph_Mission_Raid1,1,13903,1:3,1:0
+SparkLevelPatchEntry,(1,7,0,Raid_P),/Game/PatchDLC/Raid1/Maps/Raid/Raid_M_RaidOnMaliwan.Raid_M_RaidOnMaliwan_C,0,1,ExecuteUbergraph_Raid_M_RaidOnMaliwan,1,2535,1:3,1:0
 
 ###
 ### NPC Walking Speeds

@@ -1339,6 +1339,9 @@ for category, cat_scale, io_objs in [
             #IO('/Game/PatchDLC/Event2/InteractiveObjects/Doors/_Design/IO_Door_400x400_Rotate_2Piece_Generic_IronBearDoor_Cartels'),
             #IO('/Game/PatchDLC/Event2/InteractiveObjects/Doors/_Design/IO_Door_CustomSize_Rotate_2Piece_IronGate_CartelsVar'),
             IO('/Game/PatchDLC/Ixora/InteractiveObjects/Doors/IO_Door_130x250_SlideUp_Motorcade_BanditHideoutDoor_GearUp'),
+            IO('/Game/PatchDLC/Raid1/InteractiveObjects/Raid_MaliwanDoor/IO_Door_Raid02_Custom_SlideUp',
+                    level='Raid_P',
+                    ),
             # No timing parameters
             #IO('/Game/PatchDLC/Ixora/InteractiveObjects/Doors/IO_Door_400x400_SlideUp_Industrial_Generic_GearUp'),
             IO('/Geranium/InteractiveObjects/Doors/Facility/_Design/IO_Door_130x250_SlideUp_FacilityPlayerDoor1'),
@@ -1634,6 +1637,9 @@ for label, level, obj_name, speed, travel_time in sorted([
         ("Stormblind Complex", 'FrostSite_P',
             '/Ixora/Maps/FrostSite/FrostSite_Combat.FrostSite_Combat:PersistentLevel.Elevator_FrostSite_2',
             200, 10),
+        ("Midnight's Cairn (Maliwan Takedown)", 'Raid_P',
+            '/Game/PatchDLC/Raid1/Maps/Raid/Raid_M_RaidOnMaliwan.Raid_M_RaidOnMaliwan:PersistentLevel.Elevator_Raid__3',
+            900, 10),
 
         # Wrote some code to attempt to autodetect some things, to make future filling-in easier.
         # Keeping them commented for now; kind of want to doublecheck things as I go, still,  I
@@ -1641,24 +1647,9 @@ for label, level, obj_name, speed, travel_time in sorted([
         # filled in on a lot of these.  Also I suspect that at least some of these aren't really
         # things that we'd want to speed up -- like all the Guardian Takedown ones, for instance.
 
-        #("Great Vault", 'DesertBoss_P',
-        #    '/Game/Maps/Zone_3/DesertBoss/DesertBoss_Mission.DesertBoss_Mission:PersistentLevel.BP_TroyBoss_Antenna_8726',
-        #    600, 10),
-        #("Great Vault", 'DesertBoss_P',
-        #    '/Game/Maps/Zone_3/DesertBoss/DesertBoss_Mission.DesertBoss_Mission:PersistentLevel.Elevator_TroyBoss_OuterPlatform_2',
-        #    400, 10),
-
-        #("Destroyer's Rift", 'FinalBoss_P',
-        #    '/Game/Maps/Zone_0/FinalBoss/FinalBoss_M_EP23TyreenFinalBoss.FinalBoss_M_EP23TyreenFinalBoss:PersistentLevel.Elevator_FinalBoss_Rocks_86',
-        #    500, 10),
-
         #("Villa Ultraviolet", 'Cartels_P',
         #    '/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.Elevator_Cartels_5',
         #    95, 10),
-
-        #("Midnight's Cairn (Maliwan Takedown)", 'Raid_P',
-        #    '/Game/PatchDLC/Raid1/Maps/Raid/Raid_M_RaidOnMaliwan.Raid_M_RaidOnMaliwan:PersistentLevel.Elevator_Raid__3',
-        #    900, 10),
 
         #("Minos Prime / The Shattered Tribunal", 'GuardianTakedown_P',
         #    '/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Combat.GuardianTakedown_Combat:PersistentLevel.Elevator_GuardianTakedown_Lift_12',
@@ -1776,7 +1767,7 @@ mod.bytecode_hotfix(Mod.LEVEL, 'AtlasHQ_P',
         25/global_scale)
 mod.newline()
 
-mod.comment("Stormblind Complex (Arm's Race) activation delay")
+mod.comment("Stormblind Complex (Arm's Race) elevator activation delay")
 mod.reg_hotfix(Mod.LEVEL, 'FrostSite_P',
         '/Ixora/Maps/FrostSite/FrostSite_Combat.FrostSite_Combat:PersistentLevel.Elevator_FrostSite_2',
         'SwitchDelayTime',
@@ -2346,6 +2337,22 @@ mod.bytecode_hotfix(Mod.LEVEL, 'FrostSite_P',
         'ExecuteUbergraph_FrostSite_Mission',
         6200,
         10,
+        0)
+mod.newline()
+
+# Maliwan Raid Start countdown
+mod.header('Raid on Maliwan Blacksite start countdown')
+mod.bytecode_hotfix(Mod.LEVEL, 'Raid_P',
+        '/Game/PatchDLC/Raid1/Missions/Mission_Raid1',
+        'ExecuteUbergraph_Mission_Raid1',
+        13903,
+        3,
+        0)
+mod.bytecode_hotfix(Mod.LEVEL, 'Raid_P',
+        '/Game/PatchDLC/Raid1/Maps/Raid/Raid_M_RaidOnMaliwan',
+        'ExecuteUbergraph_Raid_M_RaidOnMaliwan',
+        2535,
+        3,
         0)
 mod.newline()
 
