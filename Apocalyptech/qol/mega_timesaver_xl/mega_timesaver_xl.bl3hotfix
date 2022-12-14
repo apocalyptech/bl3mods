@@ -9933,6 +9933,10 @@ SparkEarlyLevelPatchEntry,(1,1,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPla
 SparkEarlyLevelPatchEntry,(1,1,0,TechSlaughter_P),/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_Geo.TechSlaughter_Geo:PersistentLevel.Elevator_TechSlaughter_2,ElevatorSpeed,0,,2000
 SparkEarlyLevelPatchEntry,(1,1,0,TechSlaughter_P),/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_Geo.TechSlaughter_Geo:PersistentLevel.Elevator_TechSlaughter_2,ElevatorTravelTime,0,,2.5
 
+# Stormblind Complex
+SparkEarlyLevelPatchEntry,(1,1,0,FrostSite_P),/Ixora/Maps/FrostSite/FrostSite_Combat.FrostSite_Combat:PersistentLevel.Elevator_FrostSite_2,ElevatorSpeed,0,,800
+SparkEarlyLevelPatchEntry,(1,1,0,FrostSite_P),/Ixora/Maps/FrostSite/FrostSite_Combat.FrostSite_Combat:PersistentLevel.Elevator_FrostSite_2,ElevatorTravelTime,0,,2.5
+
 # Tazendeer Ruins
 SparkEarlyLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_TempleFirstFloor.Beach_TempleFirstFloor:PersistentLevel.BP_EP18_Eridian_Elevator_0,ElevatorSpeed,0,,8000
 SparkEarlyLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_TempleFirstFloor.Beach_TempleFirstFloor:PersistentLevel.BP_EP18_Eridian_Elevator_0,ElevatorTravelTime,0,,2.5
@@ -9946,11 +9950,14 @@ SparkEarlyLevelPatchEntry,(1,1,0,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue
 SparkEarlyLevelPatchEntry,(1,1,0,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue_M_Ep04_EarnSpaceship.Prologue_M_Ep04_EarnSpaceship:PersistentLevel.Elevator_Ep04_Prologue,ElevatorTravelTime,0,,2.5
 
 ###
-### Post-Mission Elevator Tweaks
+### Extra Elevator Tweaks
 ###
 
-# Atlas HQ - Main Office Elevator
+# Atlas HQ - Main Office Elevator (post-mission-activation)
 SparkLevelPatchEntry,(1,7,0,AtlasHQ_P),/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_M_EP06OfficeSpaceInvaders.AtlasHQ_M_EP06OfficeSpaceInvaders_C,0,1,ExecuteUbergraph_AtlasHQ_M_EP06OfficeSpaceInvaders,1,6427,2:25,4:6.25
+
+# Stormblind Complex (Arm's Race) activation delay
+SparkLevelPatchEntry,(1,1,0,FrostSite_P),/Ixora/Maps/FrostSite/FrostSite_Combat.FrostSite_Combat:PersistentLevel.Elevator_FrostSite_2,SwitchDelayTime,0,,0
 
 ###
 ### Fast Travel / Teleport Animation Disable
@@ -10220,6 +10227,13 @@ SparkLevelPatchEntry,(1,7,0,NekroMystery_p),/Ixora2/Maps/Mystery/Nekro/NekroMyst
 
 # Actual door-opening timeline
 SparkLevelPatchEntry,(1,1,0,NekroMystery_p),/Ixora2/Maps/Mystery/Nekro/NekroMystery_Mission.NekroMystery_Mission:PersistentLevel.IO_Door_IXO_TombEntrance_SlideUp_2.Timeline_DoorOpening,TheTimeline.Length,0,,4.0
+
+###
+### Remove Arm's Race Countdown
+###
+
+SparkLevelPatchEntry,(1,7,0,FrostSite_P),/Game/PatchDLC/Ixora/Missions/Side/Mission_GearUp.Mission_GearUp_C,0,1,ExecuteUbergraph_Mission_GearUp,1,23316,2:10,1:0
+SparkLevelPatchEntry,(1,7,0,FrostSite_P),/Ixora/Maps/FrostSite/FrostSite_Mission.FrostSite_Mission_C,0,1,ExecuteUbergraph_FrostSite_Mission,1,6200,2:10,1:0
 
 ###
 ### NPC Walking Speeds

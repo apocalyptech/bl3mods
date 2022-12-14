@@ -69,7 +69,7 @@ X /Game/Maps/Zone_4/Crypt/Crypt_P
   /Hibiscus/Maps/Venue/Venue_P
   /Hibiscus/Maps/Village/Village_P
   /Hibiscus/Maps/Woods/Woods_P
-  /Ixora/Maps/FrostSite/FrostSite_P
+* /Ixora/Maps/FrostSite/FrostSite_P
 * /Ixora2/Maps/Boss/SacrificeBoss_p
 * /Ixora2/Maps/Cabin/Cabin_P
 * /Ixora2/Maps/Mystery/Nekro/NekroMystery_p

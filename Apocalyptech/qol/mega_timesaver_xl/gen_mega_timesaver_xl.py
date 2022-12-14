@@ -1631,6 +1631,9 @@ for label, level, obj_name, speed, travel_time in sorted([
         ("Tazendeer Ruins", 'Beach_P',
             '/Game/Maps/Zone_4/Beach/Beach_TempleFirstFloor.Beach_TempleFirstFloor:PersistentLevel.BP_EP18_Eridian_Elevator_0',
             2000, 10),
+        ("Stormblind Complex", 'FrostSite_P',
+            '/Ixora/Maps/FrostSite/FrostSite_Combat.FrostSite_Combat:PersistentLevel.Elevator_FrostSite_2',
+            200, 10),
 
         # Wrote some code to attempt to autodetect some things, to make future filling-in easier.
         # Keeping them commented for now; kind of want to doublecheck things as I go, still,  I
@@ -1648,10 +1651,6 @@ for label, level, obj_name, speed, travel_time in sorted([
         #("Destroyer's Rift", 'FinalBoss_P',
         #    '/Game/Maps/Zone_0/FinalBoss/FinalBoss_M_EP23TyreenFinalBoss.FinalBoss_M_EP23TyreenFinalBoss:PersistentLevel.Elevator_FinalBoss_Rocks_86',
         #    500, 10),
-
-        #("Stormblind Complex", 'FrostSite_P',
-        #    '/Ixora/Maps/FrostSite/FrostSite_Combat.FrostSite_Combat:PersistentLevel.Elevator_FrostSite_2',
-        #    defaultspeed, 10),
 
         #("Villa Ultraviolet", 'Cartels_P',
         #    '/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.Elevator_Cartels_5',
@@ -1765,16 +1764,24 @@ for label, level, obj_name, speed, travel_time in sorted([
 
 # Some elevators (okay, possibly just the ones in Atlas HQ) need some extra ubergraph love
 # once the mission is done -- the tweak above only seems to apply on the very first trip up.
-mod.header('Post-Mission Elevator Tweaks')
+mod.header('Extra Elevator Tweaks')
 
 # This is what speeds up the elevator for us on subsequent rides
-mod.comment('Atlas HQ - Main Office Elevator')
+mod.comment('Atlas HQ - Main Office Elevator (post-mission-activation)')
 mod.bytecode_hotfix(Mod.LEVEL, 'AtlasHQ_P',
         '/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_M_EP06OfficeSpaceInvaders',
         'ExecuteUbergraph_AtlasHQ_M_EP06OfficeSpaceInvaders',
         6427,
         25,
         25/global_scale)
+mod.newline()
+
+mod.comment("Stormblind Complex (Arm's Race) activation delay")
+mod.reg_hotfix(Mod.LEVEL, 'FrostSite_P',
+        '/Ixora/Maps/FrostSite/FrostSite_Combat.FrostSite_Combat:PersistentLevel.Elevator_FrostSite_2',
+        'SwitchDelayTime',
+        0,
+        )
 mod.newline()
 
 # Make Fast Travel + Teleport digistruct animations disappear
@@ -2324,6 +2331,22 @@ mod.reg_hotfix(Mod.LEVEL, 'NekroMystery_p',
         '/Ixora2/Maps/Mystery/Nekro/NekroMystery_Mission.NekroMystery_Mission:PersistentLevel.IO_Door_IXO_TombEntrance_SlideUp_2.Timeline_DoorOpening',
         'TheTimeline.Length',
         20/door_scale),
+mod.newline()
+
+# Arm's Race
+mod.header("Remove Arm's Race Countdown")
+mod.bytecode_hotfix(Mod.LEVEL, 'FrostSite_P',
+        '/Game/PatchDLC/Ixora/Missions/Side/Mission_GearUp',
+        'ExecuteUbergraph_Mission_GearUp',
+        23316,
+        10,
+        0)
+mod.bytecode_hotfix(Mod.LEVEL, 'FrostSite_P',
+        '/Ixora/Maps/FrostSite/FrostSite_Mission',
+        'ExecuteUbergraph_FrostSite_Mission',
+        6200,
+        10,
+        0)
 mod.newline()
 
 # Honestly not sure yet if I want to put this in here, but I'm doing it for now...

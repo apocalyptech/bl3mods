@@ -38,6 +38,7 @@ Currently, the mod affects the following:
   * Vic (from Head Case)
 * Eridian tools (Resonator, Analyzer)
 * Fast-Travel/Teleport and Respawn animations
+* Removed startup countdown for Arm's Race
 * A *lot* of mission-and-map-specific animations throughout the game
 
 Note that the vehicle animations in particular are a bit weird right now --
@@ -223,6 +224,7 @@ Changelog
    * Rising Eridian statues in Pyre of Stars
    * Rising platforms in Pyre of Stars
    * Rocket launch in Fire in the Sky
+   * Removed start countdown in Arm's Race
 
 Aug 1, 2022 *(no version number change)*
  * Updated to use [new metadata tags](https://github.com/apple1417/blcmm-parsing/tree/master/blimp)
