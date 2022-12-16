@@ -10253,11 +10253,29 @@ SparkLevelPatchEntry,(1,7,0,FrostSite_P),/Game/PatchDLC/Ixora/Missions/Side/Miss
 SparkLevelPatchEntry,(1,7,0,FrostSite_P),/Ixora/Maps/FrostSite/FrostSite_Mission.FrostSite_Mission_C,0,1,ExecuteUbergraph_FrostSite_Mission,1,6200,2:10,1:0
 
 ###
-### Raid on Maliwan Blacksite start countdown
+### Takedown at the Maliwan Blacksite start countdown
 ###
 
 SparkLevelPatchEntry,(1,7,0,Raid_P),/Game/PatchDLC/Raid1/Missions/Mission_Raid1.Mission_Raid1_C,0,1,ExecuteUbergraph_Mission_Raid1,1,13903,1:3,1:0
 SparkLevelPatchEntry,(1,7,0,Raid_P),/Game/PatchDLC/Raid1/Maps/Raid/Raid_M_RaidOnMaliwan.Raid_M_RaidOnMaliwan_C,0,1,ExecuteUbergraph_Raid_M_RaidOnMaliwan,1,2535,1:3,1:0
+
+###
+### Takedown at the Guardian Breach start countdown
+###
+
+SparkLevelPatchEntry,(1,7,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Missions/Side/Mission_Takedown2.Mission_Takedown2_C,0,1,ExecuteUbergraph_Mission_Takedown2,1,8789,1:3,1:0
+SparkLevelPatchEntry,(1,7,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission_C,0,1,ExecuteUbergraph_GuardianTakedown_Mission,1,1843,1:3,1:0
+
+###
+### Initial Minos Prime Crystal Pads
+###
+
+SparkLevelPatchEntry,(1,1,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.IO_Takedown2_GuardianPad_0,ChargeIncreasePerSecond,0,,26
+SparkLevelPatchEntry,(1,1,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.IO_Takedown2_GuardianPad_0,ChargeDelayTime,0,,0
+SparkLevelPatchEntry,(1,1,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.IO_Takedown2_GuardianPad_0,AddMaxChargePerPlayer,0,,200
+SparkLevelPatchEntry,(1,1,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.IO_Takedown2_GuardianPad_3,ChargeIncreasePerSecond,0,,26
+SparkLevelPatchEntry,(1,1,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.IO_Takedown2_GuardianPad_3,ChargeDelayTime,0,,0
+SparkLevelPatchEntry,(1,1,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.IO_Takedown2_GuardianPad_3,AddMaxChargePerPlayer,0,,200
 
 ###
 ### NPC Walking Speeds

@@ -2341,7 +2341,7 @@ mod.bytecode_hotfix(Mod.LEVEL, 'FrostSite_P',
 mod.newline()
 
 # Maliwan Raid Start countdown
-mod.header('Raid on Maliwan Blacksite start countdown')
+mod.header('Takedown at the Maliwan Blacksite start countdown')
 mod.bytecode_hotfix(Mod.LEVEL, 'Raid_P',
         '/Game/PatchDLC/Raid1/Missions/Mission_Raid1',
         'ExecuteUbergraph_Mission_Raid1',
@@ -2354,6 +2354,46 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Raid_P',
         2535,
         3,
         0)
+mod.newline()
+
+# Guardian Raid Start countdown
+mod.header('Takedown at the Guardian Breach start countdown')
+mod.bytecode_hotfix(Mod.LEVEL, 'GuardianTakedown_P',
+        '/Game/PatchDLC/Takedown2/Missions/Side/Mission_Takedown2',
+        'ExecuteUbergraph_Mission_Takedown2',
+        8789,
+        3,
+        0)
+mod.bytecode_hotfix(Mod.LEVEL, 'GuardianTakedown_P',
+        '/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission',
+        'ExecuteUbergraph_GuardianTakedown_Mission',
+        1843,
+        3,
+        0)
+mod.newline()
+
+# Minos Prime initial crystals
+mod.header('Initial Minos Prime Crystal Pads')
+for obj_name in [
+        'IO_Takedown2_GuardianPad_0',
+        'IO_Takedown2_GuardianPad_3',
+        ]:
+    # These start at 47 and go up to 100, so 26 should complete them in ~2sec.
+    mod.reg_hotfix(Mod.LEVEL, 'GuardianTakedown_P',
+            f'/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.{obj_name}',
+            'ChargeIncreasePerSecond',
+            # Default: 3
+            26)
+    mod.reg_hotfix(Mod.LEVEL, 'GuardianTakedown_P',
+            f'/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.{obj_name}',
+            'ChargeDelayTime',
+            # Default: 2
+            0)
+    mod.reg_hotfix(Mod.LEVEL, 'GuardianTakedown_P',
+            f'/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.{obj_name}',
+            'AddMaxChargePerPlayer',
+            # Default: 20
+            0)
 mod.newline()
 
 # Honestly not sure yet if I want to put this in here, but I'm doing it for now...
