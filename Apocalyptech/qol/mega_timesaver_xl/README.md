@@ -227,6 +227,8 @@ Changelog
    * Rocket launch in Fire in the Sky
    * Removed start countdown in Arm's Race
    * Initial crystal pads in Guardian Takedown, on Minos Prime
+   * Bookshelf puzzle in Villa Ultraviolet
+   * Descending fountain in Villa Ultraviolet
 
 Aug 1, 2022 *(no version number change)*
  * Updated to use [new metadata tags](https://github.com/apple1417/blcmm-parsing/tree/master/blimp)

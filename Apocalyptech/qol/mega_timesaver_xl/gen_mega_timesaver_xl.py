@@ -1409,6 +1409,10 @@ for category, cat_scale, io_objs in [
                 label="Hidden Statue Button in Jakobs Estate",
                 level='Mansion_P',
                 ),
+            IO('/Game/PatchDLC/Event2/InteractiveObjects/CartelElevatorDoor/IO_Door_400x400_CartelElevatorDoor',
+                label="Elevator doors in Villa Ultraviolet",
+                level='Cartels_P',
+                ),
             ]),
         ('More Containers', global_scale, [
             # This basically just speeds up the turn-to-green which allows it to be opened
@@ -1479,6 +1483,20 @@ for category, cat_scale, io_objs in [
             IO('/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_EridianRaisingPlatform',
                 label="Rising platforms in Pyre of Stars",
                 level='Crypt_P',
+                ),
+            # Also has some tweaks down below
+            IO('/Game/PatchDLC/Event2/InteractiveObjects/BookPuzzle/IO_Usable_KeypadBook',
+                label="Book puzzle inputs in Villa Ultraviolet",
+                level='Cartels_P',
+                ),
+            IO('/Game/PatchDLC/Event2/InteractiveObjects/BookPuzzle/IO_Door_SpinningBookShelf',
+                label="Spinning bookshelf in Villa Ultraviolet",
+                level='Cartels_P',
+                ),
+            # Also has some tweaks down below
+            IO('/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain',
+                label="Villa Ultraviolet descending fountain",
+                level='Cartels_P',
                 ),
             ]),
         ]:
@@ -1603,7 +1621,8 @@ for label, level, obj_name, speed, travel_time in sorted([
         ('Floodmoor Basin - Knotty Peak', 'Wetlands_P',
             '/Game/Maps/Zone_2/Wetlands/Wetlands_Dynamic.Wetlands_Dynamic:PersistentLevel.Elevator_WetlandsLodge_3326',
             400, 10),
-        # May do alt scaling for this, and there's probably ubergraph stuff involved.  Check that out once we get there.
+        # There's a lot of components in this one, and it's already pretty speedy, so I'm leaving it alone out of laziness.  Amusingly,
+        # leaving it alone makes this one of the *slower* elevators in the game.
         #('Floodmoor Basin - Rocket Elevator', 'Wetlands_P',
         #    '/Game/Maps/Zone_2/Wetlands/Wetlands_M_DudeBro.Wetlands_M_DudeBro:PersistentLevel.Elevator_Rocket',
         #    900, 7),
@@ -1640,16 +1659,15 @@ for label, level, obj_name, speed, travel_time in sorted([
         ("Midnight's Cairn (Maliwan Takedown)", 'Raid_P',
             '/Game/PatchDLC/Raid1/Maps/Raid/Raid_M_RaidOnMaliwan.Raid_M_RaidOnMaliwan:PersistentLevel.Elevator_Raid__3',
             900, 10),
+        ("Villa Ultraviolet", 'Cartels_P',
+            '/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.Elevator_Cartels_5',
+            95, 10),
 
         # Wrote some code to attempt to autodetect some things, to make future filling-in easier.
         # Keeping them commented for now; kind of want to doublecheck things as I go, still,  I
         # suspect that `defaultspeed` is 200, but we'll see.  A default traveltime of 10 has been
         # filled in on a lot of these.  Also I suspect that at least some of these aren't really
         # things that we'd want to speed up -- like all the Guardian Takedown ones, for instance.
-
-        #("Villa Ultraviolet", 'Cartels_P',
-        #    '/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.Elevator_Cartels_5',
-        #    95, 10),
 
         #("Grand Opening", 'CasinoIntro_P',
         #    '/Dandelion/Maps/CasinoIntro/CasinoIntro_GoldenBullion.CasinoIntro_GoldenBullion:PersistentLevel.Elevator_CasinoIntro_2',
@@ -2369,6 +2387,49 @@ for obj_name in [
             'AddMaxChargePerPlayer',
             # Default: 20
             0)
+mod.newline()
+
+# Villa Ultraviolet book puzzle triggers (see also the IO() tweaks above)
+mod.header('Villa Ultraviolet book switches')
+for num in [
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        ]:
+    mod.reg_hotfix(Mod.LEVEL, 'Cartels_P',
+            f'/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.SM_Book__{num}.Timeline_Rotation_Book',
+            'TheTimeline.Length',
+            2/global_scale,
+            )
+mod.newline()
+
+# Villa Ultraviolet fountain (see also the IO() tweaks above)
+mod.header('Villa Ultraviolet fountain')
+tl_name = '/Game/PatchDLC/Event2/Maps/Cartels_Mission.Cartels_Mission:PersistentLevel.IO_MissionScripted_CartelFountain.Timeline_MoveFountain'
+mod.reg_hotfix(Mod.LEVEL, 'Cartels_P',
+        tl_name,
+        'TheTimeline.Length',
+        16/global_scale,
+        )
+for idx, default in enumerate([
+        0,
+        2.9,
+        6.5,
+        13.5,
+        15.0,
+        ]):
+    if default != 0:
+        mod.reg_hotfix(Mod.LEVEL, 'Cartels_P',
+                tl_name,
+                f'TheTimeline.Events.Events[{idx}].Time',
+                round(default/global_scale, 6),
+                )
 mod.newline()
 
 # Honestly not sure yet if I want to put this in here, but I'm doing it for now...

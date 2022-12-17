@@ -9733,6 +9733,16 @@ SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_D
 SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_Switch_StatueButton.IO_Switch_StatueButton_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.03125
 SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/InteractiveObjects/MissionUsable/_Design/MansionInvestigationObjects/IO_Switch_StatueButton.IO_Switch_StatueButton_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.0625
 
+# Elevator doors in Villa Ultraviolet
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelElevatorDoor/IO_Door_400x400_CartelElevatorDoor.IO_Door_400x400_CartelElevatorDoor_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.625
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelElevatorDoor/IO_Door_400x400_CartelElevatorDoor.IO_Door_400x400_CartelElevatorDoor_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.625
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelElevatorDoor/IO_Door_400x400_CartelElevatorDoor.IO_Door_400x400_CartelElevatorDoor_C,Timelines.Timelines[1].Object..TimelineLength,0,,0.125
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelElevatorDoor/IO_Door_400x400_CartelElevatorDoor.IO_Door_400x400_CartelElevatorDoor_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelElevatorDoor/IO_Door_400x400_CartelElevatorDoor.IO_Door_400x400_CartelElevatorDoor_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.125
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelElevatorDoor/IO_Door_400x400_CartelElevatorDoor.IO_Door_400x400_CartelElevatorDoor_C,Timelines.Timelines[2].Object..TimelineLength,0,,0.125
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelElevatorDoor/IO_Door_400x400_CartelElevatorDoor.IO_Door_400x400_CartelElevatorDoor_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelElevatorDoor/IO_Door_400x400_CartelElevatorDoor.IO_Door_400x400_CartelElevatorDoor_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.125
+
 ###
 ### More Containers
 ###
@@ -9881,6 +9891,45 @@ SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/InteractiveObjects/MissionScripted/_D
 SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_EridianRaisingPlatform.IO_MissionScripted_EridianRaisingPlatform_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.25
 SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_EridianRaisingPlatform.IO_MissionScripted_EridianRaisingPlatform_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.25
 
+# Book puzzle inputs in Villa Ultraviolet
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/BookPuzzle/IO_Usable_KeypadBook.IO_Usable_KeypadBook_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.5
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/BookPuzzle/IO_Usable_KeypadBook.IO_Usable_KeypadBook_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/BookPuzzle/IO_Usable_KeypadBook.IO_Usable_KeypadBook_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.325
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/BookPuzzle/IO_Usable_KeypadBook.IO_Usable_KeypadBook_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,0.5
+
+# Spinning bookshelf in Villa Ultraviolet
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/BookPuzzle/IO_Door_SpinningBookShelf.IO_Door_SpinningBookShelf_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/BookPuzzle/IO_Door_SpinningBookShelf.IO_Door_SpinningBookShelf_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.05
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/BookPuzzle/IO_Door_SpinningBookShelf.IO_Door_SpinningBookShelf_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.2
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/BookPuzzle/IO_Door_SpinningBookShelf.IO_Door_SpinningBookShelf_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.05
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/BookPuzzle/IO_Door_SpinningBookShelf.IO_Door_SpinningBookShelf_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.2
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/BookPuzzle/IO_Door_SpinningBookShelf.IO_Door_SpinningBookShelf_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,0.25
+
+# Villa Ultraviolet descending fountain
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..TimelineLength,0,,4.0
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..EventTracks.EventTracks[1].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,0.725
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..EventTracks.EventTracks[2].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,1.625
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..EventTracks.EventTracks[3].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,3.375
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..EventTracks.EventTracks[4].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,3.75
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.6375
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,3.75
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.6
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.725
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.525
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,1.5125
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.6375
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,3.75
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[4].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,1.5125
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[4].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.6375
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[4].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,2.5
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[4].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,3.75
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[5].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,3.375
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[5].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,3.75
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[6].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,3.375
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[6].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,3.75
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[1].Object..TimelineLength,0,,0.5
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.5
+
 ###
 ### Elevators
 ###
@@ -9965,6 +10014,10 @@ SparkEarlyLevelPatchEntry,(1,1,0,Prison_P),/Game/Maps/Zone_2/Prison/Prison_M_EP0
 # The Droughts - Taking Flight (Sanctuary III Drydock)
 SparkEarlyLevelPatchEntry,(1,1,0,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue_M_Ep04_EarnSpaceship.Prologue_M_Ep04_EarnSpaceship:PersistentLevel.Elevator_Ep04_Prologue,ElevatorSpeed,0,,700
 SparkEarlyLevelPatchEntry,(1,1,0,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue_M_Ep04_EarnSpaceship.Prologue_M_Ep04_EarnSpaceship:PersistentLevel.Elevator_Ep04_Prologue,ElevatorTravelTime,0,,2.5
+
+# Villa Ultraviolet
+SparkEarlyLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.Elevator_Cartels_5,ElevatorSpeed,0,,380
+SparkEarlyLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.Elevator_Cartels_5,ElevatorTravelTime,0,,2.5
 
 ###
 ### Extra Elevator Tweaks
@@ -10272,10 +10325,34 @@ SparkLevelPatchEntry,(1,7,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/Gu
 
 SparkLevelPatchEntry,(1,1,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.IO_Takedown2_GuardianPad_0,ChargeIncreasePerSecond,0,,26
 SparkLevelPatchEntry,(1,1,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.IO_Takedown2_GuardianPad_0,ChargeDelayTime,0,,0
-SparkLevelPatchEntry,(1,1,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.IO_Takedown2_GuardianPad_0,AddMaxChargePerPlayer,0,,200
+SparkLevelPatchEntry,(1,1,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.IO_Takedown2_GuardianPad_0,AddMaxChargePerPlayer,0,,0
 SparkLevelPatchEntry,(1,1,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.IO_Takedown2_GuardianPad_3,ChargeIncreasePerSecond,0,,26
 SparkLevelPatchEntry,(1,1,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.IO_Takedown2_GuardianPad_3,ChargeDelayTime,0,,0
-SparkLevelPatchEntry,(1,1,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.IO_Takedown2_GuardianPad_3,AddMaxChargePerPlayer,0,,200
+SparkLevelPatchEntry,(1,1,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.IO_Takedown2_GuardianPad_3,AddMaxChargePerPlayer,0,,0
+
+###
+### Villa Ultraviolet book switches
+###
+
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.SM_Book__286.Timeline_Rotation_Book,TheTimeline.Length,0,,0.5
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.SM_Book__287.Timeline_Rotation_Book,TheTimeline.Length,0,,0.5
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.SM_Book__288.Timeline_Rotation_Book,TheTimeline.Length,0,,0.5
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.SM_Book__289.Timeline_Rotation_Book,TheTimeline.Length,0,,0.5
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.SM_Book__290.Timeline_Rotation_Book,TheTimeline.Length,0,,0.5
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.SM_Book__291.Timeline_Rotation_Book,TheTimeline.Length,0,,0.5
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.SM_Book__292.Timeline_Rotation_Book,TheTimeline.Length,0,,0.5
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.SM_Book__293.Timeline_Rotation_Book,TheTimeline.Length,0,,0.5
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.SM_Book__294.Timeline_Rotation_Book,TheTimeline.Length,0,,0.5
+
+###
+### Villa Ultraviolet fountain
+###
+
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Mission.Cartels_Mission:PersistentLevel.IO_MissionScripted_CartelFountain.Timeline_MoveFountain,TheTimeline.Length,0,,4.0
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Mission.Cartels_Mission:PersistentLevel.IO_MissionScripted_CartelFountain.Timeline_MoveFountain,TheTimeline.Events.Events[1].Time,0,,0.725
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Mission.Cartels_Mission:PersistentLevel.IO_MissionScripted_CartelFountain.Timeline_MoveFountain,TheTimeline.Events.Events[2].Time,0,,1.625
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Mission.Cartels_Mission:PersistentLevel.IO_MissionScripted_CartelFountain.Timeline_MoveFountain,TheTimeline.Events.Events[3].Time,0,,3.375
+SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Mission.Cartels_Mission:PersistentLevel.IO_MissionScripted_CartelFountain.Timeline_MoveFountain,TheTimeline.Events.Events[4].Time,0,,3.75
 
 ###
 ### NPC Walking Speeds
