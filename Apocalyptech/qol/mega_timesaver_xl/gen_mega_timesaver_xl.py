@@ -576,6 +576,16 @@ for cat_name, cat_scale, animseqs in [
                 # be needed, given the other animations in this section.
                 seqlen_scale=1,
                 ),
+            # So this *does* speed up the cocking animation for catapult 3, but there's a delay in
+            # the bytecode which uses the SequenceLength of this sequence.  We need to keep the seqlen
+            # at its default value or the animation glitches out, as with the other animations in
+            # this section.  So, we can either speed up the animation and have an awkward silence until
+            # the mission moves along, or just cope with the standard animation speed.
+            #AS('/Alisma/InteractiveObjects/MissionSpecific/Plot/ALI_EP02/Catapult/Exports/AS_IO_Catapult_Cocking',
+            #    target='Anger_P',
+            #    scale=2,
+            #    seqlen_scale=1,
+            #    ),
             ]),
         # Doing this ends up screwing up the slots pretty thoroughly, actually -- the animation gets killed
         # pretty much immediately, so the rewards get stuck "inside" the machine until the 10-sec auto-drop
@@ -1497,6 +1507,13 @@ for category, cat_scale, io_objs in [
             IO('/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain',
                 label="Villa Ultraviolet descending fountain",
                 level='Cartels_P',
+                ),
+            # See also some delay tweaks below
+            IO('/Alisma/InteractiveObjects/MissionSpecific/Plot/ALI_EP02/Catapult/IO_MissionScripted_Ali_CatapultPivot',
+                label="Castle Crimson catapult rotation",
+                level='Anger_P',
+                # This actually looks a little *too* fast with our default global_scale
+                scale=2,
                 ),
             ]),
         ]:
@@ -2432,6 +2449,46 @@ for idx, default in enumerate([
                 )
 mod.newline()
 
+# Castle Crimson catapult tweaks
+mod.header('Castle Crimson catapult tweaks')
+
+mod.comment('Pivot Times')
+for suffix in [
+        '',
+        '_0',
+        '_1',
+        ]:
+    mod.reg_hotfix(Mod.LEVEL, 'Anger_P',
+            f'/Alisma/Maps/Anger/Anger_M_Plot.Anger_M_Plot:PersistentLevel.IO_Ali_CatapultPivot{suffix}',
+            'RotateTime',
+            3/2)
+mod.newline()
+
+mod.comment('Catapult dialogue delay')
+mod.bytecode_hotfix(Mod.LEVEL, 'Anger_P',
+        '/Game/PatchDLC/Alisma/Missions/Plot/ALI_EP02',
+        'ExecuteUbergraph_ALI_EP02',
+        27530,
+        2,
+        0)
+mod.bytecode_hotfix(Mod.LEVEL, 'Anger_P',
+        '/Game/PatchDLC/Alisma/Missions/Plot/ALI_EP02',
+        'ExecuteUbergraph_ALI_EP02',
+        29617,
+        3,
+        0)
+mod.newline()
+
+# P.A.T. firing delay
+mod.header('P.A.T. firing delay')
+mod.bytecode_hotfix(Mod.LEVEL, 'Anger_P',
+        '/Alisma/Maps/Anger/Anger_SM_AllShapesAndCalibers',
+        'ExecuteUbergraph_Anger_SM_AllShapesAndCalibers',
+        988,
+        4,
+        0)
+mod.newline()
+
 # Honestly not sure yet if I want to put this in here, but I'm doing it for now...
 # Can split it out later if I want.
 mod.header('NPC Walking Speeds')
@@ -2552,6 +2609,10 @@ for char in sorted([
         #    '/Game/NonPlayerCharacters/Tannis/_Design/Character/BPChar_Tannis',
         #    global_char_scale,
         #    ),
+        Char('P.A.T.',
+            '/Alisma/NonPlayerCharacters/PAT/_Design/Character/BPChar_PAT',
+            global_char_scale,
+            ),
         ]):
 
     found_main = False

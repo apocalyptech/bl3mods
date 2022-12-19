@@ -32,6 +32,7 @@ Currently, the mod affects the following:
   * Liam (Atlas HQ Guard)
   * Lilith
   * Maya
+  * P.A.T.
   * Terry the Ratch
   * Tina
   * Typhon
@@ -93,6 +94,10 @@ Some things intentionally *not* handled by the mod:
 * Various aspects of Mysteriouslier: Horror at Scryer's Crypt could probably
   be sped up (like the cube animations and such) but it's been mostly left
   alone apart from the initial door-opening animation.
+* The cocking animation on the third catapult in Castle Crimson has been
+  left alone, for boring technical reasons.
+* The egg-incubation timer in A Good Egg has been left alone; it's already
+  pretty quick, and amusing to boot.
 
 Known Bugs
 ==========
@@ -184,6 +189,7 @@ Changelog
    * Glenn the Ratch
    * Liam (Atlas HQ guard)
    * Maya
+   * P.A.T.
    * Terry the Ratch
    * Tina
    * Typhon
@@ -229,6 +235,7 @@ Changelog
    * Initial crystal pads in Guardian Takedown, on Minos Prime
    * Bookshelf puzzle in Villa Ultraviolet
    * Descending fountain in Villa Ultraviolet
+   * Castle Crimson catapult animations
 
 Aug 1, 2022 *(no version number change)*
  * Updated to use [new metadata tags](https://github.com/apple1417/blcmm-parsing/tree/master/blimp)
