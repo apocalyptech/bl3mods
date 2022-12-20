@@ -9934,6 +9934,10 @@ SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/
 SparkLevelPatchEntry,(1,1,0,Anger_P),/Alisma/InteractiveObjects/MissionSpecific/Plot/ALI_EP02/Catapult/IO_MissionScripted_Ali_CatapultPivot.IO_MissionScripted_Ali_CatapultPivot_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.5
 SparkLevelPatchEntry,(1,1,0,Anger_P),/Alisma/InteractiveObjects/MissionSpecific/Plot/ALI_EP02/Catapult/IO_MissionScripted_Ali_CatapultPivot.IO_MissionScripted_Ali_CatapultPivot_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.5
 
+# Don't Call It A Rorschach Ink-Blot Pipes
+SparkLevelPatchEntry,(1,1,0,Experiment_P),/Alisma/InteractiveObjects/MissionSpecific/Side/InkBlots/IO_MissionScripted_BlotsPipes.IO_MissionScripted_BlotsPipes_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.75
+SparkLevelPatchEntry,(1,1,0,Experiment_P),/Alisma/InteractiveObjects/MissionSpecific/Side/InkBlots/IO_MissionScripted_BlotsPipes.IO_MissionScripted_BlotsPipes_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.75
+
 ###
 ### Elevators
 ###
@@ -10376,6 +10380,14 @@ SparkLevelPatchEntry,(1,7,0,Anger_P),/Game/PatchDLC/Alisma/Missions/Plot/ALI_EP0
 ###
 
 SparkLevelPatchEntry,(1,7,0,Anger_P),/Alisma/Maps/Anger/Anger_SM_AllShapesAndCalibers.Anger_SM_AllShapesAndCalibers_C,0,1,ExecuteUbergraph_Anger_SM_AllShapesAndCalibers,1,988,1:4,1:0
+
+###
+### Don't Call It A Rorschach Ink-Blot Pipes
+###
+
+SparkLevelPatchEntry,(1,1,0,Experiment_P),/Alisma/Maps/Experiment/Experiment_SM_InkBlots.Experiment_SM_InkBlots:PersistentLevel.IO_MissionScripted_BlotsPipes_2.Timeline_RorchaschPuddle,TheTimeline.Length,0,,0.75
+SparkLevelPatchEntry,(1,1,0,Experiment_P),/Alisma/Maps/Experiment/Experiment_SM_InkBlots.Experiment_SM_InkBlots:PersistentLevel.IO_MissionScripted_BlotsPipes_5.Timeline_RorchaschPuddle,TheTimeline.Length,0,,0.75
+SparkLevelPatchEntry,(1,1,0,Experiment_P),/Alisma/Maps/Experiment/Experiment_SM_InkBlots.Experiment_SM_InkBlots:PersistentLevel.IO_MissionScripted_BlotsPipes_9.Timeline_RorchaschPuddle,TheTimeline.Length,0,,0.75
 
 ###
 ### NPC Walking Speeds

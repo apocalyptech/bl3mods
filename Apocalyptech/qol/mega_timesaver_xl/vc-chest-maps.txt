@@ -3,8 +3,8 @@ getall BPIO_Lootable_VaultCard_RedCrate_C OpeningInteractions
 
 * /Alisma/Maps/Anger/Anger_P
 * /Alisma/Maps/Chase/Chase_P
-  /Alisma/Maps/Eldorado/Eldorado_P
-  /Alisma/Maps/Experiment/Experiment_P
+* /Alisma/Maps/Eldorado/Eldorado_P
+* /Alisma/Maps/Experiment/Experiment_P
 * /Alisma/Maps/Sanctum/Sanctum_P
   /Dandelion/Maps/CasinoIntro/CasinoIntro_P
   /Dandelion/Maps/Core/Core_P

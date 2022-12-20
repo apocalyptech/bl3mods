@@ -98,6 +98,12 @@ Some things intentionally *not* handled by the mod:
   left alone, for boring technical reasons.
 * The egg-incubation timer in A Good Egg has been left alone; it's already
   pretty quick, and amusing to boot.
+* The whole train-rotation and subsequent mallet-propulsion in Sapphire's
+  Run has been left alone.  The rotation is already pretty quick, and I
+  think speeding up the mallet-hit would take away from the humor of the
+  situation.
+* Statue Krieg opening the gate to Vaulthalla could probably be faster,
+  but I left that alone too.
 
 Known Bugs
 ==========
@@ -236,6 +242,7 @@ Changelog
    * Bookshelf puzzle in Villa Ultraviolet
    * Descending fountain in Villa Ultraviolet
    * Castle Crimson catapult animations
+   * Don't Call it A Rorschach Ink-Blot Pipes, in Benediction of Pain
 
 Aug 1, 2022 *(no version number change)*
  * Updated to use [new metadata tags](https://github.com/apple1417/blcmm-parsing/tree/master/blimp)

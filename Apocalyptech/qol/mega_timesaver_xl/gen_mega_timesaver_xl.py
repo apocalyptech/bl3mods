@@ -1515,6 +1515,11 @@ for category, cat_scale, io_objs in [
                 # This actually looks a little *too* fast with our default global_scale
                 scale=2,
                 ),
+            # See also some delay tweaks below
+            IO('/Alisma/InteractiveObjects/MissionSpecific/Side/InkBlots/IO_MissionScripted_BlotsPipes',
+                label="Don't Call It A Rorschach Ink-Blot Pipes",
+                level='Experiment_P',
+                ),
             ]),
         ]:
 
@@ -2487,6 +2492,20 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Anger_P',
         988,
         4,
         0)
+mod.newline()
+
+# Ink Blots
+mod.header("Don't Call It A Rorschach Ink-Blot Pipes")
+for num in [
+        2,
+        5,
+        9,
+        ]:
+    mod.reg_hotfix(Mod.LEVEL, 'Experiment_P',
+            f'/Alisma/Maps/Experiment/Experiment_SM_InkBlots.Experiment_SM_InkBlots:PersistentLevel.IO_MissionScripted_BlotsPipes_{num}.Timeline_RorchaschPuddle',
+            'TheTimeline.Length',
+            3/global_scale,
+            )
 mod.newline()
 
 # Honestly not sure yet if I want to put this in here, but I'm doing it for now...
