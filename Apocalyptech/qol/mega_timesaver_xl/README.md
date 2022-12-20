@@ -2,12 +2,18 @@ Mega TimeSaver XL
 =================
 
 This mod aims to speed up nearly all the noticeably-slow interactive
-objects that you use throughout BL3.  It will eventually hope to encompass
-basically the entire game, but **it is currently a work in progress!**
+objects that you use throughout BL3.  It's focused mostly on things you
+directly interact with, though it does include other speedups like NPC
+walking speeds, where appropriate.  The mod doesn't attempt to do any
+dialogue or mission skips -- all content in the game should still be
+available.  A few things have even been left alone because speeding them
+up would've caused dialogue skips.
 
-As such, this mod has not seen an awful lot of testing, so please let me
-know if there's anything game-breaking or Obviously Wrong with this (like
-if a too-fast animation ends up breaking mission progression somewhere).
+It will eventually hope to encompass basically the entire game, but **it
+is currently a work in progress!**  As such, this mod has not seen an awful
+lot of testing, so please let me know if there's anything game-breaking or
+Obviously Wrong with this (like if a too-fast animation ends up breaking
+mission progression somewhere).
 
 Currently, the mod affects the following:
 
@@ -37,6 +43,7 @@ Currently, the mod affects the following:
   * Tina
   * Typhon
   * Vic (from Head Case)
+  * VIP Valet
 * Eridian tools (Resonator, Analyzer)
 * Fast-Travel/Teleport and Respawn animations
 * Removed startup countdown for: Takedown at the Maliwan Blacksite,
@@ -134,7 +141,6 @@ TODO
 * Pretty much every mission-specific animation
 * Elevators
 * Lost Loot machine?
-* DLC1 Slot Machines
 * Delay after breaking bone piles, trash cans, etc (basically pickups which
   aren't actually "connected" to a container)
   * Bone Piles
@@ -200,6 +206,7 @@ Changelog
    * Tina
    * Typhon
    * Vic (from Head Case)
+   * VIP Valet
  * Elevators!
  * Extra Doors:
    * Meridian Metroplex hub door

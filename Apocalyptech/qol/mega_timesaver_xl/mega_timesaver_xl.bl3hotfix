@@ -459,6 +459,10 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Alisma/Lootables/Hyperion/WeaponBox/Anima
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Alisma/Lootables/Hyperion/WeaponBox/Animation/AS_HypWeaponLocker_Open.AS_HypWeaponLocker_Open,Notifies.Notifies[1].SegmentLength,0,,0.283333
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Alisma/Lootables/Hyperion/WeaponBox/Animation/AS_HypWeaponLocker_Open.AS_HypWeaponLocker_Open,Notifies.Notifies[1].LinkValue,0,,0.032208
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Alisma/Lootables/Hyperion/WeaponBox/Animation/AS_HypWeaponLocker_Open.AS_HypWeaponLocker_Open,SequenceLength,0,,0.283333
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/LevelArt/Manufacturers/Hyperion/Props/SlotMachines/Animation/AS_PushButton_Open.AS_PushButton_Open,RateScale,0,,4
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/LevelArt/Manufacturers/Hyperion/Props/SlotMachines/Animation/AS_PushButton_Open.AS_PushButton_Open,Notifies.Notifies[0].SegmentLength,0,,0.166667
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/LevelArt/Manufacturers/Hyperion/Props/SlotMachines/Animation/AS_PushButton_Open.AS_PushButton_Open,Notifies.Notifies[0].LinkValue,0,,0.087757
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/LevelArt/Manufacturers/Hyperion/Props/SlotMachines/Animation/AS_PushButton_Open.AS_PushButton_Open,SequenceLength,0,,0.166667
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/AmmoCase/Animation/AS_Open_In.AS_Open_In,RateScale,0,,4
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/AmmoCase/Animation/AS_Open_In.AS_Open_In,Notifies.Notifies[0].SegmentLength,0,,0.575
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/AmmoCase/Animation/AS_Open_In.AS_Open_In,Notifies.Notifies[0].LinkValue,0,,0.002578
@@ -9789,6 +9793,38 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shar
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[6].Time,0,,0.177227
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[7].Time,0,,0.1875
 
+# BPIO_SlotMachine_Dandelion_V1
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.121759
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[1].Object..EventTracks.EventTracks[0].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,0.75
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[1].Object..EventTracks.EventTracks[1].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,1.0
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[1].Object..EventTracks.EventTracks[2].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,1.2475
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.75
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.05
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.0
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.1
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.25
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[2].Object..TimelineLength,0,,0.5
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.025
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,0.2125
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[4].Time,0,,0.25
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[3].Object..TimelineLength,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[1].Time,0,,0.0275
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[2].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[3].Time,0,,0.1
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[4].Time,0,,0.14721
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[5].Time,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[1].Time,0,,0.0275
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[2].Time,0,,0.0625
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[3].Time,0,,0.077647
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[4].Time,0,,0.0867
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[5].Time,0,,0.136252
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[6].Time,0,,0.177227
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[7].Time,0,,0.1875
+
 # Golden Calves Statue Scanner/Printer
 SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..TimelineLength,0,,3.0
 SparkLevelPatchEntry,(1,1,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,Timelines.Timelines[0].Object..EventTracks.EventTracks[0].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,1.003737
@@ -9971,6 +10007,10 @@ SparkEarlyLevelPatchEntry,(1,1,0,CreatureSlaughter_P),/Game/Maps/Slaughters/Crea
 SparkEarlyLevelPatchEntry,(1,1,0,Wetlands_P),/Game/Maps/Zone_2/Wetlands/Wetlands_Dynamic.Wetlands_Dynamic:PersistentLevel.Elevator_WetlandsLodge_3326,ElevatorSpeed,0,,1600
 SparkEarlyLevelPatchEntry,(1,1,0,Wetlands_P),/Game/Maps/Zone_2/Wetlands/Wetlands_Dynamic.Wetlands_Dynamic:PersistentLevel.Elevator_WetlandsLodge_3326,ElevatorTravelTime,0,,2.5
 
+# Grand Opening
+SparkEarlyLevelPatchEntry,(1,1,0,CasinoIntro_P),/Dandelion/Maps/CasinoIntro/CasinoIntro_GoldenBullion.CasinoIntro_GoldenBullion:PersistentLevel.Elevator_CasinoIntro_2,ElevatorSpeed,0,,600
+SparkEarlyLevelPatchEntry,(1,1,0,CasinoIntro_P),/Dandelion/Maps/CasinoIntro/CasinoIntro_GoldenBullion.CasinoIntro_GoldenBullion:PersistentLevel.Elevator_CasinoIntro_2,ElevatorTravelTime,0,,2.5
+
 # Guts of Carnivora
 SparkEarlyLevelPatchEntry,(1,1,0,MotorcadeInterior_P),/Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_Plot.MotorcadeInterior_Plot:PersistentLevel.BP_CarnivorArena_Elevator_578,ElevatorSpeed,0,,800
 SparkEarlyLevelPatchEntry,(1,1,0,MotorcadeInterior_P),/Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_Plot.MotorcadeInterior_Plot:PersistentLevel.BP_CarnivorArena_Elevator_578,ElevatorTravelTime,0,,2.5
@@ -10051,6 +10091,8 @@ SparkPatchEntry,(1,7,0,),/Game/PlayerCharacters/_Shared/_Design/Travel/Action_Te
 
 SparkLevelPatchEntry,(1,7,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,0,1,ExecuteUbergraph_BPIO_SlotMachine,1,1513,1:5,4:1.25
 SparkLevelPatchEntry,(1,7,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,0,1,ExecuteUbergraph_BPIO_SlotMachine,1,2889,1:1,4:0.25
+SparkLevelPatchEntry,(1,7,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,0,1,ExecuteUbergraph_BPIO_SlotMachine_Dandelion_V1,1,1513,1:5,4:1.25
+SparkLevelPatchEntry,(1,7,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,0,1,ExecuteUbergraph_BPIO_SlotMachine_Dandelion_V1,1,2889,1:1,4:0.25
 
 ###
 ### Custom Golden Calves Statue Scanner Tweaks
@@ -10470,4 +10512,8 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_Typhon),/Game/NonPlayerCharacters/Typhon
 # Vic (Head Case)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_HeadCaseGirl),/Game/NonPlayerCharacters/_Pandora/HeadCaseGirl/_Design/Character/BPChar_HeadCaseGirl.Default__BPChar_HeadCaseGirl_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=1800,BaseValue=1800)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_HeadCaseGirl),/Game/NonPlayerCharacters/_Pandora/HeadCaseGirl/_Design/Character/BPChar_HeadCaseGirl.Default__BPChar_HeadCaseGirl_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=2700,BaseValue=2700)
+
+# VIP Valet / Dealer Bot / Upgraded Dealer Bot
+SparkCharacterLoadedEntry,(1,1,0,BPChar_ServiceBot_Croupier),/Game/PatchDLC/Dandelion/Enemies/ServiceBot/Croupier/_Design/Character/BPChar_ServiceBot_Croupier.Default__BPChar_ServiceBot_Croupier_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_ServiceBot_Croupier),/Game/PatchDLC/Dandelion/Enemies/ServiceBot/Croupier/_Design/Character/BPChar_ServiceBot_Croupier.Default__BPChar_ServiceBot_Croupier_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1890.0,BaseValue=1890.0)
 

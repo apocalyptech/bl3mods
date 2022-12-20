@@ -430,6 +430,7 @@ for cat_name, cat_scale, animseqs in [
             AS('/Alisma/Lootables/Hyperion/RedChest/Animation/AS_HypRedChest_Open'),
             AS('/Alisma/Lootables/Hyperion/SingleCase/Animation/AS_SingleCase_In'),
             AS('/Alisma/Lootables/Hyperion/WeaponBox/Animation/AS_HypWeaponLocker_Open'),
+            AS('/Dandelion/LevelArt/Manufacturers/Hyperion/Props/SlotMachines/Animation/AS_PushButton_Open'),
             AS('/Dandelion/Lootables/Hyperion/AmmoCase/Animation/AS_Open_In'),
             AS('/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_01'),
             AS('/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_03'),
@@ -1429,8 +1430,9 @@ for category, cat_scale, io_objs in [
             IO('/Game/Lootables/_Design/Classes/Eridian/BPIO_Lootable_Eridian_WhiteChestCrystal'),
             ]),
         ('Other Objects', global_scale, [
-            # Needs some other tweaks as well, done below.
+            # Both these slot machine objects need some other tweaks as well, done below.
             IO('/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine'),
+            IO('/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1'),
             IO('/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine',
                 label='Golden Calves Statue Scanner/Printer',
                 level='Sacrifice_P',
@@ -1684,16 +1686,15 @@ for label, level, obj_name, speed, travel_time in sorted([
         ("Villa Ultraviolet", 'Cartels_P',
             '/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.Elevator_Cartels_5',
             95, 10),
+        ("Grand Opening", 'CasinoIntro_P',
+            '/Dandelion/Maps/CasinoIntro/CasinoIntro_GoldenBullion.CasinoIntro_GoldenBullion:PersistentLevel.Elevator_CasinoIntro_2',
+            150, 10),
 
         # Wrote some code to attempt to autodetect some things, to make future filling-in easier.
         # Keeping them commented for now; kind of want to doublecheck things as I go, still,  I
         # suspect that `defaultspeed` is 200, but we'll see.  A default traveltime of 10 has been
         # filled in on a lot of these.  Also I suspect that at least some of these aren't really
         # things that we'd want to speed up -- like all the Guardian Takedown ones, for instance.
-
-        #("Grand Opening", 'CasinoIntro_P',
-        #    '/Dandelion/Maps/CasinoIntro/CasinoIntro_GoldenBullion.CasinoIntro_GoldenBullion:PersistentLevel.Elevator_CasinoIntro_2',
-        #    150, 10),
 
         #("Spendopticon", 'Strip_P',
         #    '/Dandelion/Maps/Strip/Strip_SM_RagingBot.Strip_SM_RagingBot:PersistentLevel.Elevator_RagingBot_Strip_2',
@@ -1838,20 +1839,24 @@ mod.bytecode_hotfix(Mod.PATCH, '',
 
 mod.newline()
 
-# TODO: DLC1
+# Turns out the Dandelion slots are identical, bytecodewise (at least for these two offsets)
 mod.header('Slot Machine Tweaks')
-mod.bytecode_hotfix(Mod.LEVEL, 'MatchAll',
-        '/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine',
-        'ExecuteUbergraph_BPIO_SlotMachine',
-        1513,
-        5,
-        5/global_scale)
-mod.bytecode_hotfix(Mod.LEVEL, 'MatchAll',
-        '/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine',
-        'ExecuteUbergraph_BPIO_SlotMachine',
-        2889,
-        1,
-        1/global_scale)
+for obj_name, export in [
+        ('/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine', 'ExecuteUbergraph_BPIO_SlotMachine'),
+        ('/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1', 'ExecuteUbergraph_BPIO_SlotMachine_Dandelion_V1'),
+        ]:
+    mod.bytecode_hotfix(Mod.LEVEL, 'MatchAll',
+            obj_name,
+            export,
+            1513,
+            5,
+            5/global_scale)
+    mod.bytecode_hotfix(Mod.LEVEL, 'MatchAll',
+            obj_name,
+            export,
+            2889,
+            1,
+            1/global_scale)
 mod.newline()
 
 # Golden Calves Statue Scanner
@@ -2628,6 +2633,16 @@ for char in sorted([
         #    '/Game/NonPlayerCharacters/Tannis/_Design/Character/BPChar_Tannis',
         #    global_char_scale,
         #    ),
+        Char('VIP Valet / Dealer Bot / Upgraded Dealer Bot',
+            '/Game/PatchDLC/Dandelion/Enemies/ServiceBot/Croupier/_Design/Character/BPChar_ServiceBot_Croupier',
+            # Not sure if this comes into play at any point beyond the very first door-opening
+            # bot, but its default speed is sloooow.  Bumping this up a bit more than our
+            # standard rate.  (I think it must be artificially slowed down in bytecode or
+            # something, since the actual numbers seem just like most other chars.  Regardless,
+            # tweaking these values *does* seem to make that initial door-opening walk quicker,
+            # so whatever.)
+            global_char_scale*1.5,
+            ),
         Char('P.A.T.',
             '/Alisma/NonPlayerCharacters/PAT/_Design/Character/BPChar_PAT',
             global_char_scale,
