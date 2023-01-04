@@ -32,6 +32,7 @@ Currently, the mod affects the following:
   * Brick
   * Clay (base game and DLC6 version)
   * Claptrap (base game and DLC6 version)
+  * Digby Vermouth
   * Ellie
   * Failurebot
   * Glenn the Ratch
@@ -40,6 +41,7 @@ Currently, the mod affects the following:
   * Maya
   * P.A.T.
   * Terry the Ratch
+  * Timothy Lawrence
   * Tina
   * Typhon
   * Vic (from Head Case)
@@ -101,6 +103,12 @@ Some things intentionally *not* handled by the mod:
 * Various aspects of Mysteriouslier: Horror at Scryer's Crypt could probably
   be sped up (like the cube animations and such) but it's been mostly left
   alone apart from the initial door-opening animation.
+* The sequence of meeting Timothy for the first time in Spendopticon could
+  probably be improved in various ways, but it got complex enough that I
+  didn't bother, in the end.
+* Likewise, various aspects of the Digby Vermouth quests in Spendopticon
+  could use a kick, but apart from improving his walk/run speed, they were
+  left alone.
 * The cocking animation on the third catapult in Castle Crimson has been
   left alone, for boring technical reasons.
 * The egg-incubation timer in A Good Egg has been left alone; it's already
@@ -196,6 +204,7 @@ Changelog
    * Brick
    * Claptrap (DLC6 version)
    * Clay (base game and DLC6 version)
+   * Digby Vermouth
    * Ellie
    * Failurebot
    * Glenn the Ratch
@@ -203,6 +212,7 @@ Changelog
    * Maya
    * P.A.T.
    * Terry the Ratch
+   * Timothy Lawrence
    * Tina
    * Typhon
    * Vic (from Head Case)
@@ -213,6 +223,7 @@ Changelog
    * Skywell-27 post-thruster-disabling door
    * Gate to the back half of the Homestead, in Splinterlands
    * Largeish Eridian doors in Pyre of Stars
+   * Entrance to Timothy's hideout in The Spendopticon
    * A couple doors from DLC6
  * Other Additions:
    * Slot Machines
@@ -248,6 +259,7 @@ Changelog
    * Initial crystal pads in Guardian Takedown, on Minos Prime
    * Bookshelf puzzle in Villa Ultraviolet
    * Descending fountain in Villa Ultraviolet
+   * Hyperway travel in The Spendopticon
    * Castle Crimson catapult animations
    * Don't Call it A Rorschach Ink-Blot Pipes, in Benediction of Pain
 

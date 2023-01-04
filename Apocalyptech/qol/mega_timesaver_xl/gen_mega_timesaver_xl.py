@@ -1266,6 +1266,7 @@ for category, cat_scale, io_objs in [
             # No timing parameters on these two
             #IO('/Dandelion/InteractiveObjects/Doors/PrizeDoors/IO_Door_Hyperion_Single_Prize'),
             #IO('/Dandelion/InteractiveObjects/Doors/PrizeDoors/IO_Switch_Hyp_Button_V1_Prize'),
+            IO('/Dandelion/Missions/Plot/Ep01_MeetTimothy/IO_Door_TimothyHideout'),
             IO('/Game/InteractiveObjects/Doors/Atlas/_Design/IO_Door_130x250_Atlas_ShelfDoor'),
             IO('/Game/InteractiveObjects/Doors/Atlas/_Design/IO_Door_400x400_SlideLeftAndRight_AtlasHQ_Generic'),
             IO('/Game/InteractiveObjects/Doors/Atlas/_Design/IO_Door_AtlasHQ_Elevator_Exterior'),
@@ -2459,6 +2460,81 @@ for idx, default in enumerate([
                 )
 mod.newline()
 
+# Spendopticon Hyperway Speedups
+mod.header('Spendopticon Hyperway Speedups')
+hl_obj = '/Dandelion/MapSpecific/Strip/HyperHoop/BP_HyperHoop_VNat'
+hl_obj_def = f'{hl_obj}.Default__BP_HyperHoop_VNat_C'
+hl_spline_obj = f'{hl_obj_def}:HyperHoop_SplineFollowerComponent'
+
+# I think it's the first bytecode hotfix that has the most effect here; the other
+# three below it didn't seem to actually do much on their own?  It's possible we
+# could trim down these hotfixes by quite a bit, but I'm a bit sick of testing it
+# out so I'm leaving it as-is.
+mod.comment('Digistruct-In Animations')
+hyperway_in_scale=2
+mod.bytecode_hotfix(Mod.LEVEL, 'Strip_P',
+        hl_obj,
+        'ExecuteUbergraph_BP_HyperHoop_VNat',
+        1378,
+        2.85,
+        2.85/hyperway_in_scale,
+        )
+mod.bytecode_hotfix(Mod.LEVEL, 'Strip_P',
+        hl_obj,
+        'ExecuteUbergraph_BP_HyperHoop_VNat',
+        1265,
+        3,
+        3/hyperway_in_scale,
+        )
+mod.reg_hotfix(Mod.LEVEL, 'Strip_P',
+        '/Dandelion/MapSpecific/Strip/HyperHoop/BP_CE_Hyperhoop_Digistruct_In.Default__BP_CE_Hyperhoop_Digistruct_In_C',
+        'Duration',
+        3/hyperway_in_scale)
+scale_ps(mod, data, Mod.LEVEL, 'Strip_P',
+        '/Dandelion/MapSpecific/Strip/HyperHoop/Effects/Particles/PS_Hyperhoop_Spawn',
+        global_scale)
+mod.newline()
+
+# So the arrival dialogue is triggered by the deceleration, and gets cut off
+# once the player-exit animation is finished.  There may be some bytecodey
+# things we could do to allow the dialogue to continue after that point, but
+# it seemed more straightforward to just push back the deceleration trigger.
+# We're setting the Min/Max speed to equal, so that trigger *only* really
+# affects the dialogue.  This timing is basically perfect for English dialogue
+# to the Vice District.  TODO: It's not been tested in the other district
+# (market?).  Also, note that the *starting* dialogue can sometimes get a
+# bit lost as you zip away, for the longer dialogues.
+mod.comment('Travel Parameters')
+mod.reg_hotfix(Mod.LEVEL, 'Strip_P',
+        hl_obj_def,
+        'DistanceFromEndDecelerate',
+        # default: 8000
+        52000)
+mod.reg_hotfix(Mod.LEVEL, 'Strip_P',
+        hl_obj_def,
+        'DelayBeforeMove',
+        # default: 0.25
+        0.4)
+mod.reg_hotfix(Mod.LEVEL, 'Strip_P',
+        hl_obj_def,
+        'DelayBeforeExitAnim',
+        # default: 1.25
+        0.25)
+hl_speed_scale=1.7
+for attr, default in [
+        ('MaxSpeed', 5000),
+        #('MinSpeed', 500),
+        ('MinSpeed', 5000),
+        #('Acceleration', 300),
+        ('TurnRate', 150),
+        ]:
+    mod.reg_hotfix(Mod.LEVEL, 'Strip_P',
+            hl_spline_obj,
+            attr,
+            default*hl_speed_scale,
+            )
+mod.newline()
+
 # Castle Crimson catapult tweaks
 mod.header('Castle Crimson catapult tweaks')
 
@@ -2525,7 +2601,7 @@ class Char():
     so I may as well do this too.
     """
 
-    def __init__(self, name, path, scale):
+    def __init__(self, name, path, scale, force_have_slowdown=False):
         self.name = name
         self.path = path
         self.last_bit = path.split('/')[-1]
@@ -2533,6 +2609,7 @@ class Char():
         self.default_name_lower = self.default_name.lower()
         self.full_path = f'{self.path}.{self.default_name}'
         self.scale = scale
+        self.force_have_slowdown = force_have_slowdown
 
     def __lt__(self, other):
         return self.name.casefold() < other.name.casefold()
@@ -2643,6 +2720,17 @@ for char in sorted([
             # so whatever.)
             global_char_scale*1.5,
             ),
+        Char('Timothy Lawrence',
+            '/Dandelion/NonPlayerCharacters/Timothy/_Design/Character/BPChar_Timothy',
+            global_char_scale,
+            # doesn't show up in the serialization but it's there in-game  (setting this
+            # doesn't really seem to make much difference, though, alas)
+            force_have_slowdown=True,
+            ),
+        Char('Digby Vermouth',
+            '/Dandelion/NonPlayerCharacters/_SideMissions/Digby/_Design/Character/BPChar_Digby',
+            global_char_scale,
+            ),
         Char('P.A.T.',
             '/Alisma/NonPlayerCharacters/PAT/_Design/Character/BPChar_PAT',
             global_char_scale,
@@ -2670,7 +2758,8 @@ for char in sorted([
                     else:
                         # The default
                         speed_sprint = 900
-                    if 'NavSlowdownOptions' in move_export and 'SlowdownSpeed' in move_export['NavSlowdownOptions']:
+                    if char.force_have_slowdown \
+                            or 'NavSlowdownOptions' in move_export and 'SlowdownSpeed' in move_export['NavSlowdownOptions']:
                         have_slowdown = True
                 else:
                     raise RuntimeError('Could not find OakCharacterMovement export in {}'.format(char.path))

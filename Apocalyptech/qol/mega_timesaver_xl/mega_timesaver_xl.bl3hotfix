@@ -8540,6 +8540,18 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/Doors/IO_Doo
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/Doors/IO_Door_Hyperion_Single.IO_Door_Hyperion_Single_C,Timelines.Timelines[2].Object..TimelineLength,0,,0.5
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/Doors/IO_Door_Hyperion_Single.IO_Door_Hyperion_Single_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.5
 
+# IO_Door_TimothyHideout
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Missions/Plot/Ep01_MeetTimothy/IO_Door_TimothyHideout.IO_Door_TimothyHideout_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.1
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Missions/Plot/Ep01_MeetTimothy/IO_Door_TimothyHideout.IO_Door_TimothyHideout_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.020788
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Missions/Plot/Ep01_MeetTimothy/IO_Door_TimothyHideout.IO_Door_TimothyHideout_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.058714
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Missions/Plot/Ep01_MeetTimothy/IO_Door_TimothyHideout.IO_Door_TimothyHideout_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,0.1
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Missions/Plot/Ep01_MeetTimothy/IO_Door_TimothyHideout.IO_Door_TimothyHideout_C,Timelines.Timelines[1].Object..TimelineLength,0,,0.1
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Missions/Plot/Ep01_MeetTimothy/IO_Door_TimothyHideout.IO_Door_TimothyHideout_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.020788
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Missions/Plot/Ep01_MeetTimothy/IO_Door_TimothyHideout.IO_Door_TimothyHideout_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.058714
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Missions/Plot/Ep01_MeetTimothy/IO_Door_TimothyHideout.IO_Door_TimothyHideout_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,0.1
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Missions/Plot/Ep01_MeetTimothy/IO_Door_TimothyHideout.IO_Door_TimothyHideout_C,Timelines.Timelines[2].Object..TimelineLength,0,,0.3
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Missions/Plot/Ep01_MeetTimothy/IO_Door_TimothyHideout.IO_Door_TimothyHideout_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.3
+
 # IO_Door_130x250_Atlas_ShelfDoor
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/Doors/Atlas/_Design/IO_Door_130x250_Atlas_ShelfDoor.IO_Door_130x250_Atlas_ShelfDoor_C,Timelines.Timelines[0].Object..EventTracks.EventTracks[0].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,0.96
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/Doors/Atlas/_Design/IO_Door_130x250_Atlas_ShelfDoor.IO_Door_130x250_Atlas_ShelfDoor_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.0
@@ -10405,6 +10417,37 @@ SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Missio
 SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Mission.Cartels_Mission:PersistentLevel.IO_MissionScripted_CartelFountain.Timeline_MoveFountain,TheTimeline.Events.Events[4].Time,0,,3.75
 
 ###
+### Spendopticon Hyperway Speedups
+###
+
+# Digistruct-In Animations
+SparkLevelPatchEntry,(1,7,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/BP_HyperHoop_VNat.BP_HyperHoop_VNat_C,0,1,ExecuteUbergraph_BP_HyperHoop_VNat,1,1378,4:2.85,5:1.425
+SparkLevelPatchEntry,(1,7,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/BP_HyperHoop_VNat.BP_HyperHoop_VNat_C,0,1,ExecuteUbergraph_BP_HyperHoop_VNat,1,1265,1:3,3:1.5
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/BP_CE_Hyperhoop_Digistruct_In.Default__BP_CE_Hyperhoop_Digistruct_In_C,Duration,0,,1.5
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/Effects/Particles/PS_Hyperhoop_Spawn.PS_Hyperhoop_Spawn,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..TypeDataModule.Object..EmitterInfo.MaxLifetime,0,,0.075
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/Effects/Particles/PS_Hyperhoop_Spawn.PS_Hyperhoop_Spawn,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration,0,,0.625
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/Effects/Particles/PS_Hyperhoop_Spawn.PS_Hyperhoop_Spawn,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDelay,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/Effects/Particles/PS_Hyperhoop_Spawn.PS_Hyperhoop_Spawn,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MinValue,0,,0.075
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/Effects/Particles/PS_Hyperhoop_Spawn.PS_Hyperhoop_Spawn,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MaxValue,0,,0.075
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/Effects/Particles/PS_Hyperhoop_Spawn.PS_Hyperhoop_Spawn,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Table.Values.Values[0],0,,0.075
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/Effects/Particles/PS_Hyperhoop_Spawn.PS_Hyperhoop_Spawn,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration,0,,0.5625
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/Effects/Particles/PS_Hyperhoop_Spawn.PS_Hyperhoop_Spawn,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDelay,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/Effects/Particles/PS_Hyperhoop_Spawn.PS_Hyperhoop_Spawn,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MinValue,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/Effects/Particles/PS_Hyperhoop_Spawn.PS_Hyperhoop_Spawn,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MaxValue,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/Effects/Particles/PS_Hyperhoop_Spawn.PS_Hyperhoop_Spawn,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Table.Values.Values[0],0,,0.25
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/Effects/Particles/PS_Hyperhoop_Spawn.PS_Hyperhoop_Spawn,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Distribution.Object..Constant,0,,0.2
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/Effects/Particles/PS_Hyperhoop_Spawn.PS_Hyperhoop_Spawn,Emitters.Emitters[2].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDelay,0,,0.375
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/Effects/Particles/PS_Hyperhoop_Spawn.PS_Hyperhoop_Spawn,Emitters.Emitters[2].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Distribution.Object..Constant,0,,0.5
+
+# Travel Parameters
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/BP_HyperHoop_VNat.Default__BP_HyperHoop_VNat_C,DistanceFromEndDecelerate,0,,52000
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/BP_HyperHoop_VNat.Default__BP_HyperHoop_VNat_C,DelayBeforeMove,0,,0.4
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/BP_HyperHoop_VNat.Default__BP_HyperHoop_VNat_C,DelayBeforeExitAnim,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/BP_HyperHoop_VNat.Default__BP_HyperHoop_VNat_C:HyperHoop_SplineFollowerComponent,MaxSpeed,0,,8500.0
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/BP_HyperHoop_VNat.Default__BP_HyperHoop_VNat_C:HyperHoop_SplineFollowerComponent,MinSpeed,0,,8500.0
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/BP_HyperHoop_VNat.Default__BP_HyperHoop_VNat_C:HyperHoop_SplineFollowerComponent,TurnRate,0,,255.0
+
+###
 ### Castle Crimson catapult tweaks
 ###
 
@@ -10467,6 +10510,10 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_Clay),/Game/NonPlayerCharacters/Clay/_De
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Clay_IXO),/Ixora2/NonPlayerCharacters/Clay/_Design/Character/BPChar_Clay_IXO.Default__BPChar_Clay_IXO_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Clay_IXO),/Ixora2/NonPlayerCharacters/Clay/_Design/Character/BPChar_Clay_IXO.Default__BPChar_Clay_IXO_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 
+# Digby Vermouth
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Digby),/Dandelion/NonPlayerCharacters/_SideMissions/Digby/_Design/Character/BPChar_Digby.Default__BPChar_Digby_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Digby),/Dandelion/NonPlayerCharacters/_SideMissions/Digby/_Design/Character/BPChar_Digby.Default__BPChar_Digby_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+
 # Ellie
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Ellie),/Game/NonPlayerCharacters/Ellie/_Design/Character/BPChar_Ellie.Default__BPChar_Ellie_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=560.0,BaseValue=560.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Ellie),/Game/NonPlayerCharacters/Ellie/_Design/Character/BPChar_Ellie.Default__BPChar_Ellie_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
@@ -10500,6 +10547,12 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_PAT),/Alisma/NonPlayerCharacters/PAT/_De
 # Terry the Ratch
 SparkCharacterLoadedEntry,(1,1,0,BPChar_GoodRatch),/Game/NonPlayerCharacters/_Promethea/TalkingRatch/_Design/Character/BPChar_GoodRatch.Default__BPChar_GoodRatch_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_GoodRatch),/Game/NonPlayerCharacters/_Promethea/TalkingRatch/_Design/Character/BPChar_GoodRatch.Default__BPChar_GoodRatch_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+
+# Timothy Lawrence
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Timothy),/Dandelion/NonPlayerCharacters/Timothy/_Design/Character/BPChar_Timothy.Default__BPChar_Timothy_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Timothy),/Dandelion/NonPlayerCharacters/Timothy/_Design/Character/BPChar_Timothy.Default__BPChar_Timothy_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Timothy),/Dandelion/NonPlayerCharacters/Timothy/_Design/Character/BPChar_Timothy.Default__BPChar_Timothy_C,OakCharacterMovement.Object..NavSlowdownOptions.bSlowdownNearGoal,0,,False
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Timothy),/Dandelion/NonPlayerCharacters/Timothy/_Design/Character/BPChar_Timothy.Default__BPChar_Timothy_C,OakCharacterMovement.Object..NavSlowdownOptions.SlowdownSpeed.Value,0,,1
 
 # Tina
 SparkCharacterLoadedEntry,(1,1,0,BPChar_TinyTina),/Game/NonPlayerCharacters/TinyTina/_Design/Character/BPChar_TinyTina.Default__BPChar_TinyTina_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)

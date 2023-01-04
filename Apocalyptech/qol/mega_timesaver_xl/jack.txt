@@ -1,0 +1,76 @@
+loot-room-opening: AINode_TimothyAtLootDoor_ExecuteUbergraph_Strip_PM_MeetTimothy_RefProperty
+    -2078
+    -29043
+    4196
+    Referenced in Strip_PM_MeetTimothy-ubergraph-044-ExecuteUbergraph_Strip_PM_MeetTimothy, in <5907>,
+        in a big ol' objective-checking chain, under INV_Obj_OpenLootDoor_Objective.  The chain starts
+        at <6207>, and appears to be going after an "ObjectiveUpdated" var, so presumably that chain
+        gets called whenever an objective gets updated, and then it branches off when it's found the
+        objective in question.  See <9988> for where this objective branches off.
+
+Door immediately after: AINode_TimothyAtSquareExitDoor_ExecuteUbergraph_Strip_PM_MeetTimothy_RefProperty
+    -346
+    -31500
+    4497
+    Referenced in Strip_PM_MeetTimothy-ubergraph-044-ExecuteUbergraph_Strip_PM_MeetTimothy, in <11484>.
+        Looks like the same struct as the previous one -- <10837> for where it breaks off, when
+        checking for INV_Obj_TimWentToSquareExitDoor_Objective.
+
+Jack's-tower dialogue trigger location (maybe)
+    -214
+    -33842
+    4798
+
+Jack turn on the way to teleporter
+    291
+    -36389
+    4799
+
+Teleporter
+    2342
+    -37407
+    4796
+
+Jack's waypoint for handing over gun
+    3810
+    -36031
+    4797
+
+Next door
+    3978
+    -36227
+    4797
+
+/Game/PatchDLC/Dandelion/Dialog/Scripts/Scripted/DialogScript_DLC1_Main_Missions
+
+Mission_DLC1_Ep01_MeetTimothy-ubergraph-694-Obj_TalkToTimothy
+    -> 42290
+        In 42750, delay of 0.5 to <749>
+    -> Ends up setting Set_OpenLootRoom_ObjectiveSet
+
+    749
+        Dialogue 70e0858460b045eba6be49c70aeed497
+            Again, I cannot stress this enough, I am NOT Handsome Jack.
+        Dialogue 61041b0ec03a4e6c8c9451b253e79c0b
+        Dialogue 6bebefb6d2ce430485544f299d3f9a3e
+        Dialogue 39601294f218478aa4a4c0f00673bc63 (delay of 0.4)
+        Dialogue c3cbcb1019a24da1adccbae1776f19ea
+        Dialogue bbf6190cde9f4d8ab75844b87b4ad322
+        Dialogue 9a06e3b8be8943bf826b0c2bf39522db
+            This-a-way.
+        > Ends up setting Set_OpenLootRoom_ObjectiveSet
+
+Mission_DLC1_Ep01_MeetTimothy-ubergraph-678-Set_OpenLootRoom
+    -> 42842 (does nothing!)
+
+--- (not sure exactly how it gets here; possibly just Set_OpenLootRoom_ObjectiveSet?)
+Mission_DLC1_Ep01_MeetTimothy-ubergraph-811-INV_Obj_OpenLootDoor.json
+    -> 30207
+        Dialogue df826ba6d22945b19fa544c680221104
+            Doppelganger 21-C identified. Hey there, Handsome. Winning Hand access granted.
+        Dialogue 5118052712704cc38ef42b32691374b0
+            Here's some gear for you, kiddo.
+        Dialogue b6fbb0c361a34fc2a2fd2f283c29f415
+            All right, now I gotta get this transporter working before that JACKHOLE sends more loaders after me
+        > Ends up setting Set_FollowTimothyToSquareExitDoor_ObjectiveSet
+
