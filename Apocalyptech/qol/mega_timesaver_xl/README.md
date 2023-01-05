@@ -144,6 +144,10 @@ Known Bugs
 * The locker holding Ember's tools, in Freddie's lair in Impound
   Deluxe, doesn't open all the way when BUD Bot opens it up for you.
   The tools are still easily-grabbable, though.
+* The increased opening speed on some containers which fling loot
+  into the air seems to cause the loot to sometimes fly away at
+  pretty high speeds.  This can be a bit annoying in cases like the
+  trash collection in Spendopticon during One Man's Treasure.
 
 TODO
 ====

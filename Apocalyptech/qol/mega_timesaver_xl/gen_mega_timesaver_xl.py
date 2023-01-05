@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # vim: set expandtab tabstop=4 shiftwidth=4:
 
-# Copyright 2021-2022 Christopher J. Kucera
+# Copyright 2021-2023 Christopher J. Kucera
 # <cj@apocalyptech.com>
 # <https://apocalyptech.com/contact.php>
 #
@@ -69,7 +69,10 @@ global_eridian_scale = 2
 
 # Minimum serialization version to allow.  Stock JWP doesn't serialize CurveFloats
 # correctly, so the mod'll be invalid unless using apocalyptech's fork, of at least
-# this version.
+# this version.  (Honestly we probably require more than v19 at this point -- I
+# think there's some previously-unserializable objects we probably rely on now.
+# Still, that should at least fail the generation instead of producing incorrect
+# output, so we'll just leave it at v19 for now.)
 min_apoc_jwp_version = 19
 
 # Data obj
@@ -1690,16 +1693,15 @@ for label, level, obj_name, speed, travel_time in sorted([
         ("Grand Opening", 'CasinoIntro_P',
             '/Dandelion/Maps/CasinoIntro/CasinoIntro_GoldenBullion.CasinoIntro_GoldenBullion:PersistentLevel.Elevator_CasinoIntro_2',
             150, 10),
+        ("Spendopticon", 'Strip_P',
+            '/Dandelion/Maps/Strip/Strip_SM_RagingBot.Strip_SM_RagingBot:PersistentLevel.Elevator_RagingBot_Strip_2',
+            350, 10),
 
         # Wrote some code to attempt to autodetect some things, to make future filling-in easier.
         # Keeping them commented for now; kind of want to doublecheck things as I go, still,  I
         # suspect that `defaultspeed` is 200, but we'll see.  A default traveltime of 10 has been
         # filled in on a lot of these.  Also I suspect that at least some of these aren't really
         # things that we'd want to speed up -- like all the Guardian Takedown ones, for instance.
-
-        #("Spendopticon", 'Strip_P',
-        #    '/Dandelion/Maps/Strip/Strip_SM_RagingBot.Strip_SM_RagingBot:PersistentLevel.Elevator_RagingBot_Strip_2',
-        #    350, 10),
 
         #("Jack's Secret", 'Core_P',
         #    '/Dandelion/Maps/Core/Core_Mission.Core_Mission:PersistentLevel.Elevator_Core_JackpotToCore_2',
@@ -2501,15 +2503,15 @@ mod.newline()
 # it seemed more straightforward to just push back the deceleration trigger.
 # We're setting the Min/Max speed to equal, so that trigger *only* really
 # affects the dialogue.  This timing is basically perfect for English dialogue
-# to the Vice District.  TODO: It's not been tested in the other district
-# (market?).  Also, note that the *starting* dialogue can sometimes get a
-# bit lost as you zip away, for the longer dialogues.
+# to the both districts.  The Vice district lines can get away with 52000, but
+# one Market line needs slightly more time.  Note that the *starting* dialogue
+# can sometimes get a bit lost as you zip away, for the longer dialogues.
 mod.comment('Travel Parameters')
 mod.reg_hotfix(Mod.LEVEL, 'Strip_P',
         hl_obj_def,
         'DistanceFromEndDecelerate',
         # default: 8000
-        52000)
+        54000)
 mod.reg_hotfix(Mod.LEVEL, 'Strip_P',
         hl_obj_def,
         'DelayBeforeMove',
@@ -2945,7 +2947,7 @@ if False:
     # doesn't get auto-picked-up until it's no longer being affected by physics.  The
     # engine just waits for them to get "settled" and *then* adds them into whatever
     # structure controls "these are the things you can auto-pick-up."  So in the end,
-    # it's sot of the `ShouldAttachLoot` boolean which determines how quickly things
+    # it's sort of the `ShouldAttachLoot` boolean which determines how quickly things
     # like ammo/health/money will get auto-picked up.  The `bSimulatePhysicsAfterOpening`
     # boolean is actually for the container itself, not the loot -- think of the way
     # cardboard boxes get physicsy after they've been opened.  I figured I'd try
@@ -3007,3 +3009,4 @@ if False:
                         notify=True)
 
 mod.close()
+

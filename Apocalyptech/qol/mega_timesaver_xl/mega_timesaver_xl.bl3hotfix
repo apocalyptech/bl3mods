@@ -10059,6 +10059,10 @@ SparkEarlyLevelPatchEntry,(1,1,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPla
 SparkEarlyLevelPatchEntry,(1,1,0,TechSlaughter_P),/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_Geo.TechSlaughter_Geo:PersistentLevel.Elevator_TechSlaughter_2,ElevatorSpeed,0,,2000
 SparkEarlyLevelPatchEntry,(1,1,0,TechSlaughter_P),/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_Geo.TechSlaughter_Geo:PersistentLevel.Elevator_TechSlaughter_2,ElevatorTravelTime,0,,2.5
 
+# Spendopticon
+SparkEarlyLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/Maps/Strip/Strip_SM_RagingBot.Strip_SM_RagingBot:PersistentLevel.Elevator_RagingBot_Strip_2,ElevatorSpeed,0,,1400
+SparkEarlyLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/Maps/Strip/Strip_SM_RagingBot.Strip_SM_RagingBot:PersistentLevel.Elevator_RagingBot_Strip_2,ElevatorTravelTime,0,,2.5
+
 # Stormblind Complex
 SparkEarlyLevelPatchEntry,(1,1,0,FrostSite_P),/Ixora/Maps/FrostSite/FrostSite_Combat.FrostSite_Combat:PersistentLevel.Elevator_FrostSite_2,ElevatorSpeed,0,,800
 SparkEarlyLevelPatchEntry,(1,1,0,FrostSite_P),/Ixora/Maps/FrostSite/FrostSite_Combat.FrostSite_Combat:PersistentLevel.Elevator_FrostSite_2,ElevatorTravelTime,0,,2.5
@@ -10440,7 +10444,7 @@ SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/Effe
 SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/Effects/Particles/PS_Hyperhoop_Spawn.PS_Hyperhoop_Spawn,Emitters.Emitters[2].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Distribution.Object..Constant,0,,0.5
 
 # Travel Parameters
-SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/BP_HyperHoop_VNat.Default__BP_HyperHoop_VNat_C,DistanceFromEndDecelerate,0,,52000
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/BP_HyperHoop_VNat.Default__BP_HyperHoop_VNat_C,DistanceFromEndDecelerate,0,,54000
 SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/BP_HyperHoop_VNat.Default__BP_HyperHoop_VNat_C,DelayBeforeMove,0,,0.4
 SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/BP_HyperHoop_VNat.Default__BP_HyperHoop_VNat_C,DelayBeforeExitAnim,0,,0.25
 SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/BP_HyperHoop_VNat.Default__BP_HyperHoop_VNat_C:HyperHoop_SplineFollowerComponent,MaxSpeed,0,,8500.0
