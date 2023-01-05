@@ -10448,6 +10448,19 @@ SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/BP_H
 SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/BP_HyperHoop_VNat.Default__BP_HyperHoop_VNat_C:HyperHoop_SplineFollowerComponent,TurnRate,0,,255.0
 
 ###
+### BUD Bot rescue-response delay
+###
+
+SparkLevelPatchEntry,(1,1,0,Impound_P),/Dandelion/Maps/Impound/Impound_Mission.Impound_Mission:PersistentLevel.IO_Door_Hyperion_Single_6.Alpha,TheTimeline.Length,0,,0.5
+SparkLevelPatchEntry,(1,7,0,Impound_P),/Game/PatchDLC/Dandelion/Missions/Plot/Mission_DLC1_Ep03_Impound.Mission_DLC1_Ep03_Impound_C,0,1,ExecuteUbergraph_Mission_DLC1_Ep03_Impound,1,4757,1:1,1:0
+
+###
+### Freddie's makeshift bridge back to his lair
+###
+
+SparkLevelPatchEntry,(1,1,0,Impound_P),/Dandelion/Maps/Impound/Impound_Mission.Impound_Mission:PersistentLevel.SEQ_Ep03_Impound_BridgeToHangar.AnimationPlayer,PlaybackSettings.PlayRate,0,,4
+
+###
 ### Castle Crimson catapult tweaks
 ###
 
@@ -10493,6 +10506,14 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_Ava_IXO),/Ixora2/NonPlayerCharacters/Ava
 # Brick
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Brick),/Game/NonPlayerCharacters/Brick/_Design/Character/BPChar_Brick.Default__BPChar_Brick_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Brick),/Game/NonPlayerCharacters/Brick/_Design/Character/BPChar_Brick.Default__BPChar_Brick_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+
+# BUD Bot
+SparkCharacterLoadedEntry,(1,1,0,BPChar_BudLoader),/Dandelion/Enemies/Loader/_Unique/Impound/_Design/Character/BPChar_BudLoader.Default__BPChar_BudLoader_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_BudLoader),/Dandelion/Enemies/Loader/_Unique/Impound/_Design/Character/BPChar_BudLoader.Default__BPChar_BudLoader_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+
+# Bureaucracy Bot (Form Bot)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_ImpoundFormBot),/Dandelion/Enemies/ServiceBot/ImpoundFeeBot/BPChar_ImpoundFormBot.Default__BPChar_ImpoundFormBot_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_ImpoundFormBot),/Dandelion/Enemies/ServiceBot/ImpoundFeeBot/BPChar_ImpoundFormBot.Default__BPChar_ImpoundFormBot_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 
 # Claptrap
 SparkCharacterLoadedEntry,(1,1,0,BpChar_Claptrap),/Game/NonPlayerCharacters/Claptrap/_Design/Character/BpChar_Claptrap.Default__BpChar_Claptrap_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)

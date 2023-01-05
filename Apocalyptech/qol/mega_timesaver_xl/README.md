@@ -30,6 +30,8 @@ Currently, the mod affects the following:
   * Ace Baron (from Healers and Dealers)
   * Ava (base game and DLC6 version)
   * Brick
+  * BUD Bot
+  * Bureaucracy Bot (Form Bot)
   * Clay (base game and DLC6 version)
   * Claptrap (base game and DLC6 version)
   * Digby Vermouth
@@ -139,6 +141,9 @@ Known Bugs
   elevator, so if you want to make sure to hear all the Typhon+Tyreen
   dialogue up there, make sure to wait around for dialogue lines
   to finish before pressing onward.
+* The locker holding Ember's tools, in Freddie's lair in Impound
+  Deluxe, doesn't open all the way when BUD Bot opens it up for you.
+  The tools are still easily-grabbable, though.
 
 TODO
 ====
@@ -202,6 +207,8 @@ Changelog
    * Ace Baron (from Healers and Dealers)
    * Ava (base game and DLC6 version)
    * Brick
+   * BUD Bot
+   * Bureaucracy Bot (Form Bot)
    * Claptrap (DLC6 version)
    * Clay (base game and DLC6 version)
    * Digby Vermouth
@@ -260,6 +267,7 @@ Changelog
    * Bookshelf puzzle in Villa Ultraviolet
    * Descending fountain in Villa Ultraviolet
    * Hyperway travel in The Spendopticon
+   * Bridge extension back to Freddie's lair at the end of Impound Deluxe
    * Castle Crimson catapult animations
    * Don't Call it A Rorschach Ink-Blot Pipes, in Benediction of Pain
 

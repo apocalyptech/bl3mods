@@ -2535,6 +2535,44 @@ for attr, default in [
             )
 mod.newline()
 
+# This totally wasn't worth the effort it took to track down; in the end the biggest
+# win was updating that TheTimeline attr, though the bytecode tweak technically
+# shaves a second off the response time as well.
+mod.header('BUD Bot rescue-response delay')
+mod.reg_hotfix(Mod.LEVEL, 'Impound_P',
+        '/Dandelion/Maps/Impound/Impound_Mission.Impound_Mission:PersistentLevel.IO_Door_Hyperion_Single_6.Alpha',
+        'TheTimeline.Length',
+        2.5/door_scale,
+        )
+mod.bytecode_hotfix(Mod.LEVEL, 'Impound_P',
+        '/Game/PatchDLC/Dandelion/Missions/Plot/Mission_DLC1_Ep03_Impound',
+        'ExecuteUbergraph_Mission_DLC1_Ep03_Impound',
+        4757,
+        1,
+        0)
+mod.newline()
+
+# This was an interesting one.  There's an AS_Impound_Bridge object which we could do
+# our usual Stuff to, but doing so makes the bridge-extension animation freak the hell
+# out and seemingly never stop.  I tried various things related to that but never got
+# it to work.  Then in the SEQ object itself there's some PlayRate stuff where the
+# AS is linked-to, but it looks like we may not be able to get at it with hotfixes (or
+# at least I couldn't figure it out, and they don't show up in obj dump or via PythonSDK's
+# dumper -- it's got similar shenanigans to the Raid1 itempool expansion stuff.  Those
+# were in a "PrecompiledEvaluationTemplate" attr, though, and the name makes me think
+# that we probably couldn't get at them even if we had the syntax right.)  I did find that
+# the SEQ object itself has a `PlaybackSettings` attr, on which we can set a PlayRate, but
+# doing that doesn't affect anything, but I also found that `AnimationPlayer` sub-obj,
+# which has its *own* `PlaybackSettings` attr, and that, finally did the trick.  So, good
+# times!  Pretty simple in the end, but this was the first time we'd run into it.
+mod.header("Freddie's makeshift bridge back to his lair")
+mod.reg_hotfix(Mod.LEVEL, 'Impound_P',
+        '/Dandelion/Maps/Impound/Impound_Mission.Impound_Mission:PersistentLevel.SEQ_Ep03_Impound_BridgeToHangar.AnimationPlayer',
+        'PlaybackSettings.PlayRate',
+        global_scale,
+        )
+mod.newline()
+
 # Castle Crimson catapult tweaks
 mod.header('Castle Crimson catapult tweaks')
 
@@ -2729,6 +2767,17 @@ for char in sorted([
             ),
         Char('Digby Vermouth',
             '/Dandelion/NonPlayerCharacters/_SideMissions/Digby/_Design/Character/BPChar_Digby',
+            global_char_scale,
+            ),
+        # Honestly Bureaucracy Bot's "premium" speed isn't awful, given the short distance, but
+        # bumping it up anyway.
+        Char('Bureaucracy Bot (Form Bot)',
+            '/Dandelion/Enemies/ServiceBot/ImpoundFeeBot/BPChar_ImpoundFormBot',
+            global_char_scale,
+            ),
+        # Not terrible by default either, given the short distance.
+        Char('BUD Bot',
+            '/Dandelion/Enemies/Loader/_Unique/Impound/_Design/Character/BPChar_BudLoader',
             global_char_scale,
             ),
         Char('P.A.T.',
