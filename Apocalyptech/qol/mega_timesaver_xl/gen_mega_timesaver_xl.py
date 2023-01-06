@@ -1696,6 +1696,9 @@ for label, level, obj_name, speed, travel_time in sorted([
         ("Spendopticon", 'Strip_P',
             '/Dandelion/Maps/Strip/Strip_SM_RagingBot.Strip_SM_RagingBot:PersistentLevel.Elevator_RagingBot_Strip_2',
             350, 10),
+        ("Jack's Secret", 'Core_P',
+            '/Dandelion/Maps/Core/Core_Mission.Core_Mission:PersistentLevel.Elevator_Core_JackpotToCore_2',
+            700, 20),
 
         # Wrote some code to attempt to autodetect some things, to make future filling-in easier.
         # Keeping them commented for now; kind of want to doublecheck things as I go, still,  I
@@ -1703,9 +1706,6 @@ for label, level, obj_name, speed, travel_time in sorted([
         # filled in on a lot of these.  Also I suspect that at least some of these aren't really
         # things that we'd want to speed up -- like all the Guardian Takedown ones, for instance.
 
-        #("Jack's Secret", 'Core_P',
-        #    '/Dandelion/Maps/Core/Core_Mission.Core_Mission:PersistentLevel.Elevator_Core_JackpotToCore_2',
-        #    700, 20),
 
         #("Negul Neshai", 'Camp_P',
         #    '/Hibiscus/Maps/Camp/Camp_Plot_M.Camp_Plot_M:PersistentLevel.Elevator_Hib_DahlShip_2',
@@ -2590,6 +2590,20 @@ for obj_name in [
             # Default: 15
             2,
             )
+mod.newline()
+
+# Opening the door to VIP Tower
+mod.header('Ultra-Thermite Opening Door to VIP Tower')
+mod.reg_hotfix(Mod.LEVEL, 'Strip_P',
+        '/Dandelion/Maps/Strip/Strip_PM_TheHeist.Strip_PM_TheHeist:PersistentLevel.GbxLevelSequenceActor_ThermiteFlare.AnimationPlayer',
+        'PlaybackSettings.PlayRate',
+        global_scale,
+        )
+mod.reg_hotfix(Mod.LEVEL, 'Strip_P',
+        '/Dandelion/Maps/Strip/Strip_PM_TheHeist.Strip_PM_TheHeist:PersistentLevel.GbxLevelSequenceActor_ThermiteDoorOpen.AnimationPlayer',
+        'PlaybackSettings.PlayRate',
+        2,
+        )
 mod.newline()
 
 # Castle Crimson catapult tweaks

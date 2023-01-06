@@ -73,6 +73,9 @@ A few known quirks of running with this mod:
   Typhon Dead Drop), you'll likely either have to use Photo Mode to hit
   the elevator button, or go the long way around after moving the elevator
   to the bottom.
+* During Jack's Wild, the elevator in Jack's Secret stops further down than
+  usual, and well before Pretty Boy's usual cue, but there's still a window
+  right there and you can jump out as usual once he's done talking.
 
 Some things intentionally *not* handled by the mod:
 * Various minor mission-related animations have been left alone when they
@@ -205,6 +208,8 @@ TODO
 * To split up into separate mods, instead?
   * Character speed movement?
   * Digistruct tunnel removal (both teleport/FT and respawn)
+* Blackjack tables in DLC1 seem to not actually show all your cards; if we're not
+  already doing sequencelength->1 stuff, perhaps that'll do it.
 
 Changelog
 =========
@@ -280,6 +285,7 @@ Changelog
    * Hyperway travel in The Spendopticon
    * Bridge extension back to Freddie's lair at the end of Impound Deluxe
    * "Key To Happiness" timer in The Compactor, on the way into Trashlantis
+   * Ultra-Thermite opening the door to VIP Tower
    * Castle Crimson catapult animations
    * Don't Call it A Rorschach Ink-Blot Pipes, in Benediction of Pain
 

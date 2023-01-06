@@ -10,7 +10,7 @@ getall BPIO_Lootable_VaultCard_RedCrate_C OpeningInteractions
 * /Dandelion/Maps/Core/Core_P
 * /Dandelion/Maps/Impound/Impound_P
 * /Dandelion/Maps/Strip/Strip_P
-  /Dandelion/Maps/TowerLair/TowerLair_P
+* /Dandelion/Maps/TowerLair/TowerLair_P
 * /Dandelion/Maps/Trashtown/Trashtown_P
 * /Game/Maps/ProvingGrounds/Trial1/ProvingGrounds_Trial1_P
 * /Game/Maps/ProvingGrounds/Trial4/ProvingGrounds_Trial4_P

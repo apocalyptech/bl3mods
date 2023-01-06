@@ -10027,6 +10027,10 @@ SparkEarlyLevelPatchEntry,(1,1,0,CasinoIntro_P),/Dandelion/Maps/CasinoIntro/Casi
 SparkEarlyLevelPatchEntry,(1,1,0,MotorcadeInterior_P),/Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_Plot.MotorcadeInterior_Plot:PersistentLevel.BP_CarnivorArena_Elevator_578,ElevatorSpeed,0,,800
 SparkEarlyLevelPatchEntry,(1,1,0,MotorcadeInterior_P),/Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_Plot.MotorcadeInterior_Plot:PersistentLevel.BP_CarnivorArena_Elevator_578,ElevatorTravelTime,0,,2.5
 
+# Jack's Secret
+SparkEarlyLevelPatchEntry,(1,1,0,Core_P),/Dandelion/Maps/Core/Core_Mission.Core_Mission:PersistentLevel.Elevator_Core_JackpotToCore_2,ElevatorSpeed,0,,2800
+SparkEarlyLevelPatchEntry,(1,1,0,Core_P),/Dandelion/Maps/Core/Core_Mission.Core_Mission:PersistentLevel.Elevator_Core_JackpotToCore_2,ElevatorTravelTime,0,,5.0
+
 # Jakobs Estate
 SparkEarlyLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.Elevator_Ep09_Mansion_592,ElevatorSpeed,0,,700
 SparkEarlyLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.Elevator_Ep09_Mansion_592,ElevatorTravelTime,0,,5.0
@@ -10470,6 +10474,13 @@ SparkLevelPatchEntry,(1,1,0,Impound_P),/Dandelion/Maps/Impound/Impound_Mission.I
 
 SparkLevelPatchEntry,(1,1,0,Trashtown_P),/Dandelion/Maps/Trashtown/Trashtown_M_Plot.Default__Trashtown_M_Plot_C,HappinessTestDelayTime,0,,2
 SparkLevelPatchEntry,(1,1,0,Trashtown_P),/Dandelion/Maps/Trashtown/Trashtown_M_Plot.Trashtown_M_Plot:PersistentLevel.Trashtown_M_Plot_C_0,HappinessTestDelayTime,0,,2
+
+###
+### Ultra-Thermite Opening Door to VIP Tower
+###
+
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/Maps/Strip/Strip_PM_TheHeist.Strip_PM_TheHeist:PersistentLevel.GbxLevelSequenceActor_ThermiteFlare.AnimationPlayer,PlaybackSettings.PlayRate,0,,4
+SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/Maps/Strip/Strip_PM_TheHeist.Strip_PM_TheHeist:PersistentLevel.GbxLevelSequenceActor_ThermiteDoorOpen.AnimationPlayer,PlaybackSettings.PlayRate,0,,2
 
 ###
 ### Castle Crimson catapult tweaks
