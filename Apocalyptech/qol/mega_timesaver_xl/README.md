@@ -38,6 +38,7 @@ Currently, the mod affects the following:
   * Ellie
   * Failurebot
   * Glenn the Ratch
+  * Joy
   * Liam (Atlas HQ Guard)
   * Lilith
   * Maya
@@ -111,6 +112,11 @@ Some things intentionally *not* handled by the mod:
 * Likewise, various aspects of the Digby Vermouth quests in Spendopticon
   could use a kick, but apart from improving his walk/run speed, they were
   left alone.
+* The picnic section in Heart of Gold (in The Compactor) could be tightened
+  up, but it's not bad, so I left that.
+* The Clapstructor sequence could be tightened up slightly, but not by much.
+* The whole Raging Bot mission (in Spendopticon) could be tightened up in
+  various ways, but seemed too annoying to wade through for pretty small gains.
 * The cocking animation on the third catapult in Castle Crimson has been
   left alone, for boring technical reasons.
 * The egg-incubation timer in A Good Egg has been left alone; it's already
@@ -219,6 +225,7 @@ Changelog
    * Ellie
    * Failurebot
    * Glenn the Ratch
+   * Joy
    * Liam (Atlas HQ guard)
    * Maya
    * P.A.T.
@@ -272,6 +279,7 @@ Changelog
    * Descending fountain in Villa Ultraviolet
    * Hyperway travel in The Spendopticon
    * Bridge extension back to Freddie's lair at the end of Impound Deluxe
+   * "Key To Happiness" timer in The Compactor, on the way into Trashlantis
    * Castle Crimson catapult animations
    * Don't Call it A Rorschach Ink-Blot Pipes, in Benediction of Pain
 

@@ -2575,6 +2575,23 @@ mod.reg_hotfix(Mod.LEVEL, 'Impound_P',
         )
 mod.newline()
 
+# Setting Default__ works but doesn't actually end up applying on the "real" object
+# (regardless of Earlylevel/notify/etc).  Really there's no point in us setting
+# Default__ in here, since setting the instantiated one *does* do the trick, but
+# it seems a bit wrong to *not* do Default__.  So I'm doing both.  Myeh.
+mod.header('Key To Happiness timer in The Compactor')
+for obj_name in [
+        '/Dandelion/Maps/Trashtown/Trashtown_M_Plot.Default__Trashtown_M_Plot_C',
+        '/Dandelion/Maps/Trashtown/Trashtown_M_Plot.Trashtown_M_Plot:PersistentLevel.Trashtown_M_Plot_C_0',
+        ]:
+    mod.reg_hotfix(Mod.LEVEL, 'Trashtown_P',
+            obj_name,
+            'HappinessTestDelayTime',
+            # Default: 15
+            2,
+            )
+mod.newline()
+
 # Castle Crimson catapult tweaks
 mod.header('Castle Crimson catapult tweaks')
 
@@ -2780,6 +2797,10 @@ for char in sorted([
         # Not terrible by default either, given the short distance.
         Char('BUD Bot',
             '/Dandelion/Enemies/Loader/_Unique/Impound/_Design/Character/BPChar_BudLoader',
+            global_char_scale,
+            ),
+        Char('Joy',
+            '/Dandelion/NonPlayerCharacters/_SideMissions/Joy/_Design/Character/BPChar_Joy',
             global_char_scale,
             ),
         Char('P.A.T.',

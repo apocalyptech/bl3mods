@@ -10465,6 +10465,13 @@ SparkLevelPatchEntry,(1,7,0,Impound_P),/Game/PatchDLC/Dandelion/Missions/Plot/Mi
 SparkLevelPatchEntry,(1,1,0,Impound_P),/Dandelion/Maps/Impound/Impound_Mission.Impound_Mission:PersistentLevel.SEQ_Ep03_Impound_BridgeToHangar.AnimationPlayer,PlaybackSettings.PlayRate,0,,4
 
 ###
+### Key To Happiness timer in The Compactor
+###
+
+SparkLevelPatchEntry,(1,1,0,Trashtown_P),/Dandelion/Maps/Trashtown/Trashtown_M_Plot.Default__Trashtown_M_Plot_C,HappinessTestDelayTime,0,,2
+SparkLevelPatchEntry,(1,1,0,Trashtown_P),/Dandelion/Maps/Trashtown/Trashtown_M_Plot.Trashtown_M_Plot:PersistentLevel.Trashtown_M_Plot_C_0,HappinessTestDelayTime,0,,2
+
+###
 ### Castle Crimson catapult tweaks
 ###
 
@@ -10550,6 +10557,10 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_MrInterpolator),/Game/NonPlayerCharacter
 # Glenn the Ratch
 SparkCharacterLoadedEntry,(1,1,0,BPChar_TalkingRatch),/Game/NonPlayerCharacters/_Promethea/TalkingRatch/_Design/Character/BPChar_TalkingRatch.Default__BPChar_TalkingRatch_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_TalkingRatch),/Game/NonPlayerCharacters/_Promethea/TalkingRatch/_Design/Character/BPChar_TalkingRatch.Default__BPChar_TalkingRatch_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+
+# Joy
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Joy),/Dandelion/NonPlayerCharacters/_SideMissions/Joy/_Design/Character/BPChar_Joy.Default__BPChar_Joy_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Joy),/Dandelion/NonPlayerCharacters/_SideMissions/Joy/_Design/Character/BPChar_Joy.Default__BPChar_Joy_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 
 # Liam (Atlas HQ Security Guard)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_AtlasSecurityGuard),/Game/NonPlayerCharacters/_Promethea/AtlasSoldier/_Design/Character/BPChar_AtlasSecurityGuard.Default__BPChar_AtlasSecurityGuard_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
