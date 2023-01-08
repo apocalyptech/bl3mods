@@ -286,6 +286,9 @@ Changelog
    * Bridge extension back to Freddie's lair at the end of Impound Deluxe
    * "Key To Happiness" timer in The Compactor, on the way into Trashlantis
    * Ultra-Thermite opening the door to VIP Tower
+   * Various Call of the Deep tweaks, in Skittermaw basin: power coil panel, crane
+     animations, Gythian blood jar.
+   * Mission-close delay after returning recordings to DJ Midnight in The Lodge
    * Castle Crimson catapult animations
    * Don't Call it A Rorschach Ink-Blot Pipes, in Benediction of Pain
 

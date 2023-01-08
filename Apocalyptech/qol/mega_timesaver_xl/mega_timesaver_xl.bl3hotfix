@@ -1616,6 +1616,10 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Eridian/Chest_Red/Effects/
 # Industrial Dumpster Loot Spawn
 SparkLevelPatchEntry,(1,7,0,MatchAll),/Game/Lootables/_Design/Classes/Industrial/BPIO_Lootable_Industrial_Dumpster.BPIO_Lootable_Industrial_Dumpster_C,0,1,ExecuteUbergraph_BPIO_Lootable_Industrial_Dumpster,1,243,3:0.8,3:0.2
 
+# Xylourgos Portal Chest Loot Skrit Spawn Delay
+SparkLevelPatchEntry,(1,7,0,MatchAll),/Hibiscus/InteractiveObjects/Lootables/_Design/Classes/Cultists/BPIO_Hib_Lootable_PortalChest.BPIO_Hib_Lootable_PortalChest_C,0,1,ExecuteUbergraph_BPIO_Hib_Lootable_PortalChest,1,1938,4:0.25,1:0
+SparkLevelPatchEntry,(1,7,0,MatchAll),/Hibiscus/InteractiveObjects/Lootables/_Design/Classes/Cultists/BPIO_Hib_Lootable_PortalChest.BPIO_Hib_Lootable_PortalChest_C,0,1,ExecuteUbergraph_BPIO_Hib_Lootable_PortalChest,1,1494,1:1,1:0
+
 ###
 ### Eridian Tools
 ###
@@ -9491,6 +9495,10 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Geranium/InteractiveObjects/Doors/Lodge/_
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Geranium/InteractiveObjects/Doors/Lodge/_Design/IO_Door_Lodge_TreasureRoom.IO_Door_Lodge_TreasureRoom_C,Timelines.Timelines[3].Object..TimelineLength,0,,0.2
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Geranium/InteractiveObjects/Doors/Lodge/_Design/IO_Door_Lodge_TreasureRoom.IO_Door_Lodge_TreasureRoom_C,Timelines.Timelines[3].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.2
 
+# IO_MissionScripted_CageDoor
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Hibiscus/InteractiveObjects/MissionSpecific/Side/WhereIBelong/IO_MissionScripted_CageDoor.IO_MissionScripted_CageDoor_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.3
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Hibiscus/InteractiveObjects/MissionSpecific/Side/WhereIBelong/IO_MissionScripted_CageDoor.IO_MissionScripted_CageDoor_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.3
+
 # IO_Hib_Door_800x600_Factory
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Factory/IO_Hib_Door_800x600_Factory.IO_Hib_Door_800x600_Factory_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.8
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Factory/IO_Hib_Door_800x600_Factory.IO_Hib_Door_800x600_Factory_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.020663
@@ -9978,6 +9986,13 @@ SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/
 SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[1].Object..TimelineLength,0,,0.5
 SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.5
 
+# Panel containing power coil in Call of the Deep
+SparkLevelPatchEntry,(1,1,0,Lake_P),/Hibiscus/InteractiveObjects/MissionSpecific/Side/WhereIBelong/IO_MissionScripted_CranePartDoor.IO_MissionScripted_CranePartDoor_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,Lake_P),/Hibiscus/InteractiveObjects/MissionSpecific/Side/WhereIBelong/IO_MissionScripted_CranePartDoor.IO_MissionScripted_CranePartDoor_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.1875
+
+# Gythian blood jar in Call of the Deep
+SparkLevelPatchEntry,(1,1,0,Lake_P),/Hibiscus/InteractiveObjects/MissionSpecific/Side/WhereIBelong/Placeables/IO_MissionPlaceable_BloodJar.IO_MissionPlaceable_BloodJar_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.25
+
 # Castle Crimson catapult rotation
 SparkLevelPatchEntry,(1,1,0,Anger_P),/Alisma/InteractiveObjects/MissionSpecific/Plot/ALI_EP02/Catapult/IO_MissionScripted_Ali_CatapultPivot.IO_MissionScripted_Ali_CatapultPivot_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.5
 SparkLevelPatchEntry,(1,1,0,Anger_P),/Alisma/InteractiveObjects/MissionSpecific/Plot/ALI_EP02/Catapult/IO_MissionScripted_Ali_CatapultPivot.IO_MissionScripted_Ali_CatapultPivot_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.5
@@ -10082,6 +10097,10 @@ SparkEarlyLevelPatchEntry,(1,1,0,Prison_P),/Game/Maps/Zone_2/Prison/Prison_M_EP0
 # The Droughts - Taking Flight (Sanctuary III Drydock)
 SparkEarlyLevelPatchEntry,(1,1,0,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue_M_Ep04_EarnSpaceship.Prologue_M_Ep04_EarnSpaceship:PersistentLevel.Elevator_Ep04_Prologue,ElevatorSpeed,0,,700
 SparkEarlyLevelPatchEntry,(1,1,0,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue_M_Ep04_EarnSpaceship.Prologue_M_Ep04_EarnSpaceship:PersistentLevel.Elevator_Ep04_Prologue,ElevatorTravelTime,0,,2.5
+
+# VIP Tower
+SparkEarlyLevelPatchEntry,(1,1,0,TowerLair_P),/Dandelion/Maps/TowerLair/TowerLair_PM_TheHeist.TowerLair_PM_TheHeist:PersistentLevel.IO_Elevator_Heist_Tower_2,ElevatorSpeed,0,,1600
+SparkEarlyLevelPatchEntry,(1,1,0,TowerLair_P),/Dandelion/Maps/TowerLair/TowerLair_PM_TheHeist.TowerLair_PM_TheHeist:PersistentLevel.IO_Elevator_Heist_Tower_2,ElevatorTravelTime,0,,5.0
 
 # Villa Ultraviolet
 SparkEarlyLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.Elevator_Cartels_5,ElevatorSpeed,0,,380
@@ -10481,6 +10500,34 @@ SparkLevelPatchEntry,(1,1,0,Trashtown_P),/Dandelion/Maps/Trashtown/Trashtown_M_P
 
 SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/Maps/Strip/Strip_PM_TheHeist.Strip_PM_TheHeist:PersistentLevel.GbxLevelSequenceActor_ThermiteFlare.AnimationPlayer,PlaybackSettings.PlayRate,0,,4
 SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/Maps/Strip/Strip_PM_TheHeist.Strip_PM_TheHeist:PersistentLevel.GbxLevelSequenceActor_ThermiteDoorOpen.AnimationPlayer,PlaybackSettings.PlayRate,0,,2
+
+###
+### Call of the Deep Tweaks, in Skittermaw Basin
+###
+
+# Power Coil panel - acquiring the coil
+SparkLevelPatchEntry,(1,1,0,Lake_P),/Hibiscus/Maps/Lake/Lake_S_WhereIBelong.Lake_S_WhereIBelong:PersistentLevel.IO_MissionScripted_CranePartDoor_Excavation.Rotate,TheTimeline.Length,0,,0.1875
+
+# Power coil panel - installing at crane
+SparkLevelPatchEntry,(1,1,0,Lake_P),/Hibiscus/Maps/Lake/Lake_S_WhereIBelong.Lake_S_WhereIBelong:PersistentLevel.IO_MissionScripted_CranePartDoor_Crane.Rotate,TheTimeline.Length,0,,0.1875
+
+# Initial crane placement
+SparkLevelPatchEntry,(1,1,0,Lake_P),/Hibiscus/Maps/Lake/Lake_S_WhereIBelong.Lake_S_WhereIBelong:PersistentLevel.GbxLevelSequenceActor_Crane_MoveCageToPlatform.AnimationPlayer,PlaybackSettings.PlayRate,0,,4
+
+# Gythian Blood Jar Fill-Up
+SparkLevelPatchEntry,(1,1,0,Lake_P),/Hibiscus/Maps/Lake/Lake_S_WhereIBelong.Lake_S_WhereIBelong:PersistentLevel.IO_MissionPlaceable_BloodJarToFill.Timeline_0,TheTimeline.Length,0,,1.25
+
+# Cage door Opening/closing
+SparkLevelPatchEntry,(1,1,0,Lake_P),/Hibiscus/Maps/Lake/Lake_S_WhereIBelong.Lake_S_WhereIBelong:PersistentLevel.IO_MissionScripted_CageDoor_2.Raise,TheTimeline.Length,0,,0.3
+
+# Post-mission Crane Raising
+SparkLevelPatchEntry,(1,1,0,Lake_P),/Hibiscus/Maps/Lake/Lake_S_WhereIBelong.Lake_S_WhereIBelong:PersistentLevel.GbxLevelSequenceActor_Crane_LiftCageOutOfWater.AnimationPlayer,PlaybackSettings.PlayRate,0,,4
+
+###
+### DJ Midnight Dark Mix Mission-Close Delay
+###
+
+SparkLevelPatchEntry,(1,7,0,Bar_P),/Hibiscus/Maps/Bar/Bar_Side_M_SinisterSounds.Bar_Side_M_SinisterSounds_C,0,1,ExecuteUbergraph_Bar_Side_M_SinisterSounds,1,2518,2:20,3:5.0
 
 ###
 ### Castle Crimson catapult tweaks

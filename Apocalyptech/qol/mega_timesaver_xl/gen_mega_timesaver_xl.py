@@ -340,6 +340,17 @@ class AS():
     """
     Little wrapper class so that I can more easily loop over a bunch of AnimSequence
     objects which largely use the defaults but occasionally need to tweak some stuff.
+
+    When I was pretty far along in this mod, I discovered that GbxLevelSequenceActor
+    objects have a SequencePlayer sub-object with a PlayRate attr which often ends
+    up producing better results than tweaking the AnimSequence timings themselves.
+    I suspect that a lot of our AnimSequence tweaks that we do via this class would
+    probably be better done via that method instead, though I definitely don't feel
+    like having to re-test huge chunks of the game.  Also there probably *are*
+    various circumstances where we'd need to tweak AnimSequences anyway, so I don't
+    think this was wasted work.  Still, I suspect a bunch of bulk could be cut
+    back into some simpler PlayRate adjustments if I were ever willing to take the
+    time to do it.
     """
 
     def __init__(self, path, scale=None, seqlen_scale=None, extra_char=None, method=Mod.LEVEL, target=None):
@@ -678,6 +689,25 @@ mod.bytecode_hotfix(Mod.LEVEL, 'MatchAll',
         0.8,
         0.8/global_scale,
         )
+mod.newline()
+
+# Xylourgos Portal Chests
+# The speedup here is pretty slight; most of the delay is waiting for the various animations
+# to finish up, even after being sped up by our other tweaks.
+mod.comment('Xylourgos Portal Chest Loot Skrit Spawn Delay')
+for index, delay in [
+        # Slight delay before making the loot-vs-skrit decision (I think)
+        (1938, 0.25),
+        # Slight delay before spawning the skrit, if that's the choice that was made (I think)
+        (1494, 1),
+        ]:
+    mod.bytecode_hotfix(Mod.LEVEL, 'MatchAll',
+            '/Hibiscus/InteractiveObjects/Lootables/_Design/Classes/Cultists/BPIO_Hib_Lootable_PortalChest',
+            'ExecuteUbergraph_BPIO_Hib_Lootable_PortalChest',
+            index,
+            delay,
+            0,
+            )
 mod.newline()
 
 mod.header('Eridian Tools')
@@ -1373,6 +1403,8 @@ for category, cat_scale, io_objs in [
             IO('/Geranium/InteractiveObjects/Doors/IO_Door_130x250_SaloonDoor'),
             IO('/Geranium/InteractiveObjects/Doors/Lodge/_Design/IO_Door_400x400_Rotate_2Piece_Lodge_IronBear'),
             IO('/Geranium/InteractiveObjects/Doors/Lodge/_Design/IO_Door_Lodge_TreasureRoom'),
+            # See also some tweaks, below
+            IO('/Hibiscus/InteractiveObjects/MissionSpecific/Side/WhereIBelong/IO_MissionScripted_CageDoor'),
             IO('/Hibiscus/InteractiveObjects/Systems/Doors/_Design/Factory/IO_Hib_Door_800x600_Factory'),
             # No timing parameters for these two
             #IO('/Hibiscus/InteractiveObjects/Systems/Doors/_Design/MansionReskin/IO_Hib_Door2_400x400'),
@@ -1514,6 +1546,17 @@ for category, cat_scale, io_objs in [
                 label="Villa Ultraviolet descending fountain",
                 level='Cartels_P',
                 ),
+            # See also some tweaks below
+            IO('/Hibiscus/InteractiveObjects/MissionSpecific/Side/WhereIBelong/IO_MissionScripted_CranePartDoor',
+                label="Panel containing power coil in Call of the Deep",
+                level='Lake_P',
+                ),
+            # See also some tweaks below
+            IO('/Hibiscus/InteractiveObjects/MissionSpecific/Side/WhereIBelong/Placeables/IO_MissionPlaceable_BloodJar',
+                label="Gythian blood jar in Call of the Deep",
+                level='Lake_P',
+                timelinelength=False,
+                ),
             # See also some delay tweaks below
             IO('/Alisma/InteractiveObjects/MissionSpecific/Plot/ALI_EP02/Catapult/IO_MissionScripted_Ali_CatapultPivot',
                 label="Castle Crimson catapult rotation",
@@ -1565,6 +1608,14 @@ for category, cat_scale, io_objs in [
                             timeline = obj[timeline_exp-1]
 
                             # This one's not actually required (and doesn't seem to do anything), but I feel weird *not* specifying it.
+                            # NOTE: I *think* that when this attr doesn't show up, it's probably because
+                            # there's a LengthMode=TL_TimelineLength in play, which you'll see in the
+                            # map object itself, and the length ends up getting sort of computed?
+                            # Anyway, in those instances I believe the TimelineLength *does* show up
+                            # in this object if you query it, but the one you need to alter is the
+                            # one from the map object.  So you'll want to `getall` on that TimelineComponent
+                            # to ensure what it is and then do a tweak down below.  Fun!  You can see this
+                            # on the IO_MissionPlaceable_BloodJar in Lake_P.
                             if 'TimelineLength' in timeline and timeline['TimelineLength'] != 0:
                                 did_main = True
                                 mod.reg_hotfix(Mod.LEVEL, io_obj.level,
@@ -1699,6 +1750,10 @@ for label, level, obj_name, speed, travel_time in sorted([
         ("Jack's Secret", 'Core_P',
             '/Dandelion/Maps/Core/Core_Mission.Core_Mission:PersistentLevel.Elevator_Core_JackpotToCore_2',
             700, 20),
+        ("VIP Tower", 'TowerLair_P',
+            '/Dandelion/Maps/TowerLair/TowerLair_PM_TheHeist.TowerLair_PM_TheHeist:PersistentLevel.IO_Elevator_Heist_Tower_2',
+            # Doing some extra scaling on this 'cause it's slooow.
+            200*2, 40/2),
 
         # Wrote some code to attempt to autodetect some things, to make future filling-in easier.
         # Keeping them commented for now; kind of want to doublecheck things as I go, still,  I
@@ -2604,6 +2659,76 @@ mod.reg_hotfix(Mod.LEVEL, 'Strip_P',
         'PlaybackSettings.PlayRate',
         2,
         )
+mod.newline()
+
+# Lots of closely-associated Call of the Deep tweaks, in Skittermaw Basin
+mod.header('Call of the Deep Tweaks, in Skittermaw Basin')
+
+# Power coil panel in Call of the Deep
+mod.comment('Power Coil panel - acquiring the coil')
+mod.reg_hotfix(Mod.LEVEL, 'Lake_P',
+        '/Hibiscus/Maps/Lake/Lake_S_WhereIBelong.Lake_S_WhereIBelong:PersistentLevel.IO_MissionScripted_CranePartDoor_Excavation.Rotate',
+        'TheTimeline.Length',
+        0.75/global_scale,
+        )
+mod.newline()
+
+mod.comment('Power coil panel - installing at crane')
+mod.reg_hotfix(Mod.LEVEL, 'Lake_P',
+        '/Hibiscus/Maps/Lake/Lake_S_WhereIBelong.Lake_S_WhereIBelong:PersistentLevel.IO_MissionScripted_CranePartDoor_Crane.Rotate',
+        'TheTimeline.Length',
+        0.75/global_scale,
+        )
+mod.newline()
+
+# Slapping in the getall here 'cause I always have to reconstruct the buggers every time:
+# getall gbxlevelsequenceplayer PlaybackSettings name=AnimationPlayer outer=GbxLevelSequenceActor_Crane_MoveCageToPlatform
+mod.comment('Initial crane placement')
+mod.reg_hotfix(Mod.LEVEL, 'Lake_P',
+        '/Hibiscus/Maps/Lake/Lake_S_WhereIBelong.Lake_S_WhereIBelong:PersistentLevel.GbxLevelSequenceActor_Crane_MoveCageToPlatform.AnimationPlayer',
+        'PlaybackSettings.PlayRate',
+        global_scale,
+        )
+mod.newline()
+
+# Gythian Blood Jar fill-up
+mod.comment('Gythian Blood Jar Fill-Up')
+mod.reg_hotfix(Mod.LEVEL, 'Lake_P',
+        '/Hibiscus/Maps/Lake/Lake_S_WhereIBelong.Lake_S_WhereIBelong:PersistentLevel.IO_MissionPlaceable_BloodJarToFill.Timeline_0',
+        'TheTimeline.Length',
+        5/global_scale,
+        )
+mod.newline()
+
+mod.comment('Cage door Opening/closing')
+mod.reg_hotfix(Mod.LEVEL, 'Lake_P',
+        '/Hibiscus/Maps/Lake/Lake_S_WhereIBelong.Lake_S_WhereIBelong:PersistentLevel.IO_MissionScripted_CageDoor_2.Raise',
+        'TheTimeline.Length',
+        1.5/door_scale,
+        )
+mod.newline()
+
+# There's also Seq_WhereIBelong_CraneMoveCageIntoWater involved, but I'm leaving
+# that one because there's associated dialogue which takes basically the whole time.
+mod.comment('Post-mission Crane Raising')
+mod.reg_hotfix(Mod.LEVEL, 'Lake_P',
+        '/Hibiscus/Maps/Lake/Lake_S_WhereIBelong.Lake_S_WhereIBelong:PersistentLevel.GbxLevelSequenceActor_Crane_LiftCageOutOfWater.AnimationPlayer',
+        'PlaybackSettings.PlayRate',
+        global_scale,
+        )
+mod.newline()
+
+# DJ Midnight Dark Mix mission-close delay
+mod.header('DJ Midnight Dark Mix Mission-Close Delay')
+mod.bytecode_hotfix(Mod.LEVEL, 'Bar_P',
+        '/Hibiscus/Maps/Bar/Bar_Side_M_SinisterSounds',
+        'ExecuteUbergraph_Bar_Side_M_SinisterSounds',
+        2518,
+        20,
+        # It's tempting to make this even shorter, but I'd like to have a
+        # bit more of DJ Midnight's Dark Mix animation before having her
+        # revert back to the usual.
+        20/global_scale)
 mod.newline()
 
 # Castle Crimson catapult tweaks
