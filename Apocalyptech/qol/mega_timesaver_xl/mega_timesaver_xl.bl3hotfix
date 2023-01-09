@@ -10070,6 +10070,10 @@ SparkEarlyLevelPatchEntry,(1,1,0,Outskirts_P),/Game/Maps/Zone_1/Outskirts/Outski
 SparkEarlyLevelPatchEntry,(1,1,0,Raid_P),/Game/PatchDLC/Raid1/Maps/Raid/Raid_M_RaidOnMaliwan.Raid_M_RaidOnMaliwan:PersistentLevel.Elevator_Raid__3,ElevatorSpeed,0,,3600
 SparkEarlyLevelPatchEntry,(1,1,0,Raid_P),/Game/PatchDLC/Raid1/Maps/Raid/Raid_M_RaidOnMaliwan.Raid_M_RaidOnMaliwan:PersistentLevel.Elevator_Raid__3,ElevatorTravelTime,0,,2.5
 
+# Negul Neshai
+SparkEarlyLevelPatchEntry,(1,1,0,Camp_P),/Hibiscus/Maps/Camp/Camp_Plot_M.Camp_Plot_M:PersistentLevel.Elevator_Hib_DahlShip_2,ElevatorSpeed,0,,800
+SparkEarlyLevelPatchEntry,(1,1,0,Camp_P),/Hibiscus/Maps/Camp/Camp_Plot_M.Camp_Plot_M:PersistentLevel.Elevator_Hib_DahlShip_2,ElevatorTravelTime,0,,2.5
+
 # Skywell-27 - Boss Elevator
 SparkEarlyLevelPatchEntry,(1,1,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_Boss.OrbitalPlatform_Boss:PersistentLevel.Elevator_Cargo_OrbitalPlatform_2,ElevatorSpeed,0,,800
 SparkEarlyLevelPatchEntry,(1,1,0,OrbitalPlatform_P),/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_Boss.OrbitalPlatform_Boss:PersistentLevel.Elevator_Cargo_OrbitalPlatform_2,ElevatorTravelTime,0,,2.5
@@ -10119,6 +10123,9 @@ SparkLevelPatchEntry,(1,7,0,AtlasHQ_P),/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_M_EP06O
 
 # Stormblind Complex (Arm's Race) elevator activation delay
 SparkLevelPatchEntry,(1,1,0,FrostSite_P),/Ixora/Maps/FrostSite/FrostSite_Combat.FrostSite_Combat:PersistentLevel.Elevator_FrostSite_2,SwitchDelayTime,0,,0
+
+# Negul Neshai elevator-button timing
+SparkLevelPatchEntry,(1,7,0,Camp_P),/Game/PatchDLC/Hibiscus/Missions/Plot/EP05_DLC2.EP05_DLC2_C,0,1,ExecuteUbergraph_EP05_DLC2,1,34634,1:5,4:1.25
 
 ###
 ### Fast Travel / Teleport Animation Disable

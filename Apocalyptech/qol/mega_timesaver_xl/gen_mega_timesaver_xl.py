@@ -1773,17 +1773,15 @@ for label, level, obj_name, speed, travel_time in sorted([
             '/Dandelion/Maps/TowerLair/TowerLair_PM_TheHeist.TowerLair_PM_TheHeist:PersistentLevel.IO_Elevator_Heist_Tower_2',
             # Doing some extra scaling on this 'cause it's slooow.
             200*2, 40/2),
+        ("Negul Neshai", 'Camp_P',
+            '/Hibiscus/Maps/Camp/Camp_Plot_M.Camp_Plot_M:PersistentLevel.Elevator_Hib_DahlShip_2',
+            200, 10),
 
         # Wrote some code to attempt to autodetect some things, to make future filling-in easier.
         # Keeping them commented for now; kind of want to doublecheck things as I go, still,  I
         # suspect that `defaultspeed` is 200, but we'll see.  A default traveltime of 10 has been
         # filled in on a lot of these.  Also I suspect that at least some of these aren't really
         # things that we'd want to speed up -- like all the Guardian Takedown ones, for instance.
-
-
-        #("Negul Neshai", 'Camp_P',
-        #    '/Hibiscus/Maps/Camp/Camp_Plot_M.Camp_Plot_M:PersistentLevel.Elevator_Hib_DahlShip_2',
-        #    200, 10),
 
         #("Heart's Desire", 'Venue_P',
         #    '/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.Elevator_Hib_EleanorOffice_3',
@@ -1866,6 +1864,18 @@ mod.reg_hotfix(Mod.LEVEL, 'FrostSite_P',
         'SwitchDelayTime',
         0,
         )
+mod.newline()
+
+# Negul Neshai elevator timing; the elevator itself works just fine with the
+# timing tweak above, but there's a mission objective on the elevator button
+# whose activation is on a timer
+mod.comment('Negul Neshai elevator-button timing')
+mod.bytecode_hotfix(Mod.LEVEL, 'Camp_P',
+        '/Game/PatchDLC/Hibiscus/Missions/Plot/EP05_DLC2',
+        'ExecuteUbergraph_EP05_DLC2',
+        34634,
+        5,
+        5/global_scale)
 mod.newline()
 
 # Make Fast Travel + Teleport digistruct animations disappear
