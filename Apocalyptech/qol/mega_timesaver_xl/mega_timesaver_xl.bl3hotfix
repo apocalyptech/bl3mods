@@ -10544,6 +10544,52 @@ SparkLevelPatchEntry,(1,1,0,Village_P),/Hibiscus/Maps/Village/Village_Side_M_Pri
 SparkLevelPatchEntry,(1,1,0,Village_P),/Hibiscus/Maps/Village/Village_Side_M_PrivateEye01.Village_Side_M_PrivateEye01:PersistentLevel.IO_Scripted_PrivateEye_SecretWall_5.Wall Opening animation,TheTimeline.Length,0,,1.75
 
 ###
+### Cankerwood Brewery Equipment
+###
+
+# Nozzle Animations
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/Maps/Woods/Woods_Plot_M.Woods_Plot_M:PersistentLevel.BPIO_Hib_EP04_BaitPuzzle_Sender_2.Sender Pipe Movement,TheTimeline.PlayRate,0,,4
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/Maps/Woods/Woods_Plot_M.Woods_Plot_M:PersistentLevel.BPIO_Hib_EP04_BaitPuzzle_Sender_2.RefillContainer,TheTimeline.PlayRate,0,,4
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/Maps/Woods/Woods_Plot_M.Woods_Plot_M:PersistentLevel.BPIO_Hib_EP04_BaitPuzzle_Sender_2.Pouring,TheTimeline.PlayRate,0,,4
+
+# Receptacle Animations
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/Maps/Woods/Woods_Plot_M.Woods_Plot_M:PersistentLevel.BPIO_Hib_EP04_BaitPuzzle_Receiver_2.FillReceiver,TheTimeline.PlayRate,0,,4
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/Maps/Woods/Woods_Plot_M.Woods_Plot_M:PersistentLevel.BPIO_Hib_EP04_BaitPuzzle_Receiver_2.EmptyReceiver,TheTimeline.PlayRate,0,,4
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/Maps/Woods/Woods_Plot_M.Woods_Plot_M:PersistentLevel.BPIO_Hib_EP04_BaitPuzzle_Receiver_3.FillReceiver,TheTimeline.PlayRate,0,,4
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/Maps/Woods/Woods_Plot_M.Woods_Plot_M:PersistentLevel.BPIO_Hib_EP04_BaitPuzzle_Receiver_3.EmptyReceiver,TheTimeline.PlayRate,0,,4
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/Maps/Woods/Woods_Plot_M.Woods_Plot_M:PersistentLevel.BPIO_Hib_EP04_BaitPuzzle_Receiver_4.FillReceiver,TheTimeline.PlayRate,0,,4
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/Maps/Woods/Woods_Plot_M.Woods_Plot_M:PersistentLevel.BPIO_Hib_EP04_BaitPuzzle_Receiver_4.EmptyReceiver,TheTimeline.PlayRate,0,,4
+
+# Pouring ParticleSystem
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/Assets/PS_Hib_BaitPuzzle_PourLiquid.PS_Hib_BaitPuzzle_PourLiquid,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..TypeDataModule.Object..EmitterInfo.MaxLifetime,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/Assets/PS_Hib_BaitPuzzle_PourLiquid.PS_Hib_BaitPuzzle_PourLiquid,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration,0,,0.0375
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/Assets/PS_Hib_BaitPuzzle_PourLiquid.PS_Hib_BaitPuzzle_PourLiquid,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MinValue,0,,0.0875
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/Assets/PS_Hib_BaitPuzzle_PourLiquid.PS_Hib_BaitPuzzle_PourLiquid,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MaxValue,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/Assets/PS_Hib_BaitPuzzle_PourLiquid.PS_Hib_BaitPuzzle_PourLiquid,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Table.Values.Values[0],0,,0.0875
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/Assets/PS_Hib_BaitPuzzle_PourLiquid.PS_Hib_BaitPuzzle_PourLiquid,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Table.Values.Values[1],0,,0.25
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/Assets/PS_Hib_BaitPuzzle_PourLiquid.PS_Hib_BaitPuzzle_PourLiquid,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..TypeDataModule.Object..EmitterInfo.MaxLifetime,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/Assets/PS_Hib_BaitPuzzle_PourLiquid.PS_Hib_BaitPuzzle_PourLiquid,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration,0,,0.0375
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/Assets/PS_Hib_BaitPuzzle_PourLiquid.PS_Hib_BaitPuzzle_PourLiquid,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MinValue,0,,0.0875
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/Assets/PS_Hib_BaitPuzzle_PourLiquid.PS_Hib_BaitPuzzle_PourLiquid,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MaxValue,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/Assets/PS_Hib_BaitPuzzle_PourLiquid.PS_Hib_BaitPuzzle_PourLiquid,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Table.Values.Values[0],0,,0.0875
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/Assets/PS_Hib_BaitPuzzle_PourLiquid.PS_Hib_BaitPuzzle_PourLiquid,Emitters.Emitters[1].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Table.Values.Values[1],0,,0.25
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/Assets/PS_Hib_BaitPuzzle_PourLiquid.PS_Hib_BaitPuzzle_PourLiquid,Emitters.Emitters[2].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MinValue,0,,0.1875
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/Assets/PS_Hib_BaitPuzzle_PourLiquid.PS_Hib_BaitPuzzle_PourLiquid,Emitters.Emitters[2].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.MaxValue,0,,0.25
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/Assets/PS_Hib_BaitPuzzle_PourLiquid.PS_Hib_BaitPuzzle_PourLiquid,Emitters.Emitters[2].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Table.Values.Values[0],0,,0.1875
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/Assets/PS_Hib_BaitPuzzle_PourLiquid.PS_Hib_BaitPuzzle_PourLiquid,Emitters.Emitters[2].Object..LODLevels.LODLevels[0].Object..Modules.Modules[0].Object..Lifetime.Table.Values.Values[1],0,,0.25
+
+# Pouring Timings
+SparkLevelPatchEntry,(1,7,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/BPIO_Hib_EP04_BaitPuzzleManager.BPIO_Hib_EP04_BaitPuzzleManager_C,0,1,ExecuteUbergraph_BPIO_Hib_EP04_BaitPuzzleManager,1,1064,3:1.2,3:0.3
+SparkLevelPatchEntry,(1,7,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/BPIO_Hib_EP04_BaitPuzzleManager.BPIO_Hib_EP04_BaitPuzzleManager_C,0,1,ExecuteUbergraph_BPIO_Hib_EP04_BaitPuzzleManager,1,734,3:1.0,4:0.25
+SparkLevelPatchEntry,(1,7,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/BPIO_Hib_EP04_BaitPuzzleManager.BPIO_Hib_EP04_BaitPuzzleManager_C,0,1,ExecuteUbergraph_BPIO_Hib_EP04_BaitPuzzleManager,1,83,3:1.5,5:0.375
+
+# Button-unlock delays
+SparkLevelPatchEntry,(1,7,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/BPIO_Hib_EP04_BaitPuzzleManager.BPIO_Hib_EP04_BaitPuzzleManager_C,0,1,ExecuteUbergraph_BPIO_Hib_EP04_BaitPuzzleManager,2,1179,1602,1:2,3:0.5
+
+# Pedestal Raising
+SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/Maps/Woods/Woods_Plot_M.Woods_Plot_M:PersistentLevel.BPIO_Hib_EP04_BaitContainer_2.Movement,TheTimeline.PlayRate,0,,4
+
+###
 ### Castle Crimson catapult tweaks
 ###
 

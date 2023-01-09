@@ -120,6 +120,10 @@ Some things intentionally *not* handled by the mod:
 * The Clapstructor sequence could be tightened up slightly, but not by much.
 * The whole Raging Bot mission (in Spendopticon) could be tightened up in
   various ways, but seemed too annoying to wade through for pretty small gains.
+* The drawbridge lowering in The Cankerwood could be sped up a bit, but it's
+  pretty quick already.
+* Various sequences in Cold Case: Forgotten Answers, in The Cankerwood, could
+  probably be sped up, but that one's been left alone.
 * The cocking animation on the third catapult in Castle Crimson has been
   left alone, for boring technical reasons.
 * The egg-incubation timer in A Good Egg has been left alone; it's already
@@ -291,6 +295,7 @@ Changelog
      animations, Gythian blood jar.
    * Mission-close delay after returning recordings to DJ Midnight in The Lodge
    * Secret wall in crypt in Cursehaven
+   * Brew-mixing machinery in The Cankerwood
    * Castle Crimson catapult animations
    * Don't Call it A Rorschach Ink-Blot Pipes, in Benediction of Pain
 

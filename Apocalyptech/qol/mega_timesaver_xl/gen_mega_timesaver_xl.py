@@ -1258,6 +1258,20 @@ mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
         0.5)
 mod.newline()
 
+# TODO:
+# So there's various objects in here where we're doing an IO() tweak in this section, but then
+# down below we also do some tweaking to a Timeline object, specifically tweaking its Length
+# attr, to match up with the freshly-scaled IO() bits.  Well, towards the tail end of this mod
+# development, I noticed that those Timeline objects also have a `PlayRate` attr, which
+# simplifies this whole process -- namely, you can leave this IO() bit out, leave the Timeline
+# `Length` how it is, and *just* alter the `PlayRate`.  I suspect I may not have the energy
+# to convert all the prior stuff to do it, so I think this new method is likely to only be
+# used for some of DLC2 and then DLC3.  Still, it might be worth converting it at some point.
+# (To be fair, *most* of the IOs in here make sense to keep as they are -- it's mostly just the
+# mission-related objects in the "Other" section which ended up requiring map-specific tweaks.
+# We wouldn't want to have to touch every single map door object to alter PlayRate, etc.  It
+# should be mostly just the ones where I've noted that there's extra tweaks "below.")
+
 class IO():
     """
     Convenience class to allow me to loop over a bunch of IO/BPIO objects which largely
@@ -2755,6 +2769,87 @@ mod.reg_hotfix(Mod.LEVEL, 'Village_P',
         7/global_scale,
         )
 
+mod.newline()
+
+# Brewery equipment in The Cankerwood.
+mod.header('Cankerwood Brewery Equipment')
+
+mod.comment('Nozzle Animations')
+# Not actually making use of duration here, since we're now altering PlayRate instead of Length.  Keeping
+# those values in here just in case I ever change my mind, though, since I'd already put 'em in.
+for timeline, duration in [
+        ('Sender Pipe Movement', 1.6),
+        ('RefillContainer', 0.6),
+        ('Pouring', 3),
+        ]:
+    mod.reg_hotfix(Mod.LEVEL, 'Woods_P',
+            f'/Hibiscus/Maps/Woods/Woods_Plot_M.Woods_Plot_M:PersistentLevel.BPIO_Hib_EP04_BaitPuzzle_Sender_2.{timeline}',
+            'TheTimeline.PlayRate',
+            global_scale,
+            )
+mod.newline()
+
+mod.comment('Receptacle Animations')
+# Not actually making use of duration here, since we're now altering PlayRate instead of Length.  Keeping
+# those values in here just in case I ever change my mind, though, since I'd already put 'em in.
+for receiver_num in [2, 3, 4]:
+    for timeline, duration in [
+            ('FillReceiver', 1.6),
+            ('EmptyReceiver', 0.6),
+            ]:
+        mod.reg_hotfix(Mod.LEVEL, 'Woods_P',
+                f'/Hibiscus/Maps/Woods/Woods_Plot_M.Woods_Plot_M:PersistentLevel.BPIO_Hib_EP04_BaitPuzzle_Receiver_{receiver_num}.{timeline}',
+                'TheTimeline.PlayRate',
+                global_scale,
+                )
+mod.newline()
+
+mod.comment('Pouring ParticleSystem')
+scale_ps(mod, data, Mod.LEVEL, 'Woods_P',
+        '/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/Assets/PS_Hib_BaitPuzzle_PourLiquid',
+        global_scale)
+mod.newline()
+
+mod.comment('Pouring Timings')
+for index, delay in [
+        # Initial pour timing, up to ValidateRecipe
+        (1064, 1.2),
+        # End of pour timing
+        (734, 1.0),
+        # Button-re-enable timing, among others
+        (83, 1.5),
+        ]:
+    mod.bytecode_hotfix(Mod.LEVEL, 'Woods_P',
+            '/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/BPIO_Hib_EP04_BaitPuzzleManager',
+            'ExecuteUbergraph_BPIO_Hib_EP04_BaitPuzzleManager',
+            index,
+            delay,
+            delay/global_scale,
+            )
+mod.newline()
+
+# These aren't as clean as I'd like -- like the one that you hit takes a little longer to re-active
+# than the other one, so if you want to move left twice (for instance) there's a slightly longer
+# delay than there really should be.  I don't see any obvious way to fix that, though, and it's not
+# awful, so not much to do but cope!
+mod.comment('Button-unlock delays')
+mod.bytecode_hotfix(Mod.LEVEL, 'Woods_P',
+        '/Hibiscus/InteractiveObjects/MissionSpecific/Plot/EP04/BaitPuzzle/BPIO_Hib_EP04_BaitPuzzleManager',
+        'ExecuteUbergraph_BPIO_Hib_EP04_BaitPuzzleManager',
+        [1179, 1602],
+        2,
+        2/global_scale,
+        )
+mod.newline()
+
+# This one's not really necessary -- you can pick up the jug as soon as the animation starts.  But,
+# whatever, we're doing everything else here so why not?
+mod.comment('Pedestal Raising')
+mod.reg_hotfix(Mod.LEVEL, 'Woods_P',
+        '/Hibiscus/Maps/Woods/Woods_Plot_M.Woods_Plot_M:PersistentLevel.BPIO_Hib_EP04_BaitContainer_2.Movement',
+        'TheTimeline.PlayRate',
+        global_scale,
+        )
 mod.newline()
 
 # Castle Crimson catapult tweaks
