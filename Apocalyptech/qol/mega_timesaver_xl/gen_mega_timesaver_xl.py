@@ -1557,6 +1557,11 @@ for category, cat_scale, io_objs in [
                 level='Lake_P',
                 timelinelength=False,
                 ),
+            # See also some tweaks, below
+            IO('/Hibiscus/InteractiveObjects/MissionSpecific/Side/PrivateEye/Painting/IO_Scripted_Private1_SecretWall',
+                label="Secret wall in crypt, for Cold Case: Buried Questions",
+                level='Village_P',
+                ),
             # See also some delay tweaks below
             IO('/Alisma/InteractiveObjects/MissionSpecific/Plot/ALI_EP02/Catapult/IO_MissionScripted_Ali_CatapultPivot',
                 label="Castle Crimson catapult rotation",
@@ -2729,6 +2734,27 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Bar_P',
         # bit more of DJ Midnight's Dark Mix animation before having her
         # revert back to the usual.
         20/global_scale)
+mod.newline()
+
+# Cold Case: Buried Questions
+mod.header('Cold Case: Buried Questions speedups')
+
+mod.comment('Crypt opening')
+mod.reg_hotfix(Mod.LEVEL, 'Village_P',
+        '/Hibiscus/Maps/Village/Village_Side_M_PrivateEye01.Village_Side_M_PrivateEye01:PersistentLevel.GbxLevelSequenceActor_OpenCryptDoor.AnimationPlayer',
+        'PlaybackSettings.PlayRate',
+        0.25*door_scale,
+        )
+mod.newline()
+
+# See also the tweaks in the IO() section
+mod.comment('Secret Wall')
+mod.reg_hotfix(Mod.LEVEL, 'Village_P',
+        '/Hibiscus/Maps/Village/Village_Side_M_PrivateEye01.Village_Side_M_PrivateEye01:PersistentLevel.IO_Scripted_PrivateEye_SecretWall_5.Wall Opening animation',
+        'TheTimeline.Length',
+        7/global_scale,
+        )
+
 mod.newline()
 
 # Castle Crimson catapult tweaks

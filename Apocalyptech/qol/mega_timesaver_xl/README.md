@@ -247,6 +247,7 @@ Changelog
    * Gate to the back half of the Homestead, in Splinterlands
    * Largeish Eridian doors in Pyre of Stars
    * Entrance to Timothy's hideout in The Spendopticon
+   * Crypt-opening door in Cold Case: Buried Questions, in Cursehaven
    * A couple doors from DLC6
  * Other Additions:
    * Slot Machines
@@ -289,6 +290,7 @@ Changelog
    * Various Call of the Deep tweaks, in Skittermaw basin: power coil panel, crane
      animations, Gythian blood jar.
    * Mission-close delay after returning recordings to DJ Midnight in The Lodge
+   * Secret wall in crypt in Cursehaven
    * Castle Crimson catapult animations
    * Don't Call it A Rorschach Ink-Blot Pipes, in Benediction of Pain
 

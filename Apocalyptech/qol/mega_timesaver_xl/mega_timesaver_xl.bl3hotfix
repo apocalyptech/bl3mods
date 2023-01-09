@@ -9993,6 +9993,10 @@ SparkLevelPatchEntry,(1,1,0,Lake_P),/Hibiscus/InteractiveObjects/MissionSpecific
 # Gythian blood jar in Call of the Deep
 SparkLevelPatchEntry,(1,1,0,Lake_P),/Hibiscus/InteractiveObjects/MissionSpecific/Side/WhereIBelong/Placeables/IO_MissionPlaceable_BloodJar.IO_MissionPlaceable_BloodJar_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.25
 
+# Secret wall in crypt, for Cold Case: Buried Questions
+SparkLevelPatchEntry,(1,1,0,Village_P),/Hibiscus/InteractiveObjects/MissionSpecific/Side/PrivateEye/Painting/IO_Scripted_Private1_SecretWall.IO_Scripted_Private1_SecretWall_C,Timelines.Timelines[0].Object..TimelineLength,0,,1.75
+SparkLevelPatchEntry,(1,1,0,Village_P),/Hibiscus/InteractiveObjects/MissionSpecific/Side/PrivateEye/Painting/IO_Scripted_Private1_SecretWall.IO_Scripted_Private1_SecretWall_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.75
+
 # Castle Crimson catapult rotation
 SparkLevelPatchEntry,(1,1,0,Anger_P),/Alisma/InteractiveObjects/MissionSpecific/Plot/ALI_EP02/Catapult/IO_MissionScripted_Ali_CatapultPivot.IO_MissionScripted_Ali_CatapultPivot_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.5
 SparkLevelPatchEntry,(1,1,0,Anger_P),/Alisma/InteractiveObjects/MissionSpecific/Plot/ALI_EP02/Catapult/IO_MissionScripted_Ali_CatapultPivot.IO_MissionScripted_Ali_CatapultPivot_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.5
@@ -10528,6 +10532,16 @@ SparkLevelPatchEntry,(1,1,0,Lake_P),/Hibiscus/Maps/Lake/Lake_S_WhereIBelong.Lake
 ###
 
 SparkLevelPatchEntry,(1,7,0,Bar_P),/Hibiscus/Maps/Bar/Bar_Side_M_SinisterSounds.Bar_Side_M_SinisterSounds_C,0,1,ExecuteUbergraph_Bar_Side_M_SinisterSounds,1,2518,2:20,3:5.0
+
+###
+### Cold Case: Buried Questions speedups
+###
+
+# Crypt opening
+SparkLevelPatchEntry,(1,1,0,Village_P),/Hibiscus/Maps/Village/Village_Side_M_PrivateEye01.Village_Side_M_PrivateEye01:PersistentLevel.GbxLevelSequenceActor_OpenCryptDoor.AnimationPlayer,PlaybackSettings.PlayRate,0,,1.25
+
+# Secret Wall
+SparkLevelPatchEntry,(1,1,0,Village_P),/Hibiscus/Maps/Village/Village_Side_M_PrivateEye01.Village_Side_M_PrivateEye01:PersistentLevel.IO_Scripted_PrivateEye_SecretWall_5.Wall Opening animation,TheTimeline.Length,0,,1.75
 
 ###
 ### Castle Crimson catapult tweaks

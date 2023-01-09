@@ -62,13 +62,13 @@ X /Game/Maps/Zone_4/Crypt/Crypt_P
   /Geranium/Maps/Frontier/Frontier_P
   /Geranium/Maps/Lodge/Lodge_P
   /Geranium/Maps/Town/Town_P
-  /Hibiscus/Maps/Archive/Archive_P
+* /Hibiscus/Maps/Archive/Archive_P
 * /Hibiscus/Maps/Bar/Bar_P
   /Hibiscus/Maps/Camp/Camp_P
 * /Hibiscus/Maps/Lake/Lake_P
   /Hibiscus/Maps/Venue/Venue_P
 * /Hibiscus/Maps/Village/Village_P
-  /Hibiscus/Maps/Woods/Woods_P
+* /Hibiscus/Maps/Woods/Woods_P
 * /Ixora/Maps/FrostSite/FrostSite_P
 * /Ixora2/Maps/Boss/SacrificeBoss_p
 * /Ixora2/Maps/Cabin/Cabin_P
