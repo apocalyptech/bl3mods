@@ -10046,6 +10046,14 @@ SparkEarlyLevelPatchEntry,(1,1,0,CasinoIntro_P),/Dandelion/Maps/CasinoIntro/Casi
 SparkEarlyLevelPatchEntry,(1,1,0,MotorcadeInterior_P),/Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_Plot.MotorcadeInterior_Plot:PersistentLevel.BP_CarnivorArena_Elevator_578,ElevatorSpeed,0,,800
 SparkEarlyLevelPatchEntry,(1,1,0,MotorcadeInterior_P),/Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_Plot.MotorcadeInterior_Plot:PersistentLevel.BP_CarnivorArena_Elevator_578,ElevatorTravelTime,0,,2.5
 
+# Heart's Desire
+SparkEarlyLevelPatchEntry,(1,1,0,Venue_P),/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.Elevator_Hib_EleanorOffice_3,ElevatorSpeed,0,,600
+SparkEarlyLevelPatchEntry,(1,1,0,Venue_P),/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.Elevator_Hib_EleanorOffice_3,ElevatorTravelTime,0,,2.5
+
+# Heart's Desire
+SparkEarlyLevelPatchEntry,(1,1,0,Venue_P),/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.Elevator_PrisonArmory_4,ElevatorSpeed,0,,800
+SparkEarlyLevelPatchEntry,(1,1,0,Venue_P),/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.Elevator_PrisonArmory_4,ElevatorTravelTime,0,,2.5
+
 # Jack's Secret
 SparkEarlyLevelPatchEntry,(1,1,0,Core_P),/Dandelion/Maps/Core/Core_Mission.Core_Mission:PersistentLevel.Elevator_Core_JackpotToCore_2,ElevatorSpeed,0,,2800
 SparkEarlyLevelPatchEntry,(1,1,0,Core_P),/Dandelion/Maps/Core/Core_Mission.Core_Mission:PersistentLevel.Elevator_Core_JackpotToCore_2,ElevatorTravelTime,0,,5.0
@@ -10596,6 +10604,12 @@ SparkLevelPatchEntry,(1,7,0,Woods_P),/Hibiscus/InteractiveObjects/MissionSpecifi
 # Pedestal Raising
 SparkLevelPatchEntry,(1,1,0,Woods_P),/Hibiscus/Maps/Woods/Woods_Plot_M.Woods_Plot_M:PersistentLevel.BPIO_Hib_EP04_BaitContainer_2.Movement,TheTimeline.PlayRate,0,,4
 
+# Heart's Destire hidden-elevator desk drawers
+SparkLevelPatchEntry,(1,1,0,Venue_P),/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.BPIO_Hib_EP06_DeskDrawer_6.DrawerMovement,TheTimeline.PlayRate,0,,4
+SparkLevelPatchEntry,(1,1,0,Venue_P),/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.BPIO_Hib_EP06_DeskDrawer_7.DrawerMovement,TheTimeline.PlayRate,0,,4
+SparkLevelPatchEntry,(1,1,0,Venue_P),/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.BPIO_Hib_EP06_DeskDrawer_8.DrawerMovement,TheTimeline.PlayRate,0,,4
+SparkLevelPatchEntry,(1,1,0,Venue_P),/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.BPIO_Hib_EP06_DeskDrawer_9.DrawerMovement,TheTimeline.PlayRate,0,,4
+
 ###
 ### Castle Crimson catapult tweaks
 ###
@@ -10678,6 +10692,10 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_Ellie),/Game/NonPlayerCharacters/Ellie/_
 # Failurebot
 SparkCharacterLoadedEntry,(1,1,0,BPChar_MrInterpolator),/Game/NonPlayerCharacters/_Eden6/MrInterpolator/_Design/Character/BPChar_MrInterpolator.Default__BPChar_MrInterpolator_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_MrInterpolator),/Game/NonPlayerCharacters/_Eden6/MrInterpolator/_Design/Character/BPChar_MrInterpolator.Default__BPChar_MrInterpolator_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+
+# Gaige
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Hib_Gaige),/Hibiscus/NonPlayerCharacters/Gaige/_Design/Character/BPChar_Hib_Gaige.Default__BPChar_Hib_Gaige_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Hib_Gaige),/Hibiscus/NonPlayerCharacters/Gaige/_Design/Character/BPChar_Hib_Gaige.Default__BPChar_Hib_Gaige_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 
 # Glenn the Ratch
 SparkCharacterLoadedEntry,(1,1,0,BPChar_TalkingRatch),/Game/NonPlayerCharacters/_Promethea/TalkingRatch/_Design/Character/BPChar_TalkingRatch.Default__BPChar_TalkingRatch_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)

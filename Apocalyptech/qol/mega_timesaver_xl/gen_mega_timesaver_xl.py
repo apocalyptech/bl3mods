@@ -1776,19 +1776,18 @@ for label, level, obj_name, speed, travel_time in sorted([
         ("Negul Neshai", 'Camp_P',
             '/Hibiscus/Maps/Camp/Camp_Plot_M.Camp_Plot_M:PersistentLevel.Elevator_Hib_DahlShip_2',
             200, 10),
+        ("Heart's Desire", 'Venue_P',
+            '/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.Elevator_Hib_EleanorOffice_3',
+            150, 10),
+        ("Heart's Desire", 'Venue_P',
+            '/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.Elevator_PrisonArmory_4',
+            200, 10),
 
         # Wrote some code to attempt to autodetect some things, to make future filling-in easier.
         # Keeping them commented for now; kind of want to doublecheck things as I go, still,  I
         # suspect that `defaultspeed` is 200, but we'll see.  A default traveltime of 10 has been
         # filled in on a lot of these.  Also I suspect that at least some of these aren't really
         # things that we'd want to speed up -- like all the Guardian Takedown ones, for instance.
-
-        #("Heart's Desire", 'Venue_P',
-        #    '/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.Elevator_Hib_EleanorOffice_3',
-        #    150, 10),
-        #("Heart's Desire", 'Venue_P',
-        #    '/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.Elevator_PrisonArmory_4',
-        #    200, 10),
 
         #("The Blastplains", 'Frontier_P',
         #    '/Geranium/Maps/Frontier/Frontier_M_MoneyBackGuarantee.Frontier_M_MoneyBackGuarantee:PersistentLevel.Elevator_MoneyBack_frontier_2',
@@ -2862,6 +2861,15 @@ mod.reg_hotfix(Mod.LEVEL, 'Woods_P',
         )
 mod.newline()
 
+# Heart's Desire hidden-elevator desk drawers
+mod.comment("Heart's Destire hidden-elevator desk drawers")
+for num in [6, 7, 8, 9]:
+    mod.reg_hotfix(Mod.LEVEL, 'Venue_P',
+            f'/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.BPIO_Hib_EP06_DeskDrawer_{num}.DrawerMovement',
+            'TheTimeline.PlayRate',
+            global_scale)
+mod.newline()
+
 # Castle Crimson catapult tweaks
 mod.header('Castle Crimson catapult tweaks')
 
@@ -3071,6 +3079,13 @@ for char in sorted([
             ),
         Char('Joy',
             '/Dandelion/NonPlayerCharacters/_SideMissions/Joy/_Design/Character/BPChar_Joy',
+            global_char_scale,
+            ),
+        # Gaige is mostly fine throughout the game, but it's a longish way to Heart's Desire
+        # at the end of the DLC, so bumping her up a bit.  Deathtrap's sprint speed is
+        # already quite good.
+        Char('Gaige',
+            '/Hibiscus/NonPlayerCharacters/Gaige/_Design/Character/BPChar_Hib_Gaige',
             global_char_scale,
             ),
         Char('P.A.T.',

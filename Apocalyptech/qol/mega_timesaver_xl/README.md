@@ -37,6 +37,7 @@ Currently, the mod affects the following:
   * Digby Vermouth
   * Ellie
   * Failurebot
+  * Gaige
   * Glenn the Ratch
   * Joy
   * Liam (Atlas HQ Guard)
@@ -233,6 +234,7 @@ Changelog
    * Digby Vermouth
    * Ellie
    * Failurebot
+   * Gaige
    * Glenn the Ratch
    * Joy
    * Liam (Atlas HQ guard)
@@ -296,6 +298,7 @@ Changelog
    * Mission-close delay after returning recordings to DJ Midnight in The Lodge
    * Secret wall in crypt in Cursehaven
    * Brew-mixing machinery in The Cankerwood
+   * Desk drawers in hidden elevator in Heart's Desire
    * Castle Crimson catapult animations
    * Don't Call it A Rorschach Ink-Blot Pipes, in Benediction of Pain
 

@@ -66,7 +66,7 @@ X /Game/Maps/Zone_4/Crypt/Crypt_P
 * /Hibiscus/Maps/Bar/Bar_P
 * /Hibiscus/Maps/Camp/Camp_P
 * /Hibiscus/Maps/Lake/Lake_P
-  /Hibiscus/Maps/Venue/Venue_P
+* /Hibiscus/Maps/Venue/Venue_P
 * /Hibiscus/Maps/Village/Village_P
 * /Hibiscus/Maps/Woods/Woods_P
 * /Ixora/Maps/FrostSite/FrostSite_P
