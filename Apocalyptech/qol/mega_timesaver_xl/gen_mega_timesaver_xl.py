@@ -648,6 +648,33 @@ for cat_name, cat_scale, animseqs in [
 
     mod.newline()
 
+# Eridian tools should very arguably just be in the above section with all the other
+# AnimSequence tweaks, but I think these pre-dated my fancier handling, and they seem
+# to work fine.  I don't really feel like putting them in there and re-testing stuff,
+# so I'm just pretending they're part of that main section with a comment rather than
+# header, here.
+mod.comment('Eridian Tools')
+for anim_obj in [
+        '/PlayerCharacters/_Shared/Animation/Skills/VaultRewards/1st/AS_Analyzer_Use',
+        '/PlayerCharacters/_Shared/Animation/Skills/VaultRewards/1st/AS_Eridian_Melee_Small',
+        '/PlayerCharacters/_Shared/Animation/Skills/VaultRewards/1st/Eridian_Analyzer/AS_Analyzer_Use',
+        '/PlayerCharacters/Beastmaster/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use',
+        '/PlayerCharacters/Beastmaster/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small',
+        '/PlayerCharacters/Gunner/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use',
+        '/PlayerCharacters/Gunner/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small',
+        '/PlayerCharacters/Operative/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use',
+        '/PlayerCharacters/Operative/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small',
+        '/PlayerCharacters/SirenBrawler/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use',
+        '/PlayerCharacters/SirenBrawler/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small',
+        ]:
+
+    mod.reg_hotfix(Mod.PATCH, '',
+            anim_obj,
+            'RateScale',
+            global_eridian_scale)
+
+mod.newline()
+
 mod.header('Extra Container Tweaks')
 
 # Maliwan Ammo Crate Digistructs
@@ -708,29 +735,6 @@ for index, delay in [
             delay,
             0,
             )
-mod.newline()
-
-mod.header('Eridian Tools')
-
-for anim_obj in [
-        '/PlayerCharacters/_Shared/Animation/Skills/VaultRewards/1st/AS_Analyzer_Use',
-        '/PlayerCharacters/_Shared/Animation/Skills/VaultRewards/1st/AS_Eridian_Melee_Small',
-        '/PlayerCharacters/_Shared/Animation/Skills/VaultRewards/1st/Eridian_Analyzer/AS_Analyzer_Use',
-        '/PlayerCharacters/Beastmaster/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use',
-        '/PlayerCharacters/Beastmaster/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small',
-        '/PlayerCharacters/Gunner/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use',
-        '/PlayerCharacters/Gunner/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small',
-        '/PlayerCharacters/Operative/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use',
-        '/PlayerCharacters/Operative/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small',
-        '/PlayerCharacters/SirenBrawler/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use',
-        '/PlayerCharacters/SirenBrawler/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small',
-        ]:
-
-    mod.reg_hotfix(Mod.PATCH, '',
-            anim_obj,
-            'RateScale',
-            global_eridian_scale)
-
 mod.newline()
 
 # Vehicles!

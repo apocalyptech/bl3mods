@@ -1594,6 +1594,19 @@ SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Enemies/Saurian/_Shared/Animation/M
 SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,Notifies.Notifies[9].LinkValue,0,,1.695808
 SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging.AS_FastDigging,SequenceLength,0,,2.066667
 
+# Eridian Tools
+SparkPatchEntry,(1,1,0,),/PlayerCharacters/_Shared/Animation/Skills/VaultRewards/1st/AS_Analyzer_Use.AS_Analyzer_Use,RateScale,0,,2
+SparkPatchEntry,(1,1,0,),/PlayerCharacters/_Shared/Animation/Skills/VaultRewards/1st/AS_Eridian_Melee_Small.AS_Eridian_Melee_Small,RateScale,0,,2
+SparkPatchEntry,(1,1,0,),/PlayerCharacters/_Shared/Animation/Skills/VaultRewards/1st/Eridian_Analyzer/AS_Analyzer_Use.AS_Analyzer_Use,RateScale,0,,2
+SparkPatchEntry,(1,1,0,),/PlayerCharacters/Beastmaster/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use.AS_Analyzer_Use,RateScale,0,,2
+SparkPatchEntry,(1,1,0,),/PlayerCharacters/Beastmaster/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small.AS_Eridian_Melee_Small,RateScale,0,,2
+SparkPatchEntry,(1,1,0,),/PlayerCharacters/Gunner/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use.AS_Analyzer_Use,RateScale,0,,2
+SparkPatchEntry,(1,1,0,),/PlayerCharacters/Gunner/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small.AS_Eridian_Melee_Small,RateScale,0,,2
+SparkPatchEntry,(1,1,0,),/PlayerCharacters/Operative/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use.AS_Analyzer_Use,RateScale,0,,2
+SparkPatchEntry,(1,1,0,),/PlayerCharacters/Operative/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small.AS_Eridian_Melee_Small,RateScale,0,,2
+SparkPatchEntry,(1,1,0,),/PlayerCharacters/SirenBrawler/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use.AS_Analyzer_Use,RateScale,0,,2
+SparkPatchEntry,(1,1,0,),/PlayerCharacters/SirenBrawler/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small.AS_Eridian_Melee_Small,RateScale,0,,2
+
 ###
 ### Extra Container Tweaks
 ###
@@ -1619,22 +1632,6 @@ SparkLevelPatchEntry,(1,7,0,MatchAll),/Game/Lootables/_Design/Classes/Industrial
 # Xylourgos Portal Chest Loot Skrit Spawn Delay
 SparkLevelPatchEntry,(1,7,0,MatchAll),/Hibiscus/InteractiveObjects/Lootables/_Design/Classes/Cultists/BPIO_Hib_Lootable_PortalChest.BPIO_Hib_Lootable_PortalChest_C,0,1,ExecuteUbergraph_BPIO_Hib_Lootable_PortalChest,1,1938,4:0.25,1:0
 SparkLevelPatchEntry,(1,7,0,MatchAll),/Hibiscus/InteractiveObjects/Lootables/_Design/Classes/Cultists/BPIO_Hib_Lootable_PortalChest.BPIO_Hib_Lootable_PortalChest_C,0,1,ExecuteUbergraph_BPIO_Hib_Lootable_PortalChest,1,1494,1:1,1:0
-
-###
-### Eridian Tools
-###
-
-SparkPatchEntry,(1,1,0,),/PlayerCharacters/_Shared/Animation/Skills/VaultRewards/1st/AS_Analyzer_Use.AS_Analyzer_Use,RateScale,0,,2
-SparkPatchEntry,(1,1,0,),/PlayerCharacters/_Shared/Animation/Skills/VaultRewards/1st/AS_Eridian_Melee_Small.AS_Eridian_Melee_Small,RateScale,0,,2
-SparkPatchEntry,(1,1,0,),/PlayerCharacters/_Shared/Animation/Skills/VaultRewards/1st/Eridian_Analyzer/AS_Analyzer_Use.AS_Analyzer_Use,RateScale,0,,2
-SparkPatchEntry,(1,1,0,),/PlayerCharacters/Beastmaster/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use.AS_Analyzer_Use,RateScale,0,,2
-SparkPatchEntry,(1,1,0,),/PlayerCharacters/Beastmaster/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small.AS_Eridian_Melee_Small,RateScale,0,,2
-SparkPatchEntry,(1,1,0,),/PlayerCharacters/Gunner/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use.AS_Analyzer_Use,RateScale,0,,2
-SparkPatchEntry,(1,1,0,),/PlayerCharacters/Gunner/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small.AS_Eridian_Melee_Small,RateScale,0,,2
-SparkPatchEntry,(1,1,0,),/PlayerCharacters/Operative/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use.AS_Analyzer_Use,RateScale,0,,2
-SparkPatchEntry,(1,1,0,),/PlayerCharacters/Operative/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small.AS_Eridian_Melee_Small,RateScale,0,,2
-SparkPatchEntry,(1,1,0,),/PlayerCharacters/SirenBrawler/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use.AS_Analyzer_Use,RateScale,0,,2
-SparkPatchEntry,(1,1,0,),/PlayerCharacters/SirenBrawler/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small.AS_Eridian_Melee_Small,RateScale,0,,2
 
 ###
 ### Vehicle Speedups: Player Basic Interactions (always loaded objects)
