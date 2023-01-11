@@ -10730,6 +10730,10 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_Lilith),/Game/NonPlayerCharacters/Lilith
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Maya),/Game/NonPlayerCharacters/Maya/_Design/Character/BPChar_Maya.Default__BPChar_Maya_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Maya),/Game/NonPlayerCharacters/Maya/_Design/Character/BPChar_Maya.Default__BPChar_Maya_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 
+# McSmugger
+SparkCharacterLoadedEntry,(1,1,0,BPChar_McSmugger),/Geranium/NonPlayerCharacters/GerNPC/McSmugger/_Design/Character/BPChar_McSmugger.Default__BPChar_McSmugger_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_McSmugger),/Geranium/NonPlayerCharacters/GerNPC/McSmugger/_Design/Character/BPChar_McSmugger.Default__BPChar_McSmugger_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+
 # P.A.T.
 SparkCharacterLoadedEntry,(1,1,0,BPChar_PAT),/Alisma/NonPlayerCharacters/PAT/_Design/Character/BPChar_PAT.Default__BPChar_PAT_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_PAT),/Alisma/NonPlayerCharacters/PAT/_Design/Character/BPChar_PAT.Default__BPChar_PAT_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)

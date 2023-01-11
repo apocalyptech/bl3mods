@@ -43,6 +43,7 @@ Currently, the mod affects the following:
   * Liam (Atlas HQ Guard)
   * Lilith
   * Maya
+  * McSmugger
   * P.A.T.
   * Terry the Ratch
   * Timothy Lawrence
@@ -241,6 +242,7 @@ Changelog
    * Joy
    * Liam (Atlas HQ guard)
    * Maya
+   * McSmugger
    * P.A.T.
    * Terry the Ratch
    * Timothy Lawrence
