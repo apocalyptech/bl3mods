@@ -279,111 +279,6 @@ mod.bytecode_hotfix(Mod.PATCH, '',
 
 mod.newline()
 
-# Vault Card Chest injection!  So: the Vault Card menu uses a custom red chest
-# to do the animation, and the chest object in the UI structure also uses a custom
-# opening animation.  Those objects don't ordinarily exist until the Vault Card
-# menu has been opened, though, and they disappear once the menu is closed.  So,
-# our hotfixes can't touch them unless we inject the chest into each map first.
-# So that's what we're doing here!  One further wrinkle is that the "stock" custom
-# red chest object doesn't actually use the animation that the menu-spawned chest
-# uses, so we *also* have to force that reference to exist, so that we can hotfix
-# the proper animation.  Just 395 hotfixes (including the actual animation-speedup
-# ones) to get this working!  Totally worth it.
-mod.header('Vault Card Chest Injection (needed in order to speed up the opening animation)')
-for level_full in [
-        '/Alisma/Maps/Anger/Anger_P',
-        '/Alisma/Maps/Chase/Chase_P',
-        '/Alisma/Maps/Eldorado/Eldorado_P',
-        '/Alisma/Maps/Experiment/Experiment_P',
-        '/Alisma/Maps/Sanctum/Sanctum_P',
-        '/Dandelion/Maps/CasinoIntro/CasinoIntro_P',
-        '/Dandelion/Maps/Core/Core_P',
-        '/Dandelion/Maps/Impound/Impound_P',
-        '/Dandelion/Maps/Strip/Strip_P',
-        '/Dandelion/Maps/TowerLair/TowerLair_P',
-        '/Dandelion/Maps/Trashtown/Trashtown_P',
-        '/Game/Maps/ProvingGrounds/Trial1/ProvingGrounds_Trial1_P',
-        '/Game/Maps/ProvingGrounds/Trial4/ProvingGrounds_Trial4_P',
-        '/Game/Maps/ProvingGrounds/Trial5/ProvingGrounds_Trial5_P',
-        '/Game/Maps/ProvingGrounds/Trial6/ProvingGrounds_Trial6_P',
-        '/Game/Maps/ProvingGrounds/Trial7/ProvingGrounds_Trial7_P',
-        '/Game/Maps/ProvingGrounds/Trial8/ProvingGrounds_Trial8_P',
-        '/Game/Maps/Sanctuary3/Sanctuary3_P',
-        '/Game/Maps/Slaughters/COVSlaughter/COVSlaughter_P',
-        '/Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P',
-        '/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_P',
-        '/Game/Maps/Zone_0/FinalBoss/FinalBoss_P',
-        '/Game/Maps/Zone_0/Prologue/Prologue_P',
-        '/Game/Maps/Zone_0/Recruitment/Recruitment_P',
-        '/Game/Maps/Zone_0/Sacrifice/Sacrifice_P',
-        '/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_P',
-        '/Game/Maps/Zone_1/City/City_P',
-        '/Game/Maps/Zone_1/CityBoss/CityBoss_P',
-        '/Game/Maps/Zone_1/CityVault/CityVault_P',
-        '/Game/Maps/Zone_1/Monastery/Monastery_P',
-        '/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_P',
-        '/Game/Maps/Zone_1/Outskirts/Outskirts_P',
-        '/Game/Maps/Zone_1/Towers/Towers_P',
-        '/Game/Maps/Zone_2/Mansion/Mansion_P',
-        '/Game/Maps/Zone_2/MarshFields/MarshFields_P',
-        '/Game/Maps/Zone_2/Prison/Prison_P',
-        '/Game/Maps/Zone_2/Watership/Watership_P',
-        '/Game/Maps/Zone_2/Wetlands/Wetlands_P',
-        '/Game/Maps/Zone_2/WetlandsBoss/WetlandsBoss_P',
-        '/Game/Maps/Zone_2/WetlandsVault/WetlandsVault_P',
-        '/Game/Maps/Zone_3/Convoy/Convoy_P',
-        '/Game/Maps/Zone_3/Desert/Desert_P',
-        '/Game/Maps/Zone_3/DesertBoss/DesertBoss_P',
-        '/Game/Maps/Zone_3/DesertVault/Desertvault_P',
-        '/Game/Maps/Zone_3/Mine/Mine_P',
-        '/Game/Maps/Zone_3/Motorcade/Motorcade_P',
-        '/Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_P',
-        '/Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_P',
-        '/Game/Maps/Zone_4/Beach/Beach_P',
-        # For some reason, injecting this chest in Crypt_P causes Tannis+Typhon to get
-        # stuck right at the beginning of the map, after the first door opens.  No idea
-        # why, though clearly the chest is stealing an event, or just getting in the
-        # way of an event delivery.  Seriously bizarre.
-        #'/Game/Maps/Zone_4/Crypt/Crypt_P',
-        '/Game/Maps/Zone_4/Desolate/Desolate_P',
-        '/Game/PatchDLC/BloodyHarvest/Maps/Seasons/BloodyHarvest/BloodyHarvest_P',
-        '/Game/PatchDLC/Event2/Maps/Cartels_P',
-        '/Game/PatchDLC/Raid1/Maps/Raid/Raid_P',
-        '/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_P',
-        '/Geranium/Maps/CraterBoss/CraterBoss_P',
-        '/Geranium/Maps/Facility/Facility_P',
-        '/Geranium/Maps/Forest/Forest_P',
-        '/Geranium/Maps/Frontier/Frontier_P',
-        '/Geranium/Maps/Lodge/Lodge_P',
-        '/Geranium/Maps/Town/Town_P',
-        '/Hibiscus/Maps/Archive/Archive_P',
-        '/Hibiscus/Maps/Bar/Bar_P',
-        '/Hibiscus/Maps/Camp/Camp_P',
-        '/Hibiscus/Maps/Lake/Lake_P',
-        '/Hibiscus/Maps/Venue/Venue_P',
-        '/Hibiscus/Maps/Village/Village_P',
-        '/Hibiscus/Maps/Woods/Woods_P',
-        '/Ixora/Maps/FrostSite/FrostSite_P',
-        '/Ixora2/Maps/Boss/SacrificeBoss_p',
-        '/Ixora2/Maps/Cabin/Cabin_P',
-        '/Ixora2/Maps/Mystery/Nekro/NekroMystery_p',
-        '/Ixora2/Maps/Mystery/Pandora/PandoraMystery_p',
-        '/Ixora2/Maps/Noir/Noir_P',
-        ]:
-    level_short = level_full.rsplit('/', 1)[-1]
-    level_label = LVL_TO_ENG_LOWER[level_short.lower()]
-    mod.comment(level_label)
-    chest_name = mod.streaming_hotfix(level_full,
-            '/Game/PatchDLC/VaultCard/InteractiveObjects/BPIO_Lootable_VaultCard_RedCrate',
-            location=(99999,99999,99999),
-            )
-    mod.reg_hotfix(Mod.LEVEL, level_short,
-            chest_name,
-            'OpeningInteractions.OpeningInteractions[0].TransitionAnimation',
-            Mod.get_full_cond('/Game/PatchDLC/VaultCard/AS_Open_v2', 'AnimSequence'),
-            )
-    mod.newline()
-
 class AS():
     """
     Little wrapper class so that I can more easily loop over a bunch of AnimSequence
@@ -476,314 +371,6 @@ class AS():
         self._do_scale(mod, data, self.method, target)
         if self.extra_char:
             self._do_scale(mod, data, Mod.CHAR, self.extra_char)
-
-# Direct animation speedups
-mod.header('Simple Animation Speedups')
-for cat_name, cat_scale, animseqs in [
-        ('Containers', global_scale, [
-            # Initial object list generated by:
-            #     find $(find . -type d -name Lootables) -name "AS_*.uasset" | sort -i | cut -d. -f2 | grep -vE '(Idle|Flinch|_Closed|_Opened)'
-            # ... while at the root of a data unpack
-            AS('/Alisma/Lootables/Hyperion/AmmoCase/Animation/AS_Open_In'),
-            AS('/Alisma/Lootables/Hyperion/LootCase/Animation/AS_Hyp_Misc2_Opening'),
-            AS('/Alisma/Lootables/Hyperion/PortaPotty/Animation/AS_Open_IN_Poor'),
-            AS('/Alisma/Lootables/Hyperion/PortaPotty/Animation/AS_Open_IN'),
-            AS('/Alisma/Lootables/Hyperion/PortaPotty/Animation/AS_Open'),
-            AS('/Alisma/Lootables/Hyperion/RedChest/Animation/AS_HypRedChest_Open'),
-            AS('/Alisma/Lootables/Hyperion/SingleCase/Animation/AS_SingleCase_In'),
-            AS('/Alisma/Lootables/Hyperion/WeaponBox/Animation/AS_HypWeaponLocker_Open'),
-            AS('/Dandelion/LevelArt/Manufacturers/Hyperion/Props/SlotMachines/Animation/AS_PushButton_Open'),
-            AS('/Dandelion/Lootables/Hyperion/AmmoCase/Animation/AS_Open_In'),
-            AS('/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_01'),
-            AS('/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_03'),
-            AS('/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_04'),
-            AS('/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_In'),
-            AS('/Dandelion/Lootables/Hyperion/LootCase/Animation/AS_Hyp_Misc2_Opening'),
-            AS('/Dandelion/Lootables/Hyperion/PortaPotty/Animation/AS_Open_IN'),
-            AS('/Dandelion/Lootables/Hyperion/RedChest/Animation/AS_HypRedChest_Open'),
-            AS('/Dandelion/Lootables/Hyperion/SingleCase/Animation/AS_SingleCase_In'),
-            AS('/Dandelion/Lootables/Hyperion/WeaponBox/Animation/AS_HypWeaponLocker_Open'),
-            AS('/Game/Lootables/Atlas/Chest_Red/Animation/AS_Open'),
-            AS('/Game/Lootables/Atlas/Crate_Ammo/Animation/AS_Open'),
-            AS('/Game/Lootables/COV/Bandit_CardboardBox/Animation/AS_Open_Fast'),
-            AS('/Game/Lootables/COV/Bandit_CardboardBox/Animation/AS_Open_Slow'),
-            AS('/Game/Lootables/COV/Chest_Red/Animation/AS_Open_v1'),
-            AS('/Game/Lootables/COV/Chest_White/Animations/AS_Open'),
-            AS('/Game/Lootables/COV/Crate_Ammo/Animation/AS_Open_v1'),
-            AS('/Game/Lootables/COV/Crate_OfferingBox/Animation/AS_Open_v1'),
-            AS('/Game/Lootables/Eridian/Chest_Red/Animation/AS_Open'),
-            AS('/Game/Lootables/Eridian/Chest_White/Animation/AS_Open'),
-            AS('/Game/Lootables/Eridian/Crate_Ammo/Animation/AS_Open'),
-            AS('/Game/Lootables/_Global/Chest_Gold/Animation/AS_Close'),
-            AS('/Game/Lootables/_Global/Chest_Gold/Animation/AS_Open'),
-            AS('/Game/Lootables/_Global/Chest_Trials/Animation/AS_Open'),
-            AS('/Game/Lootables/_Global/Chest_Trials/Animation/AS_Open_v2'),
-            AS('/Game/Lootables/_Global/Chest_Typhon/Animation/AS_Open',
-                # Typhon Dead Drop doesn't seem to actually apply with just a Level hotfix.  I
-                # suspect it gets loaded in too late, or something?  Anyway, applying a Char
-                # hotfix instead seems to do the trick, so whatever.
-                extra_char='MatchAll',
-                ),
-            AS('/Game/Lootables/_Global/Crate_Ammo/Animations/AS_Open'),
-            AS('/Game/Lootables/_Global/Dumpster_Small/Animation/AS_Open'),
-            AS('/Game/Lootables/_Global/Locker_Generic/Animation/AS_Open_Misnamed'),
-            AS('/Game/Lootables/_Global/Locker_Generic/Animation/AS_Open'),
-            AS('/Game/Lootables/Industrial/Cash_Register/Animation/AS_Open'),
-            AS('/Game/Lootables/Industrial/Lock_Box/Animations/AS_Open'),
-            AS('/Game/Lootables/Industrial/Machine_Washing/Animation/AS_Open'),
-            AS('/Game/Lootables/Industrial/PortaPotty/Animation/AS_BlastOff'),
-            AS('/Game/Lootables/Industrial/PortaPotty/Animation/AS_Open_v1'),
-            AS('/Game/Lootables/Industrial/Refrigerator/Animation/AS_Open'),
-            AS('/Game/Lootables/Industrial/Safe/Animation/AS_Open'),
-            AS('/Game/Lootables/Industrial/Strong_Box/Animation/AS_Open'),
-            AS('/Game/Lootables/Industrial/Toilet/Animations/AS_Open'),
-            AS('/Game/Lootables/Industrial/Trunk_Car/Animation/AS_Open_Backfire'),
-            AS('/Game/Lootables/Industrial/Trunk_Car/Animation/AS_Open'),
-            AS('/Game/Lootables/Jakobs/Chest_Red/Animation/AS_Open'),
-            AS('/Game/Lootables/Jakobs/Chest_White/Animation/AS_Open'),
-            AS('/Game/Lootables/Jakobs/GunRack/Animation/AS_Open'),
-            AS('/Game/Lootables/Jakobs/Lockbox/Animation/AS_Open'),
-            AS('/Game/Lootables/Jakobs/MusicBox/Animation/AS_Open'),
-            AS('/Game/Lootables/Maliwan/Ammo/Animation/AS_Open_v1'),
-            AS('/Game/Lootables/Maliwan/Chest_Red/Animation/AS_Open'),
-            AS('/Game/Lootables/Maliwan/Chest_White/Animation/AS_Open'),
-            AS('/Game/Lootables/Mission_Specific/Rock_HideAKey/Animation/AS_Open'),
-            AS('/Game/Lootables/Pandora/Mailbox/Animation/AS_Open_v1'),
-            AS('/Game/Lootables/Pandora/Mailbox/Animation/AS_Open_v2'),
-            AS('/Game/Lootables/Pandora/TrashCan/Model/Animation/AS_Open_v1'),
-            AS('/Game/Lootables/Pandora/TrashCan/Model/Animation/AS_Open_v2'),
-            # This one doesn't show up in the find command above...
-            AS('/Game/Lootables/Pandora/TrashCan/Model/Animation/Open_v3'),
-            AS('/Game/Lootables/Pandora/Varkid_Lootable/_Shared/Animation/AS_Open_Burst'),
-            AS('/Game/Lootables/Pandora/Varkid_Lootable/_Shared/Animation/AS_Open'),
-            AS('/Game/Lootables/Promethea/Cooler/Animation/AS_Open'),
-            AS('/Game/Lootables/Promethea/Gashapon/Animations/AS_Open'),
-            AS('/Game/Lootables/Promethea/Ratch_pile/Animation/Ratch_Pile_Large/AS_Open'),
-            AS('/Game/Lootables/Promethea/Ratch_pile/Animation/Ratch_Pile_Large_Open/AS_Open'),
-            AS('/Game/Lootables/Promethea/Ratch_pile/Animation/Ratch_Pile_Small/AS_Open'),
-            AS('/Game/Lootables/Promethea/Ratch_pile/Animation/Ratch_Pile_Small_Open/AS_Open'),
-            AS('/Game/Lootables/Promethea/Toilet/Animation/AS_Open_v1'),
-            # Make this one not *quite* as fast as the rest.  Also requires the injection
-            # above this, otherwise this object won't exist yet.
-            AS('/Game/PatchDLC/VaultCard/AS_Open_v2',
-                    scale=2,
-                    seqlen_scale=2,
-                    ),
-            AS('/Geranium/Lootables/CashRegister/Animation/AS_Open'),
-            AS('/Geranium/Lootables/Chest_DeadDrop/Model/Anims/AS_Open_Ger'),
-            AS('/Geranium/Lootables/_Design/Classes/AS_Open_MoneyBack'),
-            AS('/Geranium/Lootables/Machine_Washing/Animation/AS_Close'),
-            AS('/Geranium/Lootables/Outhouse/Animation/AS_Open'),
-            AS('/Hibiscus/InteractiveObjects/Lootables/Carcass/Animation/AS_Open'),
-            AS('/Hibiscus/InteractiveObjects/Lootables/Cultists/AmmoCrate/Animation/AS_Open'),
-            AS('/Hibiscus/InteractiveObjects/Lootables/Cultists/RedChest/Animation/AS_Open'),
-            AS('/Hibiscus/InteractiveObjects/Lootables/Cultists/UniqueChest/Animation/AS_Open'),
-            AS('/Hibiscus/InteractiveObjects/Lootables/Cultists/WhiteChest/Animation/AS_Open'),
-            AS('/Hibiscus/InteractiveObjects/Lootables/FishingNet/Animation/AS_Open'),
-            AS('/Hibiscus/InteractiveObjects/Lootables/FrostBiters/AmmoCrate/Animation/AS_Open'),
-            AS('/Hibiscus/InteractiveObjects/Lootables/FrostBiters/RedChest/Animation/AS_Open'),
-            AS('/Hibiscus/InteractiveObjects/Lootables/FrostBiters/TreasureBox/Animation/AS_Open'),
-            AS('/Hibiscus/InteractiveObjects/Lootables/FrostBiters/WhiteChest/Animation/AS_Open'),
-            AS('/Hibiscus/InteractiveObjects/Lootables/SingingFish/Animation/AS_Sing_Sing'),
-            AS('/Hibiscus/InteractiveObjects/Lootables/SingingFish/Animation/AS_Sing_Spit'),
-            AS('/Hibiscus/InteractiveObjects/Lootables/SingleMushroom/AS_Mush_Open'),
-            AS('/Hibiscus/InteractiveObjects/Lootables/TentacleToilet/Animation/AS_TentacleToilet_OpenAndDropWeapon'),
-            ]),
-        ('Doors', door_scale, [
-            # Called by IO_Door_1000x600_SlideUp_Promethea_Vehicle2, the door to the hub area in City_P,
-            # and also before the big pit in OrbitalPlatform_P (after the thruster).  We're doing some
-            # custom sequence scaling here 'cause in OrbitalPlatform_P, if we leave the animsequence
-            # scaling at the default, the door animation freezes *right* at the beginning and doesn't
-            # open hardly at all.  Leaving the sequence scale at 1 lets that work fine though, and the
-            # animation is still sped up, so that should do for now.  It does make me wonder if we maybe
-            # shouldn't be touching that value *at all*, but I guess I'll leave it for now.
-            AS('/Game/InteractiveObjects/Doors/Eden_6/Door_Eden6_VehicleSpawner/Animation/AS_VehicleDoor_Open',
-                seqlen_scale=1,
-                ),
-            # Gate to the "back" half of the Homestead, in Splinterlands, during Part 2 of that questline
-            AS('/Game/MapSpecific/Motorcade/SmallDoor/Animation/AS_Opening',
-                target='Motorcade_P',
-                # This one, too, needs a sequence scale of 1, otherwise the animation gets very janky.  Wonder
-                # if *all* custom door-related ASes will end up needing this...
-                seqlen_scale=1,
-                ),
-            # Nekrotafeyo-style door, first seen in Pyre of Stars but it's also in the Guardian Takedown.
-            # See the IO_Door_Custom_Nekro_Crypt_Small bytecode fix below, too.
-            AS('/Game/InteractiveObjects/MissionSpecificObjects/Desolate/DoorCrypt/_Shared/Model/SK_Desolate_CryptDoor_Anim',
-                target='MatchAll',
-                seqlen_scale=1,
-                ),
-            ]),
-        ('Other Mission Animations', global_scale, [
-            AS('/Game/MapSpecific/Motorcade/Crane/Animation/AS_Going_Down',
-                target='Motorcade_P',
-                # At global_scale, the crane descends faster than in-game gravity, which makes
-                # the Golden Chariot a bit unpredictable.  So, cut down on the scale a bit.
-                # (Even at this scale, it bounces around a bit, but seems more stable to me.)
-                scale=global_scale/2,
-                # Need to do this, otherwise the animation glitches out
-                seqlen_scale=1,
-                ),
-            AS('/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed',
-                target='Mine_P',
-                # a 2x speedup already looks a *bit* off; this animation really doesn't need
-                # much in the way of speeding up.
-                scale=global_scale/2,
-                # Need to do this, otherwise the animation glitches out
-                seqlen_scale=1,
-                ),
-            AS('/Game/InteractiveObjects/MissionSpecificObjects/Beach/Eridian_Bridge/_Shared/Animation/AS_Bridge_Going_up',
-                target='Beach_P',
-                scale=global_scale/2,
-                # Honestly not sure if we *do* need seqlen_scale=1 here; I just stuck it in assuming it'd
-                # be needed, given the other animations in this section.
-                seqlen_scale=1,
-                ),
-            # So this *does* speed up the cocking animation for catapult 3, but there's a delay in
-            # the bytecode which uses the SequenceLength of this sequence.  We need to keep the seqlen
-            # at its default value or the animation glitches out, as with the other animations in
-            # this section.  So, we can either speed up the animation and have an awkward silence until
-            # the mission moves along, or just cope with the standard animation speed.
-            #AS('/Alisma/InteractiveObjects/MissionSpecific/Plot/ALI_EP02/Catapult/Exports/AS_IO_Catapult_Cocking',
-            #    target='Anger_P',
-            #    scale=2,
-            #    seqlen_scale=1,
-            #    ),
-            ]),
-        # Doing this ends up screwing up the slots pretty thoroughly, actually -- the animation gets killed
-        # pretty much immediately, so the rewards get stuck "inside" the machine until the 10-sec auto-drop
-        # timer elapses.  Weird.  Anyway, the drawer animations aren't awful anyway, so just leave 'em.
-        #('Slot Machine Components', global_scale, [
-        #    '/Game/InteractiveObjects/GameSystemMachines/SlotMachine/Animation/AS_SlotMachine_Drawer_Close',
-        #    '/Game/InteractiveObjects/GameSystemMachines/SlotMachine/Animation/AS_SlotMachine_Drawer_Open',
-        #    '/Game/InteractiveObjects/GameSystemMachines/SlotMachine/Animation/AS_Slotmachine_Locker_Closing',
-        #    '/Game/InteractiveObjects/GameSystemMachines/SlotMachine/Animation/AS_Slotmachine_Locker_Opening',
-        #    ]),
-        ('Character Death Respawns', global_scale, [
-            # Turns out this affects the *entire* respawn sequence, including digistruct tunnel.
-            # At our current rates, it ends up basically omitting the char-standing-up animation
-            # entirely.  (And also the char doesn't end up facing the right way 'cause the camera
-            # doesn't go through its motions.  Whatever.)
-            AS('/Game/PlayerCharacters/Beastmaster/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel'),
-            AS('/Game/PlayerCharacters/Gunner/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel'),
-            AS('/Game/PlayerCharacters/Operative/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel'),
-            AS('/Game/PlayerCharacters/SirenBrawler/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel'),
-            ]),
-        ('PC Animations', 2, [
-            AS('/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup',
-                # If we scale this up any more than this, the animation gets that freezing issue that
-                # we see on the vehicle animations.  Would prefer avoiding that, in this case.
-                scale=1.5,
-                ),
-            ]),
-        ('NPC Animations', 2, [
-            AS('/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Enter', target='CityBoss_P'),
-            AS('/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit', target='CityBoss_P'),
-            AS('/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging', target='Mansion_P'),
-            ]),
-        ]:
-
-    mod.comment(cat_name)
-
-    for animseq in animseqs:
-
-        if animseq.scale is None:
-            animseq.scale = cat_scale
-        if animseq.seqlen_scale is None:
-            animseq.seqlen_scale = animseq.scale
-
-        animseq.do_scale(mod, data)
-
-    mod.newline()
-
-# Eridian tools should very arguably just be in the above section with all the other
-# AnimSequence tweaks, but I think these pre-dated my fancier handling, and they seem
-# to work fine.  I don't really feel like putting them in there and re-testing stuff,
-# so I'm just pretending they're part of that main section with a comment rather than
-# header, here.
-mod.comment('Eridian Tools')
-for anim_obj in [
-        '/PlayerCharacters/_Shared/Animation/Skills/VaultRewards/1st/AS_Analyzer_Use',
-        '/PlayerCharacters/_Shared/Animation/Skills/VaultRewards/1st/AS_Eridian_Melee_Small',
-        '/PlayerCharacters/_Shared/Animation/Skills/VaultRewards/1st/Eridian_Analyzer/AS_Analyzer_Use',
-        '/PlayerCharacters/Beastmaster/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use',
-        '/PlayerCharacters/Beastmaster/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small',
-        '/PlayerCharacters/Gunner/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use',
-        '/PlayerCharacters/Gunner/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small',
-        '/PlayerCharacters/Operative/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use',
-        '/PlayerCharacters/Operative/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small',
-        '/PlayerCharacters/SirenBrawler/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use',
-        '/PlayerCharacters/SirenBrawler/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small',
-        ]:
-
-    mod.reg_hotfix(Mod.PATCH, '',
-            anim_obj,
-            'RateScale',
-            global_eridian_scale)
-
-mod.newline()
-
-mod.header('Extra Container Tweaks')
-
-# Maliwan Ammo Crate Digistructs
-mod.comment('Maliwan Ammo Crate Digistructs')
-# Honestly not sure what exactly this controls, though it's *not* anything to do with the animation trigger
-mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
-        '/Game/Lootables/_Design/Classes/Maliwan/BPIO_Lootable_Maliwan_AmmoCrate.BPIO_Lootable_Maliwan_AmmoCrate_C:Loot_GEN_VARIABLE',
-        'AutoLootDelayOverride',
-        0.8/global_scale)
-# This is the delay for the "light burst" effect, and maybe when the digistruct animation
-mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
-        '/Game/GameData/Loot/CoordinatedEffects/BP_CE_Maliwan_Loot_Digistruct_In.Default__BP_CE_Maliwan_Loot_Digistruct_In_C',
-        'ParticleEffects.ParticleEffects[0].StartTime',
-        0.25/global_scale)
-# *this* is what speeds up the actual digistruct animation on the individual items
-mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
-        '/Game/GameData/Loot/CoordinatedEffects/BP_CE_Maliwan_Loot_Digistruct_In.Default__BP_CE_Maliwan_Loot_Digistruct_In_C',
-        'Duration',
-        round(2.1/global_scale, 6))
-mod.newline()
-
-# Eridian ammo crate light-burst speedup
-# This doesn't actually affect anything important, but the animation as-is makes the crate-opening
-# *look* slower, so I'm tweaking it anyway.  Note that this doesn't really speed it up as much
-# as it should; this ends up resulting in maybe a 2x speedup instead of our 4x intended.  So there's
-# still something going on, but whatever, it's better.
-mod.comment('Eridian Ammo Crate Light-Burst Speedup')
-scale_ps(mod, data, Mod.LEVEL, 'MatchAll',
-        '/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn',
-        global_scale)
-mod.newline()
-
-# Industrial Dumpsters
-mod.comment('Industrial Dumpster Loot Spawn')
-mod.bytecode_hotfix(Mod.LEVEL, 'MatchAll',
-        '/Game/Lootables/_Design/Classes/Industrial/BPIO_Lootable_Industrial_Dumpster',
-        'ExecuteUbergraph_BPIO_Lootable_Industrial_Dumpster',
-        243,
-        0.8,
-        0.8/global_scale,
-        )
-mod.newline()
-
-# Xylourgos Portal Chests
-# The speedup here is pretty slight; most of the delay is waiting for the various animations
-# to finish up, even after being sped up by our other tweaks.
-mod.comment('Xylourgos Portal Chest Loot Skrit Spawn Delay')
-for index, delay in [
-        # Slight delay before making the loot-vs-skrit decision (I think)
-        (1938, 0.25),
-        # Slight delay before spawning the skrit, if that's the choice that was made (I think)
-        (1494, 1),
-        ]:
-    mod.bytecode_hotfix(Mod.LEVEL, 'MatchAll',
-            '/Hibiscus/InteractiveObjects/Lootables/_Design/Classes/Cultists/BPIO_Hib_Lootable_PortalChest',
-            'ExecuteUbergraph_BPIO_Hib_Lootable_PortalChest',
-            index,
-            delay,
-            0,
-            )
-mod.newline()
 
 # Vehicles!
 #
@@ -1308,6 +895,419 @@ mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
         '/Game/GameData/StatusEffects/CoordinatedEffects/Vehicles/BP_CE_Veh_Digistruct_In.Default__BP_CE_Veh_Digistruct_In_C',
         'Duration',
         0.5)
+mod.newline()
+
+# Vault Card Chest injection!  So: the Vault Card menu uses a custom red chest
+# to do the animation, and the chest object in the UI structure also uses a custom
+# opening animation.  Those objects don't ordinarily exist until the Vault Card
+# menu has been opened, though, and they disappear once the menu is closed.  So,
+# our hotfixes can't touch them unless we inject the chest into each map first.
+# So that's what we're doing here!  One further wrinkle is that the "stock" custom
+# red chest object doesn't actually use the animation that the menu-spawned chest
+# uses, so we *also* have to force that reference to exist, so that we can hotfix
+# the proper animation.  Just 395 hotfixes (including the actual animation-speedup
+# ones) to get this working!  Totally worth it.
+mod.header('Vault Card Chest Injection (needed in order to speed up their opening animation)')
+for level_full in [
+        '/Alisma/Maps/Anger/Anger_P',
+        '/Alisma/Maps/Chase/Chase_P',
+        '/Alisma/Maps/Eldorado/Eldorado_P',
+        '/Alisma/Maps/Experiment/Experiment_P',
+        '/Alisma/Maps/Sanctum/Sanctum_P',
+        '/Dandelion/Maps/CasinoIntro/CasinoIntro_P',
+        '/Dandelion/Maps/Core/Core_P',
+        '/Dandelion/Maps/Impound/Impound_P',
+        '/Dandelion/Maps/Strip/Strip_P',
+        '/Dandelion/Maps/TowerLair/TowerLair_P',
+        '/Dandelion/Maps/Trashtown/Trashtown_P',
+        '/Game/Maps/ProvingGrounds/Trial1/ProvingGrounds_Trial1_P',
+        '/Game/Maps/ProvingGrounds/Trial4/ProvingGrounds_Trial4_P',
+        '/Game/Maps/ProvingGrounds/Trial5/ProvingGrounds_Trial5_P',
+        '/Game/Maps/ProvingGrounds/Trial6/ProvingGrounds_Trial6_P',
+        '/Game/Maps/ProvingGrounds/Trial7/ProvingGrounds_Trial7_P',
+        '/Game/Maps/ProvingGrounds/Trial8/ProvingGrounds_Trial8_P',
+        '/Game/Maps/Sanctuary3/Sanctuary3_P',
+        '/Game/Maps/Slaughters/COVSlaughter/COVSlaughter_P',
+        '/Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P',
+        '/Game/Maps/Slaughters/TechSlaughter/TechSlaughter_P',
+        '/Game/Maps/Zone_0/FinalBoss/FinalBoss_P',
+        '/Game/Maps/Zone_0/Prologue/Prologue_P',
+        '/Game/Maps/Zone_0/Recruitment/Recruitment_P',
+        '/Game/Maps/Zone_0/Sacrifice/Sacrifice_P',
+        '/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_P',
+        '/Game/Maps/Zone_1/City/City_P',
+        '/Game/Maps/Zone_1/CityBoss/CityBoss_P',
+        '/Game/Maps/Zone_1/CityVault/CityVault_P',
+        '/Game/Maps/Zone_1/Monastery/Monastery_P',
+        '/Game/Maps/Zone_1/OrbitalPlatform/OrbitalPlatform_P',
+        '/Game/Maps/Zone_1/Outskirts/Outskirts_P',
+        '/Game/Maps/Zone_1/Towers/Towers_P',
+        '/Game/Maps/Zone_2/Mansion/Mansion_P',
+        '/Game/Maps/Zone_2/MarshFields/MarshFields_P',
+        '/Game/Maps/Zone_2/Prison/Prison_P',
+        '/Game/Maps/Zone_2/Watership/Watership_P',
+        '/Game/Maps/Zone_2/Wetlands/Wetlands_P',
+        '/Game/Maps/Zone_2/WetlandsBoss/WetlandsBoss_P',
+        '/Game/Maps/Zone_2/WetlandsVault/WetlandsVault_P',
+        '/Game/Maps/Zone_3/Convoy/Convoy_P',
+        '/Game/Maps/Zone_3/Desert/Desert_P',
+        '/Game/Maps/Zone_3/DesertBoss/DesertBoss_P',
+        '/Game/Maps/Zone_3/DesertVault/Desertvault_P',
+        '/Game/Maps/Zone_3/Mine/Mine_P',
+        '/Game/Maps/Zone_3/Motorcade/Motorcade_P',
+        '/Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_P',
+        '/Game/Maps/Zone_3/MotorcadeInterior/MotorcadeInterior_P',
+        '/Game/Maps/Zone_4/Beach/Beach_P',
+        # For some reason, injecting this chest in Crypt_P causes Tannis+Typhon to get
+        # stuck right at the beginning of the map, after the first door opens.  No idea
+        # why, though clearly the chest is stealing an event, or just getting in the
+        # way of an event delivery.  Seriously bizarre.
+        #'/Game/Maps/Zone_4/Crypt/Crypt_P',
+        '/Game/Maps/Zone_4/Desolate/Desolate_P',
+        '/Game/PatchDLC/BloodyHarvest/Maps/Seasons/BloodyHarvest/BloodyHarvest_P',
+        '/Game/PatchDLC/Event2/Maps/Cartels_P',
+        '/Game/PatchDLC/Raid1/Maps/Raid/Raid_P',
+        '/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_P',
+        '/Geranium/Maps/CraterBoss/CraterBoss_P',
+        '/Geranium/Maps/Facility/Facility_P',
+        '/Geranium/Maps/Forest/Forest_P',
+        '/Geranium/Maps/Frontier/Frontier_P',
+        '/Geranium/Maps/Lodge/Lodge_P',
+        '/Geranium/Maps/Town/Town_P',
+        '/Hibiscus/Maps/Archive/Archive_P',
+        '/Hibiscus/Maps/Bar/Bar_P',
+        '/Hibiscus/Maps/Camp/Camp_P',
+        '/Hibiscus/Maps/Lake/Lake_P',
+        '/Hibiscus/Maps/Venue/Venue_P',
+        '/Hibiscus/Maps/Village/Village_P',
+        '/Hibiscus/Maps/Woods/Woods_P',
+        '/Ixora/Maps/FrostSite/FrostSite_P',
+        '/Ixora2/Maps/Boss/SacrificeBoss_p',
+        '/Ixora2/Maps/Cabin/Cabin_P',
+        '/Ixora2/Maps/Mystery/Nekro/NekroMystery_p',
+        '/Ixora2/Maps/Mystery/Pandora/PandoraMystery_p',
+        '/Ixora2/Maps/Noir/Noir_P',
+        ]:
+    level_short = level_full.rsplit('/', 1)[-1]
+    level_label = LVL_TO_ENG_LOWER[level_short.lower()]
+    mod.comment(level_label)
+    chest_name = mod.streaming_hotfix(level_full,
+            '/Game/PatchDLC/VaultCard/InteractiveObjects/BPIO_Lootable_VaultCard_RedCrate',
+            location=(99999,99999,99999),
+            )
+    mod.reg_hotfix(Mod.LEVEL, level_short,
+            chest_name,
+            'OpeningInteractions.OpeningInteractions[0].TransitionAnimation',
+            Mod.get_full_cond('/Game/PatchDLC/VaultCard/AS_Open_v2', 'AnimSequence'),
+            )
+    mod.newline()
+
+# Direct animation speedups
+mod.header('Simple Animation Speedups')
+for cat_name, cat_scale, animseqs in [
+        ('Containers', global_scale, [
+            # Initial object list generated by:
+            #     find $(find . -type d -name Lootables) -name "AS_*.uasset" | sort -i | cut -d. -f2 | grep -vE '(Idle|Flinch|_Closed|_Opened)'
+            # ... while at the root of a data unpack
+            AS('/Alisma/Lootables/Hyperion/AmmoCase/Animation/AS_Open_In'),
+            AS('/Alisma/Lootables/Hyperion/LootCase/Animation/AS_Hyp_Misc2_Opening'),
+            AS('/Alisma/Lootables/Hyperion/PortaPotty/Animation/AS_Open_IN_Poor'),
+            AS('/Alisma/Lootables/Hyperion/PortaPotty/Animation/AS_Open_IN'),
+            AS('/Alisma/Lootables/Hyperion/PortaPotty/Animation/AS_Open'),
+            AS('/Alisma/Lootables/Hyperion/RedChest/Animation/AS_HypRedChest_Open'),
+            AS('/Alisma/Lootables/Hyperion/SingleCase/Animation/AS_SingleCase_In'),
+            AS('/Alisma/Lootables/Hyperion/WeaponBox/Animation/AS_HypWeaponLocker_Open'),
+            AS('/Dandelion/LevelArt/Manufacturers/Hyperion/Props/SlotMachines/Animation/AS_PushButton_Open'),
+            AS('/Dandelion/Lootables/Hyperion/AmmoCase/Animation/AS_Open_In'),
+            AS('/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_01'),
+            AS('/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_03'),
+            AS('/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_04'),
+            AS('/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_In'),
+            AS('/Dandelion/Lootables/Hyperion/LootCase/Animation/AS_Hyp_Misc2_Opening'),
+            AS('/Dandelion/Lootables/Hyperion/PortaPotty/Animation/AS_Open_IN'),
+            AS('/Dandelion/Lootables/Hyperion/RedChest/Animation/AS_HypRedChest_Open'),
+            AS('/Dandelion/Lootables/Hyperion/SingleCase/Animation/AS_SingleCase_In'),
+            AS('/Dandelion/Lootables/Hyperion/WeaponBox/Animation/AS_HypWeaponLocker_Open'),
+            AS('/Game/Lootables/Atlas/Chest_Red/Animation/AS_Open'),
+            AS('/Game/Lootables/Atlas/Crate_Ammo/Animation/AS_Open'),
+            AS('/Game/Lootables/COV/Bandit_CardboardBox/Animation/AS_Open_Fast'),
+            AS('/Game/Lootables/COV/Bandit_CardboardBox/Animation/AS_Open_Slow'),
+            AS('/Game/Lootables/COV/Chest_Red/Animation/AS_Open_v1'),
+            AS('/Game/Lootables/COV/Chest_White/Animations/AS_Open'),
+            AS('/Game/Lootables/COV/Crate_Ammo/Animation/AS_Open_v1'),
+            AS('/Game/Lootables/COV/Crate_OfferingBox/Animation/AS_Open_v1'),
+            AS('/Game/Lootables/Eridian/Chest_Red/Animation/AS_Open'),
+            AS('/Game/Lootables/Eridian/Chest_White/Animation/AS_Open'),
+            AS('/Game/Lootables/Eridian/Crate_Ammo/Animation/AS_Open'),
+            AS('/Game/Lootables/_Global/Chest_Gold/Animation/AS_Close'),
+            AS('/Game/Lootables/_Global/Chest_Gold/Animation/AS_Open'),
+            AS('/Game/Lootables/_Global/Chest_Trials/Animation/AS_Open'),
+            AS('/Game/Lootables/_Global/Chest_Trials/Animation/AS_Open_v2'),
+            AS('/Game/Lootables/_Global/Chest_Typhon/Animation/AS_Open',
+                # Typhon Dead Drop doesn't seem to actually apply with just a Level hotfix.  I
+                # suspect it gets loaded in too late, or something?  Anyway, applying a Char
+                # hotfix instead seems to do the trick, so whatever.
+                extra_char='MatchAll',
+                ),
+            AS('/Game/Lootables/_Global/Crate_Ammo/Animations/AS_Open'),
+            AS('/Game/Lootables/_Global/Dumpster_Small/Animation/AS_Open'),
+            AS('/Game/Lootables/_Global/Locker_Generic/Animation/AS_Open_Misnamed'),
+            AS('/Game/Lootables/_Global/Locker_Generic/Animation/AS_Open'),
+            AS('/Game/Lootables/Industrial/Cash_Register/Animation/AS_Open'),
+            AS('/Game/Lootables/Industrial/Lock_Box/Animations/AS_Open'),
+            AS('/Game/Lootables/Industrial/Machine_Washing/Animation/AS_Open'),
+            AS('/Game/Lootables/Industrial/PortaPotty/Animation/AS_BlastOff'),
+            AS('/Game/Lootables/Industrial/PortaPotty/Animation/AS_Open_v1'),
+            AS('/Game/Lootables/Industrial/Refrigerator/Animation/AS_Open'),
+            AS('/Game/Lootables/Industrial/Safe/Animation/AS_Open'),
+            AS('/Game/Lootables/Industrial/Strong_Box/Animation/AS_Open'),
+            AS('/Game/Lootables/Industrial/Toilet/Animations/AS_Open'),
+            AS('/Game/Lootables/Industrial/Trunk_Car/Animation/AS_Open_Backfire'),
+            AS('/Game/Lootables/Industrial/Trunk_Car/Animation/AS_Open'),
+            AS('/Game/Lootables/Jakobs/Chest_Red/Animation/AS_Open'),
+            AS('/Game/Lootables/Jakobs/Chest_White/Animation/AS_Open'),
+            AS('/Game/Lootables/Jakobs/GunRack/Animation/AS_Open'),
+            AS('/Game/Lootables/Jakobs/Lockbox/Animation/AS_Open'),
+            AS('/Game/Lootables/Jakobs/MusicBox/Animation/AS_Open'),
+            AS('/Game/Lootables/Maliwan/Ammo/Animation/AS_Open_v1'),
+            AS('/Game/Lootables/Maliwan/Chest_Red/Animation/AS_Open'),
+            AS('/Game/Lootables/Maliwan/Chest_White/Animation/AS_Open'),
+            AS('/Game/Lootables/Mission_Specific/Rock_HideAKey/Animation/AS_Open'),
+            AS('/Game/Lootables/Pandora/Mailbox/Animation/AS_Open_v1'),
+            AS('/Game/Lootables/Pandora/Mailbox/Animation/AS_Open_v2'),
+            AS('/Game/Lootables/Pandora/TrashCan/Model/Animation/AS_Open_v1'),
+            AS('/Game/Lootables/Pandora/TrashCan/Model/Animation/AS_Open_v2'),
+            # This one doesn't show up in the find command above...
+            AS('/Game/Lootables/Pandora/TrashCan/Model/Animation/Open_v3'),
+            AS('/Game/Lootables/Pandora/Varkid_Lootable/_Shared/Animation/AS_Open_Burst'),
+            AS('/Game/Lootables/Pandora/Varkid_Lootable/_Shared/Animation/AS_Open'),
+            AS('/Game/Lootables/Promethea/Cooler/Animation/AS_Open'),
+            AS('/Game/Lootables/Promethea/Gashapon/Animations/AS_Open'),
+            AS('/Game/Lootables/Promethea/Ratch_pile/Animation/Ratch_Pile_Large/AS_Open'),
+            AS('/Game/Lootables/Promethea/Ratch_pile/Animation/Ratch_Pile_Large_Open/AS_Open'),
+            AS('/Game/Lootables/Promethea/Ratch_pile/Animation/Ratch_Pile_Small/AS_Open'),
+            AS('/Game/Lootables/Promethea/Ratch_pile/Animation/Ratch_Pile_Small_Open/AS_Open'),
+            AS('/Game/Lootables/Promethea/Toilet/Animation/AS_Open_v1'),
+            # Make this one not *quite* as fast as the rest.  Also requires the injection
+            # above this, otherwise this object won't exist yet.
+            AS('/Game/PatchDLC/VaultCard/AS_Open_v2',
+                    scale=2,
+                    seqlen_scale=2,
+                    ),
+            AS('/Geranium/Lootables/CashRegister/Animation/AS_Open'),
+            AS('/Geranium/Lootables/Chest_DeadDrop/Model/Anims/AS_Open_Ger'),
+            AS('/Geranium/Lootables/_Design/Classes/AS_Open_MoneyBack'),
+            AS('/Geranium/Lootables/Machine_Washing/Animation/AS_Close'),
+            AS('/Geranium/Lootables/Outhouse/Animation/AS_Open'),
+            AS('/Hibiscus/InteractiveObjects/Lootables/Carcass/Animation/AS_Open'),
+            AS('/Hibiscus/InteractiveObjects/Lootables/Cultists/AmmoCrate/Animation/AS_Open'),
+            AS('/Hibiscus/InteractiveObjects/Lootables/Cultists/RedChest/Animation/AS_Open'),
+            AS('/Hibiscus/InteractiveObjects/Lootables/Cultists/UniqueChest/Animation/AS_Open'),
+            AS('/Hibiscus/InteractiveObjects/Lootables/Cultists/WhiteChest/Animation/AS_Open'),
+            AS('/Hibiscus/InteractiveObjects/Lootables/FishingNet/Animation/AS_Open'),
+            AS('/Hibiscus/InteractiveObjects/Lootables/FrostBiters/AmmoCrate/Animation/AS_Open'),
+            AS('/Hibiscus/InteractiveObjects/Lootables/FrostBiters/RedChest/Animation/AS_Open'),
+            AS('/Hibiscus/InteractiveObjects/Lootables/FrostBiters/TreasureBox/Animation/AS_Open'),
+            AS('/Hibiscus/InteractiveObjects/Lootables/FrostBiters/WhiteChest/Animation/AS_Open'),
+            AS('/Hibiscus/InteractiveObjects/Lootables/SingingFish/Animation/AS_Sing_Sing'),
+            AS('/Hibiscus/InteractiveObjects/Lootables/SingingFish/Animation/AS_Sing_Spit'),
+            AS('/Hibiscus/InteractiveObjects/Lootables/SingleMushroom/AS_Mush_Open'),
+            AS('/Hibiscus/InteractiveObjects/Lootables/TentacleToilet/Animation/AS_TentacleToilet_OpenAndDropWeapon'),
+            ]),
+        ('Doors', door_scale, [
+            # Called by IO_Door_1000x600_SlideUp_Promethea_Vehicle2, the door to the hub area in City_P,
+            # and also before the big pit in OrbitalPlatform_P (after the thruster).  We're doing some
+            # custom sequence scaling here 'cause in OrbitalPlatform_P, if we leave the animsequence
+            # scaling at the default, the door animation freezes *right* at the beginning and doesn't
+            # open hardly at all.  Leaving the sequence scale at 1 lets that work fine though, and the
+            # animation is still sped up, so that should do for now.  It does make me wonder if we maybe
+            # shouldn't be touching that value *at all*, but I guess I'll leave it for now.
+            AS('/Game/InteractiveObjects/Doors/Eden_6/Door_Eden6_VehicleSpawner/Animation/AS_VehicleDoor_Open',
+                seqlen_scale=1,
+                ),
+            # Gate to the "back" half of the Homestead, in Splinterlands, during Part 2 of that questline
+            AS('/Game/MapSpecific/Motorcade/SmallDoor/Animation/AS_Opening',
+                target='Motorcade_P',
+                # This one, too, needs a sequence scale of 1, otherwise the animation gets very janky.  Wonder
+                # if *all* custom door-related ASes will end up needing this...
+                seqlen_scale=1,
+                ),
+            # Nekrotafeyo-style door, first seen in Pyre of Stars but it's also in the Guardian Takedown.
+            # See the IO_Door_Custom_Nekro_Crypt_Small bytecode fix below, too.
+            AS('/Game/InteractiveObjects/MissionSpecificObjects/Desolate/DoorCrypt/_Shared/Model/SK_Desolate_CryptDoor_Anim',
+                target='MatchAll',
+                seqlen_scale=1,
+                ),
+            ]),
+        ('Other Mission Animations', global_scale, [
+            AS('/Game/MapSpecific/Motorcade/Crane/Animation/AS_Going_Down',
+                target='Motorcade_P',
+                # At global_scale, the crane descends faster than in-game gravity, which makes
+                # the Golden Chariot a bit unpredictable.  So, cut down on the scale a bit.
+                # (Even at this scale, it bounces around a bit, but seems more stable to me.)
+                scale=global_scale/2,
+                # Need to do this, otherwise the animation glitches out
+                seqlen_scale=1,
+                ),
+            AS('/Game/InteractiveObjects/MissionSpecificObjects/Ep14_MinerDetails/Pipe_Destroyed/Animation/AS_Pipe_Destroyed',
+                target='Mine_P',
+                # a 2x speedup already looks a *bit* off; this animation really doesn't need
+                # much in the way of speeding up.
+                scale=global_scale/2,
+                # Need to do this, otherwise the animation glitches out
+                seqlen_scale=1,
+                ),
+            AS('/Game/InteractiveObjects/MissionSpecificObjects/Beach/Eridian_Bridge/_Shared/Animation/AS_Bridge_Going_up',
+                target='Beach_P',
+                scale=global_scale/2,
+                # Honestly not sure if we *do* need seqlen_scale=1 here; I just stuck it in assuming it'd
+                # be needed, given the other animations in this section.
+                seqlen_scale=1,
+                ),
+            # So this *does* speed up the cocking animation for catapult 3, but there's a delay in
+            # the bytecode which uses the SequenceLength of this sequence.  We need to keep the seqlen
+            # at its default value or the animation glitches out, as with the other animations in
+            # this section.  So, we can either speed up the animation and have an awkward silence until
+            # the mission moves along, or just cope with the standard animation speed.
+            #AS('/Alisma/InteractiveObjects/MissionSpecific/Plot/ALI_EP02/Catapult/Exports/AS_IO_Catapult_Cocking',
+            #    target='Anger_P',
+            #    scale=2,
+            #    seqlen_scale=1,
+            #    ),
+            ]),
+        # Doing this ends up screwing up the slots pretty thoroughly, actually -- the animation gets killed
+        # pretty much immediately, so the rewards get stuck "inside" the machine until the 10-sec auto-drop
+        # timer elapses.  Weird.  Anyway, the drawer animations aren't awful anyway, so just leave 'em.
+        #('Slot Machine Components', global_scale, [
+        #    '/Game/InteractiveObjects/GameSystemMachines/SlotMachine/Animation/AS_SlotMachine_Drawer_Close',
+        #    '/Game/InteractiveObjects/GameSystemMachines/SlotMachine/Animation/AS_SlotMachine_Drawer_Open',
+        #    '/Game/InteractiveObjects/GameSystemMachines/SlotMachine/Animation/AS_Slotmachine_Locker_Closing',
+        #    '/Game/InteractiveObjects/GameSystemMachines/SlotMachine/Animation/AS_Slotmachine_Locker_Opening',
+        #    ]),
+        ('Character Death Respawns', global_scale, [
+            # Turns out this affects the *entire* respawn sequence, including digistruct tunnel.
+            # At our current rates, it ends up basically omitting the char-standing-up animation
+            # entirely.  (And also the char doesn't end up facing the right way 'cause the camera
+            # doesn't go through its motions.  Whatever.)
+            AS('/Game/PlayerCharacters/Beastmaster/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel'),
+            AS('/Game/PlayerCharacters/Gunner/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel'),
+            AS('/Game/PlayerCharacters/Operative/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel'),
+            AS('/Game/PlayerCharacters/SirenBrawler/_Shared/Animation/Generic/FFYL/AS_Respawn_Kneel'),
+            ]),
+        ('PC Animations', 2, [
+            AS('/Game/PlayerCharacters/_Shared/Animation/Generic/UI/Echo/1st/AS_Echo_Cart_Pickup',
+                # If we scale this up any more than this, the animation gets that freezing issue that
+                # we see on the vehicle animations.  Would prefer avoiding that, in this case.
+                scale=1.5,
+                ),
+            ]),
+        ('NPC Animations', 2, [
+            AS('/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Enter', target='CityBoss_P'),
+            AS('/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit', target='CityBoss_P'),
+            AS('/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging', target='Mansion_P'),
+            ]),
+        ]:
+
+    mod.comment(cat_name)
+
+    for animseq in animseqs:
+
+        if animseq.scale is None:
+            animseq.scale = cat_scale
+        if animseq.seqlen_scale is None:
+            animseq.seqlen_scale = animseq.scale
+
+        animseq.do_scale(mod, data)
+
+    mod.newline()
+
+# Eridian tools should very arguably just be in the above section with all the other
+# AnimSequence tweaks, but I think these pre-dated my fancier handling, and they seem
+# to work fine.  I don't really feel like putting them in there and re-testing stuff,
+# so I'm just pretending they're part of that main section with a comment rather than
+# header, here.
+mod.comment('Eridian Tools')
+for anim_obj in [
+        '/PlayerCharacters/_Shared/Animation/Skills/VaultRewards/1st/AS_Analyzer_Use',
+        '/PlayerCharacters/_Shared/Animation/Skills/VaultRewards/1st/AS_Eridian_Melee_Small',
+        '/PlayerCharacters/_Shared/Animation/Skills/VaultRewards/1st/Eridian_Analyzer/AS_Analyzer_Use',
+        '/PlayerCharacters/Beastmaster/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use',
+        '/PlayerCharacters/Beastmaster/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small',
+        '/PlayerCharacters/Gunner/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use',
+        '/PlayerCharacters/Gunner/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small',
+        '/PlayerCharacters/Operative/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use',
+        '/PlayerCharacters/Operative/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small',
+        '/PlayerCharacters/SirenBrawler/_Shared/Animation/Skills/VaultRewards/3rd/AS_Analyzer_Use',
+        '/PlayerCharacters/SirenBrawler/_Shared/Animation/Skills/VaultRewards/3rd/AS_Eridian_Melee_Small',
+        ]:
+
+    mod.reg_hotfix(Mod.PATCH, '',
+            anim_obj,
+            'RateScale',
+            global_eridian_scale)
+
+mod.newline()
+
+mod.header('Extra Container Tweaks')
+
+# Maliwan Ammo Crate Digistructs
+mod.comment('Maliwan Ammo Crate Digistructs')
+# Honestly not sure what exactly this controls, though it's *not* anything to do with the animation trigger
+mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
+        '/Game/Lootables/_Design/Classes/Maliwan/BPIO_Lootable_Maliwan_AmmoCrate.BPIO_Lootable_Maliwan_AmmoCrate_C:Loot_GEN_VARIABLE',
+        'AutoLootDelayOverride',
+        0.8/global_scale)
+# This is the delay for the "light burst" effect, and maybe when the digistruct animation
+mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
+        '/Game/GameData/Loot/CoordinatedEffects/BP_CE_Maliwan_Loot_Digistruct_In.Default__BP_CE_Maliwan_Loot_Digistruct_In_C',
+        'ParticleEffects.ParticleEffects[0].StartTime',
+        0.25/global_scale)
+# *this* is what speeds up the actual digistruct animation on the individual items
+mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
+        '/Game/GameData/Loot/CoordinatedEffects/BP_CE_Maliwan_Loot_Digistruct_In.Default__BP_CE_Maliwan_Loot_Digistruct_In_C',
+        'Duration',
+        round(2.1/global_scale, 6))
+mod.newline()
+
+# Eridian ammo crate light-burst speedup
+# This doesn't actually affect anything important, but the animation as-is makes the crate-opening
+# *look* slower, so I'm tweaking it anyway.  Note that this doesn't really speed it up as much
+# as it should; this ends up resulting in maybe a 2x speedup instead of our 4x intended.  So there's
+# still something going on, but whatever, it's better.
+mod.comment('Eridian Ammo Crate Light-Burst Speedup')
+scale_ps(mod, data, Mod.LEVEL, 'MatchAll',
+        '/Game/Lootables/Eridian/Chest_Red/Effects/Systems/PS_Eridian_Ammo_Chest_SinkNBurn',
+        global_scale)
+mod.newline()
+
+# Industrial Dumpsters
+mod.comment('Industrial Dumpster Loot Spawn')
+mod.bytecode_hotfix(Mod.LEVEL, 'MatchAll',
+        '/Game/Lootables/_Design/Classes/Industrial/BPIO_Lootable_Industrial_Dumpster',
+        'ExecuteUbergraph_BPIO_Lootable_Industrial_Dumpster',
+        243,
+        0.8,
+        0.8/global_scale,
+        )
+mod.newline()
+
+# Xylourgos Portal Chests
+# The speedup here is pretty slight; most of the delay is waiting for the various animations
+# to finish up, even after being sped up by our other tweaks.
+mod.comment('Xylourgos Portal Chest Loot Skrit Spawn Delay')
+for index, delay in [
+        # Slight delay before making the loot-vs-skrit decision (I think)
+        (1938, 0.25),
+        # Slight delay before spawning the skrit, if that's the choice that was made (I think)
+        (1494, 1),
+        ]:
+    mod.bytecode_hotfix(Mod.LEVEL, 'MatchAll',
+            '/Hibiscus/InteractiveObjects/Lootables/_Design/Classes/Cultists/BPIO_Hib_Lootable_PortalChest',
+            'ExecuteUbergraph_BPIO_Hib_Lootable_PortalChest',
+            index,
+            delay,
+            0,
+            )
 mod.newline()
 
 # TODO:
