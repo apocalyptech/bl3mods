@@ -171,9 +171,6 @@ TODO
 
 * It'd be nice to figure out getting the respawn animation to leave the
   camera in the right spot.
-* Other character-speed improvements (Oletta comes to mind)
-* Pretty much every mission-specific animation
-* Elevators
 * Lost Loot machine?
 * Delay after breaking bone piles, trash cans, etc (basically pickups which
   aren't actually "connected" to a container)
@@ -195,7 +192,6 @@ TODO
   all the way.  I think all the ammo inside remains pick-uppable, though, and
   I can't reliably reproduce the behavior.
 * Diamond Armory console?
-* Check CZ47's Faster NPCs mod (and make a note about compatibility, if need be)
 * I ended up reducing `global_scale` from 5 to 4 at the end of Athenas, because
   the other container tightening I did there ended up making them sort of seem
   *too* fast.  Even at 4x, things still seem quite good, IMO.  May want to
@@ -213,9 +209,6 @@ TODO
     and it opens -- the door will open but Tannis and Typhon will remain stuck there).
     The Vault Card Chest addition happened after I was through on Athenas.
 * Did we want to do the "initial" ECHO playing animation, with the blowing-on-cart?
-* To split up into separate mods, instead?
-  * Character speed movement?
-  * Digistruct tunnel removal (both teleport/FT and respawn)
 * Blackjack tables in DLC1 seem to not actually show all your cards; if we're not
   already doing sequencelength->1 stuff, perhaps that'll do it.
 
