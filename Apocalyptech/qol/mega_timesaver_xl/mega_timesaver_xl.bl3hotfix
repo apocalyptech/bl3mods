@@ -10110,6 +10110,10 @@ SparkEarlyLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_TempleFi
 SparkEarlyLevelPatchEntry,(1,1,0,Prison_P),/Game/Maps/Zone_2/Prison/Prison_M_EP08PrisonBreak.Prison_M_EP08PrisonBreak:PersistentLevel.Elevator_PrisonArmory_1624,ElevatorSpeed,0,,1400
 SparkEarlyLevelPatchEntry,(1,1,0,Prison_P),/Game/Maps/Zone_2/Prison/Prison_M_EP08PrisonBreak.Prison_M_EP08PrisonBreak:PersistentLevel.Elevator_PrisonArmory_1624,ElevatorTravelTime,0,,2.5
 
+# The Blastplains
+SparkEarlyLevelPatchEntry,(1,1,0,Frontier_P),/Geranium/Maps/Frontier/Frontier_M_MoneyBackGuarantee.Frontier_M_MoneyBackGuarantee:PersistentLevel.Elevator_MoneyBack_frontier_2,ElevatorSpeed,0,,800
+SparkEarlyLevelPatchEntry,(1,1,0,Frontier_P),/Geranium/Maps/Frontier/Frontier_M_MoneyBackGuarantee.Frontier_M_MoneyBackGuarantee:PersistentLevel.Elevator_MoneyBack_frontier_2,ElevatorTravelTime,0,,2.5
+
 # The Droughts - Taking Flight (Sanctuary III Drydock)
 SparkEarlyLevelPatchEntry,(1,1,0,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue_M_Ep04_EarnSpaceship.Prologue_M_Ep04_EarnSpaceship:PersistentLevel.Elevator_Ep04_Prologue,ElevatorSpeed,0,,700
 SparkEarlyLevelPatchEntry,(1,1,0,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue_M_Ep04_EarnSpaceship.Prologue_M_Ep04_EarnSpaceship:PersistentLevel.Elevator_Ep04_Prologue,ElevatorTravelTime,0,,2.5
@@ -10609,6 +10613,13 @@ SparkLevelPatchEntry,(1,1,0,Venue_P),/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:Pe
 SparkLevelPatchEntry,(1,1,0,Venue_P),/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.BPIO_Hib_EP06_DeskDrawer_7.DrawerMovement,TheTimeline.PlayRate,0,,4
 SparkLevelPatchEntry,(1,1,0,Venue_P),/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.BPIO_Hib_EP06_DeskDrawer_8.DrawerMovement,TheTimeline.PlayRate,0,,4
 SparkLevelPatchEntry,(1,1,0,Venue_P),/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.BPIO_Hib_EP06_DeskDrawer_9.DrawerMovement,TheTimeline.PlayRate,0,,4
+
+###
+### Artillery cannon for Money Back Guarantee, in The Blastplains
+###
+
+SparkLevelPatchEntry,(1,1,0,Frontier_P),/Geranium/Maps/Frontier/Frontier_M_MoneyBackGuarantee.Frontier_M_MoneyBackGuarantee:PersistentLevel.SEQ_Frontier_ArtilleryCannon_2.AnimationPlayer,PlaybackSettings.PlayRate,0,,4
+SparkLevelPatchEntry,(1,1,0,Frontier_P),/Geranium/Maps/Frontier/Frontier_M_MoneyBackGuarantee.Frontier_M_MoneyBackGuarantee:PersistentLevel.IO_MissionUsable_ArtilleryCannon_2,DelayBeforePlayingSequence,0,,0.25
 
 ###
 ### Castle Crimson catapult tweaks

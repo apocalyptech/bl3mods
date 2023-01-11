@@ -59,9 +59,9 @@ X /Game/Maps/Zone_4/Crypt/Crypt_P
   /Geranium/Maps/CraterBoss/CraterBoss_P
   /Geranium/Maps/Facility/Facility_P
   /Geranium/Maps/Forest/Forest_P
-  /Geranium/Maps/Frontier/Frontier_P
-  /Geranium/Maps/Lodge/Lodge_P
-  /Geranium/Maps/Town/Town_P
+* /Geranium/Maps/Frontier/Frontier_P
+* /Geranium/Maps/Lodge/Lodge_P
+* /Geranium/Maps/Town/Town_P
 * /Hibiscus/Maps/Archive/Archive_P
 * /Hibiscus/Maps/Bar/Bar_P
 * /Hibiscus/Maps/Camp/Camp_P

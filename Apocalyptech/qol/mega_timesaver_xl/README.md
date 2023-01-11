@@ -125,6 +125,8 @@ Some things intentionally *not* handled by the mod:
   pretty quick already.
 * Various sequences in Cold Case: Forgotten Answers, in The Cankerwood, could
   probably be sped up, but that one's been left alone.
+* Daisy's door-opening in Blastplains has been left alone; it's nice and
+  dramatic.
 * The cocking animation on the third catapult in Castle Crimson has been
   left alone, for boring technical reasons.
 * The egg-incubation timer in A Good Egg has been left alone; it's already
@@ -299,6 +301,7 @@ Changelog
    * Secret wall in crypt in Cursehaven
    * Brew-mixing machinery in The Cankerwood
    * Desk drawers in hidden elevator in Heart's Desire
+   * Artillery cannon for Money Back Guarantee, in The Blastplains
    * Castle Crimson catapult animations
    * Don't Call it A Rorschach Ink-Blot Pipes, in Benediction of Pain
 

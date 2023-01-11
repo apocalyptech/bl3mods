@@ -1782,6 +1782,9 @@ for label, level, obj_name, speed, travel_time in sorted([
         ("Heart's Desire", 'Venue_P',
             '/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.Elevator_PrisonArmory_4',
             200, 10),
+        ("The Blastplains", 'Frontier_P',
+            '/Geranium/Maps/Frontier/Frontier_M_MoneyBackGuarantee.Frontier_M_MoneyBackGuarantee:PersistentLevel.Elevator_MoneyBack_frontier_2',
+            200, 10),
 
         # Wrote some code to attempt to autodetect some things, to make future filling-in easier.
         # Keeping them commented for now; kind of want to doublecheck things as I go, still,  I
@@ -1789,9 +1792,6 @@ for label, level, obj_name, speed, travel_time in sorted([
         # filled in on a lot of these.  Also I suspect that at least some of these aren't really
         # things that we'd want to speed up -- like all the Guardian Takedown ones, for instance.
 
-        #("The Blastplains", 'Frontier_P',
-        #    '/Geranium/Maps/Frontier/Frontier_M_MoneyBackGuarantee.Frontier_M_MoneyBackGuarantee:PersistentLevel.Elevator_MoneyBack_frontier_2',
-        #    defaultspeed, 10),
 
         #("Bloodsun Canyon", 'Facility_P',
         #    '/Geranium/Maps/Facility/Facility_M_Plot.Facility_M_Plot:PersistentLevel.Elevator_Boss_2',
@@ -2868,6 +2868,20 @@ for num in [6, 7, 8, 9]:
             f'/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.BPIO_Hib_EP06_DeskDrawer_{num}.DrawerMovement',
             'TheTimeline.PlayRate',
             global_scale)
+mod.newline()
+
+# Money Back Guarantee artillery cannon
+mod.header('Artillery cannon for Money Back Guarantee, in The Blastplains')
+mod.reg_hotfix(Mod.LEVEL, 'Frontier_P',
+        '/Geranium/Maps/Frontier/Frontier_M_MoneyBackGuarantee.Frontier_M_MoneyBackGuarantee:PersistentLevel.SEQ_Frontier_ArtilleryCannon_2.AnimationPlayer',
+        'PlaybackSettings.PlayRate',
+        global_scale,
+        )
+mod.reg_hotfix(Mod.LEVEL, 'Frontier_P',
+        '/Geranium/Maps/Frontier/Frontier_M_MoneyBackGuarantee.Frontier_M_MoneyBackGuarantee:PersistentLevel.IO_MissionUsable_ArtilleryCannon_2',
+        'DelayBeforePlayingSequence',
+        1/global_scale,
+        )
 mod.newline()
 
 # Castle Crimson catapult tweaks
