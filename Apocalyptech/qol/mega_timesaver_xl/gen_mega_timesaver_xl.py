@@ -1595,7 +1595,7 @@ for category, cat_scale, io_objs in [
             ]),
         ]:
 
-    mod.header(category)
+    mod.header(f'InteractiveObject Speedups: {category}')
 
     for io_obj in io_objs:
 
@@ -1950,7 +1950,7 @@ for obj_name, export in [
 mod.newline()
 
 # Golden Calves Statue Scanner
-mod.header('Custom Golden Calves Statue Scanner Tweaks')
+mod.header('Mission/Level Specific: Custom Golden Calves Statue Scanner Tweaks')
 
 mod.comment('Shorten scanner-light animation')
 # TODO: Maybe convert this to `scale_ps()`?
@@ -1998,7 +1998,7 @@ mod.newline()
 # six seconds off to get it down to 14.  That's the minimum we can do without causing
 # the game to skip dialogue.
 pour_duration = 14
-mod.header('Coffee-pouring Animations during Rise and Grind')
+mod.header('Mission/Level Specific: Coffee-pouring Animations during Rise and Grind')
 # This one handles the visual fill-level on the side
 # getall IO_MissionPlaceable_RiseAndGrind_3Thermos_C FillDuration
 mod.reg_hotfix(Mod.LEVEL, 'City_P',
@@ -2036,7 +2036,7 @@ mod.newline()
 # I'm content with that.  (Another thing to do would be to try and cut Catus out
 # of the loop entirely, but I just don't care enough to try and do that without
 # breaking the mission entirely.)
-mod.header('Speed up second Athenas Bell of Peace door opening')
+mod.header('Mission/Level Specific: Speed up second Athenas Bell of Peace door opening')
 mod.bytecode_hotfix(Mod.LEVEL, 'Monastery_P',
         '/Game/Missions/Plot/Mission_Ep06_MeetMaya',
         'ExecuteUbergraph_Mission_Ep06_MeetMaya',
@@ -2052,7 +2052,7 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Monastery_P',
 mod.newline()
 
 # Don't let Ava spend so long shocked at Maya's death
-mod.header("Speed up Ava's shock-at-Maya's-death time")
+mod.header("Mission/Level Specific: Speed up Ava's shock-at-Maya's-death time")
 mod.reg_hotfix(Mod.LEVEL, 'CityBoss_P',
         '/Game/NonPlayerCharacters/Ava/_Design/Actions/Action_Ava_Loop_Grieve.Default__Action_Ava_Loop_Grieve_C',
         'LoopTime.Range.Value',
@@ -2066,7 +2066,7 @@ mod.bytecode_hotfix(Mod.LEVEL, 'CityBoss_P',
 mod.newline()
 
 # Exploding Statues (in Jakobs Estate)
-mod.header('Exploding Statue Tweaks')
+mod.header('Mission/Level Specific: Exploding Statue Tweaks')
 for obj_name in [
         'Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_ButtonStatue_2',
         'Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_MissionUsable_ExplodingStatue_3',
@@ -2087,7 +2087,7 @@ for obj_name in [
 mod.newline()
 
 # Sliding Paintings (in Jakobs Estate)
-mod.header('Sliding Painting Tweaks')
+mod.header('Mission/Level Specific: Sliding Painting Tweaks')
 for obj_name in [
         'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_10',
         'Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_11',
@@ -2107,7 +2107,7 @@ for obj_name in [
 mod.newline()
 
 # Jakobs Estate Stage Props
-mod.header('Jakobs Estate Stage Prop Tweaks')
+mod.header('Mission/Level Specific: Jakobs Estate Stage Prop Tweaks')
 mansion_base = '/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel'
 for obj_name, delay in [
         ('IO_Switch_IndustrialSwitch_V_1142', 1.2),
@@ -2142,7 +2142,7 @@ for obj_name, duration in [
 mod.newline()
 
 # Spinning Bookshelves
-mod.header('Jakobs Estate Spinning Bookshelf Tweaks')
+mod.header('Mission/Level Specific: Jakobs Estate Spinning Bookshelf Tweaks')
 mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
         '/Game/Maps/Zone_2/Mansion/Mansion_P.Mansion_P:PersistentLevel.EasterEgg_SpiningBookshelf',
         'LootSpawnDelay',
@@ -2150,7 +2150,7 @@ mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
 mod.newline()
 
 # Sliding Bed in Sacked
-mod.header('Sliding Bed in Sacked')
+mod.header('Mission/Level Specific: Sliding Bed in Sacked')
 mod.reg_hotfix(Mod.LEVEL, 'Mansion_P',
         '/Game/Maps/Zone_2/Mansion/Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_AureliasSkeletons_MovableBed_2.Move Bed',
         'TheTimeline.Length',
@@ -2161,7 +2161,7 @@ mod.newline()
 # (Honestly don't remember why this is commented out -- I think I remember that
 # maybe it turns out to not matter at all?  Maybe the next sequence kicks off
 # immediately even though the scanner is still going, or something.)
-#mod.header('Going Rogue ID Scanner')
+#mod.header('Mission/Level Specific: Going Rogue ID Scanner')
 #mod.reg_hotfix(Mod.LEVEL, 'MarshFields_P',
 #        '/Game/Maps/Zone_2/MarshFields/MarshFields_M_Ep12Marshfields.MarshFields_M_Ep12Marshfields:PersistentLevel.IO_MissionPlaceable_Static_Scanned_2.Timeline_0',
 #        'TheTimeline.Length',
@@ -2169,7 +2169,7 @@ mod.newline()
 #mod.newline()
 
 # Rumble in the Jungle Chasm-Jump Timer
-mod.header('Rumble in the Jungle Chasm-Jump Timer')
+mod.header('Mission/Level Specific: Rumble in the Jungle Chasm-Jump Timer')
 mod.bytecode_hotfix(Mod.LEVEL, 'Watership_P',
         '/Game/Missions/Side/Zone_2/Watership/Mission_RumbleJungle',
         'ExecuteUbergraph_Mission_RumbleJungle',
@@ -2179,7 +2179,7 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Watership_P',
 mod.newline()
 
 # BALEX / EMS Bot door-opening scanning
-mod.header('BALEX / EMS Bot door-opening scanning')
+mod.header('Mission/Level Specific: BALEX / EMS Bot door-opening scanning')
 mod.reg_hotfix(Mod.LEVEL, 'Watership_P',
         '/Game/Missions/Side/Zone_2/Watership/RumbleJungle/Action_ServiceBot_Rumble_OpenDoor.Default__Action_ServiceBot_Rumble_OpenDoor_C',
         'PlayRate',
@@ -2187,7 +2187,7 @@ mod.reg_hotfix(Mod.LEVEL, 'Watership_P',
 mod.newline()
 
 # Splinterlands Car Grinder
-mod.header('Splinterlands Car Grinder Conveyor')
+mod.header('Mission/Level Specific: Splinterlands Car Grinder Conveyor')
 mod.reg_hotfix(Mod.LEVEL, 'Motorcade_P',
         '/Game/Maps/Zone_3/Motorcade/Motorcade_M_Plot.Motorcade_M_Plot:PersistentLevel.ConveyorDisplacementZone_GEN_VARIABLE_DisplacementZone_CAT_2260',
         'Speed',
@@ -2195,7 +2195,7 @@ mod.reg_hotfix(Mod.LEVEL, 'Motorcade_P',
 mod.newline()
 
 # Splinterlands grinder magnet (not especially important but whatever)
-mod.header('Splinterlands Car Grinder Magnet')
+mod.header('Mission/Level Specific: Splinterlands Car Grinder Magnet')
 mod.reg_hotfix(Mod.LEVEL, 'Motorcade_P',
         f'/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C:NODE_AddInterpToMovementComponent-3',
         'Duration',
@@ -2206,7 +2206,7 @@ mod.reg_hotfix(Mod.LEVEL, 'Motorcade_P',
 mod.newline()
 
 # Eridian statue rotation in Tazendeer Ruins
-mod.header('Eridian statue rotation in Tazendeer Ruins')
+mod.header('Mission/Level Specific: Eridian statue rotation in Tazendeer Ruins')
 mod.reg_hotfix(Mod.EARLYLEVEL, 'Beach_P',
         '/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_Plot_M:PersistentLevel.IO_BeachHead_EridianStatueMaliwan_0.RotatingMovement',
         'Duration',
@@ -2219,7 +2219,7 @@ mod.newline()
 
 # These two are so the ceiling portal opens up in time, instead of knocking
 # the player off the elevator and to their death (lol)
-mod.header('Tazendeer Ruins elevator ceiling door')
+mod.header('Mission/Level Specific: Tazendeer Ruins elevator ceiling door')
 for obj_name in [
         'IO_Beachhead_ElevatorCeilingSceal_1',
         'IO_Beachhead_ElevatorCeilingSceal_4',
@@ -2245,7 +2245,7 @@ mod.newline()
 # bridge-raising animation here to account for the delayed trigger, since both that and the dialogue
 # get triggered by the same event.  (See also the `AS_Bridge_Going_up` tweaks up in our main
 # AnimSequence section.)
-mod.header('Tazendeer Ruins post-elevator dialogue trigger and bridge-raising tweaks')
+mod.header('Mission/Level Specific: Tazendeer Ruins post-elevator dialogue trigger and bridge-raising tweaks')
 mod.reg_hotfix(Mod.LEVEL, 'Beach_P',
         '/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_Plot_M:PersistentLevel.OakMissionWaypointBox_0.CollisionComp',
         'RelativeLocation',
@@ -2266,7 +2266,7 @@ for num, default in [
 mod.newline()
 
 # Typhon digistruct in Tazendeer Ruins
-mod.header('Typhon digistruct in Tazendeer Ruins')
+mod.header('Mission/Level Specific: Typhon digistruct in Tazendeer Ruins')
 mod.reg_hotfix(Mod.LEVEL, 'Beach_P',
         '/Game/Missions/Plot/EPXX_Beachhead/Effects/CoordinatedEffect/BP_CE_Typhon_Teleport.Default__BP_CE_Typhon_Teleport_C',
         'Duration',
@@ -2289,7 +2289,7 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Beach_P',
 mod.newline()
 
 # Initial door-opening triggers in Pyre of Stars
-mod.header('Door-opening triggers in Pyre of Stars')
+mod.header('Mission/Level Specific: Door-opening triggers in Pyre of Stars')
 # kk, so the last arg to PlaySingleAnimation *is* a playrate arg.  This basically does the same
 # thing as our AnimSequence tweaks to SK_Desolate_CryptDoor_Anim, above.  Sticking with the AS
 # tweaks instead.
@@ -2308,7 +2308,7 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Crypt_P',
 mod.newline()
 
 # Eridian statue tweaks in Pyre of Stars
-mod.header('Eridian statue tweaks in Pyre of Stars')
+mod.header('Mission/Level Specific: Eridian statue tweaks in Pyre of Stars')
 
 mod.comment('Timeline tweaks')
 for num in [0, 2, 5, 8]:
@@ -2336,7 +2336,7 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Crypt_P',
 mod.newline()
 
 # Rising platforms in Pyre of Stars
-mod.header('Rising platforms in Pyre of Stars')
+mod.header('Mission/Level Specific: Rising platforms in Pyre of Stars')
 
 mod.comment('Timeline tweaks')
 for num, delay in [
@@ -2368,7 +2368,7 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Crypt_P',
 mod.newline()
 
 # Fire In The Sky rocket launch
-mod.header('Fire In The Sky rocket launch')
+mod.header('Mission/Level Specific: Fire In The Sky rocket launch')
 
 mod.comment('Sparrow dialogue trigger')
 mod.bytecode_hotfix(Mod.LEVEL, 'Beach_P',
@@ -2406,7 +2406,7 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Beach_P',
 mod.newline()
 
 # Scryer's Crypt Door Phaselock-opening
-mod.header("Scryer's Crypt Main Door")
+mod.header("Mission/Level Specific: Scryer's Crypt Main Door")
 
 mod.comment('Ava Phaselock animation')
 mod.bytecode_hotfix(Mod.LEVEL, 'NekroMystery_p',
@@ -2435,7 +2435,7 @@ mod.reg_hotfix(Mod.LEVEL, 'NekroMystery_p',
 mod.newline()
 
 # Arm's Race
-mod.header("Remove Arm's Race Countdown")
+mod.header("Mission/Level Specific: Remove Arm's Race Countdown")
 mod.bytecode_hotfix(Mod.LEVEL, 'FrostSite_P',
         '/Game/PatchDLC/Ixora/Missions/Side/Mission_GearUp',
         'ExecuteUbergraph_Mission_GearUp',
@@ -2451,7 +2451,7 @@ mod.bytecode_hotfix(Mod.LEVEL, 'FrostSite_P',
 mod.newline()
 
 # Maliwan Raid Start countdown
-mod.header('Takedown at the Maliwan Blacksite start countdown')
+mod.header('Mission/Level Specific: Takedown at the Maliwan Blacksite start countdown')
 mod.bytecode_hotfix(Mod.LEVEL, 'Raid_P',
         '/Game/PatchDLC/Raid1/Missions/Mission_Raid1',
         'ExecuteUbergraph_Mission_Raid1',
@@ -2467,7 +2467,7 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Raid_P',
 mod.newline()
 
 # Guardian Raid Start countdown
-mod.header('Takedown at the Guardian Breach start countdown')
+mod.header('Mission/Level Specific: Takedown at the Guardian Breach start countdown')
 mod.bytecode_hotfix(Mod.LEVEL, 'GuardianTakedown_P',
         '/Game/PatchDLC/Takedown2/Missions/Side/Mission_Takedown2',
         'ExecuteUbergraph_Mission_Takedown2',
@@ -2483,7 +2483,7 @@ mod.bytecode_hotfix(Mod.LEVEL, 'GuardianTakedown_P',
 mod.newline()
 
 # Minos Prime initial crystals
-mod.header('Initial Minos Prime Crystal Pads')
+mod.header('Mission/Level Specific: Initial Minos Prime Crystal Pads')
 for obj_name in [
         'IO_Takedown2_GuardianPad_0',
         'IO_Takedown2_GuardianPad_3',
@@ -2507,7 +2507,7 @@ for obj_name in [
 mod.newline()
 
 # Villa Ultraviolet book puzzle triggers (see also the IO() tweaks above)
-mod.header('Villa Ultraviolet book switches')
+mod.header('Mission/Level Specific: Villa Ultraviolet book switches')
 for num in [
         286,
         287,
@@ -2527,7 +2527,7 @@ for num in [
 mod.newline()
 
 # Villa Ultraviolet fountain (see also the IO() tweaks above)
-mod.header('Villa Ultraviolet fountain')
+mod.header('Mission/Level Specific: Villa Ultraviolet fountain')
 tl_name = '/Game/PatchDLC/Event2/Maps/Cartels_Mission.Cartels_Mission:PersistentLevel.IO_MissionScripted_CartelFountain.Timeline_MoveFountain'
 mod.reg_hotfix(Mod.LEVEL, 'Cartels_P',
         tl_name,
@@ -2550,7 +2550,7 @@ for idx, default in enumerate([
 mod.newline()
 
 # Spendopticon Hyperway Speedups
-mod.header('Spendopticon Hyperway Speedups')
+mod.header('Mission/Level Specific: Spendopticon Hyperway Speedups')
 hl_obj = '/Dandelion/MapSpecific/Strip/HyperHoop/BP_HyperHoop_VNat'
 hl_obj_def = f'{hl_obj}.Default__BP_HyperHoop_VNat_C'
 hl_spline_obj = f'{hl_obj_def}:HyperHoop_SplineFollowerComponent'
@@ -2627,7 +2627,7 @@ mod.newline()
 # This totally wasn't worth the effort it took to track down; in the end the biggest
 # win was updating that TheTimeline attr, though the bytecode tweak technically
 # shaves a second off the response time as well.
-mod.header('BUD Bot rescue-response delay')
+mod.header('Mission/Level Specific: BUD Bot rescue-response delay')
 mod.reg_hotfix(Mod.LEVEL, 'Impound_P',
         '/Dandelion/Maps/Impound/Impound_Mission.Impound_Mission:PersistentLevel.IO_Door_Hyperion_Single_6.Alpha',
         'TheTimeline.Length',
@@ -2654,7 +2654,7 @@ mod.newline()
 # doing that doesn't affect anything, but I also found that `AnimationPlayer` sub-obj,
 # which has its *own* `PlaybackSettings` attr, and that, finally did the trick.  So, good
 # times!  Pretty simple in the end, but this was the first time we'd run into it.
-mod.header("Freddie's makeshift bridge back to his lair")
+mod.header("Mission/Level Specific: Freddie's makeshift bridge back to his lair")
 mod.reg_hotfix(Mod.LEVEL, 'Impound_P',
         '/Dandelion/Maps/Impound/Impound_Mission.Impound_Mission:PersistentLevel.SEQ_Ep03_Impound_BridgeToHangar.AnimationPlayer',
         'PlaybackSettings.PlayRate',
@@ -2666,7 +2666,7 @@ mod.newline()
 # (regardless of Earlylevel/notify/etc).  Really there's no point in us setting
 # Default__ in here, since setting the instantiated one *does* do the trick, but
 # it seems a bit wrong to *not* do Default__.  So I'm doing both.  Myeh.
-mod.header('Key To Happiness timer in The Compactor')
+mod.header('Mission/Level Specific: Key To Happiness timer in The Compactor')
 for obj_name in [
         '/Dandelion/Maps/Trashtown/Trashtown_M_Plot.Default__Trashtown_M_Plot_C',
         '/Dandelion/Maps/Trashtown/Trashtown_M_Plot.Trashtown_M_Plot:PersistentLevel.Trashtown_M_Plot_C_0',
@@ -2680,7 +2680,7 @@ for obj_name in [
 mod.newline()
 
 # Opening the door to VIP Tower
-mod.header('Ultra-Thermite Opening Door to VIP Tower')
+mod.header('Mission/Level Specific: Ultra-Thermite Opening Door to VIP Tower')
 mod.reg_hotfix(Mod.LEVEL, 'Strip_P',
         '/Dandelion/Maps/Strip/Strip_PM_TheHeist.Strip_PM_TheHeist:PersistentLevel.GbxLevelSequenceActor_ThermiteFlare.AnimationPlayer',
         'PlaybackSettings.PlayRate',
@@ -2694,7 +2694,7 @@ mod.reg_hotfix(Mod.LEVEL, 'Strip_P',
 mod.newline()
 
 # Lots of closely-associated Call of the Deep tweaks, in Skittermaw Basin
-mod.header('Call of the Deep Tweaks, in Skittermaw Basin')
+mod.header('Mission/Level Specific: Call of the Deep Tweaks, in Skittermaw Basin')
 
 # Power coil panel in Call of the Deep
 mod.comment('Power Coil panel - acquiring the coil')
@@ -2751,7 +2751,7 @@ mod.reg_hotfix(Mod.LEVEL, 'Lake_P',
 mod.newline()
 
 # DJ Midnight Dark Mix mission-close delay
-mod.header('DJ Midnight Dark Mix Mission-Close Delay')
+mod.header('Mission/Level Specific: DJ Midnight Dark Mix Mission-Close Delay')
 mod.bytecode_hotfix(Mod.LEVEL, 'Bar_P',
         '/Hibiscus/Maps/Bar/Bar_Side_M_SinisterSounds',
         'ExecuteUbergraph_Bar_Side_M_SinisterSounds',
@@ -2764,7 +2764,7 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Bar_P',
 mod.newline()
 
 # Cold Case: Buried Questions
-mod.header('Cold Case: Buried Questions speedups')
+mod.header('Mission/Level Specific: Cold Case: Buried Questions speedups')
 
 mod.comment('Crypt opening')
 mod.reg_hotfix(Mod.LEVEL, 'Village_P',
@@ -2785,7 +2785,7 @@ mod.reg_hotfix(Mod.LEVEL, 'Village_P',
 mod.newline()
 
 # Brewery equipment in The Cankerwood.
-mod.header('Cankerwood Brewery Equipment')
+mod.header('Mission/Level Specific: Cankerwood Brewery Equipment')
 
 mod.comment('Nozzle Animations')
 # Not actually making use of duration here, since we're now altering PlayRate instead of Length.  Keeping
@@ -2875,7 +2875,7 @@ for num in [6, 7, 8, 9]:
 mod.newline()
 
 # Money Back Guarantee artillery cannon
-mod.header('Artillery cannon for Money Back Guarantee, in The Blastplains')
+mod.header('Mission/Level Specific: Artillery cannon for Money Back Guarantee, in The Blastplains')
 mod.reg_hotfix(Mod.LEVEL, 'Frontier_P',
         '/Geranium/Maps/Frontier/Frontier_M_MoneyBackGuarantee.Frontier_M_MoneyBackGuarantee:PersistentLevel.SEQ_Frontier_ArtilleryCannon_2.AnimationPlayer',
         'PlaybackSettings.PlayRate',
@@ -2889,7 +2889,7 @@ mod.reg_hotfix(Mod.LEVEL, 'Frontier_P',
 mod.newline()
 
 # Castle Crimson catapult tweaks
-mod.header('Castle Crimson catapult tweaks')
+mod.header('Mission/Level Specific: Castle Crimson catapult tweaks')
 
 mod.comment('Pivot Times')
 for suffix in [
@@ -2919,7 +2919,7 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Anger_P',
 mod.newline()
 
 # P.A.T. firing delay
-mod.header('P.A.T. firing delay')
+mod.header('Mission/Level Specific: P.A.T. firing delay')
 mod.bytecode_hotfix(Mod.LEVEL, 'Anger_P',
         '/Alisma/Maps/Anger/Anger_SM_AllShapesAndCalibers',
         'ExecuteUbergraph_Anger_SM_AllShapesAndCalibers',
@@ -2929,7 +2929,7 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Anger_P',
 mod.newline()
 
 # Ink Blots
-mod.header("Don't Call It A Rorschach Ink-Blot Pipes")
+mod.header("Mission/Level Specific: Don't Call It A Rorschach Ink-Blot Pipes")
 for num in [
         2,
         5,

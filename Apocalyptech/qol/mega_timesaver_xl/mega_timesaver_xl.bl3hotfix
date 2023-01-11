@@ -8444,7 +8444,7 @@ SparkCharacterLoadedEntry,(1,1,0,MatchAll),/Game/Enemies/Trooper/_Shared/Animati
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/GameData/StatusEffects/CoordinatedEffects/Vehicles/BP_CE_Veh_Digistruct_In.Default__BP_CE_Veh_Digistruct_In_C,Duration,0,,0.5
 
 ###
-### Doors
+### InteractiveObject Speedups: Doors
 ###
 
 # IO_Door_130x250_SlideLeft_Hyperion
@@ -9593,7 +9593,7 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/MissionSpecific
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Ixora2/InteractiveObjects/MissionSpecific/04_Nekro/IO_Door_IXO_TombEntrance_SlideUp.IO_Door_IXO_TombEntrance_SlideUp_C,Timelines.Timelines[0].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[1].Time,0,,0.6
 
 ###
-### Switches
+### InteractiveObject Speedups: Switches
 ###
 
 # IO_Switch_Circuit_Breaker_V1
@@ -9765,7 +9765,7 @@ SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/
 SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelElevatorDoor/IO_Door_400x400_CartelElevatorDoor.IO_Door_400x400_CartelElevatorDoor_C,Timelines.Timelines[2].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.125
 
 ###
-### More Containers
+### InteractiveObject Speedups: More Containers
 ###
 
 # BPIO_Lootable_Eridian_WhiteChestCrystal
@@ -9775,7 +9775,7 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Design/Classes/Eridian/BP
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Design/Classes/Eridian/BPIO_Lootable_Eridian_WhiteChestCrystal.BPIO_Lootable_Eridian_WhiteChestCrystal_C,Timelines.Timelines[0].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.Keys.Keys[3].Time,0,,0.75
 
 ###
-### Other Objects
+### InteractiveObject Speedups: Other Objects
 ###
 
 # BPIO_SlotMachine
@@ -10154,7 +10154,7 @@ SparkLevelPatchEntry,(1,7,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlot
 SparkLevelPatchEntry,(1,7,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,0,1,ExecuteUbergraph_BPIO_SlotMachine_Dandelion_V1,1,2889,1:1,4:0.25
 
 ###
-### Custom Golden Calves Statue Scanner Tweaks
+### Mission/Level Specific: Custom Golden Calves Statue Scanner Tweaks
 ###
 
 # Shorten scanner-light animation
@@ -10172,7 +10172,7 @@ SparkLevelPatchEntry,(1,7,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripte
 SparkLevelPatchEntry,(1,7,0,Sacrifice_P),/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine.IO_MissionScripted_StatueManufacturingMachine_C,0,1,ExecuteUbergraph_IO_MissionScripted_StatueManufacturingMachine,1,2539,3:1.0,4:0.25
 
 ###
-### Coffee-pouring Animations during Rise and Grind
+### Mission/Level Specific: Coffee-pouring Animations during Rise and Grind
 ###
 
 SparkLevelPatchEntry,(1,1,0,City_P),/Game/Maps/Zone_1/City/City_M_RiseAndGrind.City_M_RiseAndGrind:PersistentLevel.RiseAndGrind_Thermos,FillDuration,0,,14
@@ -10181,21 +10181,21 @@ SparkLevelPatchEntry,(1,1,0,City_P),/Game/Missions/Side/Zone_1/City/RiseAndGrind
 SparkLevelPatchEntry,(1,7,0,City_P),/Game/Maps/Zone_1/City/City_M_RiseAndGrind.City_M_RiseAndGrind_C,0,1,ExecuteUbergraph_City_M_RiseAndGrind,1,6616,2:20,2:14
 
 ###
-### Speed up second Athenas Bell of Peace door opening
+### Mission/Level Specific: Speed up second Athenas Bell of Peace door opening
 ###
 
 SparkLevelPatchEntry,(1,7,0,Monastery_P),/Game/Missions/Plot/Mission_Ep06_MeetMaya.Mission_Ep06_MeetMaya_C,0,1,ExecuteUbergraph_Mission_Ep06_MeetMaya,1,39968,1:3,1:0
 SparkLevelPatchEntry,(1,7,0,Monastery_P),/Game/Maps/Zone_1/Monastery/Monastery_Mission_Ep06_MeetMaya.Monastery_Mission_Ep06_MeetMaya_C,0,1,ExecuteUbergraph_Monastery_Mission_Ep06_MeetMaya,1,49863,1:1,1:0
 
 ###
-### Speed up Ava's shock-at-Maya's-death time
+### Mission/Level Specific: Speed up Ava's shock-at-Maya's-death time
 ###
 
 SparkLevelPatchEntry,(1,1,0,CityBoss_P),/Game/NonPlayerCharacters/Ava/_Design/Actions/Action_Ava_Loop_Grieve.Default__Action_Ava_Loop_Grieve_C,LoopTime.Range.Value,0,,3.75
 SparkLevelPatchEntry,(1,7,0,CityBoss_P),/Game/Maps/Zone_1/CityBoss/CityBoss_Mission.CityBoss_Mission_C,0,1,ExecuteUbergraph_CityBoss_Mission,1,31722,2:15,4:3.75
 
 ###
-### Exploding Statue Tweaks
+### Mission/Level Specific: Exploding Statue Tweaks
 ###
 
 SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_ButtonStatue_2.RotateStatue,TheTimeline.Length,0,,0.25
@@ -10210,7 +10210,7 @@ SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_P:Persi
 SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_P:PersistentLevel.IO_MissionUsable_ExplodingStatue_3.BP_IO_LootSpawnComponent,DelayBeforeSpawningLoot,0,,0.25
 
 ###
-### Sliding Painting Tweaks
+### Mission/Level Specific: Sliding Painting Tweaks
 ###
 
 SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Library.Mansion_Library:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_10.MoveFrame,TheTimeline.Length,0,,0.25
@@ -10224,7 +10224,7 @@ SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Theater
 SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_Theater.Mansion_Theater:PersistentLevel.IO_MissionUsable_SlidingPictureFrame_8.MoveFrame,TheTimeline.Length,0,,0.25
 
 ###
-### Jakobs Estate Stage Prop Tweaks
+### Mission/Level Specific: Jakobs Estate Stage Prop Tweaks
 ###
 
 SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.IO_Switch_IndustrialSwitch_V_1142,EndSwitchMovementDelay,0,,0.3
@@ -10241,50 +10241,50 @@ SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09G
 SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_EP09GrandTour.Mansion_M_EP09GrandTour:PersistentLevel.E11GrandTour_RightProp.Timeline_0,TheTimeline.Events.Events[0].Time,0,,0.125
 
 ###
-### Jakobs Estate Spinning Bookshelf Tweaks
+### Mission/Level Specific: Jakobs Estate Spinning Bookshelf Tweaks
 ###
 
 SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_P.Mansion_P:PersistentLevel.EasterEgg_SpiningBookshelf,LootSpawnDelay,0,,1.25
 
 ###
-### Sliding Bed in Sacked
+### Mission/Level Specific: Sliding Bed in Sacked
 ###
 
 SparkLevelPatchEntry,(1,1,0,Mansion_P),/Game/Maps/Zone_2/Mansion/Mansion_M_AureliasSkeletons.Mansion_M_AureliasSkeletons:PersistentLevel.IO_MissionUsable_AureliasSkeletons_MovableBed_2.Move Bed,TheTimeline.Length,0,,0.5
 
 ###
-### Rumble in the Jungle Chasm-Jump Timer
+### Mission/Level Specific: Rumble in the Jungle Chasm-Jump Timer
 ###
 
 SparkLevelPatchEntry,(1,7,0,Watership_P),/Game/Missions/Side/Zone_2/Watership/Mission_RumbleJungle.Mission_RumbleJungle_C,0,1,ExecuteUbergraph_Mission_RumbleJungle,1,47567,2:30,1:5
 
 ###
-### BALEX / EMS Bot door-opening scanning
+### Mission/Level Specific: BALEX / EMS Bot door-opening scanning
 ###
 
 SparkLevelPatchEntry,(1,1,0,Watership_P),/Game/Missions/Side/Zone_2/Watership/RumbleJungle/Action_ServiceBot_Rumble_OpenDoor.Default__Action_ServiceBot_Rumble_OpenDoor_C,PlayRate,0,,4
 
 ###
-### Splinterlands Car Grinder Conveyor
+### Mission/Level Specific: Splinterlands Car Grinder Conveyor
 ###
 
 SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Maps/Zone_3/Motorcade/Motorcade_M_Plot.Motorcade_M_Plot:PersistentLevel.ConveyorDisplacementZone_GEN_VARIABLE_DisplacementZone_CAT_2260,Speed,0,,800
 
 ###
-### Splinterlands Car Grinder Magnet
+### Mission/Level Specific: Splinterlands Car Grinder Magnet
 ###
 
 SparkLevelPatchEntry,(1,1,0,Motorcade_P),/Game/Missions/Plot/EP17_BigChase/BP_Ep17_CarGrinder.BP_Ep17_CarGrinder_C:NODE_AddInterpToMovementComponent-3,Duration,0,,2.25
 
 ###
-### Eridian statue rotation in Tazendeer Ruins
+### Mission/Level Specific: Eridian statue rotation in Tazendeer Ruins
 ###
 
 SparkEarlyLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_Plot_M:PersistentLevel.IO_BeachHead_EridianStatueMaliwan_0.RotatingMovement,Duration,0,,1.75
 SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_Plot_M:PersistentLevel.IO_BeachHead_EridianStatueMaliwan_0,DelayBeforePlayingSequence,0,,1.75
 
 ###
-### Tazendeer Ruins elevator ceiling door
+### Mission/Level Specific: Tazendeer Ruins elevator ceiling door
 ###
 
 SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_Plot_M:PersistentLevel.IO_Beachhead_ElevatorCeilingSceal_1,SlideSpeed,0,,1.25
@@ -10293,7 +10293,7 @@ SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_
 SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_Plot_M:PersistentLevel.IO_Beachhead_ElevatorCeilingSceal_4,DelayBeforeStartAnim,0,,0.75
 
 ###
-### Tazendeer Ruins post-elevator dialogue trigger and bridge-raising tweaks
+### Mission/Level Specific: Tazendeer Ruins post-elevator dialogue trigger and bridge-raising tweaks
 ###
 
 SparkLevelPatchEntry,(1,1,1,Beach_P),/Game/Maps/Zone_4/Beach/Beach_Plot_M.Beach_Plot_M:PersistentLevel.OakMissionWaypointBox_0.CollisionComp,RelativeLocation,0,,(X=45044,Y=22996,Z=10648)
@@ -10303,7 +10303,7 @@ SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_TempleSecondF
 SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Maps/Zone_4/Beach/Beach_TempleSecondFloor.Beach_TempleSecondFloor:PersistentLevel.IO_BeachHead_EridianBridge_5,AnimationDelay,0,,0.85
 
 ###
-### Typhon digistruct in Tazendeer Ruins
+### Mission/Level Specific: Typhon digistruct in Tazendeer Ruins
 ###
 
 SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/CoordinatedEffect/BP_CE_Typhon_Teleport.Default__BP_CE_Typhon_Teleport_C,Duration,0,,1.5
@@ -10340,13 +10340,13 @@ SparkLevelPatchEntry,(1,1,0,Beach_P),/Game/Missions/Plot/EPXX_Beachhead/Effects/
 SparkLevelPatchEntry,(1,7,0,Beach_P),/Game/Missions/Plot/Mission_Ep21_Beachhead.Mission_Ep21_Beachhead_C,0,1,ExecuteUbergraph_Mission_Ep21_Beachhead,1,4145,3:5.6,3:1.4
 
 ###
-### Door-opening triggers in Pyre of Stars
+### Mission/Level Specific: Door-opening triggers in Pyre of Stars
 ###
 
 SparkLevelPatchEntry,(1,7,0,Crypt_P),/Game/InteractiveObjects/Doors/Nekro/_Design/IO_Door_Custom_Nekro_Crypt_Small.IO_Door_Custom_Nekro_Crypt_Small_C,0,1,ExecuteUbergraph_IO_Door_Custom_Nekro_Crypt_Small,1,334,1:7,4:1.75
 
 ###
-### Eridian statue tweaks in Pyre of Stars
+### Mission/Level Specific: Eridian statue tweaks in Pyre of Stars
 ###
 
 # Timeline tweaks
@@ -10360,7 +10360,7 @@ SparkLevelPatchEntry,(1,7,0,Crypt_P),/Game/Missions/Plot/Mission_Ep22_TheMachine
 SparkLevelPatchEntry,(1,7,0,Crypt_P),/Game/Missions/Plot/Mission_Ep22_TheMachine.Mission_Ep22_TheMachine_C,0,1,ExecuteUbergraph_Mission_Ep22_TheMachine,1,3523,3:8.5,5:2.125
 
 ###
-### Rising platforms in Pyre of Stars
+### Mission/Level Specific: Rising platforms in Pyre of Stars
 ###
 
 # Timeline tweaks
@@ -10379,7 +10379,7 @@ SparkLevelPatchEntry,(1,1,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMach
 SparkLevelPatchEntry,(1,7,0,Crypt_P),/Game/Maps/Zone_4/Crypt/Crypt_M_EP22TheMachine.Crypt_M_EP22TheMachine_C,0,1,ExecuteUbergraph_Crypt_M_EP22TheMachine,1,11737,3:6.5,5:1.625
 
 ###
-### Fire In The Sky rocket launch
+### Mission/Level Specific: Fire In The Sky rocket launch
 ###
 
 # Sparrow dialogue trigger
@@ -10395,7 +10395,7 @@ SparkLevelPatchEntry,(1,7,0,Beach_P),/Game/Missions/Side/Zone_4/Desolate/BetterT
 SparkLevelPatchEntry,(1,7,0,Beach_P),/Game/Missions/Side/Zone_4/Desolate/BetterTimes/IO_MissionScripted_BetterTimes_Rocket.IO_MissionScripted_BetterTimes_Rocket_C,0,1,ExecuteUbergraph_IO_MissionScripted_BetterTimes_Rocket,1,479,2:30,5:11.25
 
 ###
-### Scryer's Crypt Main Door
+### Mission/Level Specific: Scryer's Crypt Main Door
 ###
 
 # Ava Phaselock animation
@@ -10408,28 +10408,28 @@ SparkLevelPatchEntry,(1,7,0,NekroMystery_p),/Ixora2/Maps/Mystery/Nekro/NekroMyst
 SparkLevelPatchEntry,(1,1,0,NekroMystery_p),/Ixora2/Maps/Mystery/Nekro/NekroMystery_Mission.NekroMystery_Mission:PersistentLevel.IO_Door_IXO_TombEntrance_SlideUp_2.Timeline_DoorOpening,TheTimeline.Length,0,,4.0
 
 ###
-### Remove Arm's Race Countdown
+### Mission/Level Specific: Remove Arm's Race Countdown
 ###
 
 SparkLevelPatchEntry,(1,7,0,FrostSite_P),/Game/PatchDLC/Ixora/Missions/Side/Mission_GearUp.Mission_GearUp_C,0,1,ExecuteUbergraph_Mission_GearUp,1,23316,2:10,1:0
 SparkLevelPatchEntry,(1,7,0,FrostSite_P),/Ixora/Maps/FrostSite/FrostSite_Mission.FrostSite_Mission_C,0,1,ExecuteUbergraph_FrostSite_Mission,1,6200,2:10,1:0
 
 ###
-### Takedown at the Maliwan Blacksite start countdown
+### Mission/Level Specific: Takedown at the Maliwan Blacksite start countdown
 ###
 
 SparkLevelPatchEntry,(1,7,0,Raid_P),/Game/PatchDLC/Raid1/Missions/Mission_Raid1.Mission_Raid1_C,0,1,ExecuteUbergraph_Mission_Raid1,1,13903,1:3,1:0
 SparkLevelPatchEntry,(1,7,0,Raid_P),/Game/PatchDLC/Raid1/Maps/Raid/Raid_M_RaidOnMaliwan.Raid_M_RaidOnMaliwan_C,0,1,ExecuteUbergraph_Raid_M_RaidOnMaliwan,1,2535,1:3,1:0
 
 ###
-### Takedown at the Guardian Breach start countdown
+### Mission/Level Specific: Takedown at the Guardian Breach start countdown
 ###
 
 SparkLevelPatchEntry,(1,7,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Missions/Side/Mission_Takedown2.Mission_Takedown2_C,0,1,ExecuteUbergraph_Mission_Takedown2,1,8789,1:3,1:0
 SparkLevelPatchEntry,(1,7,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission_C,0,1,ExecuteUbergraph_GuardianTakedown_Mission,1,1843,1:3,1:0
 
 ###
-### Initial Minos Prime Crystal Pads
+### Mission/Level Specific: Initial Minos Prime Crystal Pads
 ###
 
 SparkLevelPatchEntry,(1,1,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.IO_Takedown2_GuardianPad_0,ChargeIncreasePerSecond,0,,26
@@ -10440,7 +10440,7 @@ SparkLevelPatchEntry,(1,1,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/Gu
 SparkLevelPatchEntry,(1,1,0,GuardianTakedown_P),/Game/PatchDLC/Takedown2/Maps/GuardianTakedown_Mission.GuardianTakedown_Mission:PersistentLevel.IO_Takedown2_GuardianPad_3,AddMaxChargePerPlayer,0,,0
 
 ###
-### Villa Ultraviolet book switches
+### Mission/Level Specific: Villa Ultraviolet book switches
 ###
 
 SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.SM_Book__286.Timeline_Rotation_Book,TheTimeline.Length,0,,0.5
@@ -10454,7 +10454,7 @@ SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Combat
 SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Combat.Cartels_Combat:PersistentLevel.SM_Book__294.Timeline_Rotation_Book,TheTimeline.Length,0,,0.5
 
 ###
-### Villa Ultraviolet fountain
+### Mission/Level Specific: Villa Ultraviolet fountain
 ###
 
 SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Mission.Cartels_Mission:PersistentLevel.IO_MissionScripted_CartelFountain.Timeline_MoveFountain,TheTimeline.Length,0,,4.0
@@ -10464,7 +10464,7 @@ SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Missio
 SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/Maps/Cartels_Mission.Cartels_Mission:PersistentLevel.IO_MissionScripted_CartelFountain.Timeline_MoveFountain,TheTimeline.Events.Events[4].Time,0,,3.75
 
 ###
-### Spendopticon Hyperway Speedups
+### Mission/Level Specific: Spendopticon Hyperway Speedups
 ###
 
 # Digistruct-In Animations
@@ -10495,34 +10495,34 @@ SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/BP_H
 SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/MapSpecific/Strip/HyperHoop/BP_HyperHoop_VNat.Default__BP_HyperHoop_VNat_C:HyperHoop_SplineFollowerComponent,TurnRate,0,,255.0
 
 ###
-### BUD Bot rescue-response delay
+### Mission/Level Specific: BUD Bot rescue-response delay
 ###
 
 SparkLevelPatchEntry,(1,1,0,Impound_P),/Dandelion/Maps/Impound/Impound_Mission.Impound_Mission:PersistentLevel.IO_Door_Hyperion_Single_6.Alpha,TheTimeline.Length,0,,0.5
 SparkLevelPatchEntry,(1,7,0,Impound_P),/Game/PatchDLC/Dandelion/Missions/Plot/Mission_DLC1_Ep03_Impound.Mission_DLC1_Ep03_Impound_C,0,1,ExecuteUbergraph_Mission_DLC1_Ep03_Impound,1,4757,1:1,1:0
 
 ###
-### Freddie's makeshift bridge back to his lair
+### Mission/Level Specific: Freddie's makeshift bridge back to his lair
 ###
 
 SparkLevelPatchEntry,(1,1,0,Impound_P),/Dandelion/Maps/Impound/Impound_Mission.Impound_Mission:PersistentLevel.SEQ_Ep03_Impound_BridgeToHangar.AnimationPlayer,PlaybackSettings.PlayRate,0,,4
 
 ###
-### Key To Happiness timer in The Compactor
+### Mission/Level Specific: Key To Happiness timer in The Compactor
 ###
 
 SparkLevelPatchEntry,(1,1,0,Trashtown_P),/Dandelion/Maps/Trashtown/Trashtown_M_Plot.Default__Trashtown_M_Plot_C,HappinessTestDelayTime,0,,2
 SparkLevelPatchEntry,(1,1,0,Trashtown_P),/Dandelion/Maps/Trashtown/Trashtown_M_Plot.Trashtown_M_Plot:PersistentLevel.Trashtown_M_Plot_C_0,HappinessTestDelayTime,0,,2
 
 ###
-### Ultra-Thermite Opening Door to VIP Tower
+### Mission/Level Specific: Ultra-Thermite Opening Door to VIP Tower
 ###
 
 SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/Maps/Strip/Strip_PM_TheHeist.Strip_PM_TheHeist:PersistentLevel.GbxLevelSequenceActor_ThermiteFlare.AnimationPlayer,PlaybackSettings.PlayRate,0,,4
 SparkLevelPatchEntry,(1,1,0,Strip_P),/Dandelion/Maps/Strip/Strip_PM_TheHeist.Strip_PM_TheHeist:PersistentLevel.GbxLevelSequenceActor_ThermiteDoorOpen.AnimationPlayer,PlaybackSettings.PlayRate,0,,2
 
 ###
-### Call of the Deep Tweaks, in Skittermaw Basin
+### Mission/Level Specific: Call of the Deep Tweaks, in Skittermaw Basin
 ###
 
 # Power Coil panel - acquiring the coil
@@ -10544,13 +10544,13 @@ SparkLevelPatchEntry,(1,1,0,Lake_P),/Hibiscus/Maps/Lake/Lake_S_WhereIBelong.Lake
 SparkLevelPatchEntry,(1,1,0,Lake_P),/Hibiscus/Maps/Lake/Lake_S_WhereIBelong.Lake_S_WhereIBelong:PersistentLevel.GbxLevelSequenceActor_Crane_LiftCageOutOfWater.AnimationPlayer,PlaybackSettings.PlayRate,0,,4
 
 ###
-### DJ Midnight Dark Mix Mission-Close Delay
+### Mission/Level Specific: DJ Midnight Dark Mix Mission-Close Delay
 ###
 
 SparkLevelPatchEntry,(1,7,0,Bar_P),/Hibiscus/Maps/Bar/Bar_Side_M_SinisterSounds.Bar_Side_M_SinisterSounds_C,0,1,ExecuteUbergraph_Bar_Side_M_SinisterSounds,1,2518,2:20,3:5.0
 
 ###
-### Cold Case: Buried Questions speedups
+### Mission/Level Specific: Cold Case: Buried Questions speedups
 ###
 
 # Crypt opening
@@ -10560,7 +10560,7 @@ SparkLevelPatchEntry,(1,1,0,Village_P),/Hibiscus/Maps/Village/Village_Side_M_Pri
 SparkLevelPatchEntry,(1,1,0,Village_P),/Hibiscus/Maps/Village/Village_Side_M_PrivateEye01.Village_Side_M_PrivateEye01:PersistentLevel.IO_Scripted_PrivateEye_SecretWall_5.Wall Opening animation,TheTimeline.Length,0,,1.75
 
 ###
-### Cankerwood Brewery Equipment
+### Mission/Level Specific: Cankerwood Brewery Equipment
 ###
 
 # Nozzle Animations
@@ -10612,14 +10612,14 @@ SparkLevelPatchEntry,(1,1,0,Venue_P),/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:Pe
 SparkLevelPatchEntry,(1,1,0,Venue_P),/Hibiscus/Maps/Venue/Venue_IOs.Venue_IOs:PersistentLevel.BPIO_Hib_EP06_DeskDrawer_9.DrawerMovement,TheTimeline.PlayRate,0,,4
 
 ###
-### Artillery cannon for Money Back Guarantee, in The Blastplains
+### Mission/Level Specific: Artillery cannon for Money Back Guarantee, in The Blastplains
 ###
 
 SparkLevelPatchEntry,(1,1,0,Frontier_P),/Geranium/Maps/Frontier/Frontier_M_MoneyBackGuarantee.Frontier_M_MoneyBackGuarantee:PersistentLevel.SEQ_Frontier_ArtilleryCannon_2.AnimationPlayer,PlaybackSettings.PlayRate,0,,4
 SparkLevelPatchEntry,(1,1,0,Frontier_P),/Geranium/Maps/Frontier/Frontier_M_MoneyBackGuarantee.Frontier_M_MoneyBackGuarantee:PersistentLevel.IO_MissionUsable_ArtilleryCannon_2,DelayBeforePlayingSequence,0,,0.25
 
 ###
-### Castle Crimson catapult tweaks
+### Mission/Level Specific: Castle Crimson catapult tweaks
 ###
 
 # Pivot Times
@@ -10632,13 +10632,13 @@ SparkLevelPatchEntry,(1,7,0,Anger_P),/Game/PatchDLC/Alisma/Missions/Plot/ALI_EP0
 SparkLevelPatchEntry,(1,7,0,Anger_P),/Game/PatchDLC/Alisma/Missions/Plot/ALI_EP02.ALI_EP02_C,0,1,ExecuteUbergraph_ALI_EP02,1,29617,1:3,1:0
 
 ###
-### P.A.T. firing delay
+### Mission/Level Specific: P.A.T. firing delay
 ###
 
 SparkLevelPatchEntry,(1,7,0,Anger_P),/Alisma/Maps/Anger/Anger_SM_AllShapesAndCalibers.Anger_SM_AllShapesAndCalibers_C,0,1,ExecuteUbergraph_Anger_SM_AllShapesAndCalibers,1,988,1:4,1:0
 
 ###
-### Don't Call It A Rorschach Ink-Blot Pipes
+### Mission/Level Specific: Don't Call It A Rorschach Ink-Blot Pipes
 ###
 
 SparkLevelPatchEntry,(1,1,0,Experiment_P),/Alisma/Maps/Experiment/Experiment_SM_InkBlots.Experiment_SM_InkBlots:PersistentLevel.IO_MissionScripted_BlotsPipes_2.Timeline_RorchaschPuddle,TheTimeline.Length,0,,0.75
