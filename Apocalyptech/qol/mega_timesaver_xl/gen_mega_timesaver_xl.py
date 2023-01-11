@@ -35,6 +35,73 @@ parser.add_argument('-v', '--verbose',
 args = parser.parse_args()
 verbose = args.verbose
 
+# There's a lot going on in this mod, but in general there's just a few classes
+# of tweaks that I'm making.  This should cover like 95% of the mod.  Here's a
+# brief summary:
+#
+#  - ParticleSystems
+#    There's a few cases where a ParticleSystem might determine the timing of
+#    something, and others where it just ends up looking weird if you don't
+#    speed it up.  Digistruct effects tend to use these, and stuff like the
+#    steam while Barista Bot pours coffee in Metridian Metroplex, or the liquid
+#    pouring in the brewery in Cankerwood.  There's a lot of values which need
+#    to be tweaked to speed up a ParticleSystem -- I've got that wrapped up in
+#    a `scale_ps()` function.
+#
+#  - AnimSequences
+#    These are little individual bits of animations, and if that's all you've
+#    got to work with, they tend to require a number of tweaks inside them to
+#    get the timing right.  I'm using an `AS()` class to wrap all that up.  There's
+#    some weird interactions between the majority of the attrs and the
+#    `SequenceLength` inside the AnimSequence which I've never figured out.  Some
+#    AnimSequences end up glitching out if you scale SequenceLength along with
+#    everything else, but others require you to scale it if you want the overall
+#    timings to update properly.  Go figure.  The vehicle-related animations in
+#    particular are very finnicky, and I've had to balance between an animation
+#    which seems to freeze up versus having it *look* fine but leave the vehicle
+#    uncontrollable for a bit afterwards.  Note that the AS class expects you to
+#    fill in `scale` and `seqlen_scale` *after* instantiation, due to how we're
+#    processing these.
+#
+#  - InteractiveObjects
+#    Most of the stuff you interact with in the game is an InteractiveObject (IO),
+#    sometimes prefixed by "Blueprint" (BPIO).  Speeding these up required hitting
+#    a lot of internal attrs (much like AnimSequences), but at least these don't
+#    suffer from the same weird SequenceLength problems that AnimSequences do.  For
+#    some objects, the IO/BPIO object itself controls the main "Timeline" attributes,
+#    but the specific map objects might also need some tweaking to account for the
+#    reduced runtime.  So you'll see a bunch of level-specific object types have an
+#    IO tweak and then also some custom map tweaks further down in the file.  Scaling
+#    for these objects is helped out a bit by an `IO()` class, though the actual
+#    scaling's done outside the class.
+#
+#  - GbxLevelSequenceActors
+#    As a potential alternative to both AnimSequence and InteractiveObject tweaking,
+#    the game sometimes uses sequences to kick off one or more of those, and there
+#    may be a GbxLevelSequenceActor which kicks that off.  I didn't really discover
+#    these until pretty late in the mod development, but when they're available,
+#    they seem much more reliable (and simpler!) than editing AnimSequence and
+#    InteractiveObject objects directly.  They've got a `SequencePlayer` sub-object
+#    attached which has a very convenient `PlayRate` attr, so all I need to do is
+#    set that and I'm golden.  I suspect there are quite a few AS/IO tweaks
+#    that I'm doing which would be better done via this method.  (I'm pretty sure
+#    there are plenty of AS/IO objects which don't live inside a sequence, so we'd
+#    have to be doing some direct tweaks anyway, though.)
+#
+#  - Bytecode Tweaks
+#    Finally, the other main class of tweaks in here is altering blueprint bytecode,
+#    generally just to shorten `Delay` opcodes.  There's plenty of times where even
+#    if you have all the AS/IO/whatever stuff sped up, you'll end up with blueprint-
+#    enforced delays.  Tracking these down is a "fun" process sometimes; see my
+#    UAssetAPI fork: https://github.com/apocalyptech/UAssetAPI/
+#
+# Other than all that, there's the usual amount of "custom" tweaking for other
+# stuff, which should be pretty straightforward so long as you've got object
+# serializations available.  Elevators all share a common set of attrs, as do the
+# NPC walk/sprint speed stuff.  I've tried to keep things at least somewhat
+# commented, so hopefully the comments here will help out if you're curious about
+# something!
+
 mod = Mod('mega_timesaver_xl.bl3hotfix',
         'Mega TimeSaver XL',
         'Apocalyptech',
