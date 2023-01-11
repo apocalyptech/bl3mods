@@ -65,11 +65,11 @@ verbose = args.verbose
 #
 #  - InteractiveObjects
 #    Most of the stuff you interact with in the game is an InteractiveObject (IO),
-#    sometimes prefixed by "Blueprint" (BPIO).  Speeding these up required hitting
+#    sometimes prefixed by "Blueprint" (BPIO).  Speeding these up requires hitting
 #    a lot of internal attrs (much like AnimSequences), but at least these don't
 #    suffer from the same weird SequenceLength problems that AnimSequences do.  For
-#    some objects, the IO/BPIO object itself controls the main "Timeline" attributes,
-#    but the specific map objects might also need some tweaking to account for the
+#    some objects, the in addition to tweaking the "main" IO object itself, the
+#    map-specific instances of the IO might also need some tweaking to account for the
 #    reduced runtime.  So you'll see a bunch of level-specific object types have an
 #    IO tweak and then also some custom map tweaks further down in the file.  Scaling
 #    for these objects is helped out a bit by an `IO()` class, though the actual
