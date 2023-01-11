@@ -41,6 +41,14 @@ SparkPatchEntry,(1,1,0,),/Game/Pickups/_Shared/_Design/DroppedPickupFlyToSetting
 SparkPatchEntry,(1,1,0,),/Game/Pickups/_Shared/_Design/DroppedPickupFlyToSettings.DroppedPickupFlyToSettings,LinearAcceleration,0,,1000.0
 
 ###
+### Fast Travel / Teleport Animation Disable
+###
+
+SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/_Shared/_Design/Travel/Action_TeleportEffects.Default__Action_TeleportEffects_C,Duration,0,,0.5
+SparkPatchEntry,(1,7,0,),/Game/PlayerCharacters/_Shared/_Design/Travel/Action_TeleportEffects.Action_TeleportEffects_C,0,1,ExecuteUbergraph_Action_TeleportEffects,1,1119,3:5.5,3:0.5
+SparkPatchEntry,(1,7,0,),/Game/PlayerCharacters/_Shared/_Design/Travel/Action_TeleportEffects.Action_TeleportEffects_C,0,1,ExecuteUbergraph_Action_TeleportEffects,1,391,3:1.5,3:0.5
+
+###
 ### Vault Card Chest Injection (needed in order to speed up the opening animation)
 ###
 
@@ -10135,14 +10143,6 @@ SparkLevelPatchEntry,(1,1,0,FrostSite_P),/Ixora/Maps/FrostSite/FrostSite_Combat.
 
 # Negul Neshai elevator-button timing
 SparkLevelPatchEntry,(1,7,0,Camp_P),/Game/PatchDLC/Hibiscus/Missions/Plot/EP05_DLC2.EP05_DLC2_C,0,1,ExecuteUbergraph_EP05_DLC2,1,34634,1:5,4:1.25
-
-###
-### Fast Travel / Teleport Animation Disable
-###
-
-SparkPatchEntry,(1,1,0,),/Game/PlayerCharacters/_Shared/_Design/Travel/Action_TeleportEffects.Default__Action_TeleportEffects_C,Duration,0,,0.5
-SparkPatchEntry,(1,7,0,),/Game/PlayerCharacters/_Shared/_Design/Travel/Action_TeleportEffects.Action_TeleportEffects_C,0,1,ExecuteUbergraph_Action_TeleportEffects,1,1119,3:5.5,3:0.5
-SparkPatchEntry,(1,7,0,),/Game/PlayerCharacters/_Shared/_Design/Travel/Action_TeleportEffects.Action_TeleportEffects_C,0,1,ExecuteUbergraph_Action_TeleportEffects,1,391,3:1.5,3:0.5
 
 ###
 ### Slot Machine Tweaks
