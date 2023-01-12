@@ -68,7 +68,7 @@ verbose = args.verbose
 #    sometimes prefixed by "Blueprint" (BPIO).  Speeding these up requires hitting
 #    a lot of internal attrs (much like AnimSequences), but at least these don't
 #    suffer from the same weird SequenceLength problems that AnimSequences do.  For
-#    some objects, the in addition to tweaking the "main" IO object itself, the
+#    some objects, in addition to tweaking the "main" IO object itself, the
 #    map-specific instances of the IO might also need some tweaking to account for the
 #    reduced runtime.  So you'll see a bunch of level-specific object types have an
 #    IO tweak and then also some custom map tweaks further down in the file.  Scaling
@@ -3021,7 +3021,7 @@ class Char():
     so I may as well do this too.
     """
 
-    def __init__(self, name, path, scale, force_have_slowdown=False):
+    def __init__(self, name, path, scale, sprint_scale=None, force_have_slowdown=False):
         self.name = name
         self.path = path
         self.last_bit = path.split('/')[-1]
@@ -3030,6 +3030,10 @@ class Char():
         self.full_path = f'{self.path}.{self.default_name}'
         self.scale = scale
         self.force_have_slowdown = force_have_slowdown
+        if sprint_scale is None:
+            self.sprint_scale = scale
+        else:
+            self.sprint_scale = sprint_scale
 
     def __lt__(self, other):
         return self.name.casefold() < other.name.casefold()
@@ -3177,6 +3181,32 @@ for char in sorted([
             '/Geranium/NonPlayerCharacters/GerNPC/McSmugger/_Design/Character/BPChar_McSmugger',
             global_char_scale,
             ),
+        Char('Oletta',
+            '/Geranium/NonPlayerCharacters/Granny/_Design/Character/BPChar_Granny',
+            # Oletta's all right except for the opening of the mission Lost and Found,  where
+            # she takes forever walking across the rooftops.  I suspect that it's partially
+            # because the call to BeginScriptedMove doesn't include a Stance, so she defaults
+            # to NPC Walk (or something).  Unfortunately, because that arg's value is None,
+            # we can't bytecode-edit it to the Sprint one.  Alas!  Anyway, bumping up her
+            # scaling quite a bit to compensate.  We have to be careful not to go *too*
+            # fast, though, or she'll end up skipping some dialogue in the main plot quest.
+            #
+            # In fact, with this scaling we also need to swap her ScriptedMove stances
+            # from Run to Walk (see below) or dialogue gets skipped anyway.  Technically
+            # we'd only need to do that for a single instance, but her sprint speed becomes
+            # utterly ridiculous.  I'd tried scaling back sprint specifically, as you can
+            # see, but it seems to be ignored?  I wonder if NPC "Run" stances don't actually
+            # use the CharMoveComp MaxSprintSpeed, and instead just scale up Walk.  So,
+            # we're actually switching *all* Run instances to Walk.
+            #
+            # We can technically go up to 1.8 without skipping dialogue, but it's awfully
+            # tight, so I dragged it back just a bit.  This lets both Off The Rails and
+            # Lost and Found be pretty quick as far as Oletta's concerned.
+            global_char_scale*1.75,
+            # An attempt to scale back sprinting a bit, which seems to not actually do anything?
+            # Technically this would make her sprinting *slower* than walking, btw.
+            sprint_scale=global_char_scale,
+            ),
         Char('P.A.T.',
             '/Alisma/NonPlayerCharacters/PAT/_Design/Character/BPChar_PAT',
             global_char_scale,
@@ -3228,8 +3258,8 @@ for char in sorted([
             char.full_path,
             'OakCharacterMovement.Object..MaxSprintSpeed',
             '(Value={},BaseValue={})'.format(
-                round(speed_sprint*char.scale, 6),
-                round(speed_sprint*char.scale, 6),
+                round(speed_sprint*char.sprint_scale, 6),
+                round(speed_sprint*char.sprint_scale, 6),
                 ),
             )
     if have_slowdown:
@@ -3244,6 +3274,47 @@ for char in sorted([
                 1,
                 )
     mod.newline()
+
+mod.header('Extra Character Movement Tweaks')
+
+# Oletta!  First, since we're buffing her movement speed so much, her Sprint speed
+# becomes ludicrous.  (And MaxSprintSpeed is maybe ignored in favor of MaxWalkSpeed
+# scaling, for NPCs?)  So we're swapping all instance of the Run stance with Walk.
+#
+# Note that this (and/or the speed tweaks in general) make her act pretty weirdly
+# after releasing the Menta Gnats.  On the way to the test area (where you first use
+# Traitorweed), she ends up teleporting a bit, and the dialogue triggers are a bit
+# weird.  Then afterwards she seems to say some dialogue *early* and open the door
+# to the rest of the level from a distance.  Kind of weird.  In the end I didn't
+# feel like tracking it down much, since the "fix" would probably just be "don't
+# speed her up like this."  So we'll just cope.
+mod.comment('Oletta: Walk instead of Run')
+mod.bytecode_hotfix(Mod.LEVEL, 'Forest_P',
+        '/Geranium/Maps/Forest/Forest_M_Ep03_Forest',
+        'ExecuteUbergraph_Forest_M_Ep03_Forest',
+        # This is the index we *need* to do, to not skip dialogue, btw.  The rest are
+        # just because her Run speed looks ridiculous with our enhanced scaling.
+        #3176,
+        [237, 1352, 3176, 6172, 6692],
+        '/Game/NonPlayerCharacters/_Shared/_Design/StanceData/StanceData_NPC_Passive_Run.StanceData_NPC_Passive_Run',
+        '/Game/NonPlayerCharacters/_Shared/_Design/StanceData/StanceData_NPC_Passive_Walk.StanceData_NPC_Passive_Walk',
+        )
+mod.newline()
+
+# More Oletta!  Tighten up some dialogue delays to make it fit more nicely on the
+# way to her lab.
+mod.comment('Oletta: Dialogue delay tweaks')
+for index, cur_delay in [
+        ([25040, 1171], 2),
+        (826, 3),
+        ]:
+    mod.bytecode_hotfix(Mod.LEVEL, 'Forest_P',
+            '/Game/PatchDLC/Geranium/Missions/Plot/Mission_Ep03_ObsidianForest',
+            'ExecuteUbergraph_Mission_Ep03_ObsidianForest',
+            index,
+            cur_delay,
+            0.5)
+mod.newline()
 
 ###
 ### Various disabled things follow!  These are either bits which *work* but which I

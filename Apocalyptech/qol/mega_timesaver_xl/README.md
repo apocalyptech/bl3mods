@@ -44,6 +44,7 @@ Currently, the mod affects the following:
   * Lilith
   * Maya
   * McSmugger
+  * Oletta
   * P.A.T.
   * Terry the Ratch
   * Timothy Lawrence
@@ -128,6 +129,8 @@ Some things intentionally *not* handled by the mod:
   probably be sped up, but that one's been left alone.
 * Daisy's door-opening in Blastplains has been left alone; it's nice and
   dramatic.
+* Adding the various bath products for Dirty Deeds, in Ashfall Peaks, could
+  be sped up a bit, though not by much if you don't want to cut off dialogue.
 * The cocking animation on the third catapult in Castle Crimson has been
   left alone, for boring technical reasons.
 * The egg-incubation timer in A Good Egg has been left alone; it's already
@@ -165,6 +168,11 @@ Known Bugs
   into the air seems to cause the loot to sometimes fly away at
   pretty high speeds.  This can be a bit annoying in cases like the
   trash collection in Spendopticon during One Man's Treasure.
+* Oletta ends up acting a bit weird after releasing the Menta Gnats
+  in Obsidian Forest; she may teleport a bit, open the door to the
+  rest of the level from a distance, and suddenly get real quick
+  on her way back to her lab.  Still, doesn't look like any dialogue
+  gets missed, and it lets us speed her up othewise.
 
 TODO
 ====
@@ -236,6 +244,7 @@ Changelog
    * Liam (Atlas HQ guard)
    * Maya
    * McSmugger
+   * Oletta
    * P.A.T.
    * Terry the Ratch
    * Timothy Lawrence
