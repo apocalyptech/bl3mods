@@ -10619,6 +10619,31 @@ SparkLevelPatchEntry,(1,1,0,Frontier_P),/Geranium/Maps/Frontier/Frontier_M_Money
 SparkLevelPatchEntry,(1,1,0,Frontier_P),/Geranium/Maps/Frontier/Frontier_M_MoneyBackGuarantee.Frontier_M_MoneyBackGuarantee:PersistentLevel.IO_MissionUsable_ArtilleryCannon_2,DelayBeforePlayingSequence,0,,0.25
 
 ###
+### Various Oletta / Lost and Found tweaks
+###
+
+# Intro dialogue delay tweaks
+SparkLevelPatchEntry,(1,7,0,Forest_P),/Game/PatchDLC/Geranium/Missions/Plot/Mission_Ep03_ObsidianForest.Mission_Ep03_ObsidianForest_C,0,1,ExecuteUbergraph_Mission_Ep03_ObsidianForest,2,25040,1171,1:2,3:0.5
+SparkLevelPatchEntry,(1,7,0,Forest_P),/Game/PatchDLC/Geranium/Missions/Plot/Mission_Ep03_ObsidianForest.Mission_Ep03_ObsidianForest_C,0,1,ExecuteUbergraph_Mission_Ep03_ObsidianForest,1,826,1:3,3:0.5
+
+# Move Oletta's initial Lost and Found waiting point
+SparkLevelPatchEntry,(1,1,1,Forest_P),/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.AINode_3.AINodeComponent,RelativeLocation,0,,(X=-4007.6667,Y=-5736.0737,Z=1459.2206)
+
+# Give Oletta's Lost and Found waiting point a further navigation node
+SparkLevelPatchEntry,(1,1,1,Forest_P),/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.AINode_3.AINodeComponent,LinksTo,0,,((Weight=1,PrevWeight=0,Actor=AINode'"/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.AINode_1"'))
+SparkLevelPatchEntry,(1,1,1,Forest_P),/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.AINode_1.AINodeComponent,LinksTo,0,,
+
+# Extend second navigation node onto bridge
+SparkLevelPatchEntry,(1,1,1,Forest_P),/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.AINode_1.AINodeComponent,RelativeLocation,0,,(X=-3404,Y=-6601,Z=1625)
+SparkLevelPatchEntry,(1,1,1,Forest_P),/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.AINode_1.AINodeComponent,ArrivalThreshold,0,,20
+
+# Relocate "Talk to Oletta" activation sphere to second navigation node
+SparkLevelPatchEntry,(1,1,1,Forest_P),/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.OakMissionWaypoint_MeetGranny.CollisionComp,RelativeLocation,0,,(X=-3404,Y=-6601,Z=1625)
+
+# Redirect post-"Talk to Oletta" navigation node to the next step
+SparkLevelPatchEntry,(1,1,1,Forest_P),/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.Forest_M_AnimalControl_C_1,AINode_1_ExecuteUbergraph_Forest_M_AnimalControl_RefProperty,0,,AINode'"/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.AINode_2"'
+
+###
 ### Mission/Level Specific: Castle Crimson catapult tweaks
 ###
 
@@ -10732,7 +10757,7 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_McSmugger),/Geranium/NonPlayerCharacters
 SparkCharacterLoadedEntry,(1,1,0,BPChar_McSmugger),/Geranium/NonPlayerCharacters/GerNPC/McSmugger/_Design/Character/BPChar_McSmugger.Default__BPChar_McSmugger_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 
 # Oletta
-SparkCharacterLoadedEntry,(1,1,0,BPChar_Granny),/Geranium/NonPlayerCharacters/Granny/_Design/Character/BPChar_Granny.Default__BPChar_Granny_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=1470.0,BaseValue=1470.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Granny),/Geranium/NonPlayerCharacters/Granny/_Design/Character/BPChar_Granny.Default__BPChar_Granny_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Granny),/Geranium/NonPlayerCharacters/Granny/_Design/Character/BPChar_Granny.Default__BPChar_Granny_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 
 # P.A.T.
@@ -10764,15 +10789,4 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_HeadCaseGirl),/Game/NonPlayerCharacters/
 # VIP Valet / Dealer Bot / Upgraded Dealer Bot
 SparkCharacterLoadedEntry,(1,1,0,BPChar_ServiceBot_Croupier),/Game/PatchDLC/Dandelion/Enemies/ServiceBot/Croupier/_Design/Character/BPChar_ServiceBot_Croupier.Default__BPChar_ServiceBot_Croupier_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_ServiceBot_Croupier),/Game/PatchDLC/Dandelion/Enemies/ServiceBot/Croupier/_Design/Character/BPChar_ServiceBot_Croupier.Default__BPChar_ServiceBot_Croupier_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1890.0,BaseValue=1890.0)
-
-###
-### Extra Character Movement Tweaks
-###
-
-# Oletta: Walk instead of Run
-SparkLevelPatchEntry,(1,7,0,Forest_P),/Geranium/Maps/Forest/Forest_M_Ep03_Forest.Forest_M_Ep03_Forest_C,0,1,ExecuteUbergraph_Forest_M_Ep03_Forest,5,237,1352,3176,6172,6692,106:/Game/NonPlayerCharacters/_Shared/_Design/StanceData/StanceData_NPC_Passive_Run.StanceData_NPC_Passive_Run,108:/Game/NonPlayerCharacters/_Shared/_Design/StanceData/StanceData_NPC_Passive_Walk.StanceData_NPC_Passive_Walk
-
-# Oletta: Dialogue delay tweaks
-SparkLevelPatchEntry,(1,7,0,Forest_P),/Game/PatchDLC/Geranium/Missions/Plot/Mission_Ep03_ObsidianForest.Mission_Ep03_ObsidianForest_C,0,1,ExecuteUbergraph_Mission_Ep03_ObsidianForest,2,25040,1171,1:2,3:0.5
-SparkLevelPatchEntry,(1,7,0,Forest_P),/Game/PatchDLC/Geranium/Missions/Plot/Mission_Ep03_ObsidianForest.Mission_Ep03_ObsidianForest_C,0,1,ExecuteUbergraph_Mission_Ep03_ObsidianForest,1,826,1:3,3:0.5
 

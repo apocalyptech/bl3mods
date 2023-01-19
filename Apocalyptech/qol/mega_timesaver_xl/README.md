@@ -168,11 +168,11 @@ Known Bugs
   into the air seems to cause the loot to sometimes fly away at
   pretty high speeds.  This can be a bit annoying in cases like the
   trash collection in Spendopticon during One Man's Treasure.
-* Oletta ends up acting a bit weird after releasing the Menta Gnats
-  in Obsidian Forest; she may teleport a bit, open the door to the
-  rest of the level from a distance, and suddenly get real quick
-  on her way back to her lab.  Still, doesn't look like any dialogue
-  gets missed, and it lets us speed her up othewise.
+* Oletta (in Obsidian Forest) has a couple of interesting behaviors:
+  * If you stay too close to her when she's on the way to the Traitorweed
+    testing area, she may end up teleporting a bit.
+  * She ends up doing a bit of teleporting after she spawns in for
+    the Lost and Found mission in Obsidian Forest.
 
 TODO
 ====

@@ -2955,6 +2955,114 @@ mod.reg_hotfix(Mod.LEVEL, 'Frontier_P',
         )
 mod.newline()
 
+# Various Oletta tweaks.  I'm using notify=True for most of these, and I'm not sure if
+# it's actually required in all cases (or at all) - I'd just used it by default since
+# many other RelativeLocation tweaks tend to need it.
+mod.header('Various Oletta / Lost and Found tweaks')
+
+# AINodes that Oletta will follow.  In the vanilla data, she hangs around at
+# the first node after picking up the quest.  Then when you talk to her, she
+# proceeds through the second and third (and beyond to a few more).  What I'm
+# doing here, instead, is extending her post-spawn node traversal to include
+# that second node, since she runs to those.  Then talking to her will kick off
+# at that third node, instead of the second.
+oletta_first_node_comp = '/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.AINode_3.AINodeComponent'
+oletta_second_node = '/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.AINode_1'
+oletta_second_node_comp = f'{oletta_second_node}.AINodeComponent'
+oletta_third_node = '/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.AINode_2'
+
+# Also shuffling the nodes around a bit.  The first node is moving to the
+# previous location of the second node, and the second is moving out onto
+# the "bridge"
+oletta_first_node_coords = '(X=-4007.6667,Y=-5736.0737,Z=1459.2206)'
+oletta_second_node_coords = '(X=-3404,Y=-6601,Z=1625)'
+
+# Tighten up some dialogue delays to make it fit more nicely on the way to her lab.
+mod.comment('Intro dialogue delay tweaks')
+for index, cur_delay in [
+        ([25040, 1171], 2),
+        (826, 3),
+        ]:
+    mod.bytecode_hotfix(Mod.LEVEL, 'Forest_P',
+            '/Game/PatchDLC/Geranium/Missions/Plot/Mission_Ep03_ObsidianForest',
+            'ExecuteUbergraph_Mission_Ep03_ObsidianForest',
+            index,
+            cur_delay,
+            0.5)
+mod.newline()
+
+mod.comment("Move Oletta's initial Lost and Found waiting point")
+mod.reg_hotfix(Mod.LEVEL, 'Forest_P',
+        oletta_first_node_comp,
+        'RelativeLocation',
+        oletta_first_node_coords,
+        notify=True,
+        )
+mod.newline()
+
+mod.comment("Give Oletta's Lost and Found waiting point a further navigation node")
+# Link Oletta's standing point to AINode_1 (usually a part of the
+# next sequence after you've said hello to her)
+mod.reg_hotfix(Mod.LEVEL, 'Forest_P',
+        oletta_first_node_comp,
+        'LinksTo',
+        """
+        (
+            (
+                Weight=1,
+                PrevWeight=0,
+                Actor={}
+            )
+        )
+        """.format(Mod.get_full_cond(oletta_second_node, 'AINode')),
+        notify=True,
+        )
+# Cut off AINode_1's link
+mod.reg_hotfix(Mod.LEVEL, 'Forest_P',
+        oletta_second_node_comp,
+        'LinksTo',
+        '',
+        notify=True,
+        )
+mod.newline()
+
+mod.comment('Extend second navigation node onto bridge')
+# Move AINode_1 further out onto the bridge
+mod.reg_hotfix(Mod.LEVEL, 'Forest_P',
+        oletta_second_node_comp,
+        'RelativeLocation',
+        oletta_second_node_coords,
+        notify=True,
+        )
+# ... and tighten up its arrival threshhold
+mod.reg_hotfix(Mod.LEVEL, 'Forest_P',
+        oletta_second_node_comp,
+        'ArrivalThreshold',
+        '20',
+        notify=True,
+        )
+mod.newline()
+
+# Move the "Meet Oletta" activation sphere near her new starting point, too
+mod.comment('Relocate "Talk to Oletta" activation sphere to second navigation node')
+mod.reg_hotfix(Mod.LEVEL, 'Forest_P',
+        '/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.OakMissionWaypoint_MeetGranny.CollisionComp',
+        'RelativeLocation',
+        oletta_second_node_coords,
+        notify=True,
+        )
+mod.newline()
+
+mod.comment('Redirect post-"Talk to Oletta" navigation node to the next step')
+# Redirect the start of her mission dialogue to the next node along
+mod.reg_hotfix(Mod.LEVEL, 'Forest_P',
+        '/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.Forest_M_AnimalControl_C_1',
+        'AINode_1_ExecuteUbergraph_Forest_M_AnimalControl_RefProperty',
+        Mod.get_full_cond(oletta_third_node, 'AINode'),
+        notify=True,
+        )
+mod.newline()
+
 # Castle Crimson catapult tweaks
 mod.header('Mission/Level Specific: Castle Crimson catapult tweaks')
 
@@ -3181,31 +3289,28 @@ for char in sorted([
             '/Geranium/NonPlayerCharacters/GerNPC/McSmugger/_Design/Character/BPChar_McSmugger',
             global_char_scale,
             ),
+        # Oletta's actually a tough one to speed up without unintended side effects!  There are
+        # four interactions specifically which can cause problems:
+        #
+        #   1) The initial jaunt over to the lab
+        #   2) Heading over to the Traitorweed-testing area
+        #   3) Unlocking the door to the rest of the map, and journey back to her starting point
+        #   4) Her walk across the rooftops at the beginning of Lost and Found
+        #
+        # (Her journey back from the lab to have you release the Menta Gnats isn't problematic
+        # because the timers on that seem to be entirely dialogue-dependent.)
+        #
+        # Number 4 in particular *really* needs speeding up, but if we bump up her walking speed
+        # too much, all sorts of weirdness can start happening with all the others, so we've got
+        # to remain somewhat conservative.  What I'm doing with number 4 is moving some of the
+        # AINodes around so that she's got less distance to cover (she runs to the initial
+        # waiting point, so this speeds things up nicely).  That and a few other minor
+        # tweaks gets all four cases working pretty well.  Oletta *does* do a little bit of
+        # teleporting when getting into position for Lost and Found, still, but IMO that's a
+        # perfectly fine tradeoff.
         Char('Oletta',
             '/Geranium/NonPlayerCharacters/Granny/_Design/Character/BPChar_Granny',
-            # Oletta's all right except for the opening of the mission Lost and Found,  where
-            # she takes forever walking across the rooftops.  I suspect that it's partially
-            # because the call to BeginScriptedMove doesn't include a Stance, so she defaults
-            # to NPC Walk (or something).  Unfortunately, because that arg's value is None,
-            # we can't bytecode-edit it to the Sprint one.  Alas!  Anyway, bumping up her
-            # scaling quite a bit to compensate.  We have to be careful not to go *too*
-            # fast, though, or she'll end up skipping some dialogue in the main plot quest.
-            #
-            # In fact, with this scaling we also need to swap her ScriptedMove stances
-            # from Run to Walk (see below) or dialogue gets skipped anyway.  Technically
-            # we'd only need to do that for a single instance, but her sprint speed becomes
-            # utterly ridiculous.  I'd tried scaling back sprint specifically, as you can
-            # see, but it seems to be ignored?  I wonder if NPC "Run" stances don't actually
-            # use the CharMoveComp MaxSprintSpeed, and instead just scale up Walk.  So,
-            # we're actually switching *all* Run instances to Walk.
-            #
-            # We can technically go up to 1.8 without skipping dialogue, but it's awfully
-            # tight, so I dragged it back just a bit.  This lets both Off The Rails and
-            # Lost and Found be pretty quick as far as Oletta's concerned.
-            global_char_scale*1.75,
-            # An attempt to scale back sprinting a bit, which seems to not actually do anything?
-            # Technically this would make her sprinting *slower* than walking, btw.
-            sprint_scale=global_char_scale,
+            global_char_scale,
             ),
         Char('P.A.T.',
             '/Alisma/NonPlayerCharacters/PAT/_Design/Character/BPChar_PAT',
@@ -3274,47 +3379,6 @@ for char in sorted([
                 1,
                 )
     mod.newline()
-
-mod.header('Extra Character Movement Tweaks')
-
-# Oletta!  First, since we're buffing her movement speed so much, her Sprint speed
-# becomes ludicrous.  (And MaxSprintSpeed is maybe ignored in favor of MaxWalkSpeed
-# scaling, for NPCs?)  So we're swapping all instance of the Run stance with Walk.
-#
-# Note that this (and/or the speed tweaks in general) make her act pretty weirdly
-# after releasing the Menta Gnats.  On the way to the test area (where you first use
-# Traitorweed), she ends up teleporting a bit, and the dialogue triggers are a bit
-# weird.  Then afterwards she seems to say some dialogue *early* and open the door
-# to the rest of the level from a distance.  Kind of weird.  In the end I didn't
-# feel like tracking it down much, since the "fix" would probably just be "don't
-# speed her up like this."  So we'll just cope.
-mod.comment('Oletta: Walk instead of Run')
-mod.bytecode_hotfix(Mod.LEVEL, 'Forest_P',
-        '/Geranium/Maps/Forest/Forest_M_Ep03_Forest',
-        'ExecuteUbergraph_Forest_M_Ep03_Forest',
-        # This is the index we *need* to do, to not skip dialogue, btw.  The rest are
-        # just because her Run speed looks ridiculous with our enhanced scaling.
-        #3176,
-        [237, 1352, 3176, 6172, 6692],
-        '/Game/NonPlayerCharacters/_Shared/_Design/StanceData/StanceData_NPC_Passive_Run.StanceData_NPC_Passive_Run',
-        '/Game/NonPlayerCharacters/_Shared/_Design/StanceData/StanceData_NPC_Passive_Walk.StanceData_NPC_Passive_Walk',
-        )
-mod.newline()
-
-# More Oletta!  Tighten up some dialogue delays to make it fit more nicely on the
-# way to her lab.
-mod.comment('Oletta: Dialogue delay tweaks')
-for index, cur_delay in [
-        ([25040, 1171], 2),
-        (826, 3),
-        ]:
-    mod.bytecode_hotfix(Mod.LEVEL, 'Forest_P',
-            '/Game/PatchDLC/Geranium/Missions/Plot/Mission_Ep03_ObsidianForest',
-            'ExecuteUbergraph_Mission_Ep03_ObsidianForest',
-            index,
-            cur_delay,
-            0.5)
-mod.newline()
 
 ###
 ### Various disabled things follow!  These are either bits which *work* but which I
@@ -3473,6 +3537,45 @@ if False:
                         'ShouldAttachLoot',
                         'True',
                         notify=True)
+
+# While working on speedups for Oletta, there was one annoying sequence at the
+# beginning of the Lost and Found mission where her stance was unavoidably locked
+# to "Walk" instead of sprint, and she had a *long* way to go, requiring a pretty
+# hefty Walk-speed buff to make it reasonable.  Unfortunately, it seems that NPCs
+# might not actually use MaxSprintSpeed -- it seems that the game probably just
+# scales up MaxWalkSpeed instead, which led to pretty absurd behavior elsewhere in
+# Oletta's movements.
+#
+# So, one thing I'd been doing for awhile was to convert as many of her Run stances
+# to Walk, to attempt to compensate for this.  The one place I was aware of where
+# this was more-or-less *necessary*, to avoid skipping dialogue, was her initial
+# jaunt over to the lab, to charge up the core sample to activate the Menta Gnats.
+#
+# I'd ended up trying it on *all* the stance parameters that I could find, in the
+# end, because her sprint speed was hilariously out of place otherwise, but all of
+# this combined ended up causing some really bizarre behavior.  On the way to the
+# test area (where you first use Traitorweed), she ends up teleporting a bit, and
+# the dialogue triggers are a bit weird.  Then afterwards she seems to say some
+# dialogue *early* and open the door to the rest of the level from a distance.
+#
+# In the end, what I did instead of this was move her navigation AINodes around a
+# bit -- she runs from her spawnpoint to the dedicated spot -- and bringing her
+# walk speed buff down to our usual levels, and that turned out to be a much better
+# solution overall.  Still, leaving this in here in case I want to take another
+# look at it.
+if False:
+    mod.comment('Oletta: Walk instead of Run')
+    mod.bytecode_hotfix(Mod.LEVEL, 'Forest_P',
+            '/Geranium/Maps/Forest/Forest_M_Ep03_Forest',
+            'ExecuteUbergraph_Forest_M_Ep03_Forest',
+            # This is the index we *need* to do, to not skip dialogue, btw.  The rest are
+            # just because her Run speed looks ridiculous with our enhanced scaling.
+            3176,
+            #[237, 1352, 3176, 6172, 6692],
+            '/Game/NonPlayerCharacters/_Shared/_Design/StanceData/StanceData_NPC_Passive_Run.StanceData_NPC_Passive_Run',
+            '/Game/NonPlayerCharacters/_Shared/_Design/StanceData/StanceData_NPC_Passive_Walk.StanceData_NPC_Passive_Walk',
+            )
+    mod.newline()
 
 mod.close()
 
