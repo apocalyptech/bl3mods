@@ -56,7 +56,7 @@ X /Game/Maps/Zone_4/Crypt/Crypt_P
 * /Game/PatchDLC/Event2/Maps/Cartels_P
 * /Game/PatchDLC/Raid1/Maps/Raid/Raid_P
 * /Game/PatchDLC/Takedown2/Maps/GuardianTakedown_P
-  /Geranium/Maps/CraterBoss/CraterBoss_P
+* /Geranium/Maps/CraterBoss/CraterBoss_P
 * /Geranium/Maps/Facility/Facility_P
 * /Geranium/Maps/Forest/Forest_P
 * /Geranium/Maps/Frontier/Frontier_P

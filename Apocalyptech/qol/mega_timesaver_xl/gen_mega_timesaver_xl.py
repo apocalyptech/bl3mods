@@ -1904,20 +1904,21 @@ for label, level, obj_name, speed, travel_time in sorted([
         ("The Blastplains", 'Frontier_P',
             '/Geranium/Maps/Frontier/Frontier_M_MoneyBackGuarantee.Frontier_M_MoneyBackGuarantee:PersistentLevel.Elevator_MoneyBack_frontier_2',
             200, 10),
+        ("Bloodsun Canyon - Presentation Room", 'Facility_P',
+            '/Geranium/Maps/Facility/Facility_M_Plot.Facility_M_Plot:PersistentLevel.Elevator_ToLowerFacility_2',
+            # This one's as slow as VIP Tower, but I'm sticking with our default scaling since
+            # there's other sequences associated with it (the curtains + lights, specifically,
+            # on the first trip down)
+            400, 40),
+        ("Bloodsun Canyon - Boss", 'Facility_P',
+            '/Geranium/Maps/Facility/Facility_M_Plot.Facility_M_Plot:PersistentLevel.Elevator_Boss_2',
+            200, 15),
 
         # Wrote some code to attempt to autodetect some things, to make future filling-in easier.
         # Keeping them commented for now; kind of want to doublecheck things as I go, still,  I
         # suspect that `defaultspeed` is 200, but we'll see.  A default traveltime of 10 has been
         # filled in on a lot of these.  Also I suspect that at least some of these aren't really
         # things that we'd want to speed up -- like all the Guardian Takedown ones, for instance.
-
-
-        #("Bloodsun Canyon", 'Facility_P',
-        #    '/Geranium/Maps/Facility/Facility_M_Plot.Facility_M_Plot:PersistentLevel.Elevator_Boss_2',
-        #    defaultspeed, 15),
-        #("Bloodsun Canyon", 'Facility_P',
-        #    '/Geranium/Maps/Facility/Facility_M_Plot.Facility_M_Plot:PersistentLevel.Elevator_ToLowerFacility_2',
-        #    400, 40),
 
         #("Crater's Edge", 'CraterBoss_P',
         #    '/Geranium/Maps/CraterBoss/CraterBoss_Boss.CraterBoss_Boss:PersistentLevel.Elevator_CraterBoss_Gondola_2',
@@ -1994,6 +1995,27 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Camp_P',
         34634,
         5,
         5/global_scale)
+mod.newline()
+
+# Bloodsun Canyon initial delay
+mod.comment('Bloodsun Canyon presentation room - initial elevator delay')
+mod.reg_hotfix(Mod.LEVEL, 'Facility_P',
+        '/Geranium/Maps/Facility/Facility_M_Plot.Facility_M_Plot:PersistentLevel.Elevator_ToLowerFacility_2',
+        'SwitchDelayTime',
+        0)
+mod.newline()
+
+mod.comment('Bloodsun Canyon presentation room - light activation sequence')
+mod.reg_hotfix(Mod.LEVEL, 'Facility_P',
+        '/Geranium/Maps/Facility/Facility_M_Plot.Facility_M_Plot:PersistentLevel.SEQ_ElevatorMuralLights.AnimationPlayer',
+        'PlaybackSettings.PlayRate',
+        # The presentation room elevator takes 40 seconds by default, but is also delayed
+        # by 6 seconds.  I suspect that this sequence is timed to coincide with that total
+        # 46-second period, rather than just 40.  So, since we're getting rid of that
+        # activation delay, if we want it to end at about the same time, we'd need to
+        # scale the curtains+lights slightly differently.
+        46/(40/global_scale),
+        )
 mod.newline()
 
 # Turns out the Dandelion slots are identical, bytecodewise (at least for these two offsets)

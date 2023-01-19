@@ -10027,6 +10027,14 @@ SparkEarlyLevelPatchEntry,(1,1,0,AtlasHQ_P),/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_M_
 SparkEarlyLevelPatchEntry,(1,1,0,AtlasHQ_P),/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_M_EP06OfficeSpaceInvaders.AtlasHQ_M_EP06OfficeSpaceInvaders:PersistentLevel.Elevator_Ep06_AtlasHQ_V_0,ElevatorTravelTime,0,,1.25
 SparkEarlyLevelPatchEntry,(1,1,0,AtlasHQ_P),/Game/Maps/Zone_1/AtlasHQ/AtlasHQ_M_EP06OfficeSpaceInvaders.AtlasHQ_M_EP06OfficeSpaceInvaders:PersistentLevel.Elevator_Ep06_AtlasHQ_V_0,killDelay,0,,0
 
+# Bloodsun Canyon - Boss
+SparkEarlyLevelPatchEntry,(1,1,0,Facility_P),/Geranium/Maps/Facility/Facility_M_Plot.Facility_M_Plot:PersistentLevel.Elevator_Boss_2,ElevatorSpeed,0,,800
+SparkEarlyLevelPatchEntry,(1,1,0,Facility_P),/Geranium/Maps/Facility/Facility_M_Plot.Facility_M_Plot:PersistentLevel.Elevator_Boss_2,ElevatorTravelTime,0,,3.75
+
+# Bloodsun Canyon - Presentation Room
+SparkEarlyLevelPatchEntry,(1,1,0,Facility_P),/Geranium/Maps/Facility/Facility_M_Plot.Facility_M_Plot:PersistentLevel.Elevator_ToLowerFacility_2,ElevatorSpeed,0,,1600
+SparkEarlyLevelPatchEntry,(1,1,0,Facility_P),/Geranium/Maps/Facility/Facility_M_Plot.Facility_M_Plot:PersistentLevel.Elevator_ToLowerFacility_2,ElevatorTravelTime,0,,10.0
+
 # Carnivora - La Cage O' Tinks Entrance
 SparkEarlyLevelPatchEntry,(1,1,0,MotorcadeFestival_P),/Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_M_Plot.MotorcadeFestival_M_Plot:PersistentLevel.BP_Ep15_BigChase_FestivalElevator,ElevatorSpeed,0,,480
 SparkEarlyLevelPatchEntry,(1,1,0,MotorcadeFestival_P),/Game/Maps/Zone_3/MotorcadeFestival/MotorcadeFestival_M_Plot.MotorcadeFestival_M_Plot:PersistentLevel.BP_Ep15_BigChase_FestivalElevator,ElevatorTravelTime,0,,2.5
@@ -10143,6 +10151,12 @@ SparkLevelPatchEntry,(1,1,0,FrostSite_P),/Ixora/Maps/FrostSite/FrostSite_Combat.
 
 # Negul Neshai elevator-button timing
 SparkLevelPatchEntry,(1,7,0,Camp_P),/Game/PatchDLC/Hibiscus/Missions/Plot/EP05_DLC2.EP05_DLC2_C,0,1,ExecuteUbergraph_EP05_DLC2,1,34634,1:5,4:1.25
+
+# Bloodsun Canyon presentation room - initial elevator delay
+SparkLevelPatchEntry,(1,1,0,Facility_P),/Geranium/Maps/Facility/Facility_M_Plot.Facility_M_Plot:PersistentLevel.Elevator_ToLowerFacility_2,SwitchDelayTime,0,,0
+
+# Bloodsun Canyon presentation room - light activation sequence
+SparkLevelPatchEntry,(1,1,0,Facility_P),/Geranium/Maps/Facility/Facility_M_Plot.Facility_M_Plot:PersistentLevel.SEQ_ElevatorMuralLights.AnimationPlayer,PlaybackSettings.PlayRate,0,,4.6
 
 ###
 ### Slot Machine Tweaks
