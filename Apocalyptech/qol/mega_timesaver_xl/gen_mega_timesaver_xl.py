@@ -1695,6 +1695,10 @@ for category, cat_scale, io_objs in [
                 label="Secret wall in crypt, for Cold Case: Buried Questions",
                 level='Village_P',
                 ),
+            IO('/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola',
+                label="Crater's Edge Gondola",
+                level='CraterBoss_P',
+                ),
             # See also some delay tweaks below
             IO('/Alisma/InteractiveObjects/MissionSpecific/Plot/ALI_EP02/Catapult/IO_MissionScripted_Ali_CatapultPivot',
                 label="Castle Crimson catapult rotation",
@@ -1913,28 +1917,9 @@ for label, level, obj_name, speed, travel_time in sorted([
         ("Bloodsun Canyon - Boss", 'Facility_P',
             '/Geranium/Maps/Facility/Facility_M_Plot.Facility_M_Plot:PersistentLevel.Elevator_Boss_2',
             200, 15),
-
-        # Wrote some code to attempt to autodetect some things, to make future filling-in easier.
-        # Keeping them commented for now; kind of want to doublecheck things as I go, still,  I
-        # suspect that `defaultspeed` is 200, but we'll see.  A default traveltime of 10 has been
-        # filled in on a lot of these.  Also I suspect that at least some of these aren't really
-        # things that we'd want to speed up -- like all the Guardian Takedown ones, for instance.
-
-        #("Crater's Edge", 'CraterBoss_P',
-        #    '/Geranium/Maps/CraterBoss/CraterBoss_Boss.CraterBoss_Boss:PersistentLevel.Elevator_CraterBoss_Gondola_2',
-        #    defaultspeed, 50),
-        #("Crater's Edge", 'CraterBoss_P',
-        #    '/Geranium/Maps/CraterBoss/CraterBoss_Boss.CraterBoss_Boss:PersistentLevel.Elevator_BossTest_0',
-        #    defaultspeed, 20),
-        #("Crater's Edge", 'CraterBoss_P',
-        #    '/Geranium/Maps/CraterBoss/CraterBoss_Boss.CraterBoss_Boss:PersistentLevel.Elevator_BossTest_1',
-        #    defaultspeed, 20),
-        #("Crater's Edge", 'CraterBoss_P',
-        #    '/Geranium/Maps/CraterBoss/CraterBoss_Boss.CraterBoss_Boss:PersistentLevel.Elevator_BossTest_4',
-        #    defaultspeed, 20),
-        #("Crater's Edge", 'CraterBoss_P',
-        #    '/Geranium/Maps/CraterBoss/CraterBoss_Boss.CraterBoss_Boss:PersistentLevel.Elevator_BossTest_6',
-        #    defaultspeed, 20),
+        ("Crater's Edge Gondola", 'CraterBoss_P',
+            '/Geranium/Maps/CraterBoss/CraterBoss_Boss.CraterBoss_Boss:PersistentLevel.Elevator_CraterBoss_Gondola_2',
+            200, 50),
         ]):
     mod.comment(label)
     # Honestly not sure if we need both of these, but we *do* need EarlyLevel.  I'm pretty
@@ -1960,6 +1945,13 @@ for label, level, obj_name, speed, travel_time in sorted([
                 obj_name,
                 'killDelay',
                 0,
+                )
+    elif 'Elevator_CraterBoss_Gondola_2' in obj_name:
+        # This one has an extra attr, just hardcode it stupidly in here.
+        mod.reg_hotfix(Mod.EARLYLEVEL, level,
+                obj_name,
+                'TramTravelTime',
+                43/global_scale,
                 )
     mod.newline()
 
@@ -2980,7 +2972,7 @@ mod.newline()
 # Various Oletta tweaks.  I'm using notify=True for most of these, and I'm not sure if
 # it's actually required in all cases (or at all) - I'd just used it by default since
 # many other RelativeLocation tweaks tend to need it.
-mod.header('Various Oletta / Lost and Found tweaks')
+mod.header('Mission/Level Specific: Various Oletta / Lost and Found tweaks')
 
 # AINodes that Oletta will follow.  In the vanilla data, she hangs around at
 # the first node after picking up the quest.  Then when you talk to her, she
@@ -3089,7 +3081,7 @@ mod.reg_hotfix(Mod.LEVEL, 'Forest_P',
 mod.newline()
 
 # More dialogue delay tweaks
-mod.header('Quick and the Quickerer Dialogue Delay Tweaks')
+mod.header('Mission/Level Specific: Quick and the Quickerer Dialogue Delay Tweaks')
 mod.bytecode_hotfix(Mod.LEVEL, 'Town_P',
         '/Game/PatchDLC/Geranium/Missions/Side/Mission_Dueling',
         'ExecuteUbergraph_Mission_Dueling',
@@ -3097,6 +3089,16 @@ mod.bytecode_hotfix(Mod.LEVEL, 'Town_P',
         4,
         0.5,
         )
+mod.newline()
+
+# Crater's Edge narration delay
+mod.header("Mission/Level Specific: Crater's Edge gondola narration delay")
+mod.bytecode_hotfix(Mod.LEVEL, 'CraterBoss_P',
+        '/Game/PatchDLC/Geranium/Missions/Plot/Mission_Ep05_Crater',
+        'ExecuteUbergraph_Mission_Ep05_Crater',
+        19592,
+        14,
+        0.5)
 mod.newline()
 
 # Castle Crimson catapult tweaks

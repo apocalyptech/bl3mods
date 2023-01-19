@@ -10002,6 +10002,42 @@ SparkLevelPatchEntry,(1,1,0,Lake_P),/Hibiscus/InteractiveObjects/MissionSpecific
 SparkLevelPatchEntry,(1,1,0,Village_P),/Hibiscus/InteractiveObjects/MissionSpecific/Side/PrivateEye/Painting/IO_Scripted_Private1_SecretWall.IO_Scripted_Private1_SecretWall_C,Timelines.Timelines[0].Object..TimelineLength,0,,1.75
 SparkLevelPatchEntry,(1,1,0,Village_P),/Hibiscus/InteractiveObjects/MissionSpecific/Side/PrivateEye/Painting/IO_Scripted_Private1_SecretWall.IO_Scripted_Private1_SecretWall_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,1.75
 
+# Crater's Edge Gondola
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..TimelineLength,0,,12.5
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..EventTracks.EventTracks[0].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,0.234496
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..EventTracks.EventTracks[0].CurveKeys.Object..FloatCurve.Keys.Keys[1].Time,0,,5.269554
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..EventTracks.EventTracks[1].CurveKeys.Object..FloatCurve.Keys.Keys[0].Time,0,,6.551183
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..EventTracks.EventTracks[1].CurveKeys.Object..FloatCurve.Keys.Keys[1].Time,0,,10.672422
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.5
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,12.0
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,12.5
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.5
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.75
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,11.75
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,12.0
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,2.25
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,5.0
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,7.25
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,6.25
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,8.5
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,10.25
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,12.5
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[1].Object..TimelineLength,0,,12.5
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.5
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,12.0
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,12.5
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,0.5
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.75
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,11.75
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[1].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,12.0
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,2.25
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,5.0
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[2].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,7.25
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[0].Time,0,,5.25
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,7.5
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,10.25
+SparkLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/Elevators/Elevator_CraterBoss_Gondola.Elevator_CraterBoss_Gondola_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[3].CurveFloat.Object..FloatCurve.Keys.Keys[3].Time,0,,12.5
+
 # Castle Crimson catapult rotation
 SparkLevelPatchEntry,(1,1,0,Anger_P),/Alisma/InteractiveObjects/MissionSpecific/Plot/ALI_EP02/Catapult/IO_MissionScripted_Ali_CatapultPivot.IO_MissionScripted_Ali_CatapultPivot_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.5
 SparkLevelPatchEntry,(1,1,0,Anger_P),/Alisma/InteractiveObjects/MissionSpecific/Plot/ALI_EP02/Catapult/IO_MissionScripted_Ali_CatapultPivot.IO_MissionScripted_Ali_CatapultPivot_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.5
@@ -10046,6 +10082,11 @@ SparkEarlyLevelPatchEntry,(1,1,0,MotorcadeFestival_P),/Game/Maps/Zone_3/Motorcad
 # Cistern of Slaughter
 SparkEarlyLevelPatchEntry,(1,1,0,CreatureSlaughter_P),/Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P.CreatureSlaughter_P:PersistentLevel.Elevator_CreatureSlaughter,ElevatorSpeed,0,,1600
 SparkEarlyLevelPatchEntry,(1,1,0,CreatureSlaughter_P),/Game/Maps/Slaughters/CreatureSlaughter/CreatureSlaughter_P.CreatureSlaughter_P:PersistentLevel.Elevator_CreatureSlaughter,ElevatorTravelTime,0,,2.5
+
+# Crater's Edge Gondola
+SparkEarlyLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/CraterBoss_Boss.CraterBoss_Boss:PersistentLevel.Elevator_CraterBoss_Gondola_2,ElevatorSpeed,0,,800
+SparkEarlyLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/CraterBoss_Boss.CraterBoss_Boss:PersistentLevel.Elevator_CraterBoss_Gondola_2,ElevatorTravelTime,0,,12.5
+SparkEarlyLevelPatchEntry,(1,1,0,CraterBoss_P),/Geranium/Maps/CraterBoss/CraterBoss_Boss.CraterBoss_Boss:PersistentLevel.Elevator_CraterBoss_Gondola_2,TramTravelTime,0,,10.75
 
 # Floodmoor Basin - Knotty Peak
 SparkEarlyLevelPatchEntry,(1,1,0,Wetlands_P),/Game/Maps/Zone_2/Wetlands/Wetlands_Dynamic.Wetlands_Dynamic:PersistentLevel.Elevator_WetlandsLodge_3326,ElevatorSpeed,0,,1600
@@ -10633,7 +10674,7 @@ SparkLevelPatchEntry,(1,1,0,Frontier_P),/Geranium/Maps/Frontier/Frontier_M_Money
 SparkLevelPatchEntry,(1,1,0,Frontier_P),/Geranium/Maps/Frontier/Frontier_M_MoneyBackGuarantee.Frontier_M_MoneyBackGuarantee:PersistentLevel.IO_MissionUsable_ArtilleryCannon_2,DelayBeforePlayingSequence,0,,0.25
 
 ###
-### Various Oletta / Lost and Found tweaks
+### Mission/Level Specific: Various Oletta / Lost and Found tweaks
 ###
 
 # Intro dialogue delay tweaks
@@ -10658,10 +10699,16 @@ SparkLevelPatchEntry,(1,1,1,Forest_P),/Geranium/Maps/Forest/Forest_M_AnimalContr
 SparkLevelPatchEntry,(1,1,1,Forest_P),/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.Forest_M_AnimalControl_C_1,AINode_1_ExecuteUbergraph_Forest_M_AnimalControl_RefProperty,0,,AINode'"/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.AINode_2"'
 
 ###
-### Quick and the Quickerer Dialogue Delay Tweaks
+### Mission/Level Specific: Quick and the Quickerer Dialogue Delay Tweaks
 ###
 
 SparkLevelPatchEntry,(1,7,0,Town_P),/Game/PatchDLC/Geranium/Missions/Side/Mission_Dueling.Mission_Dueling_C,0,1,ExecuteUbergraph_Mission_Dueling,1,8312,1:4,3:0.5
+
+###
+### Mission/Level Specific: Crater's Edge gondola narration delay
+###
+
+SparkLevelPatchEntry,(1,7,0,CraterBoss_P),/Game/PatchDLC/Geranium/Missions/Plot/Mission_Ep05_Crater.Mission_Ep05_Crater_C,0,1,ExecuteUbergraph_Mission_Ep05_Crater,1,19592,2:14,3:0.5
 
 ###
 ### Mission/Level Specific: Castle Crimson catapult tweaks
