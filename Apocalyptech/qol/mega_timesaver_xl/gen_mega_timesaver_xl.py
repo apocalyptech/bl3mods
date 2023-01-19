@@ -2965,7 +2965,10 @@ mod.header('Various Oletta / Lost and Found tweaks')
 # proceeds through the second and third (and beyond to a few more).  What I'm
 # doing here, instead, is extending her post-spawn node traversal to include
 # that second node, since she runs to those.  Then talking to her will kick off
-# at that third node, instead of the second.
+# at that third node, instead of the second.  She ends up teleporting a bit to
+# the second node; I haven't figured that one out yet.  Unfortunately we can't
+# *just* go to the second node because she ends up teleporting the *entire*
+# way there.
 oletta_first_node_comp = '/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.AINode_3.AINodeComponent'
 oletta_second_node = '/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.AINode_1'
 oletta_second_node_comp = f'{oletta_second_node}.AINodeComponent'
@@ -3060,6 +3063,17 @@ mod.reg_hotfix(Mod.LEVEL, 'Forest_P',
         'AINode_1_ExecuteUbergraph_Forest_M_AnimalControl_RefProperty',
         Mod.get_full_cond(oletta_third_node, 'AINode'),
         notify=True,
+        )
+mod.newline()
+
+# More dialogue delay tweaks
+mod.header('Quick and the Quickerer Dialogue Delay Tweaks')
+mod.bytecode_hotfix(Mod.LEVEL, 'Town_P',
+        '/Game/PatchDLC/Geranium/Missions/Side/Mission_Dueling',
+        'ExecuteUbergraph_Mission_Dueling',
+        8312,
+        4,
+        0.5,
         )
 mod.newline()
 
@@ -3310,6 +3324,14 @@ for char in sorted([
         # perfectly fine tradeoff.
         Char('Oletta',
             '/Geranium/NonPlayerCharacters/Granny/_Design/Character/BPChar_Granny',
+            global_char_scale,
+            ),
+        Char('Slim',
+            '/Geranium/NonPlayerCharacters/GerNPC/Dueler/_Design/Character/BPChar_Dueler',
+            global_char_scale,
+            ),
+        Char('Drunk William',
+            '/Geranium/NonPlayerCharacters/GerNPC/DuelOpponent/_Design/Character/BPChar_DuelOpponent',
             global_char_scale,
             ),
         Char('P.A.T.',

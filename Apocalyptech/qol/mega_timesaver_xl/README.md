@@ -35,6 +35,7 @@ Currently, the mod affects the following:
   * Clay (base game and DLC6 version)
   * Claptrap (base game and DLC6 version)
   * Digby Vermouth
+  * Drunk William (from Quick and the Quickerer)
   * Ellie
   * Failurebot
   * Gaige
@@ -46,6 +47,7 @@ Currently, the mod affects the following:
   * McSmugger
   * Oletta
   * P.A.T.
+  * Slim (from Quick and the Quickerer)
   * Terry the Ratch
   * Timothy Lawrence
   * Tina
@@ -131,6 +133,8 @@ Some things intentionally *not* handled by the mod:
   dramatic.
 * Adding the various bath products for Dirty Deeds, in Ashfall Peaks, could
   be sped up a bit, though not by much if you don't want to cut off dialogue.
+* The telezapper registration in The Blastplains has been left as-is.  It's
+  pretty quick anyway.
 * The cocking animation on the third catapult in Castle Crimson has been
   left alone, for boring technical reasons.
 * The egg-incubation timer in A Good Egg has been left alone; it's already
@@ -236,6 +240,7 @@ Changelog
    * Claptrap (DLC6 version)
    * Clay (base game and DLC6 version)
    * Digby Vermouth
+   * Drunk William (from Quick and the Quickerer)
    * Ellie
    * Failurebot
    * Gaige
@@ -246,6 +251,7 @@ Changelog
    * McSmugger
    * Oletta
    * P.A.T.
+   * Slim (from Quick and the Quickerer)
    * Terry the Ratch
    * Timothy Lawrence
    * Tina

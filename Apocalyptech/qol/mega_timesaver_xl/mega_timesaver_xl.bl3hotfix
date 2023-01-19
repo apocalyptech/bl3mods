@@ -10644,6 +10644,12 @@ SparkLevelPatchEntry,(1,1,1,Forest_P),/Geranium/Maps/Forest/Forest_M_AnimalContr
 SparkLevelPatchEntry,(1,1,1,Forest_P),/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.Forest_M_AnimalControl_C_1,AINode_1_ExecuteUbergraph_Forest_M_AnimalControl_RefProperty,0,,AINode'"/Geranium/Maps/Forest/Forest_M_AnimalControl.Forest_M_AnimalControl:PersistentLevel.AINode_2"'
 
 ###
+### Quick and the Quickerer Dialogue Delay Tweaks
+###
+
+SparkLevelPatchEntry,(1,7,0,Town_P),/Game/PatchDLC/Geranium/Missions/Side/Mission_Dueling.Mission_Dueling_C,0,1,ExecuteUbergraph_Mission_Dueling,1,8312,1:4,3:0.5
+
+###
 ### Mission/Level Specific: Castle Crimson catapult tweaks
 ###
 
@@ -10718,6 +10724,10 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_Clay_IXO),/Ixora2/NonPlayerCharacters/Cl
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Digby),/Dandelion/NonPlayerCharacters/_SideMissions/Digby/_Design/Character/BPChar_Digby.Default__BPChar_Digby_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Digby),/Dandelion/NonPlayerCharacters/_SideMissions/Digby/_Design/Character/BPChar_Digby.Default__BPChar_Digby_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 
+# Drunk William
+SparkCharacterLoadedEntry,(1,1,0,BPChar_DuelOpponent),/Geranium/NonPlayerCharacters/GerNPC/DuelOpponent/_Design/Character/BPChar_DuelOpponent.Default__BPChar_DuelOpponent_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_DuelOpponent),/Geranium/NonPlayerCharacters/GerNPC/DuelOpponent/_Design/Character/BPChar_DuelOpponent.Default__BPChar_DuelOpponent_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+
 # Ellie
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Ellie),/Game/NonPlayerCharacters/Ellie/_Design/Character/BPChar_Ellie.Default__BPChar_Ellie_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=560.0,BaseValue=560.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_Ellie),/Game/NonPlayerCharacters/Ellie/_Design/Character/BPChar_Ellie.Default__BPChar_Ellie_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
@@ -10763,6 +10773,10 @@ SparkCharacterLoadedEntry,(1,1,0,BPChar_Granny),/Geranium/NonPlayerCharacters/Gr
 # P.A.T.
 SparkCharacterLoadedEntry,(1,1,0,BPChar_PAT),/Alisma/NonPlayerCharacters/PAT/_Design/Character/BPChar_PAT.Default__BPChar_PAT_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
 SparkCharacterLoadedEntry,(1,1,0,BPChar_PAT),/Alisma/NonPlayerCharacters/PAT/_Design/Character/BPChar_PAT.Default__BPChar_PAT_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
+
+# Slim
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Dueler),/Geranium/NonPlayerCharacters/GerNPC/Dueler/_Design/Character/BPChar_Dueler.Default__BPChar_Dueler_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
+SparkCharacterLoadedEntry,(1,1,0,BPChar_Dueler),/Geranium/NonPlayerCharacters/GerNPC/Dueler/_Design/Character/BPChar_Dueler.Default__BPChar_Dueler_C,OakCharacterMovement.Object..MaxSprintSpeed,0,,(Value=1260.0,BaseValue=1260.0)
 
 # Terry the Ratch
 SparkCharacterLoadedEntry,(1,1,0,BPChar_GoodRatch),/Game/NonPlayerCharacters/_Promethea/TalkingRatch/_Design/Character/BPChar_GoodRatch.Default__BPChar_GoodRatch_C,OakCharacterMovement.Object..MaxWalkSpeed,0,,(Value=840.0,BaseValue=840.0)
