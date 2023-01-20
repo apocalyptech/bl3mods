@@ -63,6 +63,10 @@ Known Quirks
 These aren't really bugs per se, just side-effects of having all these
 speedups in effect.  See the Known Bugs section below, as well!
 
+* The increased opening speed on some containers which fling loot
+  into the air seems to cause the loot to sometimes fly away at
+  pretty high speeds.  This can be a bit annoying in cases like the
+  trash collection in Spendopticon during One Man's Treasure.
 * To get on top of the "main" elevator in Meridian Outskirts (to reach the
   Typhon Dead Drop), you'll likely either have to use Photo Mode to hit
   the elevator button, or go the long way around after moving the elevator
@@ -73,10 +77,6 @@ speedups in effect.  See the Known Bugs section below, as well!
   longer triggers right at the top of the now-sped-up elevator, so if you want
   to make sure to hear all the Typhon+Tyreen dialogue up there, make sure to
   wait around for dialogue lines to finish before pressing onward.
-* The increased opening speed on some containers which fling loot
-  into the air seems to cause the loot to sometimes fly away at
-  pretty high speeds.  This can be a bit annoying in cases like the
-  trash collection in Spendopticon during One Man's Treasure.
 * During Jack's Wild, the elevator in Jack's Secret stops further down than
   usual, and well before Pretty Boy's usual cue, but there's still a window
   right there and you can jump out as usual once he's done talking.
@@ -88,9 +88,9 @@ speedups in effect.  See the Known Bugs section below, as well!
 Not Handled By This Mod
 =======================
 
-Some things intentionally *not* handled by the mod, mostly because they were
-already pretty good speedwise, or because speedups would've caused dialogue
-skips or the like:
+Some things intentionally *not* handled by the mod, either because they were
+already pretty good speedwise, because speedups would've caused dialogue
+skips, or because it just felt right to leave 'em alone:
 
 * Inter-system navigation via Sanctuary III
 * Using the Viper Drive in Skywell-27, during Space-Laser Tag.  Those delays
@@ -103,11 +103,13 @@ skips or the like:
   dialogue skips.
 * The crane in Ambermire.  That sequence is mostly dialogue-dependent.
 * The Rakk shootout in Devil's Razor, during Life of the Party.  Use my
-  "Life of the Party: Short Rakk Shootout" mod to shorten that, if you want.
+  [Life of the Party: Short Rakk Shootout](https://github.com/BLCM/bl3mods/wiki/Life%20of%20the%20Party%3A%20Short%20Rakk%20Shootout)
+  mod to shorten that, if you want.
 * The Desolation's Edge mission "Homeopathological"
 * The explosive device delay in Desolation's Edge, during Bad Vibrations
 * The Desolation's Edge mission "Transaction-Packed."  I recommend using my
-  "Transaction-Packed: Abridged" to basically skip the entire mission, instead.
+  [Transaction-Packed: Abridged](https://github.com/BLCM/bl3mods/wiki/Transaction-Packed%3A%20Abridged)
+  mod to basically skip the entire mission, instead.
 * The cube animations during Mysteriouslier: Horror at Scryer's Crypt
 * The sequence of meeting Timothy for the first time in Spendopticon could
   probably be improved in various ways, but it got complex enough that I
