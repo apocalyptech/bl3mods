@@ -59,11 +59,9 @@ A sampling of the things this mod affects:
 Known Quirks
 ============
 
-What separates these from "Known Bugs" is a bit of a fuzzy line, of course.
+These aren't really bugs per se, just side-effects of having all these
+speedups in effect.  See the Known Bugs section below, as well!
 
-* Vehicle-related animations in are a bit weird right now; the animation gets
-  "frozen" near the end for a bit, and the point at which you get full control
-  of the vehicle is a bit odd.  I'm not aware of any way around that, though
 * To get on top of the "main" elevator in Meridian Outskirts (to reach the
   Typhon Dead Drop), you'll likely either have to use Photo Mode to hit
   the elevator button, or go the long way around after moving the elevator
@@ -81,6 +79,10 @@ What separates these from "Known Bugs" is a bit of a fuzzy line, of course.
 * During Jack's Wild, the elevator in Jack's Secret stops further down than
   usual, and well before Pretty Boy's usual cue, but there's still a window
   right there and you can jump out as usual once he's done talking.
+* In Obsidian Forest, when Oletta's on her way to the Traitorweed testing
+  area, if you stay too close to her she may end up teleporting to her next
+  nav point (and skipping some dialogue in the process).  Hang back a bit to
+  avoid that!
 
 Not Handled By This Mod
 =======================
@@ -132,31 +134,17 @@ skips or the like:
   situation.
 * Statue Krieg opening the gate to Vaulthalla
 
-Known Bugs
-==========
+Known Bugs / TODO
+=================
 
-* Weapons on vehicles that you hijack seem to take a little bit to
-  become active, possibly based on timing from the original hijack
-  animations?  Vehicle movement, at least, is available right away,
-  though steering is not.  Hrmph.
-* The door you have to slide under to retrieve the umbrella for
-  Claptrap in Bad Reception acts a bit weirdly, and is probably
-  pretty easy to just run through now.
+* Vehicle-related animations are a bit weird in general.  The animations tend
+  to get "frozen" near the end for a bit.  Also, weapons on vehicles that you
+  hijack seem to take a little while to become active, possibly based on timing
+  from the original hijack animations?  Also hijacked-vehicle steering might
+  be similarly locked out for a bit (though acceleration is still possible).
+  Anyway, it's strange, and unfortuantely I currently have zero ideas on how
+  to address it (beyond simply *not* speeding up vehicle animations, of course).
 * Respawning after death leaves your char facing the wrong way.
-* The locker holding Ember's tools, in Freddie's lair in Impound
-  Deluxe, doesn't open all the way when BUD Bot opens it up for you.
-  The tools are still easily-grabbable, though.
-* Oletta (in Obsidian Forest) has a couple of interesting behaviors:
-  * If you stay too close to her when she's on the way to the Traitorweed
-    testing area, she may end up teleporting a bit.
-  * She ends up doing a bit of teleporting after she spawns in for
-    the Lost and Found mission in Obsidian Forest.
-
-TODO
-====
-
-* It'd be nice to figure out getting the respawn animation to leave the
-  camera in the right spot.
 * Pickups flung into the air don't auto-pick-up until they're no longer
   affected by physics (like loot from bone piles, trash cans, etc).
 * Iron Bear interactions (entering, exiting, Dakka Bear turret)?  I'm leaving
@@ -164,6 +152,14 @@ TODO
   actual combat advantage, which isn't really something this mod is meant to
   do (though I suppose our vehicle handling technically applies to that).
 * The Vault Card Chest-opening tweak does *not* work in Pyre of Stars.
+* The door you have to slide under to retrieve the umbrella for
+  Claptrap in Bad Reception acts a bit weirdly, and is probably
+  pretty easy to just run through now.
+* The locker holding Ember's tools, in Freddie's lair in Impound
+  Deluxe, doesn't open all the way when BUD Bot opens it up for you.
+  The tools are still easily-grabbable, though.
+* Oletta ends up teleporting a bit during the Obsidian Forest side mission
+  Lost and Found, when she first jumps down onto the rooftops.
 * Speed of camera that moves in/out of Photo Mode?
 * Ammo containers seem to not always attach ammo properly; ends up below the
   platform (at least, the sort 'round Tannis's dig site in The Droughts, and
