@@ -25,10 +25,11 @@ A sampling of the things this mod affects:
   Takedown at the Guardian Breach, and Arm's Race
 * A *lot* of mission-and-map-specific animations throughout the game
 * Many characters' walking/sprinting speeds have been improved.  The speedup
-  is, in general, a little less than CZ47's Faster NPCs mod, so execute that
-  one after this one if you want some NPCs to be even faster.  The list of
-  affected NPCs is a bit different between the two, as well.  Characters
-  affected by this mod:
+  is, in general, a little less than
+  [CZ47's Faster NPCs mod](https://github.com/BLCM/bl3mods/wiki/Faster%20NPCs),
+  so execute that one after this one if you want some NPCs to be even faster.
+  The list of affected NPCs is a bit different between the two, as well.
+  Characters affected by this mod:
   * Ace Baron (from Healers and Dealers)
   * Ava (base game and DLC6 version)
   * Brick
@@ -123,10 +124,10 @@ skips, or because it just felt right to leave 'em alone:
 * The whole Raging Bot mission (in Spendopticon) could be tightened up in
   various ways, but seemed too annoying to wade through for pretty small gains.
 * The drawbridge lowering in The Cankerwood
-* Various sequences in Cold Case: Forgotten Answers, in The Cankerwood
+* Various sequences during Cold Case: Forgotten Answers, in The Cankerwood
 * Daisy's door-opening in Blastplains has been left alone; it's nice and
   dramatic.
-* Adding the various bath products for Dirty Deeds, in Ashfall Peaks
+* Adding the various bath products during Dirty Deeds, in Ashfall Peaks
 * Telezapper registration in The Blastplains
 * The cocking animation on the third catapult in Castle Crimson has been
   left alone, for boring technical reasons.
