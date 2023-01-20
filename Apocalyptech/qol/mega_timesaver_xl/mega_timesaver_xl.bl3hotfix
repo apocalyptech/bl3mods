@@ -49,6 +49,12 @@ SparkPatchEntry,(1,7,0,),/Game/PlayerCharacters/_Shared/_Design/Travel/Action_Te
 SparkPatchEntry,(1,7,0,),/Game/PlayerCharacters/_Shared/_Design/Travel/Action_TeleportEffects.Action_TeleportEffects_C,0,1,ExecuteUbergraph_Action_TeleportEffects,1,391,3:1.5,3:0.5
 
 ###
+### Photo Mode Activation Time
+###
+
+SparkPatchEntry,(1,7,0,),/Game/GameData/BP_PhotoModeController.BP_PhotoModeController_C,0,1,ExecuteUbergraph_BP_PhotoModeController,1,122,3:1.5,5:0.375
+
+###
 ### Vehicle Speedups: Player Basic Interactions (always loaded objects)
 ###
 

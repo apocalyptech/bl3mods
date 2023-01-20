@@ -346,6 +346,23 @@ mod.bytecode_hotfix(Mod.PATCH, '',
 
 mod.newline()
 
+# Photo Mode activation time
+# I actually *don't* want to alter deactivation time, since Photo Mode can be used
+# to pick up gear or hit buttons that you wouldn't otherwise be able to reach,
+# while the camera's zooming back to your char.  That's even occasionally important
+# with this mod active, such as getting to the Typhon Dead Drop in Meridian
+# Outskirts without having to go all the way around the level.
+mod.header('Photo Mode Activation Time')
+mod.bytecode_hotfix(Mod.PATCH, '',
+        '/Game/GameData/BP_PhotoModeController',
+        'ExecuteUbergraph_BP_PhotoModeController',
+        # 187 is the deactivation index (also default of 1.5)
+        122,
+        1.5,
+        1.5/global_scale,
+        )
+mod.newline()
+
 class AS():
     """
     Little wrapper class so that I can more easily loop over a bunch of AnimSequence
@@ -3418,6 +3435,11 @@ for char in sorted([
                 round(speed_walk*char.scale, 6),
                 ),
             )
+    # NOTE: After spending quite a bit of time getting Oletta sorted out, I'm pretty sure
+    # that MaxSprintSpeed isn't actually used by NPCs.  I'm pretty sure that the stances
+    # used to control NPC speeds just take the walk speed and scale it where appropriate.
+    # I think that MaxWalkSpeed itself might even be scaled down a bit for the usual NPC
+    # "Walk" stance.
     mod.reg_hotfix(Mod.CHAR, char.last_bit,
             char.full_path,
             'OakCharacterMovement.Object..MaxSprintSpeed',

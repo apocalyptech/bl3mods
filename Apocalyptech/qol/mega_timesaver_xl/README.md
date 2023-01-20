@@ -164,7 +164,6 @@ Known Bugs / TODO
   The tools are still easily-grabbable, though.
 * Oletta ends up teleporting a bit during the Obsidian Forest side mission
   Lost and Found, when she first jumps down onto the rooftops.
-* Speed of camera that moves in/out of Photo Mode?
 * Ammo containers seem to not always attach ammo properly; ends up below the
   platform (at least, the sort 'round Tannis's dig site in The Droughts, and
   in Athenas).  Seems to be maybe not consistent, though?  Sometimes it seems
@@ -241,6 +240,7 @@ Changelog
    * Vault Card chest-opening animation (except in Pyre of Stars)
    * Fast-travel/teleport/resurrect skips
    * ECHO cartridge playing animation
+   * Photo Mode activation time
  * Mission-Specific Animations:
    * Statue scanner/printer from Golden Calves
    * Coffee-pouring animation during Rise and Grind (pretty slight improvement,
