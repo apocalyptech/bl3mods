@@ -181,18 +181,12 @@ TODO
 
 * It'd be nice to figure out getting the respawn animation to leave the
   camera in the right spot.
-* Delay after breaking bone piles, trash cans, etc (basically pickups which
-  aren't actually "connected" to a container)
-  * Bone Piles
-  * Trash Cans
-  * Washing Machines
-  * Cardboard Boxes
-  * Some Mailbox drops
-  * Some porta-potty drops
-  * Eridian Crystals
-* I feel like the Slam animation could use some work
-* Entering/Exiting Iron Bear?
-* Maybe have a real slight speedup on melee attacks?
+* Pickups flung into the air don't auto-pick-up until they're no longer
+  affected by physics (like loot from bone piles, trash cans, etc).
+* Iron Bear interactions (entering, exiting, Dakka Bear turret)?  I'm leaving
+  those alone primarily out of laziness but also because that'd feel like an
+  actual combat advantage, which isn't really something this mod is meant to
+  do (though I suppose our vehicle handling technically applies to that).
 * Speed of camera that moves in/out of Photo Mode?
 * Ammo containers seem to not always attach ammo properly; ends up below the
   platform (at least, the sort 'round Tannis's dig site in The Droughts, and
