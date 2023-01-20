@@ -8,8 +8,9 @@ walking speeds, where appropriate.  The mod doesn't attempt to do any
 dialogue or mission skips -- all content in the game should still be
 available.
 
-**NOTE:** Parts of this mod currently *require* using OpenHotfixLoader
-(OHL) instead of B3HM.  If B3HM v1.0.2 ever gets released, that version
+**NOTE:** Parts of this mod currently *require* using
+[OpenHotfixLoader (OHL)](https://borderlandsmodding.com/bl3-running-mods/#ohl-openhotfixloader)
+instead of B3HM.  If B3HM v1.0.2 ever gets released, that version
 should be supported too, but v1.0.1 will *not* give you 100% mod
 functionality with this mod.
 
