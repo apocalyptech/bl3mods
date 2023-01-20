@@ -9786,7 +9786,7 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Design/Classes/Eridian/BP
 ### InteractiveObject Speedups: Other Objects
 ###
 
-# BPIO_SlotMachine
+# Base-Game Slot Machines
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.1875
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.0625
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.121759
@@ -9818,7 +9818,7 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shar
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[6].Time,0,,0.177227
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,Timelines.Timelines[3].Object..VectorTracks.VectorTracks[1].CurveVector.Object..FloatCurves.Keys.Keys[7].Time,0,,0.1875
 
-# BPIO_SlotMachine_Dandelion_V1
+# DLC1 Slot Machines
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.1875
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.0625
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[2].Time,0,,0.121759
@@ -10207,6 +10207,12 @@ SparkLevelPatchEntry,(1,7,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shar
 SparkLevelPatchEntry,(1,7,0,MatchAll),/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine.BPIO_SlotMachine_C,0,1,ExecuteUbergraph_BPIO_SlotMachine,1,2889,1:1,4:0.25
 SparkLevelPatchEntry,(1,7,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,0,1,ExecuteUbergraph_BPIO_SlotMachine_Dandelion_V1,1,1513,1:5,4:1.25
 SparkLevelPatchEntry,(1,7,0,MatchAll),/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1.BPIO_SlotMachine_Dandelion_V1_C,0,1,ExecuteUbergraph_BPIO_SlotMachine_Dandelion_V1,1,2889,1:1,4:0.25
+
+###
+### Lost Loot Machine Gear-Spawning Delay
+###
+
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/InteractiveObjects/GameSystemMachines/LostLootMachine/_Design/BP_LostLootMachine.BP_LostLootMachine_C:OakLostLoot_GEN_VARIABLE,DelayBetweenSpawningItem,0,,0.1875
 
 ###
 ### Mission/Level Specific: Custom Golden Calves Statue Scanner Tweaks

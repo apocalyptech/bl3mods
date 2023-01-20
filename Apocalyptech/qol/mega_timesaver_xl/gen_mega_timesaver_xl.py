@@ -1600,8 +1600,12 @@ for category, cat_scale, io_objs in [
             ]),
         ('Other Objects', global_scale, [
             # Both these slot machine objects need some other tweaks as well, done below.
-            IO('/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine'),
-            IO('/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1'),
+            IO('/Game/InteractiveObjects/SlotMachine/_Shared/_Design/BPIO_SlotMachine',
+                label='Base-Game Slot Machines',
+                ),
+            IO('/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1',
+                label='DLC1 Slot Machines',
+                ),
             IO('/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine',
                 label='Golden Calves Statue Scanner/Printer',
                 level='Sacrifice_P',
@@ -2028,6 +2032,15 @@ for obj_name, export in [
             2889,
             1,
             1/global_scale)
+mod.newline()
+
+# Lost Loot Machine
+mod.header('Lost Loot Machine Gear-Spawning Delay')
+mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
+        '/Game/InteractiveObjects/GameSystemMachines/LostLootMachine/_Design/BP_LostLootMachine.BP_LostLootMachine_C:OakLostLoot_GEN_VARIABLE',
+        'DelayBetweenSpawningItem',
+        0.75/global_scale,
+        )
 mod.newline()
 
 # Golden Calves Statue Scanner
@@ -3622,6 +3635,72 @@ if False:
             '/Game/NonPlayerCharacters/_Shared/_Design/StanceData/StanceData_NPC_Passive_Walk.StanceData_NPC_Passive_Walk',
             )
     mod.newline()
+
+# I'd like to speed up the Lost Loot machine's open/close animation, but it acts... *weird*.
+# It really should just be our usual IO() shenanigans like so:
+#
+#     IO('/Game/InteractiveObjects/GameSystemMachines/LostLootMachine/_Design/BP_LostLootMachine',
+#         label='Lost Loot Machines',
+#         ),
+#
+# ... but the two relevant FloatCurve objects don't update properly.  It's quite weird; on-disk
+# they look like this, which is what the IO() processing has always expected (trimmed down to
+# just the relevant info):
+#
+#     {
+#       "export_type": "CurveVector",
+#       "_jwp_export_idx": 36,
+#       "_jwp_is_asset": false,
+#       "_jwp_object_name": "CurveVector_2",
+#       "FloatCurves": {
+#         "Keys": [
+#           { "time": 0.0, "value": -50.0 },
+#           { "time": 1.5, "value": 0.0 }
+#         ]
+#       }
+#     }
+#
+# But via a `getall` on the console, the `FloatCurves` attr shows up as an array (also trimmed
+# down to just the relevant info):
+#
+#     >>> getall CurveVector FloatCurves name=CurveVector_2 outer=BP_LostLootMachine_C <<<
+#     0) CurveVector /Game/InteractiveObjects/GameSystemMachines/LostLootMachine/_Design/BP_LostLootMachine.BP_LostLootMachine_C:CurveVector_2.FloatCurves =
+#             0: ()
+#             1: ()
+#             2: (Keys=((Value=-50.000000),(Time=1.500000)))
+#
+# Below is basically just two attempts to try and alter the `Time` values by going after that
+# weird in-engine structure instead, but these don't work any better than the IO() processing
+# does.  The attr just never updates.
+#
+# Anyway, without having these Time attrs update, the Lost Loot open/close animation glitches
+# out (when spewing loot, the door remains mostly-closed, and afterwards the door switches to
+# being mostly-open).  In the end, I'm just going to leave the open/close animations at the
+# default values.  We *are* updating the loot-spew delay, so that bit happens much more quickly.
+if False:
+    # Test 1
+    lost_loot_obj = '/Game/InteractiveObjects/GameSystemMachines/LostLootMachine/_Design/BP_LostLootMachine.BP_LostLootMachine_C'
+    for curve_idx, default_val in [
+            (0, 1.2),
+            (2, 1.5),
+            ]:
+        mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
+                f'{lost_loot_obj}:CurveVector_{curve_idx}',
+                'FloatCurves.FloatCurves[2].Keys.Keys[1].Time',
+                default_val/global_scale,
+                )
+
+    # Test 2
+    mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
+            lost_loot_obj,
+            'Timelines.Timelines[0].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.FloatCurves[2].Keys.Keys[1].Time',
+            1.2/global_scale,
+            )
+    mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
+            lost_loot_obj,
+            'Timelines.Timelines[1].Object..VectorTracks.VectorTracks[0].CurveVector.Object..FloatCurves.FloatCurves[2].Keys.Keys[1].Time',
+            1.5/global_scale,
+            )
 
 mod.close()
 

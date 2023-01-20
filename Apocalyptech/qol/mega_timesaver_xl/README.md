@@ -17,12 +17,15 @@ mission progression somewhere).
 
 Currently, the mod affects the following:
 
-* Lootable Containers
-* Doors
+* Lootable Containers, Doors, Elevators, Slot Machines, Lost Loot Machine, etc...
 * Vehicle interaction animations (hijacking, entering, leaving, changing seats)
 * Catch-A-Ride Digistruct Speed
-* Digistruct tunnel has been removed for teleport / fast travel / respawning
-* Various characters' walking/sprinting speeds have been improved.  The speedup
+* Fast Travel / Teleport / Respawning (no more digistruct tunnel!)
+* Eridian tools (Resonator, Analyzer)
+* Removed startup countdown for: Takedown at the Maliwan Blacksite,
+  Takedown at the Guardian Breach, and Arm's Race
+* A *lot* of mission-and-map-specific animations throughout the game
+* Many characters' walking/sprinting speeds have been improved.  The speedup
   is, in general, a little less than CZ47's Faster NPCs mod, so execute that
   one after this one if you want some NPCs to be even faster.  The list of
   affected NPCs is a bit different between the two, as well.  Characters
@@ -54,11 +57,6 @@ Currently, the mod affects the following:
   * Typhon
   * Vic (from Head Case)
   * VIP Valet
-* Eridian tools (Resonator, Analyzer)
-* Fast-Travel/Teleport and Respawn animations
-* Removed startup countdown for: Takedown at the Maliwan Blacksite,
-  Takedown at the Guardian Breach, and Arm's Race
-* A *lot* of mission-and-map-specific animations throughout the game
 
 Note that the vehicle animations in particular are a bit weird right now --
 the animation gets "frozen" near the end for a bit.  I think that's something
@@ -183,7 +181,6 @@ TODO
 
 * It'd be nice to figure out getting the respawn animation to leave the
   camera in the right spot.
-* Lost Loot machine?
 * Delay after breaking bone piles, trash cans, etc (basically pickups which
   aren't actually "connected" to a container)
   * Bone Piles
@@ -269,6 +266,7 @@ Changelog
    * A couple doors from DLC6
  * Other Additions:
    * Slot Machines
+   * Lost Loot Machine
    * Vault Card chest-opening animation (except in Pyre of Stars)
    * Fast-travel/teleport/resurrect skips
    * ECHO cartridge playing animation
