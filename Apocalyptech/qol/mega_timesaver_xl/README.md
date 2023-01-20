@@ -70,73 +70,65 @@ A few known quirks of running with this mod:
   Typhon Dead Drop), you'll likely either have to use Photo Mode to hit
   the elevator button, or go the long way around after moving the elevator
   to the bottom.
+* It's very easy to end up with skipped dialogue at the top of the Tazendeer
+  Elevator -- there's some triggers up there which can be missed if there's
+  already dialogue playing.  This mod moves one of those around a bit so it no
+  longer triggers right at the top of the now-sped-up elevator, so if you want
+  to make sure to hear all the Typhon+Tyreen dialogue up there, make sure to
+  wait around for dialogue lines to finish before pressing onward.
+* The increased opening speed on some containers which fling loot
+  into the air seems to cause the loot to sometimes fly away at
+  pretty high speeds.  This can be a bit annoying in cases like the
+  trash collection in Spendopticon during One Man's Treasure.
 * During Jack's Wild, the elevator in Jack's Secret stops further down than
   usual, and well before Pretty Boy's usual cue, but there's still a window
   right there and you can jump out as usual once he's done talking.
 
-Some things intentionally *not* handled by the mod:
-* Various minor mission-related animations have been left alone when they
-  were already quite short.
-* Inter-system navigation via Sanctuary III has been left alone.
-* The Viper Drive uses in Space-Laser Tag are all pretty dialogue-dependent,
-  so I left those alone.
-* Chadd's movement in Swamp Bro could probably be improved, but most of the
-  "blockers" are shared animations like climbing ledges and so on, so they've
-  been left entirely alone.
-* The Boosty-Jammer elevator in Floodmoor Basin has also been left alone,
-  since it was already pretty good speedwise, and I didn't feel like messing
-  with its more-complicated animation sequences.  Amusingly, this elevator
-  becomes one of the slower ones in the game, instead of one of the fastest.
-* The bomb conveyor in Capture the Frag has been left alone, since it can
-  end up clipping through other conveyors and causing dialogue skips if sped
-  up.
-* The crane in Ambermire could probably be sped up a bit, but not by a lot
-  without skipping dialogue or having it just sit there waiting for dialogue.
-  So, it's been left alone.
-* The Rakk shootout in Life of the Party has been left alone -- use my
+Some things intentionally *not* handled by the mod, mostly because they were
+already pretty good speedwise, or because speedups would've caused dialogue
+skips or the like:
+* Inter-system navigation via Sanctuary III
+* Using the Viper Drive in Skywell-27, during Space-Laser Tag.  Those delays
+  are all pretty dialogue-dependent.
+* Chadd's movement in Floodmoor Basin, during Swamp Bro.  Most of the slow
+  bits are shared animations like climbing ledges and so on.
+* The Boosty-Jammer elevator in Floodmoor Basin
+* The bomb conveyor in Floodmoor Basin, during Capture the Frag.  Speeding
+  that one up can cause clipping through other conveyors, in addition to
+  dialogue skips.
+* The crane in Ambermire.  That sequence is mostly dialogue-dependent.
+* The Rakk shootout in Devil's Razor, during Life of the Party.  Use my
   "Life of the Party: Short Rakk Shootout" mod to shorten that, if you want.
-* The Desolation's Edge mission "Homeopathological" is pretty slow, but
-  there's no good way to speed it up without causing dialogue skips, apart
-  from some real minor timing tweaks, so it was left alone.
-* The explosive device delay in Bad Vibrations could probably be shortened,
-  but I left it alone for now.
-* The Desolation's Edge mission "Transaction-Packed" has been left alone.
-  I recommend using my "Transaction-Packed: Abridged" to basically skip
-  the entire mission, instead.
-* Various aspects of Mysteriouslier: Horror at Scryer's Crypt could probably
-  be sped up (like the cube animations and such) but it's been mostly left
-  alone apart from the initial door-opening animation.
+* The Desolation's Edge mission "Homeopathological"
+* The explosive device delay in Desolation's Edge, during Bad Vibrations
+* The Desolation's Edge mission "Transaction-Packed."  I recommend using my
+  "Transaction-Packed: Abridged" to basically skip the entire mission, instead.
+* The cube animations during Mysteriouslier: Horror at Scryer's Crypt
 * The sequence of meeting Timothy for the first time in Spendopticon could
   probably be improved in various ways, but it got complex enough that I
   didn't bother, in the end.
 * Likewise, various aspects of the Digby Vermouth quests in Spendopticon
   could use a kick, but apart from improving his walk/run speed, they were
   left alone.
-* The picnic section in Heart of Gold (in The Compactor) could be tightened
-  up, but it's not bad, so I left that.
+* The picnic section in The Compactor, during Heart of Gold.  It's not bad
+  in the first place.
 * The Clapstructor sequence could be tightened up slightly, but not by much.
 * The whole Raging Bot mission (in Spendopticon) could be tightened up in
   various ways, but seemed too annoying to wade through for pretty small gains.
-* The drawbridge lowering in The Cankerwood could be sped up a bit, but it's
-  pretty quick already.
-* Various sequences in Cold Case: Forgotten Answers, in The Cankerwood, could
-  probably be sped up, but that one's been left alone.
+* The drawbridge lowering in The Cankerwood
+* Various sequences in Cold Case: Forgotten Answers, in The Cankerwood
 * Daisy's door-opening in Blastplains has been left alone; it's nice and
   dramatic.
-* Adding the various bath products for Dirty Deeds, in Ashfall Peaks, could
-  be sped up a bit, though not by much if you don't want to cut off dialogue.
-* The telezapper registration in The Blastplains has been left as-is.  It's
-  pretty quick anyway.
+* Adding the various bath products for Dirty Deeds, in Ashfall Peaks
+* Telezapper registration in The Blastplains
 * The cocking animation on the third catapult in Castle Crimson has been
   left alone, for boring technical reasons.
-* The egg-incubation timer in A Good Egg has been left alone; it's already
-  pretty quick, and amusing to boot.
+* The egg-incubation timer in Castle Crimson, during A Good Egg
 * The whole train-rotation and subsequent mallet-propulsion in Sapphire's
   Run has been left alone.  The rotation is already pretty quick, and I
   think speeding up the mallet-hit would take away from the humor of the
   situation.
-* Statue Krieg opening the gate to Vaulthalla could probably be faster,
-  but I left that alone too.
+* Statue Krieg opening the gate to Vaulthalla
 
 Known Bugs
 ==========
@@ -149,21 +141,9 @@ Known Bugs
   Claptrap in Bad Reception acts a bit weirdly, and is probably
   pretty easy to just run through now.
 * Respawning after death leaves your char facing the wrong way.
-* This isn't really a bug per se, but it's very easy to end up
-  with skipped dialogue at the top of the Tazendeer Elevator --
-  there's some triggers up there which can be missed if there's
-  already dialogue playing.  This mod moves one of those around a
-  bit so it no longer triggers right at the top of the now-sped-up
-  elevator, so if you want to make sure to hear all the Typhon+Tyreen
-  dialogue up there, make sure to wait around for dialogue lines
-  to finish before pressing onward.
 * The locker holding Ember's tools, in Freddie's lair in Impound
   Deluxe, doesn't open all the way when BUD Bot opens it up for you.
   The tools are still easily-grabbable, though.
-* The increased opening speed on some containers which fling loot
-  into the air seems to cause the loot to sometimes fly away at
-  pretty high speeds.  This can be a bit annoying in cases like the
-  trash collection in Spendopticon during One Man's Treasure.
 * Oletta (in Obsidian Forest) has a couple of interesting behaviors:
   * If you stay too close to her when she's on the way to the Traitorweed
     testing area, she may end up teleporting a bit.
