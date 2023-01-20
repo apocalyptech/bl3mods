@@ -6,8 +6,12 @@ objects that you use throughout BL3.  It's focused mostly on things you
 directly interact with, though it does include other speedups like NPC
 walking speeds, where appropriate.  The mod doesn't attempt to do any
 dialogue or mission skips -- all content in the game should still be
-available.  A few things have even been left alone because speeding them
-up would've caused dialogue skips.
+available.
+
+**NOTE:** Parts of this mod currently *require* using OpenHotfixLoader
+(OHL) instead of B3HM.  If B3HM v1.0.2 ever gets released, that version
+should be supported too, but v1.0.1 will *not* give you 100% mod
+functionality with this mod.
 
 A sampling of the things this mod affects:
 
@@ -52,20 +56,14 @@ A sampling of the things this mod affects:
   * Vic (from Head Case)
   * VIP Valet
 
-Note that the vehicle animations in particular are a bit weird right now --
-the animation gets "frozen" near the end for a bit.  I think that's something
-that we can't do much about at the moment, though I'll be looking into it
-more for the eventual 1.0 release.  Check the full README for known bugs and
-my current TODO!
+Known Quirks
+============
 
-**NOTE:** The Vault Card Chest-opening speed tweak currently *requires*
-using OpenHotfixLoader (OHL) instead of B3HM.  If B3HM v1.0.2 ever gets
-released, that version should be supported too, but v1.0.1 will *not*
-work with that Vault Card chest.  Also, the Vault Card Chest-opening
-tweak does *not* work in Pyre of Stars.  Open your chests elsewhere if
-you want their opening to be quicker!
+What separates these from "Known Bugs" is a bit of a fuzzy line, of course.
 
-A few known quirks of running with this mod:
+* Vehicle-related animations in are a bit weird right now; the animation gets
+  "frozen" near the end for a bit, and the point at which you get full control
+  of the vehicle is a bit odd.  I'm not aware of any way around that, though
 * To get on top of the "main" elevator in Meridian Outskirts (to reach the
   Typhon Dead Drop), you'll likely either have to use Photo Mode to hit
   the elevator button, or go the long way around after moving the elevator
@@ -84,9 +82,13 @@ A few known quirks of running with this mod:
   usual, and well before Pretty Boy's usual cue, but there's still a window
   right there and you can jump out as usual once he's done talking.
 
+Not Handled By This Mod
+=======================
+
 Some things intentionally *not* handled by the mod, mostly because they were
 already pretty good speedwise, or because speedups would've caused dialogue
 skips or the like:
+
 * Inter-system navigation via Sanctuary III
 * Using the Viper Drive in Skywell-27, during Space-Laser Tag.  Those delays
   are all pretty dialogue-dependent.
@@ -161,6 +163,7 @@ TODO
   those alone primarily out of laziness but also because that'd feel like an
   actual combat advantage, which isn't really something this mod is meant to
   do (though I suppose our vehicle handling technically applies to that).
+* The Vault Card Chest-opening tweak does *not* work in Pyre of Stars.
 * Speed of camera that moves in/out of Photo Mode?
 * Ammo containers seem to not always attach ammo properly; ends up below the
   platform (at least, the sort 'round Tannis's dig site in The Droughts, and
