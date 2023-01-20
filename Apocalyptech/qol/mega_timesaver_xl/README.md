@@ -9,13 +9,7 @@ dialogue or mission skips -- all content in the game should still be
 available.  A few things have even been left alone because speeding them
 up would've caused dialogue skips.
 
-It will eventually hope to encompass basically the entire game, but **it
-is currently a work in progress!**  As such, this mod has not seen an awful
-lot of testing, so please let me know if there's anything game-breaking or
-Obviously Wrong with this (like if a too-fast animation ends up breaking
-mission progression somewhere).
-
-Currently, the mod affects the following:
+A sampling of the things this mod affects:
 
 * Lootable Containers, Doors, Elevators, Slot Machines, Lost Loot Machine, etc...
 * Vehicle interaction animations (hijacking, entering, leaving, changing seats)
