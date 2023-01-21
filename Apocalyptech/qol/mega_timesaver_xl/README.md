@@ -162,9 +162,6 @@ Known Bugs / TODO
   that faster than 9 seconds without having the loot walls sometimes get
   softlocked on the next activation.  Still, the spawn-in time is much quicker,
   and 9sec is a 1.5x speed increase at the end, too.
-* The door you have to slide under to retrieve the umbrella for
-  Claptrap in Bad Reception acts a bit weirdly, and is probably
-  pretty easy to just run through now.
 * The locker holding Ember's tools, in Freddie's lair in Impound
   Deluxe, doesn't open all the way when BUD Bot opens it up for you.
   The tools are still easily-grabbable, though.
@@ -248,6 +245,8 @@ Changelog
    * ECHO cartridge playing animation
    * Photo Mode activation time
  * Mission-Specific Animations:
+   * Fixed garage door timing in The Droughts during Bad Reception (to get the
+     umbrella) to be a bit less weird
    * Statue scanner/printer from Golden Calves
    * Coffee-pouring animation during Rise and Grind (pretty slight improvement,
      and if localization dialogue other than English happens to be longer, it's

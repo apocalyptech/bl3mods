@@ -10458,6 +10458,12 @@ SparkLevelPatchEntry,(1,1,0,Sanctuary3_P),/Game/PatchDLC/DiamondLootChest/LevelA
 SparkLevelPatchEntry,(1,1,0,Sanctuary3_P),/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Effects/Systems/PS_DiamondCrate_WallRollDiamondDust.PS_DiamondCrate_WallRollDiamondDust,Emitters.Emitters[0].Object..LODLevels.LODLevels[0].Object..RequiredModule.Object..EmitterDuration,0,,0.05
 
 ###
+### Bad Reception umbrella garage door timing tweaks
+###
+
+SparkLevelPatchEntry,(1,1,0,Prologue_P),/Game/Maps/Zone_0/Prologue/Prologue_M_BadReception.Prologue_M_BadReception:PersistentLevel.IO_Door_400x400_SlideUp_Pandora_Generic_2.Timeline_0_0,TheTimeline.Length,0,,1
+
+###
 ### Mission/Level Specific: Custom Golden Calves Statue Scanner Tweaks
 ###
 

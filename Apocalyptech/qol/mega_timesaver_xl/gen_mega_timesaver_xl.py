@@ -2225,6 +2225,17 @@ for ps_name in [
     scale_ps(mod, data, Mod.LEVEL, 'Sanctuary3_P', ps_name, global_scale)
 mod.newline()
 
+# Bad Reception door-timing fix
+mod.header('Bad Reception umbrella garage door timing tweaks')
+mod.reg_hotfix(Mod.LEVEL, 'Prologue_P',
+        '/Game/Maps/Zone_0/Prologue/Prologue_M_BadReception.Prologue_M_BadReception:PersistentLevel.IO_Door_400x400_SlideUp_Pandora_Generic_2.Timeline_0_0',
+        'TheTimeline.Length',
+        # This seems about right -- running will still *just* block you, but
+        # sliding works so long as it's timed right.
+        round(3/3),
+        )
+mod.newline()
+
 # Golden Calves Statue Scanner
 mod.header('Mission/Level Specific: Custom Golden Calves Statue Scanner Tweaks')
 
