@@ -1290,6 +1290,31 @@ for cat_name, cat_scale, animseqs in [
             AS('/Game/NonPlayerCharacters/Ava/Animation/Missions/AS_MayaDeathReaction_Exit', target='CityBoss_P'),
             AS('/Game/Enemies/Saurian/_Shared/Animation/Missions/AS_FastDigging', target='Mansion_P'),
             ]),
+        ('Diamond Armory', global_scale, [
+            AS('/Game/PatchDLC/DiamondLootChest/InteractiveObjects/DiamondChest/Animation/AS_Close', target='Sanctuary3_P'),
+            AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondChest/Animations/R_SideWall/AS_Wall_Opening', target='Sanctuary3_P'),
+            AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondChest/Animations/R_SideWall/AS_Wall_Locking', target='Sanctuary3_P'),
+            #AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondChest/Animations/R_SideWall/AS_Wall_Opened_Idle', target='Sanctuary3_P'),
+            #AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondChest/Animations/R_SideWall/AS_Wall_Locked_Idle', target='Sanctuary3_P'),
+            #AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondChest/Animations/R_SideWall/AS_Wall_Closed_Idle', target='Sanctuary3_P'),
+            AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondChest/Animations/R_SideWall/AS_Wall_Closing', target='Sanctuary3_P'),
+            AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondChest/Animations/CenterWall/AS_Wall_Opening', target='Sanctuary3_P'),
+            AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondChest/Animations/CenterWall/AS_Wall_Locking', target='Sanctuary3_P'),
+            #AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondChest/Animations/CenterWall/AS_Wall_Opened_Idle', target='Sanctuary3_P'),
+            #AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondChest/Animations/CenterWall/AS_Wall_Locked_Idle', target='Sanctuary3_P'),
+            #AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondChest/Animations/CenterWall/AS_Wall_Closed_Idle', target='Sanctuary3_P'),
+            AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondChest/Animations/CenterWall/AS_Wall_Closing', target='Sanctuary3_P'),
+            AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondChest/Animations/SideWall/AS_Wall_Opening', target='Sanctuary3_P'),
+            AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondChest/Animations/SideWall/AS_Wall_Locking', target='Sanctuary3_P'),
+            #AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondChest/Animations/SideWall/AS_Wall_Opened_Idle', target='Sanctuary3_P'),
+            #AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondChest/Animations/SideWall/AS_Wall_Locked_Idle', target='Sanctuary3_P'),
+            #AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondChest/Animations/SideWall/AS_Wall_Closed_Idle', target='Sanctuary3_P'),
+            AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondChest/Animations/SideWall/AS_Wall_Closing', target='Sanctuary3_P'),
+            AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Animations/AS_Close', target='Sanctuary3_P'),
+            AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Animations/AS_Open', target='Sanctuary3_P'),
+            #AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Animations/AS_Closed_Idle', target='Sanctuary3_P'),
+            #AS('/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Animations/AS_Open_Idle', target='Sanctuary3_P'),
+            ]),
         ]:
 
     mod.comment(cat_name)
@@ -1414,7 +1439,11 @@ class IO():
     use the defaults but which occasionally need to override 'em.
     """
 
-    def __init__(self, path, label=None, level='MatchAll', scale=None, timelinelength=True):
+    def __init__(self, path, label=None,
+            hf_type=Mod.LEVEL, level='MatchAll', notify=False,
+            scale=None, timelinelength=True,
+            timeline_skip_set=None,
+            ):
         self.path = path
         self.last_bit = path.split('/')[-1]
         self.last_bit_c = f'{self.last_bit}_C'
@@ -1423,11 +1452,20 @@ class IO():
             self.label = self.last_bit
         else:
             self.label = label
+        self.hf_type = hf_type
         self.level = level
+        self.notify = notify
         self.scale = scale
+
         # This is just used to suppress warnings we'd otherwise print, for objects
         # we know don't have this attr
         self.timelinelength = timelinelength
+
+        # Any timelines to skip
+        if timeline_skip_set is None:
+            self.timeline_skip_set = set()
+        else:
+            self.timeline_skip_set = timeline_skip_set
 
 # It's tempting to try and limit some of these doors to the "obvious" particular level, but a lot
 # of them end up getting used elsewhere anyway, like in Trials maps, or DLC6 levels.  We could
@@ -1623,6 +1661,20 @@ for category, cat_scale, io_objs in [
             IO('/Dandelion/InteractiveObjects/PlayableSlotMachines/BPIO_SlotMachine_Dandelion_V1',
                 label='DLC1 Slot Machines',
                 ),
+            # See also some tweaks below, re: Diamond Armory
+            IO('/Game/PatchDLC/DiamondLootChest/InteractiveObjects/DiamondChest/_Design/Chest/BPIO_DiamondChest',
+                label='Diamond Armory Console',
+                level='Sanctuary3_P',
+                timeline_skip_set={
+                    # This timeline controls the visible countdown (though not the *real* countdown).
+                    # Letting it scale would end up with what looks like a very fast countdown.
+                    'TimerTimeline_Template',
+                    },
+                ),
+            IO('/Game/PatchDLC/DiamondLootChest/InteractiveObjects/DiamondChest/_Design/Walls/BPIO_DiamondChestWall',
+                label='Diamond Armory Walls',
+                level='Sanctuary3_P',
+                ),
             IO('/Game/InteractiveObjects/MissionScripted/_Design/IO_MissionScripted_StatueManufacturingMachine',
                 label='Golden Calves Statue Scanner/Printer',
                 level='Sacrifice_P',
@@ -1765,8 +1817,13 @@ for category, cat_scale, io_objs in [
                 if 'Timelines' in export:
                     for timeline_idx, timeline_ref in enumerate(export['Timelines']):
                         timeline_exp = timeline_ref['export']
+                        timeline_name = timeline_ref['_jwp_export_dst_name']
+                        if timeline_name in io_obj.timeline_skip_set:
+                            if verbose:
+                                print(f' - Skipping timeline {timeline_idx} ({timeline_name}, export {timeline_exp})')
+                            continue
                         if verbose:
-                            print(' - Processing timeline {} (export {})'.format(timeline_idx, timeline_exp))
+                            print(f' - Processing timeline {timeline_idx} ({timeline_name}, export {timeline_exp})')
                         if timeline_exp != 0:
                             timeline = obj[timeline_exp-1]
 
@@ -1781,10 +1838,12 @@ for category, cat_scale, io_objs in [
                             # on the IO_MissionPlaceable_BloodJar in Lake_P.
                             if 'TimelineLength' in timeline and timeline['TimelineLength'] != 0:
                                 did_main = True
-                                mod.reg_hotfix(Mod.LEVEL, io_obj.level,
+                                mod.reg_hotfix(io_obj.hf_type, io_obj.level,
                                         io_obj.full_path,
                                         f'Timelines.Timelines[{timeline_idx}].Object..TimelineLength',
-                                        round(timeline['TimelineLength']/io_obj.scale, 6))
+                                        round(timeline['TimelineLength']/io_obj.scale, 6),
+                                        notify=io_obj.notify,
+                                        )
 
                             # Now process all our various curves
                             for trackname, curve_var in [
@@ -1808,10 +1867,12 @@ for category, cat_scale, io_objs in [
                                                     for key_idx, key in enumerate(curve[inner_curve_var]['Keys']):
                                                         if key['time'] != 0:
                                                             did_curve = True
-                                                            mod.reg_hotfix(Mod.LEVEL, io_obj.level,
+                                                            mod.reg_hotfix(io_obj.hf_type, io_obj.level,
                                                                     io_obj.full_path,
                                                                     f'Timelines.Timelines[{timeline_idx}].Object..{trackname}.{trackname}[{track_idx}].{curve_var}.Object..{inner_curve_var}.Keys.Keys[{key_idx}].Time',
-                                                                    round(key['time']/io_obj.scale, 6))
+                                                                    round(key['time']/io_obj.scale, 6),
+                                                                    notify=io_obj.notify,
+                                                                    )
 
 
         if not found_primary:
@@ -2058,6 +2119,110 @@ mod.reg_hotfix(Mod.LEVEL, 'MatchAll',
         'DelayBetweenSpawningItem',
         0.75/global_scale,
         )
+mod.newline()
+
+# Diamond Armory
+# See also the IO() tweaks above
+mod.header('Mission/Level Specific: Diamond Armory Timing Tweaks')
+mod.comment('Event Delays')
+for attr, default_val in [
+        ('TimeToSpawnLootOver', 5),
+        ('LootEnabledDelay', 9),
+        ('MaxDeferredSpawnDelay', 2),
+        ]:
+    for obj_name in [
+            'BPIO_DiamondChestWall_Shields',
+            'BPIO_DiamondChestWall_Guns',
+            'BPIO_DiamondChestWall_Grenades',
+            ]:
+        mod.reg_hotfix(Mod.LEVEL, 'Sanctuary3_P',
+                f'/Game/PatchDLC/DiamondLootChest/Maps/Sanctuary3/Sanctuary3_DiamondChestRoom.Sanctuary3_DiamondChestRoom:PersistentLevel.{obj_name}.Loot',
+                attr,
+                default_val/global_scale,
+                )
+for attr, default_val in [
+        ('SpawnChestLootDelay', 3),
+        ]:
+    for obj_name in [
+            '/Game/PatchDLC/DiamondLootChest/InteractiveObjects/DiamondChest/_Design/Chest/BPIO_DiamondChest.Default__BPIO_DiamondChest_C',
+            '/Game/PatchDLC/DiamondLootChest/Maps/Sanctuary3/Sanctuary3_DiamondChestRoom.Sanctuary3_DiamondChestRoom:PersistentLevel.BPIO_DiamondChest_V_3',
+            ]:
+        mod.reg_hotfix(Mod.LEVEL, 'Sanctuary3_P',
+                obj_name,
+                attr,
+                default_val/global_scale,
+                )
+mod.reg_hotfix(Mod.LEVEL, 'Sanctuary3_P',
+        '/Game/PatchDLC/DiamondLootChest/InteractiveObjects/DiamondChest/_Design/BP_CE_DiamondChest_Loot_Flash.Default__BP_CE_DiamondChest_Loot_Flash_C',
+        'Duration',
+        9/global_scale,
+        )
+# This is what determines how soon the last bit of gear spawns, on top of
+# the armory console itself.  Keeping this more conservative so that it
+# lines up a bit better with the golden particlesystem stuff.
+mod.reg_hotfix(Mod.LEVEL, 'Sanctuary3_P',
+        '/Game/PatchDLC/DiamondLootChest/InteractiveObjects/DiamondChest/_Design/BP_CE_DiamondChest_Loot_Glimmer.Default__BP_CE_DiamondChest_Loot_Glimmer_C',
+        'Duration',
+        4.5/1.5,
+        )
+mod.newline()
+
+mod.comment('Bytecode delay tweaks')
+for obj_name, export_name, indexes in [
+        ('/Game/PatchDLC/DiamondLootChest/InteractiveObjects/DiamondChest/_Design/Walls/BPIO_DiamondChestWall',
+            'ExecuteUbergraph_BPIO_DiamondChestWall',
+            [
+                (2457, 2, None),
+                # Okay, so *this* is the timer for re-enabling the armory after an activation.
+                # If it's scaled *too* much, one or more of the walls might not actually
+                # populate the armory, which'll softlock it until the user quits + re-enters.
+                # Looks like at the moment the most I can scale it by is 1.5x before we risk
+                # screwing up the walls.  *Really* I'm guessing that what this means is that
+                # I'm missing some scaling on something else -- will look around for that.
+                (3310, 13.6, 1.5),
+                (3435, 0.25, None),
+                ]),
+        ('/Game/PatchDLC/DiamondLootChest/InteractiveObjects/DiamondChest/_Design/Chest/BPIO_DiamondChest',
+            'ExecuteUbergraph_BPIO_DiamondChest',
+            [
+                (238, 1.4, None),
+                (2248, 1, None),
+                (2325, 0.2, None),
+                ([5609, 5716], 1.5, None),
+                (9273, 2, None),
+                ]),
+        ]:
+    for index, default_val, bytecode_scale in indexes:
+        if bytecode_scale is None:
+            bytecode_scale = global_scale
+        mod.bytecode_hotfix(Mod.LEVEL, 'Sanctuary3_P',
+                obj_name,
+                export_name,
+                index,
+                default_val,
+                round(default_val/bytecode_scale, 6),
+                )
+mod.newline()
+
+mod.comment('ParticleSystems')
+for ps_name in [
+        #'/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Effects/Systems/PS_DiamondCrate_Countdown',
+        '/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Effects/Systems/PS_DiamondCrate_FloorRays',
+        '/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Effects/Systems/PS_DiamondCrate_InitialOpen',
+        '/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Effects/Systems/PS_DiamondCrate_ItemSparkle',
+        '/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Effects/Systems/PS_DiamondCrate_LegendaryAttract',
+        '/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Effects/Systems/PS_DiamondCrate_Room_CeilingRays',
+        #'/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Effects/Systems/PS_DiamondCrate_Room_FloorVapor',
+        #'/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Effects/Systems/PS_DiamondCrate_Room_FloorVapor_DiamondDust',
+        '/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Effects/Systems/PS_DiamondCrate_Room_LaserShapes',
+        #'/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Effects/Systems/PS_DiamondCrate_Room_SteamJet',
+        #'/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Effects/Systems/PS_DiamondCrate_Room_WallVapor',
+        #'/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Effects/Systems/PS_DiamondCrate_UsePrompt',
+        '/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Effects/Systems/PS_DiamondCrate_WallDiamondDust_Burst',
+        '/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Effects/Systems/PS_DiamondCrate_WallDiamondDust_Burst_Longer',
+        '/Game/PatchDLC/DiamondLootChest/LevelArt/Environments/DiamondCrate/Effects/Systems/PS_DiamondCrate_WallRollDiamondDust',
+        ]:
+    scale_ps(mod, data, Mod.LEVEL, 'Sanctuary3_P', ps_name, global_scale)
 mod.newline()
 
 # Golden Calves Statue Scanner

@@ -16,7 +16,8 @@ functionality with this mod.
 
 A sampling of the things this mod affects:
 
-* Lootable Containers, Doors, Elevators, Slot Machines, Lost Loot Machine, etc...
+* Lootable Containers, Doors, Elevators, Slot Machines, Lost Loot Machine,
+  Diamond Armory, etc...
 * Vehicle interaction animations (hijacking, entering, leaving, changing seats)
 * Catch-A-Ride Digistruct Speed
 * Fast Travel / Teleport / Respawning (no more digistruct tunnel!)
@@ -154,8 +155,13 @@ Known Bugs / TODO
 * Iron Bear interactions (entering, exiting, Dakka Bear turret)?  I'm leaving
   those alone primarily out of laziness but also because that'd feel like an
   actual combat advantage, which isn't really something this mod is meant to
-  do (though I suppose our vehicle handling technically applies to that).
+  do (though I suppose that argument should apply to our vehicle animations,
+  too).
 * The Vault Card Chest-opening tweak does *not* work in Pyre of Stars.
+* The closing-up of the Diamond Armory could be faster; I can't seem to push
+  that faster than 9 seconds without having the loot walls sometimes get
+  softlocked on the next activation.  Still, the spawn-in time is much quicker,
+  and 9sec is a 1.5x speed increase at the end, too.
 * The door you have to slide under to retrieve the umbrella for
   Claptrap in Bad Reception acts a bit weirdly, and is probably
   pretty easy to just run through now.
@@ -170,7 +176,6 @@ Known Bugs / TODO
   to work.  Possibly relatedly, sometimes Eridian ammo chests seem to not open
   all the way.  I think all the ammo inside remains pick-uppable, though, and
   I can't reliably reproduce the behavior.
-* Diamond Armory console?
 * I ended up reducing `global_scale` from 5 to 4 at the end of Athenas, because
   the other container tightening I did there ended up making them sort of seem
   *too* fast.  Even at 4x, things still seem quite good, IMO.  May want to
@@ -237,6 +242,7 @@ Changelog
  * Other Additions:
    * Slot Machines
    * Lost Loot Machine
+   * Diamond Armory
    * Vault Card chest-opening animation (except in Pyre of Stars)
    * Fast-travel/teleport/resurrect skips
    * ECHO cartridge playing animation
