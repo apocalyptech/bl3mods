@@ -7634,7 +7634,7 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Global/Locker_Generic/Ani
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Global/Locker_Generic/Animation/AS_Open.AS_Open,Notifies.Notifies[3].LinkValue,0,,0.104753
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Global/Locker_Generic/Animation/AS_Open.AS_Open,Notifies.Notifies[4].SegmentLength,0,,0.3
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Global/Locker_Generic/Animation/AS_Open.AS_Open,Notifies.Notifies[4].LinkValue,0,,0.199186
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Global/Locker_Generic/Animation/AS_Open.AS_Open,SequenceLength,0,,0.3
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/_Global/Locker_Generic/Animation/AS_Open.AS_Open,SequenceLength,0,,1.2
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Industrial/Cash_Register/Animation/AS_Open.AS_Open,RateScale,0,,4
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Industrial/Cash_Register/Animation/AS_Open.AS_Open,Notifies.Notifies[0].SegmentLength,0,,0.408333
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Lootables/Industrial/Cash_Register/Animation/AS_Open.AS_Open,Notifies.Notifies[0].LinkValue,0,,0.005203

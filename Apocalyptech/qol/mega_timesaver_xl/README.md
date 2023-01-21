@@ -162,9 +162,6 @@ Known Bugs / TODO
   that faster than 9 seconds without having the loot walls sometimes get
   softlocked on the next activation.  Still, the spawn-in time is much quicker,
   and 9sec is a 1.5x speed increase at the end, too.
-* The locker holding Ember's tools, in Freddie's lair in Impound
-  Deluxe, doesn't open all the way when BUD Bot opens it up for you.
-  The tools are still easily-grabbable, though.
 * Oletta ends up teleporting a bit during the Obsidian Forest side mission
   Lost and Found, when she first jumps down onto the rooftops.
 * Ammo containers seem to not always attach ammo properly; ends up below the
@@ -277,6 +274,8 @@ Changelog
    * Descending fountain in Villa Ultraviolet
    * Hyperway travel in The Spendopticon
    * Bridge extension back to Freddie's lair at the end of Impound Deluxe
+   * Fixed a visual glitch in the locker holding Ember's tools, in Impound
+     Deluxe.
    * "Key To Happiness" timer in The Compactor, on the way into Trashlantis
    * Ultra-Thermite opening the door to VIP Tower
    * Various Call of the Deep tweaks, in Skittermaw basin: power coil panel, crane

@@ -1136,7 +1136,23 @@ for cat_name, cat_scale, animseqs in [
             AS('/Game/Lootables/_Global/Crate_Ammo/Animations/AS_Open'),
             AS('/Game/Lootables/_Global/Dumpster_Small/Animation/AS_Open'),
             AS('/Game/Lootables/_Global/Locker_Generic/Animation/AS_Open_Misnamed'),
-            AS('/Game/Lootables/_Global/Locker_Generic/Animation/AS_Open'),
+            AS('/Game/Lootables/_Global/Locker_Generic/Animation/AS_Open',
+                # This is necessary to get rid of a visual glitch (a not-fully-opened
+                # locker) when picking up Ember's toolbox in Impound Deluxe, in Freddie's
+                # hideout.  It looks like doing this doesn't negatively impact other
+                # lockers throughout the game, though this means that locker-opening has
+                # become the least-tested container in the game (I didn't make this
+                # tweak until I was through with the primary mod-writing playthrough).
+                # Still, I tested out the Sanctuary locker for The Kevin Konundrum,
+                # and the Skywell-27 locker during Opposition Research, and those still
+                # work fine too (in addition to a bunch of "regular" lockers I'd
+                # tested), so I think we're good.  I suspect that we should probably
+                # *default* to leaving the seqlen alone, rather than scaling it by
+                # default and then specifying like this when we *don't* want it.
+                # Still, that change would involve about a million times more re-testing
+                # than I'm willing to do, so eh.
+                seqlen_scale=1,
+                ),
             AS('/Game/Lootables/Industrial/Cash_Register/Animation/AS_Open'),
             AS('/Game/Lootables/Industrial/Lock_Box/Animations/AS_Open'),
             AS('/Game/Lootables/Industrial/Machine_Washing/Animation/AS_Open'),
