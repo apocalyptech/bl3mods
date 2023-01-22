@@ -69,6 +69,8 @@ speedups in effect.  See the Known Bugs section below, as well!
   into the air seems to cause the loot to sometimes fly away at
   pretty high speeds.  This can be a bit annoying in cases like the
   trash collection in Spendopticon during One Man's Treasure.
+* Following Lilith too closely in Covenant Pass can lead to her skipping
+  a couple of dialogue lines.
 * To get on top of the "main" elevator in Meridian Outskirts (to reach the
   Typhon Dead Drop), you'll likely either have to use Photo Mode to hit
   the elevator button, or go the long way around after moving the elevator
@@ -94,6 +96,10 @@ Some things intentionally *not* handled by the mod, either because they were
 already pretty good speedwise, because speedups would've caused dialogue
 skips, or because it just felt right to leave 'em alone:
 
+* The special animation when you pick up your *first* ECHO Log (where you
+  examine it and blow onto the contacts) has been left alone -- the animation
+  goes all weird when it's sped up, and it's an amusing animation anyway.
+  (Plus you only see it the once, so whatever.)
 * Inter-system navigation via Sanctuary III
 * Using the Viper Drive in Skywell-27, during Space-Laser Tag.  Those delays
   are all pretty dialogue-dependent.
@@ -183,7 +189,6 @@ Known Bugs / TODO
     (specifically at the very beginning when Tannis and Typhon run up to the door,
     and it opens -- the door will open but Tannis and Typhon will remain stuck there).
     The Vault Card Chest addition happened after I was through on Athenas.
-* Did we want to do the "initial" ECHO playing animation, with the blowing-on-cart?
 
 Changelog
 =========
