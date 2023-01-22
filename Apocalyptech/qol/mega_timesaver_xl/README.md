@@ -157,6 +157,9 @@ Known Bugs / TODO
   actual combat advantage, which isn't really something this mod is meant to
   do (though I suppose that argument should apply to our vehicle animations,
   too).
+* Sometimes Eridian ammo chests seem to not open all the way, though the ammo
+  inside should remain pick-uppable.  I can't reliably reproduce it, so it's
+  difficult to diagnose.
 * The Vault Card Chest-opening tweak does *not* work in Pyre of Stars.
 * The closing-up of the Diamond Armory could be faster; I can't seem to push
   that faster than 9 seconds without having the loot walls sometimes get
@@ -164,12 +167,6 @@ Known Bugs / TODO
   and 9sec is a 1.5x speed increase at the end, too.
 * Oletta ends up teleporting a bit during the Obsidian Forest side mission
   Lost and Found, when she first jumps down onto the rooftops.
-* Ammo containers seem to not always attach ammo properly; ends up below the
-  platform (at least, the sort 'round Tannis's dig site in The Droughts, and
-  in Athenas).  Seems to be maybe not consistent, though?  Sometimes it seems
-  to work.  Possibly relatedly, sometimes Eridian ammo chests seem to not open
-  all the way.  I think all the ammo inside remains pick-uppable, though, and
-  I can't reliably reproduce the behavior.
 * I ended up reducing `global_scale` from 5 to 4 at the end of Athenas, because
   the other container tightening I did there ended up making them sort of seem
   *too* fast.  Even at 4x, things still seem quite good, IMO.  May want to
@@ -187,8 +184,6 @@ Known Bugs / TODO
     and it opens -- the door will open but Tannis and Typhon will remain stuck there).
     The Vault Card Chest addition happened after I was through on Athenas.
 * Did we want to do the "initial" ECHO playing animation, with the blowing-on-cart?
-* Blackjack tables in DLC1 seem to not actually show all your cards; if we're not
-  already doing sequencelength->1 stuff, perhaps that'll do it.
 
 Changelog
 =========
@@ -242,8 +237,6 @@ Changelog
    * ECHO cartridge playing animation
    * Photo Mode activation time
  * Mission-Specific Animations:
-   * Fixed garage door timing in The Droughts during Bad Reception (to get the
-     umbrella) to be a bit less weird
    * Statue scanner/printer from Golden Calves
    * Coffee-pouring animation during Rise and Grind (pretty slight improvement,
      and if localization dialogue other than English happens to be longer, it's
@@ -274,8 +267,6 @@ Changelog
    * Descending fountain in Villa Ultraviolet
    * Hyperway travel in The Spendopticon
    * Bridge extension back to Freddie's lair at the end of Impound Deluxe
-   * Fixed a visual glitch in the locker holding Ember's tools, in Impound
-     Deluxe.
    * "Key To Happiness" timer in The Compactor, on the way into Trashlantis
    * Ultra-Thermite opening the door to VIP Tower
    * Various Call of the Deep tweaks, in Skittermaw basin: power coil panel, crane
@@ -287,6 +278,12 @@ Changelog
    * Artillery cannon for Money Back Guarantee, in The Blastplains
    * Castle Crimson catapult animations
    * Don't Call it A Rorschach Ink-Blot Pipes, in Benediction of Pain
+ * Other bugfixes:
+   * Fixed garage door timing in The Droughts during Bad Reception (to get the
+     umbrella) to be a bit less weird
+   * Fixed initial card draws in Handsome Jackpot blackjack tables
+   * Fixed a visual glitch in the locker holding Ember's tools, in Impound
+     Deluxe.
 
 Aug 1, 2022 *(no version number change)*
  * Updated to use [new metadata tags](https://github.com/apple1417/blcmm-parsing/tree/master/blimp)

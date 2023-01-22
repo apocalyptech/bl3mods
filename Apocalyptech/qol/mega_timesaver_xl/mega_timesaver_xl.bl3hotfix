@@ -7308,7 +7308,7 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChe
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_01.AS_Open_Draw_card_01,Notifies.Notifies[4].LinkValue,0,,0.238757
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_01.AS_Open_Draw_card_01,Notifies.Notifies[5].SegmentLength,0,,0.322917
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_01.AS_Open_Draw_card_01,Notifies.Notifies[5].LinkValue,0,,0.256757
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_01.AS_Open_Draw_card_01,SequenceLength,0,,0.322917
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_01.AS_Open_Draw_card_01,SequenceLength,0,,1.291667
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_03.AS_Open_Draw_card_03,RateScale,0,,4
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_03.AS_Open_Draw_card_03,Notifies.Notifies[0].SegmentLength,0,,0.166667
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_03.AS_Open_Draw_card_03,Notifies.Notifies[0].LinkValue,0,,0.018756
@@ -7316,7 +7316,7 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChe
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_03.AS_Open_Draw_card_03,Notifies.Notifies[1].LinkValue,0,,0.066435
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_03.AS_Open_Draw_card_03,Notifies.Notifies[2].SegmentLength,0,,0.166667
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_03.AS_Open_Draw_card_03,Notifies.Notifies[2].LinkValue,0,,0.13252
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_03.AS_Open_Draw_card_03,SequenceLength,0,,0.166667
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_03.AS_Open_Draw_card_03,SequenceLength,0,,0.666667
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_04.AS_Open_Draw_card_04,RateScale,0,,4
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_04.AS_Open_Draw_card_04,Notifies.Notifies[0].SegmentLength,0,,0.166667
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_04.AS_Open_Draw_card_04,Notifies.Notifies[0].LinkValue,0,,0.028222
@@ -7324,13 +7324,13 @@ SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChe
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_04.AS_Open_Draw_card_04,Notifies.Notifies[1].LinkValue,0,,0.075901
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_04.AS_Open_Draw_card_04,Notifies.Notifies[2].SegmentLength,0,,0.166667
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_04.AS_Open_Draw_card_04,Notifies.Notifies[2].LinkValue,0,,0.141986
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_04.AS_Open_Draw_card_04,SequenceLength,0,,0.166667
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_Draw_card_04.AS_Open_Draw_card_04,SequenceLength,0,,0.666667
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_In.AS_Open_In,RateScale,0,,4
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_In.AS_Open_In,Notifies.Notifies[0].SegmentLength,0,,0.5
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_In.AS_Open_In,Notifies.Notifies[0].LinkValue,0,,0.066955
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_In.AS_Open_In,Notifies.Notifies[1].SegmentLength,0,,0.5
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_In.AS_Open_In,Notifies.Notifies[1].LinkValue,0,,0.109563
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_In.AS_Open_In,SequenceLength,0,,0.5
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/BlackJackChest/Animation/AS_Open_In.AS_Open_In,SequenceLength,0,,2.0
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/LootCase/Animation/AS_Hyp_Misc2_Opening.AS_Hyp_Misc2_Opening,RateScale,0,,4
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/LootCase/Animation/AS_Hyp_Misc2_Opening.AS_Hyp_Misc2_Opening,Notifies.Notifies[0].SegmentLength,0,,0.425
 SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/Hyperion/LootCase/Animation/AS_Hyp_Misc2_Opening.AS_Hyp_Misc2_Opening,Notifies.Notifies[0].LinkValue,0,,0.029558
@@ -10098,6 +10098,10 @@ SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/
 SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[6].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,3.75
 SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[1].Object..TimelineLength,0,,0.5
 SparkLevelPatchEntry,(1,1,0,Cartels_P),/Game/PatchDLC/Event2/InteractiveObjects/CartelFountain/IO_MissionScripted_CartelFountain.IO_MissionScripted_CartelFountain_C,Timelines.Timelines[1].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.5
+
+# Handsome Jackpot Blackjack Tables
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/_Design/Classes/Hyperion/BPIO_Lootable_BlackJackChest.BPIO_Lootable_BlackJackChest_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.125
+SparkLevelPatchEntry,(1,1,0,MatchAll),/Dandelion/Lootables/_Design/Classes/Hyperion/BPIO_Lootable_BlackJackChest.BPIO_Lootable_BlackJackChest_C,Timelines.Timelines[0].Object..FloatTracks.FloatTracks[0].CurveFloat.Object..FloatCurve.Keys.Keys[1].Time,0,,0.125
 
 # Panel containing power coil in Call of the Deep
 SparkLevelPatchEntry,(1,1,0,Lake_P),/Hibiscus/InteractiveObjects/MissionSpecific/Side/WhereIBelong/IO_MissionScripted_CranePartDoor.IO_MissionScripted_CranePartDoor_C,Timelines.Timelines[0].Object..TimelineLength,0,,0.1875
