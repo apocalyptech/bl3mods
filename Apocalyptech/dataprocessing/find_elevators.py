@@ -28,6 +28,10 @@ from bl3hotfixmod.bl3hotfixmod import LVL_TO_ENG_LOWER
 # Written while doing Mega TimeSaver XL -- wanted to pre-generate Elevator
 # snippets.  Note that this serializes every map object in the game!  See
 # Fragile Containers' generation script for a quick way to clean that up.
+# (Also, Fragile Containers uses mulitprocessing to parallelize the
+# serialization, which is quite a bit faster -- honestly you might want to
+# do the serializations by running that generation script and then come
+# back here to run.)
 
 data = BL3Data()
 
@@ -149,8 +153,11 @@ for level_orig in [
                             export['_jwp_object_name'],
                             )
 
-                    speed = 'defaultspeed'
-                    travel = 'defaulttravel'
+                    # These have been experimentally verified to be the defaults when there's
+                    # literally no info in the serializations anywhere.
+                    speed = 200
+                    travel = 10
+
                     class_name = export['export_type'][:-2]
                     if class_name in elevators:
                         el = elevators[class_name]
