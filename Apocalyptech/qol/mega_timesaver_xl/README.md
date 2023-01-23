@@ -177,7 +177,6 @@ Known Bugs / TODO
   the other container tightening I did there ended up making them sort of seem
   *too* fast.  Even at 4x, things still seem quite good, IMO.  May want to
   doublecheck some stuff from before then, though, to just to be sure:
-  * Statue printer/scanner
   * Taking Flight elevator
   * Meridian Outskirts elevators
 * Unrelatedly to re-test:
@@ -195,9 +194,15 @@ Changelog
 
 **v1.0.0** - *(unreleased)*
  * Reduced our "standard" speed improvement from 5x to 4x (except for doors)
- * Fixed Typhon Dead Drop Chests
- * Tightened up various chest-opening animations (including digistruct contents)
- * Character Movement Speed:
+ * Bugfixes:
+   * Fixed Typhon Dead Drop Chests
+   * Tightened up various chest-opening animations (including digistruct contents)
+   * Fixed garage door timing in The Droughts during Bad Reception (to get the
+     umbrella) to be a bit less weird
+   * Fixed initial card draws in Handsome Jackpot blackjack tables
+   * Fixed a visual glitch in the locker holding Ember's tools, in Impound
+     Deluxe.
+ * Added character movement speedups:
    * Ace Baron (from Healers and Dealers)
    * Ava (base game and DLC6 version)
    * Brick
@@ -283,12 +288,8 @@ Changelog
    * Artillery cannon for Money Back Guarantee, in The Blastplains
    * Castle Crimson catapult animations
    * Don't Call it A Rorschach Ink-Blot Pipes, in Benediction of Pain
- * Other bugfixes:
-   * Fixed garage door timing in The Droughts during Bad Reception (to get the
-     umbrella) to be a bit less weird
-   * Fixed initial card draws in Handsome Jackpot blackjack tables
-   * Fixed a visual glitch in the locker holding Ember's tools, in Impound
-     Deluxe.
+ * Possibly one or two other things I forgot to put in here, though I think the
+   list is pretty exhaustive.
 
 Aug 1, 2022 *(no version number change)*
  * Updated to use [new metadata tags](https://github.com/apple1417/blcmm-parsing/tree/master/blimp)

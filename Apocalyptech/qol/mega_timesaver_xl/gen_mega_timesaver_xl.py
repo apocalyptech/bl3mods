@@ -119,6 +119,18 @@ mod = Mod('mega_timesaver_xl.bl3hotfix',
         quiet_streaming=True,
         )
 
+###
+### Some global scaling params follow.  For the *most* part, you can alter practically
+### everything in the mod by altering these few variables, though there's some
+### hardcoded stuff occasionally, and note that some timings are more fragile than
+### others.  Some "complex" animations and sequences might be somewhat touchy about
+### the precise timing, and I've done some manual tweaking to line things up in a few
+### cases.  Nudging these global vars up or down could knock some of that out of
+### alignment.  Vehicle animations in particular are already a bit weird and don't
+### even work perfectly at 2x.  Dialogue skips probably become more likely as the
+### scales goes up, too, particularly on the character movement scale.
+###
+
 # How much to improve speed
 global_scale = 4
 
@@ -1045,7 +1057,9 @@ for level_full in [
         # For some reason, injecting this chest in Crypt_P causes Tannis+Typhon to get
         # stuck right at the beginning of the map, after the first door opens.  No idea
         # why, though clearly the chest is stealing an event, or just getting in the
-        # way of an event delivery.  Seriously bizarre.
+        # way of an event delivery.  Seriously bizarre.  TODO: One thing to try might be
+        # using a "regular" bandit red chest instead of the actual Vault Card chest.
+        # Maybe that one wouldn't steal the event?
         #'/Game/Maps/Zone_4/Crypt/Crypt_P',
         '/Game/Maps/Zone_4/Desolate/Desolate_P',
         '/Game/PatchDLC/BloodyHarvest/Maps/Seasons/BloodyHarvest/BloodyHarvest_P',
