@@ -100,6 +100,7 @@ skips, or because it just felt right to leave 'em alone:
   examine it and blow onto the contacts) has been left alone -- the animation
   goes all weird when it's sped up, and it's an amusing animation anyway.
   (Plus you only see it the once, so whatever.)
+* The various Sanctuary-intro sequences
 * Inter-system navigation via Sanctuary III
 * Using the Viper Drive in Skywell-27, during Space-Laser Tag.  Those delays
   are all pretty dialogue-dependent.
@@ -173,21 +174,6 @@ Known Bugs / TODO
   and 9sec is a 1.5x speed increase at the end, too.
 * Oletta ends up teleporting a bit during the Obsidian Forest side mission
   Lost and Found, when she first jumps down onto the rooftops.
-* I ended up reducing `global_scale` from 5 to 4 at the end of Athenas, because
-  the other container tightening I did there ended up making them sort of seem
-  *too* fast.  Even at 4x, things still seem quite good, IMO.  May want to
-  doublecheck some stuff from before then, though, to just to be sure:
-  * Taking Flight elevator
-  * Meridian Outskirts elevators
-* Unrelatedly to re-test:
-  * Moxxi slot-machine eridium bump
-  * Re-test `City_P` hub door-opening (tweaked that during `OrbitalPlatform_P`)
-  * Also the Skywell-27 door after the thruster disabling
-  * Maybe *everything* up through Athenas?  When I got to Pyre of Stars, I discovered
-    that our Vault Card Chest speedup causes some mission event to Not Work Anymore
-    (specifically at the very beginning when Tannis and Typhon run up to the door,
-    and it opens -- the door will open but Tannis and Typhon will remain stuck there).
-    The Vault Card Chest addition happened after I was through on Athenas.
 
 Changelog
 =========

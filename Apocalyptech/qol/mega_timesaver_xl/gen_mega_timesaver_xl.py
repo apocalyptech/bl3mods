@@ -1057,9 +1057,9 @@ for level_full in [
         # For some reason, injecting this chest in Crypt_P causes Tannis+Typhon to get
         # stuck right at the beginning of the map, after the first door opens.  No idea
         # why, though clearly the chest is stealing an event, or just getting in the
-        # way of an event delivery.  Seriously bizarre.  TODO: One thing to try might be
-        # using a "regular" bandit red chest instead of the actual Vault Card chest.
-        # Maybe that one wouldn't steal the event?
+        # way of an event delivery.  Seriously bizarre.  I did try using a few other
+        # red chest variants as well, and even a white chest, and all of them ended
+        # up exhibiting the same behavior, too.
         #'/Game/Maps/Zone_4/Crypt/Crypt_P',
         '/Game/Maps/Zone_4/Desolate/Desolate_P',
         '/Game/PatchDLC/BloodyHarvest/Maps/Seasons/BloodyHarvest/BloodyHarvest_P',
